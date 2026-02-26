@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRocket, FaClock, FaUsers, FaAward } from "react-icons/fa";
-import CountUp from "react-countup";
+
 
 const Stats = () => {
   const stats = [

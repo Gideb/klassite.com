@@ -1,6 +1,8 @@
 import logo from "../../assets/images/logo.png";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { FiHome, FiBriefcase } from "react-icons/fi";
+import { HiOutlineHome, HiOutlineUser } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -21,7 +23,12 @@ const Navbar = () => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
   }, [menuOpen]);
 
-  const navLinks = ["Home", "Services", "Portfolio", "About", "Contact"];
+  const navLinks = [
+    { name: "Home", path: "/", icon: HiOutlineHome },
+    { name: "About", path: "/about", icon: HiOutlineUser },
+    { name: "Services", path: "/services", icon: FiBriefcase },
+    { name: "Portfolio", path: "/portfolio", icon: FiHome },
+  ];
 
   return (
     <>
@@ -36,17 +43,14 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="space-x-8 hidden md:flex">
-            {navLinks.map((item) => (
+            {navLinks.map((link) => (
               <Link
-                key={item}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                key={link.name}
+                to={link.path}
                 className="relative font-medium text-gray-700 hover:text-purple-600
-        after:content-[''] after:absolute after:left-0 after:-bottom-1
-        after:h-0.5 after:w-0 after:bg-purple-500
-        after:transition-all after:duration-300
-        hover:after:w-full"
+        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
               >
-                {item}
+                {link.name}
               </Link>
             ))}
           </div>
@@ -83,14 +87,12 @@ const Navbar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-70 bg-white z-50 shadow-2xl 
-        transform transition-transform duration-400 ease-out
-        ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 h-full w-72 bg-linear-to-br from-fuchsia-100 via-purple-100 to-fuchsia-200 z-50 shadow-2xl transform transition-transform duration-400 ease-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="p-6 flex flex-col h-full ">
           {/* Close Button */}
           <button
-            className="self-end text-2xl cursor-pointer"
+            className="self-end text-4xl font-semibold cursor-pointer hover:text-purple-600 transition"
             onClick={() => setMenuOpen(false)}
           >
             ×
@@ -98,14 +100,17 @@ const Navbar = () => {
 
           {/* Links */}
           <div className="mt-10 flex flex-col gap-6 text-lg">
-            {navLinks.map((item) => (
+            {navLinks.map((link, index) => (
               <Link
-                key={item}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                key={index}
+                to={link.path}
                 onClick={() => setMenuOpen(false)}
-                className="font-medium text-gray-700 hover:text-purple-600 transition"
+                className="font-normal text-base text-gray-700 hover:text-fuchsia-600 transition"
               >
-                {item}
+                <div className="flex gap-3">
+                  <link.icon className="text-xl " />
+                  {link.name}
+                </div>
               </Link>
             ))}
           </div>

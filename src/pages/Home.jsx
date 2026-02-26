@@ -1,24 +1,21 @@
-import HeroSection from "../components/sections/home/HeroSection.jsx";
-import TestimonialSection from "../components/TestimonialSection.jsx";
-import SocialProofSection from "../components/sections/home/SocialProofSection.jsx";
-import ServicesSection from "../components/sections/home/ServicesSection.jsx";
-import CaseStudySection from "../components/sections/home/CaseStudySection.jsx";
-import VerticalProcessSection from "../components/sections/home/VertialProcessSection.jsx";
-import DifferentiatorSection from "../components/sections/home/DifferentiatorSection.jsx";
-import ContactSection from "../components/sections/home/ContactSection.jsx";
+import HeroSection from "../components/sections/homepage/HeroSection.jsx";
+import TestimonialSection from "../components/sections/homepage/TestimonialSection.jsx";
+import SocialProofSection from "../components/sections/homepage/SocialProofSection.jsx";
+import ServicesSection from "../components/sections/homepage/ServicesSection.jsx";
+import WhyUs from "../components/sections/homepage/WhyUs.jsx";
+import ProblemStatement from "../components/sections/homepage/ProblemStatement.jsx";
+import Transition from "../components/ui/Transition.jsx";
 
 const Home = () => {
   return (
     <>
       <HeroSection />
-      <SocialProofSection />
+      <ProblemStatement />
+      <Transition />
       <ServicesSection />
-      <CaseStudySection />
+      <SocialProofSection />
+      <WhyUs />
       <TestimonialSection />
-      <VerticalProcessSection />
-      <DifferentiatorSection />
-      <ContactSection />
-    
     </>
   );
 };

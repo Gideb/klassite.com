@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import placeholder from "../assets/images/hero.png";
 import { FaGithub, FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const PortfolioSection = () => {
 
@@ -245,13 +246,13 @@ const PortfolioSection = () => {
 
         {/* View All Button */}
         <div className="mt-16">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-3 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 group"
           >
             View All Projects
             <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>

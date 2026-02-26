@@ -45,9 +45,6 @@ const AboutSection = () => {
     },
   ];
 
-
-
-
   return (
     <div id="about" className="scroll-mt-24">
       <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24">

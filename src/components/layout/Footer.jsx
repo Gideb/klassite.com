@@ -14,10 +14,13 @@ import {
 const Footer = () => {
   const navLinks = [
     { name: "Home", path: "home" },
+    { name: "About", path: "about" },
     { name: "Services", path: "services" },
     { name: "Portfolio", path: "portfolio" },
-    { name: "About", path: "about" },
     { name: "Contact", path: "contact" },
+    { name: "Pricing", path: "pricing" },
+    { name: "FAQs", path: "faqs" },
+    { name: "Careers", path: "careers" },
   ];
 
   const services = [
@@ -94,7 +97,7 @@ const Footer = () => {
               <h3 className="text-sm font-semibold text-white/70 uppercase tracking-wider">
                 Quick Links
               </h3>
-              <div className="space-y-2 flex flex-col">
+              <div className="space-y-2 flex flex-col text-gray-400 text-sm">
                 {navLinks.map((item) => (
                   <Link
                     key={item.name}
@@ -116,7 +119,7 @@ const Footer = () => {
                 {services.map((service, index) => (
                   <li
                     key={index}
-                    className="hover:text-purple-500 transition-colors"
+                    className="hover:text-gray-500 transition-colors"
                   >
                     {service}
                   </li>
@@ -149,7 +152,7 @@ const Footer = () => {
                   </a>
                 </p>
                 <p className="flex items-center justify-center sm:justify-start gap-2">
-                  <FaMapMarkerAlt className="text-purple-500" />
+                  <FaMapMarkerAlt className="" />
                   <span>
                     Accra, Ghana{" "}
                     <span className="text-xs text-purple-500">GH</span>
@@ -201,13 +204,7 @@ const Footer = () => {
 
             {/* Legal Links */}
             <div className="flex gap-4 text-xs">
-              <Link
-                to="/cookies"
-                className="hover:text-purple-500 transition-colors"
-              >
-                Cookies{" "}
-              </Link>
-              <span>•</span>
+             
               <Link
                 to="/privacy"
                 className="hover:text-purple-500 transition-colors"

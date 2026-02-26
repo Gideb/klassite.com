@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaSearch,
   FaSitemap,
@@ -7,6 +6,7 @@ import {
   FaCheckCircle,
   FaArrowRight,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const VerticalProcessSection = () => {
   const processes = [
@@ -77,13 +77,13 @@ const VerticalProcessSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-linear-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-fuchsia-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
               Proven Process
             </span>
           </h2>
@@ -96,7 +96,7 @@ const VerticalProcessSection = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-200 via-fuchsia-200 to-purple-200"></div>
+          <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-purple-200 via-fuchsia-200 to-purple-200"></div>
 
           {processes.map((process, index) => {
             const Icon = process.icon;
@@ -118,7 +118,7 @@ const VerticalProcessSection = () => {
                     {/* Header */}
                     <div className="flex items-center gap-4 mb-4">
                       <div
-                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${process.color} flex items-center justify-center text-white shadow-lg`}
+                        className={`w-12 h-12 rounded-xl bg-linear-to-br ${process.color} flex items-center justify-center text-white shadow-lg`}
                       >
                         <Icon className="text-xl" />
                       </div>
@@ -143,7 +143,7 @@ const VerticalProcessSection = () => {
                           className="flex items-start gap-2 text-sm text-gray-500"
                         >
                           <FaCheckCircle
-                            className={`text-${process.color.split(" ")[0].replace("from-", "")} mt-0.5 flex-shrink-0`}
+                            className={`text-${process.color.split(" ")[0].replace("from-", "")} mt-0.5 shrink-0`}
                           />
                           <span>{detail}</span>
                         </li>
@@ -171,13 +171,13 @@ const VerticalProcessSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all group"
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all group"
           >
             Start Your Project With Confidence
             <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

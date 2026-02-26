@@ -1,0 +1,236 @@
+import hero from "../../../assets/images/hero.png";
+import blob from "../../../assets/images/blob.svg";
+import { Link } from "react-router-dom";
+import { FaArrowRight, FaPlay } from "react-icons/fa";
+import { SlCalender } from "react-icons/sl";
+import { GoRocket } from "react-icons/go";
+import CountUp from "react-countup";
+import { memo } from "react";
+
+// Blob configuration - increased sizes for visibility
+const BLOB_CONFIG = [
+  {
+    className: "-top-20 -left-20 w-[600px] h-[600px]", // Much larger
+    color: "purple",
+  },
+
+  {
+    className: "bottom-0 right-0 w-[700px] h-[800px]",
+    color: "default",
+  },
+  {
+    className: "top-40 -right-20 w-[200px] h-[300px]",
+    color: "default",
+  },
+];
+
+// Services array
+const SERVICES = ["Web Development", "Branding", "Media", "Security Solutions"];
+
+// Stats array
+const STATS = [
+  { end: 5, suffix: "+", label: "Years Experience", duration: 2.5 },
+  { end: 50, suffix: "+", label: "Projects Delivered", duration: 4 },
+  { end: 98, suffix: "%", label: "Client Satisfaction", duration: 5 },
+];
+
+const BlobBackground = memo(() => (
+  <>
+    {BLOB_CONFIG.map((config, index) => (
+      <img
+        key={index}
+        src={blob}
+        alt=""
+        aria-hidden="true"
+        className={`absolute ${config.className} z-0 pointer-events-none select-none object-contain ${
+          index === 0
+            ? "animate-blobfluid"
+            : index === 1
+              ? "animate-blobfluid-slow"
+              : "animate-blobfluid-fast"
+        }`}
+        style={{
+          opacity: 0.1,
+        }}
+      />
+    ))}
+  </>
+));
+
+BlobBackground.displayName = "BlobBackground";
+
+const ServiceTags = memo(() => (
+  <div className="flex flex-wrap gap-3" aria-label="Our services">
+    {SERVICES.map((service) => (
+      <span
+        key={service}
+        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-purple-100 hover:text-purple-600 transition-colors duration-300 cursor-default"
+      >
+        {service}
+      </span>
+    ))}
+  </div>
+));
+
+ServiceTags.displayName = "ServiceTags";
+
+const StatsSection = memo(() => (
+  <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 lg:pt-10 border-t border-gray-200">
+    {STATS.map((stat) => (
+      <div key={stat.label} className="text-center sm:text-left">
+        <h5 className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-600 to-fuchsia-600">
+          <CountUp
+            end={stat.end}
+            duration={stat.duration}
+            suffix={stat.suffix}
+          />
+        </h5>
+        <span className="text-gray-700 text-xs sm:text-sm">{stat.label}</span>
+      </div>
+    ))}
+  </div>
+));
+
+StatsSection.displayName = "StatsSection";
+
+const HeroSection = () => {
+  return (
+    <section
+      id="hero"
+      className="scroll-mt-16 relative  w-full overflow-hidden bg-white py-10 sm:py-10 lg:py-20 "
+      aria-label="Hero section"
+    >
+      <BlobBackground />
+
+      {/* Main Content Container */}
+      <div className=" z-10  px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-12 lg:py-0">
+          {/* Left Content */}
+          <div className="flex flex-col space-y-8 lg:space-y-10 order-2 lg:order-1">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
+              </span>
+              Digital Agency & Portfolio
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight lg:leading-[1.2] text-gray-900">
+              We Build{" "}
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-fuchsia-500">
+                High Performance
+              </span>{" "}
+              <br className="hidden sm:block" />
+              Digital Systems That <br className="hidden sm:block" />
+              Grow Your Business
+            </h1>
+
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
+              Klass Koncepts partners with ambitious brands to design, build,
+              and scale modern digital platforms that convert users, increase
+              revenue, and outperform competitors.
+            </p>
+
+            <ServiceTags />
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+              <Link
+                to="/contact"
+                className="w-full sm:w-auto group bg-linear-to-r from-purple-500 to-fuchsia-500 text-white px-8 py-3.5 rounded-full font-medium text-md hover:shadow-xl transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex items-center justify-center gap-2"
+              >
+                <SlCalender />
+                <span> Book a Strategic Call</span>
+                <FaArrowRight
+                  className="text-sm group-hover:translate-x-1 transition-transform"
+                  aria-hidden="true"
+                />
+              </Link>
+
+              <a
+                href="#services"
+                className="w-full sm:w-auto group text-purple-700 px-8 py-3.5 rounded-full font-medium border-2 border-purple-600 hover:bg-purple-50 transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector("#services")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                <FaPlay className="text-xs" aria-hidden="true" />
+                <span> Start a Project</span>
+                <GoRocket aria-hidden="true" />
+              </a>
+            </div>
+
+            <StatsSection />
+
+            {/* Trust Badge */}
+            <div className="flex items-center gap-4 text-sm text-gray-600">
+              <div className="flex -space-x-2" aria-hidden="true">
+                {[...Array(4)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-8 h-8 rounded-full bg-linear-to-br from-purple-400 to-fuchsia-400 border-2 border-white shadow-sm"
+                  />
+                ))}
+              </div>
+              <span className="font-medium">
+                Trusted by 50+ businesses worldwide
+              </span>
+            </div>
+          </div>
+
+          {/* Right Content - Hero Image */}
+          <div className="w-full flex justify-center lg:justify-end order-1 lg:order-2">
+            <div className="relative group">
+              {/* Decorative Elements */}
+              <div className="absolute -inset-4 bg-linear-to-r from-purple-600 to-fuchsia-600 rounded-2xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
+
+              <img
+                src={hero}
+                alt="Modern laptop displaying digital solutions interface"
+                className="relative w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl will-change-transform group-hover:scale-105 transition-transform duration-500"
+                loading="eager"
+              />
+
+              {/* Floating Badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 motion-safe:animate-bounce">
+                <div className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </div>
+                <span className="text-sm font-medium">Available for work</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block">
+        <a
+          href="#problem"
+          className="flex flex-col items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors group p-2"
+          onClick={(e) => {
+            e.preventDefault();
+            document
+              .querySelector("#problem")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <span className="text-xs uppercase tracking-widest sr-only lg:not-sr-only">
+            Scroll
+          </span>
+          <div className="w-5 h-9 border-2 border-current rounded-full flex justify-center p-1">
+            <div className="w-1 h-2 bg-current rounded-full motion-safe:animate-[bounce_1s_ease-in-out_infinite]"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default memo(HeroSection);

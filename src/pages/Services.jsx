@@ -1,4 +1,4 @@
-import AllServices from "../components/sections/services/AllServices.jsx";
+import AllServices from "../components/sections/servicesections/AllServices.jsx";
 
 const Services = () => {
   return (
