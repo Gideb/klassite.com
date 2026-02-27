@@ -97,7 +97,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="scroll-mt-16 relative  w-full overflow-hidden bg-white py-10 sm:py-10 lg:py-20 "
+      className="scroll-mt-16 relative mt-10 sm:mt-5  w-full overflow-hidden bg-white py-10 sm:py-10 lg:py-24 "
       aria-label="Hero section"
     >
       <BlobBackground />
