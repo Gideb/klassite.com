@@ -5,7 +5,8 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 const App = () => {
   return (
     <>
-     <AppRoutes />
+      <AppRoutes />
+      <SpeedInsights />
     </>
   );
 };
