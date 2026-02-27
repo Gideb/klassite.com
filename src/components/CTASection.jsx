@@ -5,6 +5,7 @@ import { memo } from "react";
 const CTASection = () => {
   return (
     <section className="scroll-mt-16 relative w-full overflow-hidden bg-linear-to-br from-purple-900 via-purple-800 to-fuchsia-900 py-20 sm:py-24 lg:py-28">
+     
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
@@ -18,6 +19,7 @@ const CTASection = () => {
       {/* Floating Orbs */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-500 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
+
 
       <div className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">

@@ -1,5 +1,5 @@
 const Transition = () => (
-  <div className="relative py-6 bg-linear-to-b from-white to-purple-50">
+  <div className="relative py-6 ">
     <div className="max-w-7xl mx-auto px-4 text-center">
       <div className="relative">
         {/* Animated arrow */}

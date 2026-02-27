@@ -1,6 +1,6 @@
 import { memo, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
+
 
 import logo1 from "../../../assets/images/brandLogo/logo1.png";
 import logo2 from "../../../assets/images/brandLogo/logo2.png";
@@ -157,7 +157,7 @@ const SocialProofSection = () => {
         </div>
 
         {/* Gentle CTA */}
-        <div className="text-center mt-8">
+        {/*  <div className="text-center mt-8">
           <Link
             to="/case-studies"
             className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium group"
@@ -165,30 +165,10 @@ const SocialProofSection = () => {
             <span>See how we've helped these brands</span>
             <FaArrowRight className="text-sm group-hover:translate-x-2 transition-transform duration-300" />
           </Link>
-        </div>
-      </div>
+        </div> */}
 
-      {/* Add animations to your global CSS if not already there */}
-      <style jsx>{`
-        @keyframes blob {
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-      `}</style>
+        
+      </div>
     </section>
   );
 };

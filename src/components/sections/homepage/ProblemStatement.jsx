@@ -48,7 +48,7 @@ const ProblemStatement = () => {
   return (
     <section
       id="problem"
-      className="scroll-mt-24 py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-linear-to-br from-purple-50 via-white/60 to-white"
+      className="scroll-mt-24 py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-linear-to-br from-purple-50 via-white/60 to-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -124,55 +124,7 @@ const ProblemStatement = () => {
             );
           })}
         </div>
-
-       
-        {/* <div className="text-center max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-xl border border-gray-100"> */}
-          {/* <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            Here's the good news
-          </div> */}
-
-         {/*  <p className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-            Every problem has a solution.
-            <span className="block bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-fuchsia-500 mt-2">
-              We build intelligent digital architecture that solves all of this.
-            </span>
-          </p> */}
-
-          {/* <div className="flex flex-wrap justify-center gap-3 mt-8">
-            {[
-              { text: "⚡ Lightning Fast", color: "purple" },
-              { text: "🎯 UX Optimized", color: "fuchsia" },
-              { text: "🔍 SEO Ready", color: "purple" },
-              { text: "🔄 Fully Integrated", color: "fuchsia" },
-            ].map((feature, index) => (
-              <span
-                key={index}
-                className={`px-5 py-2.5 bg-linear-to-r from-${feature.color}-50 to-${feature.color}-100 text-${feature.color}-700 rounded-full text-sm font-medium border border-${feature.color}-200 shadow-sm`}
-              >
-                {feature.text}
-              </span>
-            ))}
-          </div> */}
-
-          {/* CTA */}
-          {/* <div className="mt-10">
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-3 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
-            >
-              <span>Fix Your Performance Issues</span>
-              <FaRocket className="text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </Link>
-            <p className="text-sm text-gray-500 mt-4">
-              Free consultation • No obligation • 30-minute strategic call
-            </p>
-          </div> */}
-       {/*  </div>  */}
       </div>
-
-
-   
     </section>
   );
 };

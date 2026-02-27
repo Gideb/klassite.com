@@ -6,11 +6,12 @@ import { SlCalender } from "react-icons/sl";
 import { GoRocket } from "react-icons/go";
 import CountUp from "react-countup";
 import { memo } from "react";
+import { useInView } from "react-intersection-observer";
 
-// Blob configuration - increased sizes for visibility
+
 const BLOB_CONFIG = [
   {
-    className: "-top-20 -left-20 w-[600px] h-[600px]", // Much larger
+    className: "-top-20 -left-20 w-[600px] h-[600px]", 
     color: "purple",
   },
 
@@ -29,9 +30,9 @@ const SERVICES = ["Web Development", "Branding", "Media", "Security Solutions"];
 
 // Stats array
 const STATS = [
-  { end: 5, suffix: "+", label: "Years Experience", duration: 2.5 },
-  { end: 50, suffix: "+", label: "Projects Delivered", duration: 4 },
-  { end: 98, suffix: "%", label: "Client Satisfaction", duration: 5 },
+  { end: 5, suffix: "+", label: "Years Experience", duration: 5 },
+  { end: 50, suffix: "+", label: "Projects Delivered", duration: 6 },
+  { end: 98, suffix: "%", label: "Client Satisfaction", duration: 6 },
 ];
 
 const BlobBackground = memo(() => (
@@ -74,26 +75,16 @@ const ServiceTags = memo(() => (
 
 ServiceTags.displayName = "ServiceTags";
 
-const StatsSection = memo(() => (
-  <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 lg:pt-10 border-t border-gray-200">
-    {STATS.map((stat) => (
-      <div key={stat.label} className="text-center sm:text-left">
-        <h5 className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-600 to-fuchsia-600">
-          <CountUp
-            end={stat.end}
-            duration={stat.duration}
-            suffix={stat.suffix}
-          />
-        </h5>
-        <span className="text-gray-700 text-xs sm:text-sm">{stat.label}</span>
-      </div>
-    ))}
-  </div>
-));
 
-StatsSection.displayName = "StatsSection";
 
 const HeroSection = () => {
+
+  const { ref: STATSRef, inView: STATSInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+
   return (
     <section
       id="hero"
@@ -128,9 +119,8 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
-              Klass Koncepts partners with ambitious brands to design, build,
-              and scale modern digital platforms that convert users, increase
-              revenue, and outperform competitors.
+              Klass Koncepts partners with ambitious brands to architect and
+              scale performance-driven digital platforms.
             </p>
 
             <ServiceTags />
@@ -165,7 +155,29 @@ const HeroSection = () => {
               </a>
             </div>
 
-            <StatsSection />
+            {/*   <StatsSection /> */}
+            <div
+              ref={STATSRef}
+              className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 lg:pt-10 border-t border-gray-200"
+            >
+              {STATS.map((stat) => (
+                <div key={stat.label} className="text-center sm:text-left">
+                  <h5 className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-600 to-fuchsia-600">
+                    {STATSInView ? (
+                      <>
+                        <CountUp end={stat.end} duration={stat.duration} />
+                        {stat.suffix}
+                      </>
+                    ) : (
+                      `0${stat.suffix}`
+                    )}
+                  </h5>
+                  <span className="text-gray-700 text-xs sm:text-sm">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
 
             {/* Trust Badge */}
             <div className="flex items-center gap-4 text-sm text-gray-600">
