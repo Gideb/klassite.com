@@ -144,48 +144,58 @@ const ServicesSection = () => {
           </div>
 
           {/* Stats Content */}
-          <div className="relative z-10 px-6 py-14">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div ref={statsRef} className="relative z-10 py-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mx-5">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
 
                 return (
                   <div
                     key={index}
-                    className="flex items-center gap-4 
-                       bg-white/10 backdrop-blur-lg 
-                       border border-white/20
-                       px-6 py-5 rounded-2xl 
-                       transition duration-300 
-                       hover:scale-105 hover:bg-white/20"
+                    className="relative shadow-sm hover:shadow-md transition-all duration-300 bg-white/30 backdrop-blur-md border border-white/20 p-5 rounded-2xl hover:scale-105 hover:bg-white/40 mx-2"
                   >
-                    {/* Icon */}
-                    <div
-                      className={`w-12 h-12 rounded-xl bg-linear-to-br ${stat.color}
-                          flex items-center justify-center text-white shadow-md`}
-                    >
-                      <Icon className="text-lg" />
+                    {/* Faded index number */}
+                    <span className="absolute bottom-3 right-5 text-4xl font-semibold text-gray-200 opacity-40">
+                      00{index + 1}
+                    </span>
+
+                    {/* Top Row */}
+                    <div className="flex items-center justify-between mb-6">
+                      {/* Stat Number */}
+                      <div className="flex items-start gap-3">
+                        <span className="text-xl leading-none text-gray-100 mt-1">
+                          •
+                        </span>
+
+                        <h3 className="text-3xl font-bold text-gray-100 leading-none">
+                          {statsInView ? (
+                            <>
+                              <CountUp
+                                end={stat.value}
+                                duration={stat.duration}
+                              />
+                              {stat.suffix}
+                            </>
+                          ) : (
+                            `0${stat.suffix}`
+                          )}
+                        </h3>
+                      </div>
+
+                      {/* Soft Icon Circle */}
+                      <div
+                        className="w-12 h-12 rounded-full bg-white 
+                            flex items-center justify-center 
+                            shadow-sm"
+                      >
+                        <Icon className="text-gray-700 text-xl" />
+                      </div>
                     </div>
 
-                    {/* Text */}
-                    <div>
-                      <div className="text-3xl font-bold text-white leading-none">
-                        {statsInView ? (
-                          <>
-                            <CountUp
-                              end={stat.value}
-                              duration={stat.duration}
-                            />
-                            {stat.suffix}
-                          </>
-                        ) : (
-                          `0${stat.suffix}`
-                        )}
-                      </div>
-                      <div className="text-sm text-white/80 mt-1">
-                        {stat.label}
-                      </div>
-                    </div>
+                    {/* Label */}
+                    <p className="text-gray-100 opacity-90 text-sm">
+                      {stat.label}
+                    </p>
                   </div>
                 );
               })}
