@@ -47,7 +47,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="relative font-medium text-gray-700 hover:text-purple-600
+                className="relative font-medium text-gray-400 hover:text-purple-600
         after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.name}
@@ -67,12 +67,12 @@ const Navbar = () => {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 cursor-pointer"
+            className="md:hidden flex flex-col gap-1 cursor-pointer"
             onClick={() => setMenuOpen(true)}
           >
-            <span className="w-6 h-0.5 bg-gray-800"></span>
-            <span className="w-6 h-0.5 bg-gray-800"></span>
-            <span className="w-6 h-0.5 bg-gray-800"></span>
+            <span className="w-6 h-1 bg-gray-800"></span>
+            <span className="w-6 h-1 bg-gray-800"></span>
+            <span className="w-6 h-1 bg-gray-800"></span>
           </button>
         </div>
       </nav>

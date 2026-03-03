@@ -1,60 +1,127 @@
-import React from "react";
-import { FaRocket, FaClock, FaUsers, FaAward } from "react-icons/fa";
-
+import { GoRocket } from "react-icons/go";
+import { LiaAwardSolid } from "react-icons/lia";
+import { WiTime4 } from "react-icons/wi";
+import { PiUsersThreeLight } from "react-icons/pi";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+import team from "../assets/images/serviceSpecific/teamWorking.jpg";
 
 const Stats = () => {
   const stats = [
     {
-      icon: FaRocket,
+      icon: GoRocket,
       value: 50,
-      label: "Projects Delivered",
       suffix: "+",
-      color: "from-blue-600 to-cyan-500",
+      label: "Projects",
+      color: "from-amber-600 to-amber-600",
+      duration: 8,
     },
     {
-      icon: FaUsers,
+      icon: PiUsersThreeLight,
       value: 30,
-      label: "Happy Clients",
       suffix: "+",
-      color: "from-green-600 to-emerald-500",
+      label: "Clients",
+      color: "from-amber-600 to-amber-600",
+      duration: 8,
     },
     {
-      icon: FaAward,
+      icon: LiaAwardSolid,
       value: 5,
-      label: "Years Experience",
       suffix: "+",
-      color: "from-purple-600 to-pink-500",
+      label: "Years",
+      color: "from-amber-600 to-amber-600",
+      duration: 5,
     },
     {
-      icon: FaClock,
+      icon: WiTime4,
       value: 24,
-      label: "Support",
       suffix: "/7",
-      color: "from-orange-600 to-red-500",
+      label: "Support",
+      color: "from-amber-600 to-amber-600",
+      duration: 8,
     },
   ];
 
+  const { ref: statsRef, inView: statsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <div className="bg-purple-600">
-      {/* Stats Bar */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12 sm:mb-16">
-        {stats.map((stat, index) => {
-          const Icon = stat.icon;
-          return (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1"
-            >
-              <Icon className="text-2xl sm:text-3xl text-white mx-auto mb-2" />
-              <div className="text-xl sm:text-2xl font-bold text-white">
-                {stat.value}
-              </div>
-              <div className="text-xs sm:text-sm text-white/70">
-                {stat.label}
-              </div>
-            </div>
-          );
-        })}
+    <div>
+      {/* Quick Stats - Simple row */}
+      <div
+        ref={statsRef}
+        className="relative mb-20 rounded-3xl overflow-hidden"
+      >
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img
+            src={team}
+            alt="Team working"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-purple-900/60 backdrop-blur-md"></div>
+        </div>
+
+        {/* Stats Content */}
+        <div ref={statsRef} className="relative z-10 py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mx-5">
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="relative shadow-sm hover:shadow-md transition-all duration-300 bg-white/30 backdrop-blur-md border border-white/20 p-5 rounded-2xl hover:scale-105 hover:bg-white/40 mx-2"
+                >
+                  {/* Faded index number */}
+                  <span className="absolute bottom-3 right-5 text-4xl font-semibold text-gray-200 opacity-40">
+                    00{index + 1}
+                  </span>
+
+                  {/* Top Row */}
+                  <div className="flex items-center justify-between mb-6">
+                    {/* Stat Number */}
+                    <div className="flex items-start gap-3">
+                      <span className="text-xl leading-none text-gray-100 mt-1">
+                        •
+                      </span>
+
+                      <h3 className="text-3xl font-bold text-gray-100 leading-none">
+                        {statsInView ? (
+                          <>
+                            <CountUp
+                              end={stat.value}
+                              duration={stat.duration}
+                            />
+                            {stat.suffix}
+                          </>
+                        ) : (
+                          `0${stat.suffix}`
+                        )}
+                      </h3>
+                    </div>
+
+                    {/* Soft Icon Circle */}
+                    <div
+                      className="w-12 h-12 rounded-full bg-white 
+                                  flex items-center justify-center 
+                                  shadow-sm"
+                    >
+                      <Icon className="text-gray-700 text-xl" />
+                    </div>
+                  </div>
+
+                  {/* Label */}
+                  <p className="text-gray-100 opacity-90 text-sm">
+                    {stat.label}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

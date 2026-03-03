@@ -1,8 +1,11 @@
 import React from 'react'
+import CTASection from '../components/CTASection'
 
 const Pricings = () => {
   return (
-    <div>Pricings</div>
+    <div>
+      <CTASection />
+    </div>
   )
 }
 

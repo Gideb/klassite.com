@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
-const AboutSection = () => {
+const AboutFounder = () => {
   const techStack = [
     { icon: SiTypescript, name: "TypeScript", bgColor: "bg-fuchsia-600" },
     { icon: FaReact, name: "React", bgColor: "bg-blue-600" },
@@ -210,4 +210,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default AboutFounder;
