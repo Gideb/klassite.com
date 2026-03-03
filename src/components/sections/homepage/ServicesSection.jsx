@@ -102,7 +102,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="scroll-mt-16 relative w-full overflow-hidden bg-linear-to-b from-white via-white/60 to-purple-50 py-20 sm:py-24"
+      className="scroll-mt-16 relative w-full overflow-hidden bg-white py-20 sm:py-24"
     >
       {/* Decorative Background */}
       <div className="absolute inset-0 overflow-hidden">

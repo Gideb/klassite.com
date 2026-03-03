@@ -43,73 +43,80 @@ const WhyUs = () => {
   return (
     <section
       id="why-us"
-      className="scroll-mt-16 relative w-full overflow-hidden py-20 sm:py-24"
+      className="relative w-full py-28 bg-gray-300"
     >
-      {/* Simple dark background */}
-      <div className="absolute inset-0 bg-linear-to-br from-purple-900 via-purple-800 to-fuchsia-900"></div>
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
+        {/* Floating Orbs */}{" "}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-purple-400 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-300 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
+        <div className="max-w-3xl mb-20">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-purple-300 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
+            </span>
+            Why Choose Us
+          </div>
 
-      {/* Subtle pattern */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-          backgroundSize: "40px 40px",
-        }}
-      ></div>
-
-      {/* Floating Orbs */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-500 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
-
-      <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
-        {/* Simple Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-fuchsia-300 font-semibold text-sm uppercase tracking-wider">
-            Why Us
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">
-            The{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-fuchsia-300 to-purple-200">
-              Klass Koncepts
-            </span>{" "}
-            Difference
+          <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight text-gray-800">
+            Built for performance. <br />
+            Designed for long-term growth.
           </h2>
-          <p className="text-purple-100 text-lg">
-            We build partnerships, not just websites.
+
+          <p className="mt-6 text-lg text-gray-600">
+            We don’t just ship websites — we build scalable digital
+            infrastructure that supports serious business growth.
           </p>
         </div>
-
-        {/* Simple 2x2 Grid of Features */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        {/* Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {differentiators.map((item) => {
             const Icon = item.icon;
+
             return (
               <div
                 key={item.id}
-                className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white/30 border border-white/90 
+                       rounded-2xl p-8 
+                       backdrop-blur-md
+                       transition-all duration-300
+                       hover:bg-white/10 hover:-translate-y-2 hover:shadow-xs hover:shadow-purple-600"
               >
-                <div
-                  className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-linear-to-br ${item.gradient} mb-4`}
-                >
-                  <Icon className="text-xl text-white" />
+                {/* Icon */}
+                <div className="mb-6">
+                  <div
+                    className="w-12 h-12 rounded-xl bg-white/80 
+                              flex items-center justify-center
+                              transition-all duration-300
+                              group-hover:bg-purple-600/80 "
+                  >
+                    <Icon className="text-xl text-purple-500 group-hover:text-white/90 transition-colors" />
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-fuchsia-300">{item.stat}</p>
+
+                {/* Title */}
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">{item.title}</h3>
+
+                {/* Stat */}
+                <p className="text-sm text-gray-600">{item.stat}</p>
               </div>
             );
           })}
         </div>
-
-        {/* Single, Clear CTA */}
-        <div className="text-center">
+        {/* CTA */}
+        <div className="mt-20">
           <Link
-            to="/serivices"
-            className="inline-flex items-center gap-2 bg-white text-purple-900 px-6 py-3 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+            to="/services"
+            className="inline-flex items-center gap-3 
+                   bg-purple-600 hover:bg-purple-500
+                   px-7 py-3 rounded-full
+                   font-medium
+                   transition-all duration-300 group hover:scale-105 text-white"
           >
-            <span>Let's Build Together</span>
-            <FaArrowRight className="text-sm group-hover:translate-x-1.5 transition-transform" />
+            Let’s Build Together
+            <FaArrowRight className="text-sm transition-transform group-hover:translate-x-2" />
           </Link>
         </div>
       </div>
