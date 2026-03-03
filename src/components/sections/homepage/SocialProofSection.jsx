@@ -76,7 +76,7 @@ const SocialProofSection = () => {
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT SIDE — TEAM IMAGE */}
-          <div className="relative">
+          <div className="relative order-2">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               <img
                 src={teamImage}
@@ -90,7 +90,7 @@ const SocialProofSection = () => {
           {/* RIGHT SIDE — TRUST CONTENT */}
           <div>
             {/* Small Badge */}
-            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0 order-1">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>

@@ -16,16 +16,16 @@ const ProblemStatement = () => {
       title: "Slow Websites",
       description: "Costing you revenue daily",
       stat: "53% of users abandon sites loading >3s",
-      color: "fuchsia",
-      gradient: "from-fuchsia-500 to-rose-500",
+      color: "amber",
+      gradient: "from-amber-500 to-amber-700",
     },
     {
       icon: FaMousePointer,
       title: "Poor User Experience",
       description: "Driving customers away",
       stat: "88% won't return after bad UX",
-      color: "green",
-      gradient: "from-green-500 to-yellow-500",
+      color: "amber",
+      gradient: "from-amber-500 to-amber-700",
     },
     {
       icon: FaChartLine,
@@ -33,15 +33,15 @@ const ProblemStatement = () => {
       description: "Hiding you from customers",
       stat: "75% never scroll past page 1",
       color: "amber",
-      gradient: "from-orange-500 to-amber-400",
+      gradient: "from-amber-500 to-amber-700",
     },
     {
       icon: FaUsers,
       title: "Disconnected Systems",
       description: "Wasting time & resources",
       stat: "Businesses lose 20-30% revenue to inefficiency",
-      color: "purple",
-      gradient: "from-purple-500 to-fuchsia-500",
+      color: "amber",
+      gradient: "from-amber-500 to-amber-700",
     },
   ];
 
@@ -52,9 +52,8 @@ const ProblemStatement = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          {/* Small label for context */}
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+        <div className="max-w-3xl mb-16">
+          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
@@ -62,7 +61,7 @@ const ProblemStatement = () => {
             The Reality Check
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
             Most Businesses Don't Have a{" "}
             <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-fuchsia-500">
               Website Problem.
@@ -74,7 +73,7 @@ const ProblemStatement = () => {
             </span>
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mt-6">
             If your digital presence isn't performing, you're leaving money on
             the table. Here's what's holding you back.
           </p>
