@@ -1,6 +1,6 @@
 import { memo, useState } from "react";
 
-
+import teamImage from "../../../assets/images/serviceSpecific/teamWorking.jpg";
 
 import logo1 from "../../../assets/images/brandLogo/logo1.png";
 import logo2 from "../../../assets/images/brandLogo/logo2.png";
@@ -71,103 +71,73 @@ const SocialProofSection = () => {
   return (
     <section
       id="social-proof"
-      className="scroll-mt-16 relative w-full overflow-hidden bg-linear-to-b from-white via-purple-50 to-white py-20 sm:py-24 lg:py-28"
+      className="scroll-mt-16 relative w-full bg-white py-20 sm:py-24 lg:py-28"
     >
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-fuchsia-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-      </div>
-
-      <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
-        {/* Section Header - Simplified */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
-            </span>
-            Trusted Partners
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* LEFT SIDE — TEAM IMAGE */}
+          <div className="relative">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+              <img
+                src={teamImage}
+                alt="Our Team"
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-purple-900/20"></div>
+            </div>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-            Backed by{" "}
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-600 to-fuchsia-600">
-              Industry Leaders
-            </span>
-          </h2>
+          {/* RIGHT SIDE — TRUST CONTENT */}
+          <div>
+            {/* Small Badge */}
+            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
+              </span>
+              Trusted Partners
+            </div>
 
-          <p className="text-lg text-gray-600">
-            We're proud to partner with innovative companies that trust us to
-            deliver exceptional digital experiences.
-          </p>
-        </div>
+            {/* Heading */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 mt-3">
+              Trusted by{" "}
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-600 to-fuchsia-600">
+                Industry Leaders
+              </span>
+            </h2>
 
-        {/* Brand Logos Grid - Clean and focused */}
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
-            {brands.map((brand, index) => (
-              <div key={index} className="group relative">
-                <div className="relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden">
-                  {/* Gradient overlay on hover */}
-                  <div
-                    className={`absolute inset-0 bg-linear-to-br ${brand.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
-                  ></div>
+            {/* Description */}
+            <p className="text-lg text-gray-600 mb-10">
+              We collaborate with forward-thinking brands who trust us to
+              deliver exceptional digital experiences.
+            </p>
 
-                  {/* Logo container */}
-                  <div className="relative w-20 h-20 mx-auto mb-4">
-                    {/* Decorative ring */}
-                    <div
-                      className={`absolute inset-0 bg-linear-to-br ${brand.gradient} rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500 blur-sm`}
-                    ></div>
-
-                    {/* Logo with fallback */}
-                    <div className="relative w-full h-full p-3">
-                      <LogoWithFallback
-                        logo={brand.logo}
-                        name={brand.name}
-                        gradient={brand.gradient}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Brand name */}
-                  <div className="text-center">
-                    <div className="text-sm font-semibold text-gray-800 group-hover:text-purple-600 transition-colors duration-300">
-                      {brand.name}
-                    </div>
-                  </div>
-
-                  {/* Bottom gradient line */}
-                  <div
-                    className={`absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r ${brand.gradient} rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}
-                  ></div>
+            {/* Logo Grid — Cleaner Version */}
+            <div className="grid grid-cols-3 gap-6">
+              {brands.map((brand, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center 
+                         bg-gray-50 rounded-xl p-4 shadow-sm
+                         hover:bg-white hover:shadow-fuchsia-300 hover:shadow-md 
+                         transition duration-300"
+                >
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="h-10 object-contain grayscale hover:grayscale-0 transition duration-300"
+                  />
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Subtext */}
+            <p className="text-gray-500 text-sm mt-8">
+              ...and 40+ other innovative companies across fintech, healthcare,
+              and e-commerce.
+            </p>
           </div>
         </div>
-
-        {/* Subtle brand mention - replaces stats */}
-        <div className="text-center mt-12">
-          <p className="text-gray-500 text-sm">
-            ...and 40+ other innovative companies across fintech, healthcare,
-            and e-commerce
-          </p>
-        </div>
-
-        {/* Gentle CTA */}
-        {/*  <div className="text-center mt-8">
-          <Link
-            to="/case-studies"
-            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium group"
-          >
-            <span>See how we've helped these brands</span>
-            <FaArrowRight className="text-sm group-hover:translate-x-2 transition-transform duration-300" />
-          </Link>
-        </div> */}
-
-        
       </div>
     </section>
   );

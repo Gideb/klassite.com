@@ -1,5 +1,5 @@
 import ContactSection from "../components/ContactSection.jsx";
-import FinalCTASection from "../components/sections/aboutpage/FinalCTASection.jsx";
+import FinalCTASection from "../components/FinalCTASection.jsx";
 
 const Contact = () => {
   return (

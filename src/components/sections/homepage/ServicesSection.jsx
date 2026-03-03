@@ -13,14 +13,19 @@ import { PiUsersThreeLight } from "react-icons/pi";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { memo } from "react";
+import digitalMark from "../../../assets/images/serviceSpecific/digi-mark.jpg";
+import cctv from "../../../assets/images/serviceSpecific/cctv.jpg";
+import webDev from "../../../assets/images/serviceSpecific/web-dev.jpg";
+import camera from "../../../assets/images/serviceSpecific/camera.jpg";
+import team from "../../../assets/images/serviceSpecific/teamWorking.jpg";
 
 const ServicesSection = () => {
-  // Grouped services that better represent your actual offerings
+
   const serviceGroups = [
     {
       id: 1,
       title: "Web Development & Design",
-      icon: FaCode,
+      image: webDev, 
       description:
         "Custom websites that are fast, responsive, and built to convert.",
       services: ["Website Development", "Web Design"],
@@ -29,7 +34,7 @@ const ServicesSection = () => {
     {
       id: 2,
       title: "Digital Marketing",
-      icon: FaSearch,
+      image: digitalMark, 
       description:
         "Data-driven SEO strategies that get you to the top of Google.",
       services: ["SEO Optimization"],
@@ -38,7 +43,7 @@ const ServicesSection = () => {
     {
       id: 3,
       title: "Creative & Media",
-      icon: FaVideo,
+      image: camera, 
       description: "Professional photography, videography, and video editing.",
       services: ["Photography", "Videography", "Video Editing"],
       gradient: "from-green-600 to-emerald-500",
@@ -46,7 +51,7 @@ const ServicesSection = () => {
     {
       id: 4,
       title: "Brand & Security",
-      icon: FaShieldAlt,
+      image: cctv, 
       description:
         "Graphic design and security solutions for complete peace of mind.",
       services: ["Graphic Design", "CCTV Installation"],
@@ -97,7 +102,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="scroll-mt-16 relative w-full overflow-hidden bg-linear-to-b from-white via-purple-50 to-white py-20 sm:py-24"
+      className="scroll-mt-16 relative w-full overflow-hidden bg-linear-to-b from-white via-white/60 to-purple-50 py-20 sm:py-24"
     >
       {/* Decorative Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -126,34 +131,66 @@ const ServicesSection = () => {
         {/* Quick Stats - Simple row */}
         <div
           ref={statsRef}
-          className="flex flex-wrap justify-center gap-6 mb-16"
+          className="relative mb-20 rounded-3xl overflow-hidden"
         >
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div
-                key={index}
-                className="flex items-center gap-2 py-2  bg-white px-4 rounded-full shadow-sm border border-gray-100"
-              >
-                <div
-                  className={`w-8 h-8 rounded-full bg-linear-to-br ${stat.color} flex items-center justify-center`}
-                >
-                  <Icon className="text-sm text-white" />
-                </div>
-                <span className="font-semibold text-gray-900">
-                  {statsInView ? (
-                    <>
-                      <CountUp end={stat.value} duration={stat.duration} />
-                      {stat.suffix}
-                    </>
-                  ) : (
-                    `0${stat.suffix}`
-                  )}
-                </span>
-                <span className="text-sm text-gray-600">{stat.label}</span>
-              </div>
-            );
-          })}
+          {/* Background */}
+          <div className="absolute inset-0">
+            <img
+              src={team}
+              alt="Team working"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-purple-900/60 backdrop-blur-md"></div>
+          </div>
+
+          {/* Stats Content */}
+          <div className="relative z-10 px-6 py-14">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+
+                return (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 
+                       bg-white/10 backdrop-blur-lg 
+                       border border-white/20
+                       px-6 py-5 rounded-2xl 
+                       transition duration-300 
+                       hover:scale-105 hover:bg-white/20"
+                  >
+                    {/* Icon */}
+                    <div
+                      className={`w-12 h-12 rounded-xl bg-linear-to-br ${stat.color}
+                          flex items-center justify-center text-white shadow-md`}
+                    >
+                      <Icon className="text-lg" />
+                    </div>
+
+                    {/* Text */}
+                    <div>
+                      <div className="text-3xl font-bold text-white leading-none">
+                        {statsInView ? (
+                          <>
+                            <CountUp
+                              end={stat.value}
+                              duration={stat.duration}
+                            />
+                            {stat.suffix}
+                          </>
+                        ) : (
+                          `0${stat.suffix}`
+                        )}
+                      </div>
+                      <div className="text-sm text-white/80 mt-1">
+                        {stat.label}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Service Groups - Clean grid */}
@@ -161,42 +198,53 @@ const ServicesSection = () => {
           {serviceGroups.map((group) => {
             const Icon = group.icon;
             return (
+              // Inside your map function, replace the card with:
               <div
                 key={group.id}
-                className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
               >
-                <div
-                  className={`w-12 h-12 rounded-lg bg-linear-to-br ${group.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                >
-                  <Icon className="text-xl text-white" />
+                {/* Image Container */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={group.image}
+                    alt={group.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {/* Gradient Overlay */}
+                  <div
+                    className={`absolute inset-0 bg-linear-to-br ${group.gradient} opacity-0 group-hover:opacity-20 transition-opacity`}
+                  ></div>
                 </div>
 
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {group.title}
-                </h3>
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {group.title}
+                  </h3>
 
-                <p className="text-sm text-gray-600 mb-3">
-                  {group.description}
-                </p>
+                  <p className="text-sm text-gray-600 mb-3">
+                    {group.description}
+                  </p>
 
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {group.services.map((service, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
-                    >
-                      {service}
-                    </span>
-                  ))}
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {group.services.map((service, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
+                      >
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium group/link"
+                  >
+                    <span>Learn more</span>
+                    <FaArrowRight className="text-xs group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium group/link"
-                >
-                  <span>Learn more</span>
-                  <FaArrowRight className="text-xs group-hover/link:translate-x-1 transition-transform" />
-                </Link>
               </div>
             );
           })}

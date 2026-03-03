@@ -48,7 +48,7 @@ const ProblemStatement = () => {
   return (
     <section
       id="problem"
-      className="scroll-mt-24 py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-linear-to-br from-purple-50 via-white/60 to-white"
+      className="scroll-mt-24 py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-linear-to-b from-purple-50 via-white/60 to-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}

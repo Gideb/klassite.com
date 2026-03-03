@@ -1,26 +1,42 @@
-import React from "react";
+// components/sections/HeroParallax.jsx
+import React, { useEffect, useRef } from "react";
 
-const AboutHeroSection = () => {
+const HeroParallax = () => {
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (bgRef.current) {
+        const scrollY = window.scrollY;
+        bgRef.current.style.transform = `translateY(${scrollY * 0.5}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div>
-      <section
-        id="aboutHero"
-        className="scroll-mt-16 relative mt-10 sm:mt-5 w-full overflow-hidden bg-white py-10 sm:py-10 lg:py-24 "
-        aria-label="Hero section"
+    <section className="relative w-full min-h-[50vh] lg:min-h-[60vh] flex items-center overflow-hidden">
+      {/* Parallax Background */}
+      <div
+        ref={bgRef}
+        className="absolute inset-0 w-full h-[120%] -top-[10%] z-0"
       >
-        {/* Main Content Container */}
-        <div className="z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
-            </span>
-            Our Story
-          </div>
-        </div>
-      </section>
-    </div>
+        <img
+          src="/images/hero-bg.jpg"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      {/* Content (same as above) */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-white">
+        {/* ... same content as HeroImage component ... */}
+      </div>
+    </section>
   );
 };
 
-export default AboutHeroSection;
+export default HeroParallax;
