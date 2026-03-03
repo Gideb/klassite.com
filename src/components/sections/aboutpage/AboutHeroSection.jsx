@@ -6,19 +6,19 @@ import Team from "../../../assets/images/serviceSpecific/teamWorking.jpg";
 const AboutHeroSection = () => {
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Hero Image - 40vh with opacity */}
+     
       <div className="relative h-[50vh] sm:h-[55vh] lg:h-[60vh] w-full">
-        {/* Background Image with Overlay */}
+       
         <div className="absolute inset-0">
           <img
             src={Team} 
             alt="Our team at work"
             className="w-full h-full object-cover"
           />
-          {/* Dark overlay for text readability */}
+          
           <div className="absolute inset-0 bg-purple-800/60 mix-blend-multiply"></div>
 
-          {/* Techy overlay pattern */}
+          
           <div
             className="absolute inset-0 opacity-20"
             style={{
@@ -41,7 +41,7 @@ const AboutHeroSection = () => {
             </div> */}
 
             {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 mt-10">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 mt-12">
               We Build Digital
               <span className="block text-transparent bg-clip-text bg-linear-to-r from-fuchsia-300 to-purple-200">
                 Experiences That Matter
@@ -84,7 +84,7 @@ const AboutHeroSection = () => {
       </div>
 
       {/* Optional: Decorative wave or gradient at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-white to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-white/40 to-transparent"></div>
     </section>
   );
 };
