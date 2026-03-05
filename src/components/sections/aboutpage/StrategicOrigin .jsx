@@ -1,16 +1,14 @@
 import { memo, useRef } from "react";
- // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import codeArchitecture from '../../../assets/images/aboutPage/slow-fast-site1.jpg'
+import codeArchitecture from "../../../assets/images/aboutPage/slow-fast-site1.jpg";
 
 const StrategicOrigin = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section className="relative w-full py-20 sm:py-24 bg-white overflow-hidden">
+    <section className="relative w-full py-18 sm:py-20 bg-white overflow-hidden">
       {/* Subtle background texture */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -24,8 +22,6 @@ const StrategicOrigin = () => {
 
       <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
-
           {/* Right Column - Image */}
           <motion.div
             ref={ref}
@@ -61,7 +57,7 @@ const StrategicOrigin = () => {
             </div>
           </motion.div>
 
-{/* Left Column - Text */}
+          {/* Left Column - Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -70,9 +66,13 @@ const StrategicOrigin = () => {
           >
             {/* Section Header */}
             <div className="mb-6">
-              <span className="text-sm font-semibold text-purple-600 uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
+                </span>
                 Strategic Origin
-              </span>
+              </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
                 Closing the{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
@@ -82,7 +82,7 @@ const StrategicOrigin = () => {
             </div>
 
             {/* Clean typography */}
-            <div className="space-y-5 text-gray-700 leading-relaxed">
+            <div className="space-y-5 text-gray-700 leading-relaxed text-justify">
               <p className="text-lg">
                 We started Klass Koncepts because we kept seeing the same
                 pattern: brilliant businesses held back by digital foundations
@@ -104,16 +104,8 @@ const StrategicOrigin = () => {
                 experiences that don't just look good, but perform where it
                 counts.
               </p>
-
-              {/* Subtle signature/quote */}
-              <div className="pt-4 mt-4 border-t border-gray-100">
-                <p className="text-sm text-gray-500 italic">
-                  — Gilbert, Founder & Lead Developer
-                </p>
-              </div>
             </div>
           </motion.div>
-
         </div>
 
         {/* Optional subtle CTA */}
@@ -123,15 +115,7 @@ const StrategicOrigin = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
-        >
-          <Link
-            to="/story"
-            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium group"
-          >
-            <span>Read our full story</span>
-            <FaArrowRight className="text-xs group-hover:translate-x-1.5 transition-transform" />
-          </Link>
-        </motion.div>
+        ></motion.div>
       </div>
     </section>
   );

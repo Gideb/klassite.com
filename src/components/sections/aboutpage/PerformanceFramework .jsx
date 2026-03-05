@@ -1,16 +1,24 @@
-import { memo, useRef } from "react";
- // eslint-disable-next-line no-unused-vars
-import {  motion, useInView } from "framer-motion";
-import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { memo, useRef, useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion, useInView } from "framer-motion";
+import { FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
+import { HiOutlineCheckCircle } from "react-icons/hi";
+import video3 from "../../../assets/videos/video3.mp4";
+import poster from "../../../assets/images/poster.jpg";
 
 const PerformanceFramework = () => {
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef(null);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+
   const frameworks = [
     {
       id: "01",
       title: "Strategic Architecture",
       description:
-        "We map your business goals to technical requirements before writing a single line of code. No assumptions. Just strategy.",
+        "We map your business goals to technical requirements before writing a single line of code.",
       gradient: "from-purple-600 to-fuchsia-600",
       details: [
         "Business goal mapping",
@@ -22,7 +30,7 @@ const PerformanceFramework = () => {
       id: "02",
       title: "Experience Engineering",
       description:
-        "Every interaction is engineered for speed and clarity. We optimize for how users actually behave, not how we wish they would.",
+        "Every interaction is engineered for speed and clarity. Optimized for how users actually behave.",
       gradient: "from-blue-600 to-cyan-500",
       details: [
         "User behavior analysis",
@@ -34,7 +42,7 @@ const PerformanceFramework = () => {
       id: "03",
       title: "Scalable Development",
       description:
-        "Clean code that grows with you. Our architecture handles traffic spikes, new features, and future integration without breaking.",
+        "Clean code that grows with you. Handles traffic spikes and future integration without breaking.",
       gradient: "from-green-600 to-emerald-500",
       details: [
         "Clean code architecture",
@@ -46,7 +54,7 @@ const PerformanceFramework = () => {
       id: "04",
       title: "Optimization & Growth",
       description:
-        "Launch is just the beginning. We continuously refine based on real data, ensuring your digital presence gets better over time.",
+        "Launch is just the beginning. We continuously refine based on real data.",
       gradient: "from-orange-600 to-red-500",
       details: [
         "Data-driven refinement",
@@ -56,157 +64,173 @@ const PerformanceFramework = () => {
     },
   ];
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
   };
 
   return (
-    <section className="relative w-full py-20 sm:py-22 bg-white overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #6366f1 1px, transparent 0)`,
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
-      </div>
-
-      <div className="relative px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <section
+      ref={sectionRef}
+      className="relative w-full py-24 bg-white overflow-hidden"
+    >
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-600"></span>
-            </span>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-sm font-semibold text-purple-600 uppercase tracking-wider">
             Systematic Approach
-          </div>
+          </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-2">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
               Performance Framework
             </span>
           </h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 mt-4 text-lg">
             A repeatable process that turns technical complexity into measurable
             business growth.
           </p>
-        </motion.div>
+        </div>
 
-        {/* Vertical Timeline */}
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="relative"
-        >
-          {/* Vertical line with gradient */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5">
-            <div className="w-full h-full bg-linear-to-b from-purple-200 via-fuchsia-200 to-purple-200"></div>
-          </div>
-
-          {/* Timeline items */}
-          <div className="space-y-12">
+        {/* Split Layout: Framework Left, Video Right */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Left Column - Framework Timeline */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
+          >
             {frameworks.map((item, idx) => (
-              <motion.div
-                key={idx}
-                variants={itemVariants}
-                className="relative flex gap-8 group"
-              >
-                {/* Number badge with glow effect */}
-                <div className="relative shrink-0">
+              <div key={idx} className="relative flex gap-6 group">
+                {/* Number badge */}
+                <div className="shrink-0">
                   <div
-                    className={`relative w-16 h-16 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg z-10 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     {item.id}
                   </div>
-                  {/* Glow ring */}
-                  <div
-                    className={`absolute inset-0 rounded-full bg-linear-to-br ${item.gradient} opacity-20 blur-xl group-hover:opacity-30 transition-opacity`}
-                  ></div>
                 </div>
 
-                {/* Content card */}
-                <div className="flex-1 pt-2 pb-8">
-                  <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 group-hover:shadow-lg transition-all duration-300 group-hover:-translate-y-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      {item.description}
-                    </p>
+                {/* Content */}
+                <div className="flex-1 pb-6 border-b border-gray-100 last:border-0">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 mb-3">{item.description}</p>
 
-                    {/* Detail list */}
-                    <ul className="space-y-2">
-                      {item.details.map((detail, i) => (
-                        <li
-                          key={i}
-                          className="flex items-center gap-2 text-sm text-gray-500"
-                        >
-                          <FaCheckCircle
-                            className={`text-transparent bg-clip-text bg-linear-to-br ${item.gradient} text-xs`}
-                          />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-1">
+                    {item.details.map((detail, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-2 text-sm text-gray-500"
+                      >
+                        <HiOutlineCheckCircle
+                          className={`text-transparent bg-clip-text bg-linear-to-br ${item.gradient} text-sm`}
+                        />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <Link
-            to="/methodology"
-            className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+          {/* Right Column - Video */}
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative top-50"
           >
-            <span>Explore our methodology</span>
-            <FaArrowRight className="text-sm group-hover:translate-x-1.5 transition-transform" />
-          </Link>
-          <p className="text-sm text-gray-400 mt-4">
-            *Every project follows this framework, adapted to your specific
-            needs
-          </p>
-        </motion.div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 aspect-video">
+              {/* Video Element */}
+              <video
+                ref={videoRef}
+                src={video3}
+                poster={poster}
+                autoPlay
+                muted={isMuted}
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              />
+
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-linear-to-t from-purple-900/40 via-transparent to-transparent pointer-events-none"></div>
+
+              {/* Video Controls */}
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={togglePlay}
+                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  >
+                    {isPlaying ? (
+                      <FaPause className="text-sm" />
+                    ) : (
+                      <FaPlay className="text-sm ml-0.5" />
+                    )}
+                  </button>
+                  <button
+                    onClick={toggleMute}
+                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+                  >
+                    {isMuted ? (
+                      <FaVolumeMute className="text-sm" />
+                    ) : (
+                      <FaVolumeUp className="text-sm" />
+                    )}
+                  </button>
+                </div>
+
+                <span className="text-xs text-white/80 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                  How we build • 1:24
+                </span>
+              </div>
+
+              {/* Play/Pause when out of view */}
+              {!isInView && isPlaying && (
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                  <button
+                    onClick={togglePlay}
+                    className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white hover:bg-purple-700 transition-colors animate-pulse"
+                  >
+                    <FaPlay className="text-xl ml-1" />
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Video Caption */}
+            <div className="mt-4 text-center text-sm text-gray-500">
+              See our framework in action • Behind-the-scenes at Klass Koncepts
+            </div>
+
+            {/* Decorative Elements */}
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 -z-10"></div>
+            <div className="absolute -top-4 -left-4 w-32 h-32 bg-fuchsia-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 -z-10"></div>
+          </motion.div>
+
+          {}
+        </div>
       </div>
     </section>
   );

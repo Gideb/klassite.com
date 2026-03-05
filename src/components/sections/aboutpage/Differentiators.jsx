@@ -201,7 +201,7 @@ const Differentiators = () => {
             </Link>
           </div>
           <p className="text-sm text-gray-400 mt-4">
-            Join 40+ businesses that have scaled with us
+            Join 30+ businesses that have scaled with us
           </p>
         </motion.div>
       </div>
