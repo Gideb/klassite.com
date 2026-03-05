@@ -1,4 +1,5 @@
 import { memo, useRef } from "react";
+ // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import {
   FaRocket,
@@ -84,7 +85,7 @@ const Differentiators = () => {
   };
 
   return (
-    <section className="relative w-full py-24 sm:py-28 bg-gradient-to-b from-white to-purple-50/30 overflow-hidden">
+    <section className="relative w-full py-20 sm:py-22 bg-linear-to-b from-white to-purple-50/30 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
@@ -133,9 +134,9 @@ const Differentiators = () => {
                 variants={itemVariants}
                 className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden"
               >
-                {/* Gradient background on hover */}
+                {/* linear background on hover */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-linear-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 ></div>
 
                 {/* Content */}
@@ -166,13 +167,13 @@ const Differentiators = () => {
 
                   {/* Bottom accent */}
                   <div
-                    className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${item.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}
+                    className={`absolute -bottom-8 left-0 right-0 h-1 bg-linear-to-r ${item.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}
                   ></div>
                 </div>
 
                 {/* Decorative corner */}
                 <div
-                  className={`absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-br ${item.gradient} opacity-10 rounded-bl-full`}
+                  className={`absolute -top-2 -right-2 w-12 h-12 bg-linear-to-br ${item.gradient} opacity-10 rounded-bl-full`}
                 ></div>
               </motion.div>
             );

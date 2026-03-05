@@ -1,4 +1,5 @@
 import { memo, useRef } from "react";
+ // eslint-disable-next-line no-unused-vars
 import {  motion, useInView } from "framer-motion";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -81,7 +82,7 @@ const PerformanceFramework = () => {
   };
 
   return (
-    <section className="relative w-full py-24 sm:py-28 bg-white overflow-hidden">
+    <section className="relative w-full py-20 sm:py-22 bg-white overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div
@@ -130,8 +131,8 @@ const PerformanceFramework = () => {
           className="relative"
         >
           {/* Vertical line with gradient */}
-          <div className="absolute left-[2rem] top-0 bottom-0 w-0.5">
-            <div className="w-full h-full bg-gradient-to-b from-purple-200 via-fuchsia-200 to-purple-200"></div>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5">
+            <div className="w-full h-full bg-linear-to-b from-purple-200 via-fuchsia-200 to-purple-200"></div>
           </div>
 
           {/* Timeline items */}
@@ -143,15 +144,15 @@ const PerformanceFramework = () => {
                 className="relative flex gap-8 group"
               >
                 {/* Number badge with glow effect */}
-                <div className="relative flex-shrink-0">
+                <div className="relative shrink-0">
                   <div
-                    className={`relative w-16 h-16 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg z-10 group-hover:scale-110 transition-transform duration-300`}
+                    className={`relative w-16 h-16 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg z-10 group-hover:scale-110 transition-transform duration-300`}
                   >
                     {item.id}
                   </div>
                   {/* Glow ring */}
                   <div
-                    className={`absolute inset-0 rounded-full bg-gradient-to-br ${item.gradient} opacity-20 blur-xl group-hover:opacity-30 transition-opacity`}
+                    className={`absolute inset-0 rounded-full bg-linear-to-br ${item.gradient} opacity-20 blur-xl group-hover:opacity-30 transition-opacity`}
                   ></div>
                 </div>
 
@@ -173,7 +174,7 @@ const PerformanceFramework = () => {
                           className="flex items-center gap-2 text-sm text-gray-500"
                         >
                           <FaCheckCircle
-                            className={`text-transparent bg-clip-text bg-gradient-to-br ${item.gradient} text-xs`}
+                            className={`text-transparent bg-clip-text bg-linear-to-br ${item.gradient} text-xs`}
                           />
                           <span>{detail}</span>
                         </li>
