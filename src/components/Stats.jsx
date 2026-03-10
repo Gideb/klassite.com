@@ -83,11 +83,7 @@ const Stats = () => {
                   {/* Top Row */}
                   <div className="flex items-center justify-between mb-6">
                     {/* Stat Number */}
-                    <div className="flex items-start gap-3">
-                      <span className="text-xl leading-none text-gray-100 mt-1">
-                        •
-                      </span>
-
+                    <div>
                       <h3 className="text-3xl font-bold text-gray-100 leading-none">
                         {statsInView ? (
                           <>
@@ -114,9 +110,14 @@ const Stats = () => {
                   </div>
 
                   {/* Label */}
-                  <p className="text-gray-100 opacity-90 text-sm">
-                    {stat.label}
-                  </p>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl leading-none text-gray-100  opacity-90 ">
+                      •
+                    </span>
+                    <p className="text-gray-100 opacity-90 text-sm ">
+                      {stat.label}
+                    </p>
+                  </div>
                 </div>
               );
             })}

@@ -70,9 +70,9 @@ const Navbar = () => {
             className="md:hidden flex flex-col gap-1 cursor-pointer"
             onClick={() => setMenuOpen(true)}
           >
-            <span className="w-6 h-1 bg-gray-800"></span>
-            <span className="w-6 h-1 bg-gray-800"></span>
-            <span className="w-6 h-1 bg-gray-800"></span>
+            <span className="w-6 h-0.75 bg-gray-400"></span>
+            <span className="w-5 h-0.75 bg-black/50"></span>
+            <span className="w-4 h-0.75 bg-black/70"></span>
           </button>
         </div>
       </nav>

@@ -85,7 +85,7 @@ const Differentiators = () => {
   };
 
   return (
-    <section className="relative w-full py-20 sm:py-22 bg-linear-to-b from-white to-purple-50/30 overflow-hidden">
+    <section className="relative w-full py-20 sm:py-22 bg-linear-to-b from-gray-200 to-gray-200 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>

@@ -1,18 +1,10 @@
-import { memo, useRef, useState } from "react";
+import { memo, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
-import { motion, useInView } from "framer-motion";
-import { FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { HiOutlineCheckCircle } from "react-icons/hi";
-import video3 from "../../../assets/videos/video3.mp4";
-import poster from "../../../assets/images/poster.jpg";
 
 const PerformanceFramework = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef(null);
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
-
   const frameworks = [
     {
       id: "01",
@@ -64,23 +56,9 @@ const PerformanceFramework = () => {
     },
   ];
 
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
+  // Split frameworks into two columns
+  const leftColumnFrameworks = frameworks.slice(0, 2); // First two items
+  const rightColumnFrameworks = frameworks.slice(2, 4); // Last two items
 
   return (
     <section
@@ -90,9 +68,13 @@ const PerformanceFramework = () => {
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-purple-600 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
+            </span>
             Systematic Approach
-          </span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-2">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
@@ -105,9 +87,9 @@ const PerformanceFramework = () => {
           </p>
         </div>
 
-        {/* Split Layout: Framework Left, Video Right */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left Column - Framework Timeline */}
+        {/* Two Column Layout */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left Column - First Two Items */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -115,8 +97,15 @@ const PerformanceFramework = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            {frameworks.map((item, idx) => (
-              <div key={idx} className="relative flex gap-6 group">
+            {leftColumnFrameworks.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+                className="relative flex gap-6 group"
+              >
                 {/* Number badge */}
                 <div className="shrink-0">
                   <div
@@ -127,7 +116,7 @@ const PerformanceFramework = () => {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pb-6 border-b border-gray-100 last:border-0">
+                <div className="flex-1 pb-6 border-b border-gray-100">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {item.title}
                   </h3>
@@ -147,90 +136,92 @@ const PerformanceFramework = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
+
+            {/* Optional: Add some decorative element for left column */}
+            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-1 h-48 bg-gradient-to-b from-purple-600 via-fuchsia-500 to-transparent rounded-full opacity-20"></div>
           </motion.div>
 
-          {/* Right Column - Video */}
-
+          {/* Right Column - Last Two Items */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative top-50"
+            className="space-y-8 lg:mt-16" // Added margin top for visual interest
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 aspect-video">
-              {/* Video Element */}
-              <video
-                ref={videoRef}
-                src={video3}
-                poster={poster}
-                autoPlay
-                muted={isMuted}
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              />
-
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-purple-900/40 via-transparent to-transparent pointer-events-none"></div>
-
-              {/* Video Controls */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={togglePlay}
-                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+            {rightColumnFrameworks.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 + idx * 0.2 }}
+                className="relative flex gap-6 group"
+              >
+                {/* Number badge */}
+                <div className="shrink-0">
+                  <div
+                    className={`w-14 h-14 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {isPlaying ? (
-                      <FaPause className="text-sm" />
-                    ) : (
-                      <FaPlay className="text-sm ml-0.5" />
-                    )}
-                  </button>
-                  <button
-                    onClick={toggleMute}
-                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                  >
-                    {isMuted ? (
-                      <FaVolumeMute className="text-sm" />
-                    ) : (
-                      <FaVolumeUp className="text-sm" />
-                    )}
-                  </button>
+                    {item.id}
+                  </div>
                 </div>
 
-                <span className="text-xs text-white/80 bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                  How we build • 1:24
-                </span>
-              </div>
+                {/* Content */}
+                <div className="flex-1 pb-6 border-b border-gray-100">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 mb-3">{item.description}</p>
 
-              {/* Play/Pause when out of view */}
-              {!isInView && isPlaying && (
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <button
-                    onClick={togglePlay}
-                    className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white hover:bg-purple-700 transition-colors animate-pulse"
-                  >
-                    <FaPlay className="text-xl ml-1" />
-                  </button>
+                  <ul className="space-y-1">
+                    {item.details.map((detail, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-2 text-sm text-gray-500"
+                      >
+                        <HiOutlineCheckCircle
+                          className={`text-transparent bg-clip-text bg-linear-to-br ${item.gradient} text-sm`}
+                        />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              )}
-            </div>
+              </motion.div>
+            ))}
 
-            {/* Video Caption */}
-            <div className="mt-4 text-center text-sm text-gray-500">
-              See our framework in action • Behind-the-scenes at Klass Koncepts
-            </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 -z-10"></div>
-            <div className="absolute -top-4 -left-4 w-32 h-32 bg-fuchsia-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 -z-10"></div>
+            {/* Optional: Add some decorative element for right column */}
+            <div className="hidden lg:block absolute right-0 bottom-0 w-32 h-32 bg-gradient-to-tl from-fuchsia-200 to-purple-200 rounded-full filter blur-3xl opacity-30"></div>
           </motion.div>
-
-          {}
         </div>
+
+        {/* Optional: Add a connecting line or decorative element between columns */}
+        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-y-1/2 w-px h-64 bg-gradient-to-b from-transparent via-purple-300 to-transparent"></div>
+
+        {/* Bottom CTA or decorative element */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <div className="inline-flex items-center gap-3 bg-purple-50 px-6 py-3 rounded-full">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-purple-600"></span>
+            </span>
+            <span className="text-sm text-gray-600">
+              <span className="font-semibold text-purple-600">
+                4 proven phases
+              </span>{" "}
+              to transform your digital presence
+            </span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

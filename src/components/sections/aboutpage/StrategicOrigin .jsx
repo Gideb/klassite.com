@@ -1,121 +1,149 @@
 import { memo, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
-import codeArchitecture from "../../../assets/images/aboutPage/slow-fast-site1.jpg";
+import { FaBullseye, FaEye } from "react-icons/fa";
 
 const StrategicOrigin = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
+  // Animation variants for cleaner code
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -30 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 30 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  // Origin story paragraphs
+  const storyParagraphs = [
+    "We started Klass Koncepts because we kept seeing the same pattern: brilliant businesses held back by digital foundations that couldn't scale. Great ideas, poor execution.",
+    "While agencies chased trends and flashy designs, we noticed the fundamentals crumbling. Sites that looked beautiful but took 6 seconds to load. Platforms that crashed during traffic spikes. Tools that should work together acting like strangers.",
+    "So we took a different path. No templates. No cookie-cutter solutions. Just clean architecture, performance-first engineering, and honest conversations about what actually works. Three years later, we're still at it—building digital experiences that don't just look good, but perform where it counts.",
+  ];
+
   return (
-    <section className="relative w-full py-18 sm:py-20 bg-white overflow-hidden">
-      {/* Subtle background texture */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, #6366f1 1px, transparent 0)`,
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
-      </div>
+    <section className="relative w-full py-20 bg-white overflow-hidden">
+      {/* Subtle background pattern */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, #6366f1 1px, transparent 0)`,
+          backgroundSize: "40px 40px",
+        }}
+      />
 
       <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Right Column - Image */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Left Column - Origin Story */}
           <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
-            {/* Main image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={codeArchitecture}
-                alt="Clean code architecture and development"
-                className="w-full h-auto object-cover"
-              />
-
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-linear-to-tr from-purple-600/20 via-transparent to-fuchsia-600/20"></div>
-            </div>
-
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-fuchsia-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30"></div>
-
-            {/* Floating tech badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-lg p-3 border border-gray-100">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-xs font-mono text-gray-600">
-                  99.9% uptime
-                </span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Left Column - Text */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             {/* Section Header */}
-            <div className="mb-6">
-              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600" />
                 </span>
                 Strategic Origin
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
                 Closing the{" "}
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-fuchsia-600">
                   Performance Gap
                 </span>
               </h2>
             </div>
 
-            {/* Clean typography */}
-            <div className="space-y-5 text-gray-700 leading-relaxed text-justify">
-              <p className="text-lg">
-                We started Klass Koncepts because we kept seeing the same
-                pattern: brilliant businesses held back by digital foundations
-                that couldn't scale. Great ideas, poor execution.
-              </p>
+            {/* Story paragraphs */}
+            <div className="space-y-4">
+              {storyParagraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-gray-700 leading-relaxed border-l-2 border-purple-200 pl-4 hover:border-purple-400 transition-colors duration-300"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </motion.div>
 
-              <p>
-                While agencies chased trends and flashy designs, we noticed the
-                fundamentals crumbling. Sites that looked beautiful but took 6
-                seconds to load. Platforms that crashed during traffic spikes.
-                Tools that should work together acting like strangers.
-              </p>
+          {/* Right Column - Mission & Vision */}
+          <motion.div
+            ref={ref}
+            variants={fadeInRight}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6 lg:mt-12"
+          >
+            {/* Mission Card */}
+            <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-200">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-purple-100 to-fuchsia-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <FaBullseye className="text-xl text-purple-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Our Mission
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    To eliminate the performance gap between business ambition
+                    and digital reality. We build infrastructure that scales,
+                    experiences that convert, and partnerships that outlast
+                    trends.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-              <p>
-                So we took a different path. No templates. No cookie-cutter
-                solutions. Just clean architecture, performance-first
-                engineering, and honest conversations about what actually works.
-                Three years later, we're still at it—building digital
-                experiences that don't just look good, but perform where it
-                counts.
-              </p>
+            {/* Vision Card */}
+            <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-fuchsia-200">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-100 to-purple-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <FaEye className="text-xl text-fuchsia-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Our Vision
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    A digital landscape where every business—regardless of
+                    size—has access to enterprise-grade performance. We're
+                    building the standard for how brands grow through
+                    technology.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Optional: Stats or metrics */}
+            <div className="flex items-center gap-6 pt-4">
+              <div>
+                <div className="text-2xl font-bold text-purple-600">3+</div>
+                <div className="text-xs text-gray-500">Years Building</div>
+              </div>
+              <div className="w-px h-8 bg-gray-200" />
+              <div>
+                <div className="text-2xl font-bold text-fuchsia-600">100%</div>
+                <div className="text-xs text-gray-500">Performance Focus</div>
+              </div>
+              <div className="w-px h-8 bg-gray-200" />
+              <div>
+                <div className="text-2xl font-bold text-purple-600">∞</div>
+                <div className="text-xs text-gray-500">Scalable Solutions</div>
+              </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Optional subtle CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
-        ></motion.div>
       </div>
     </section>
   );
