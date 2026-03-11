@@ -61,7 +61,7 @@ const Stats = () => {
             alt="Team working"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-purple-900/60 backdrop-blur-md"></div>
+          <div className="absolute inset-0 bg-purple-900/60 backdrop-blur-sm"></div>
         </div>
 
         {/* Stats Content */}
@@ -73,7 +73,7 @@ const Stats = () => {
               return (
                 <div
                   key={index}
-                  className="relative shadow-sm hover:shadow-md transition-all duration-300 bg-white/30 backdrop-blur-md border border-white/20 p-5 rounded-2xl hover:scale-105 hover:bg-white/40 mx-2"
+                  className="relative shadow-sm hover:shadow-md transition-all duration-300 bg-white/30 backdrop-blur-md border border-white/30 p-5 rounded-2xl hover:scale-105 hover:bg-white/40 mx-2"
                 >
                   {/* Faded index number */}
                   <span className="absolute bottom-3 right-5 text-4xl font-semibold text-gray-200 opacity-40">

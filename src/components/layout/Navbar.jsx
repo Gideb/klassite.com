@@ -47,7 +47,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="relative font-medium text-gray-400 hover:text-purple-600
+                className="relative font-medium text-black/90 hover:text-purple-700
         after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.name}
