@@ -1,4 +1,5 @@
-import "./styles/App.css";
+import "./App.css";
+import "./index.css";
 import AppRoutes from './routes/AppRoutes.jsx'
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
