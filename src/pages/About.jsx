@@ -6,13 +6,13 @@ import PerformanceFramework from "../components/sections/aboutpage/PerformanceFr
 import Differentiators from "../components/sections/aboutpage/Differentiators";
 
 
-
 const About = () => {
   return (
     <div>
       <OtherHeroSection />
       <MarketReality />
       <StrategicOrigin />
+   
       <PerformanceFramework />
       <Differentiators />
       <CTASection />

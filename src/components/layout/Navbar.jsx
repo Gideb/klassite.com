@@ -27,7 +27,7 @@ const Navbar = () => {
     { name: "Home", path: "/", icon: HiOutlineHome },
     { name: "About", path: "/about", icon: HiOutlineUser },
     { name: "Services", path: "/services", icon: FiBriefcase },
-    { name: "Portfolio", path: "/portfolio", icon: FiHome },
+    { name: "Blog", path: "/blog", icon: FiHome },
   ];
 
   return (

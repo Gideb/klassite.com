@@ -26,7 +26,7 @@ const MarketReality = () => {
       text: "Disconnected tools create data silos",
       icon: FiUsers,
       stat: "Isolated",
-      color: "text-yellow-500",
+      color: "text-orange-500",
     },
     {
       text: "Outdated tech increases security risks",
@@ -61,7 +61,7 @@ const MarketReality = () => {
       suffix: "x", 
       prefix: "",
       desc: "traffic spikes", 
-      color: "text-yellow-600",
+      color: "text-orange-600",
       duration: 2,
     },
     { 
@@ -80,17 +80,17 @@ const MarketReality = () => {
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 bg-purple-100 backdrop-blur-sm text-purple-600 px-4 py-2 rounded-full mb-6 text-sm font-semibold  uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-purple-100 backdrop-blur-sm text-purple-600 px-4 py-2 rounded-full mb-6 text-sm font-semibold tracking-wider">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-400 "></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-500 "></span>
             </span>
             Market Reality
           </div>
           
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
             The Hidden Cost of{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-orange-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-orange-500">
               Weak Digital Infrastructure
             </span>
           </h2>
@@ -134,7 +134,7 @@ const MarketReality = () => {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow shadow-red-400 hover:shadow-red-500"
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow shadow-red-200 hover:shadow-red-300"
               >
                 <div className={`text-2xl font-bold ${stat.color} mb-1`}>
                   {stat.prefix}

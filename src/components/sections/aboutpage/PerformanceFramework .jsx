@@ -140,7 +140,7 @@ const PerformanceFramework = () => {
             ))}
 
             {/* Optional: Add some decorative element for left column */}
-            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-1 h-48 bg-gradient-to-b from-purple-600 via-fuchsia-500 to-transparent rounded-full opacity-20"></div>
+            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-1 h-48 bg-linear-to-b from-purple-600 via-fuchsia-500 to-transparent rounded-full opacity-20"></div>
           </motion.div>
 
           {/* Right Column - Last Two Items */}
@@ -194,15 +194,15 @@ const PerformanceFramework = () => {
             ))}
 
             {/* Optional: Add some decorative element for right column */}
-            <div className="hidden lg:block absolute right-0 bottom-0 w-32 h-32 bg-gradient-to-tl from-fuchsia-200 to-purple-200 rounded-full filter blur-3xl opacity-30"></div>
+            <div className="hidden lg:block absolute right-0 bottom-0 w-32 h-32 bg-linear-to-tl from-fuchsia-200 to-purple-200 rounded-full filter blur-3xl opacity-30"></div>
           </motion.div>
         </div>
 
         {/* Optional: Add a connecting line or decorative element between columns */}
-        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-y-1/2 w-px h-64 bg-gradient-to-b from-transparent via-purple-300 to-transparent"></div>
+        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-y-1/2 w-px h-64 bg-linear-to-b from-transparent via-purple-300 to-transparent"></div>
 
         {/* Bottom CTA or decorative element */}
-        <motion.div
+     {/*    <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -221,7 +221,7 @@ const PerformanceFramework = () => {
               to transform your digital presence
             </span>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
