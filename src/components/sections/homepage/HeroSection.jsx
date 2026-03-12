@@ -8,10 +8,9 @@ import CountUp from "react-countup";
 import { memo } from "react";
 import { useInView } from "react-intersection-observer";
 
-
 const BLOB_CONFIG = [
   {
-    className: "-top-20 -left-20 w-[600px] h-[600px]", 
+    className: "-top-20 -left-20 w-[600px] h-[600px]",
     color: "purple",
   },
 
@@ -75,47 +74,42 @@ const ServiceTags = memo(() => (
 
 ServiceTags.displayName = "ServiceTags";
 
-
-
 const HeroSection = () => {
-
   const { ref: STATSRef, inView: STATSInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-
   return (
     <section
       id="hero"
-      className="scroll-mt-16 relative mt-10 sm:mt-5  w-full overflow-hidden bg-white py-10 sm:py-10 lg:py-24 "
+      className="scroll-mt-16 relative mt-10 sm:mt-5  w-full overflow-hidden bg-white py-8 sm:py-8 lg:py-22 "
       aria-label="Hero section"
     >
       <BlobBackground />
 
       {/* Main Content Container */}
-      <div className=" z-10  px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
+      <div className=" z-10  px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center mt-5">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-12 lg:py-0">
           {/* Left Content */}
           <div className="flex flex-col space-y-8 lg:space-y-10 order-2 lg:order-1">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+         {/*    <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
               </span>
               Digital Agency & Portfolio
-            </div>
+            </div> */}
 
             {/* Main Heading */}
-            <h1 className="font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight lg:leading-[1.2] text-gray-900">
+            <h1 className="font-bold text-2xl sm:text-3xl lg:text-5xl xl:text-6xl leading-tight lg:leading-[1.2] text-gray-900">
               We Build{" "}
               <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-fuchsia-500">
                 High Performance
               </span>{" "}
               <br className="hidden sm:block" />
-              Digital Systems That <br className="hidden sm:block" />
-              Grow Your Business
+              Digital Systems That Grow Your Business
             </h1>
 
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
@@ -162,7 +156,7 @@ const HeroSection = () => {
             >
               {STATS.map((stat) => (
                 <div key={stat.label} className="text-center sm:text-left">
-                  <h5 className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-linear-to-br from-purple-600 to-fuchsia-600">
+                  <h5 className="text-xl sm:text-2xl font-semibold bg-clip-text text-transparent bg-linear-to-br from-purple-600 to-fuchsia-600">
                     {STATSInView ? (
                       <>
                         <CountUp end={stat.end} duration={stat.duration} />

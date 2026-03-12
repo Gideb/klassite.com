@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Brand Column */}
             <div className="space-y-4 text-center sm:text-left">
-              <h2 className="text-2xl font-bold">
+              <h2 className="text-2xl font-semibold">
                 <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-600 to-fuchsia-700">
                   Klass
                 </span>{" "}
@@ -164,7 +164,7 @@ const Footer = () => {
 
           {/* Newsletter Section - Centered on all screens */}
           <div className="mt-16 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-8">
+            <h2 className="text-2xl sm:text-2xl font-semibold mb-8">
               Ready to Build Something Exceptional?
             </h2>
 
@@ -204,7 +204,6 @@ const Footer = () => {
 
             {/* Legal Links */}
             <div className="flex gap-4 text-xs">
-             
               <Link
                 to="/privacy"
                 className="hover:text-purple-500 transition-colors"

@@ -100,7 +100,7 @@ const ContactSection = () => {
           </div>
 
           {/* Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 text-gray-900">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal mt-4 text-gray-900">
             Let's{" "}
             <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
               Work Together

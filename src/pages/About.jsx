@@ -4,7 +4,7 @@ import MarketReality from "../components/sections/aboutpage/MarketReality ";
 import StrategicOrigin from "../components/sections/aboutpage/StrategicOrigin ";
 import PerformanceFramework from "../components/sections/aboutpage/PerformanceFramework ";
 import Differentiators from "../components/sections/aboutpage/Differentiators";
-
+import Team from "../components/sections/aboutpage/Team";
 
 const About = () => {
   return (
@@ -12,9 +12,9 @@ const About = () => {
       <OtherHeroSection />
       <MarketReality />
       <StrategicOrigin />
-   
       <PerformanceFramework />
       <Differentiators />
+      <Team />
       <CTASection />
     </div>
   );

@@ -41,10 +41,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section
-      id="why-us"
-      className="relative w-full py-28 bg-gray-300"
-    >
+    <section id="why-us" className="relative w-full py-28 bg-gray-300">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         {/* Floating Orbs */}{" "}
@@ -52,7 +49,7 @@ const WhyUs = () => {
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-300 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
         <div className="max-w-3xl mb-20">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-purple-300 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
+          <div className="font-[autography] inline-flex items-center gap-2 bg-purple-300 text-purple-600 px-4 py-2 rounded-full text-md font-normal w-fit mx-auto lg:mx-0">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
@@ -60,7 +57,7 @@ const WhyUs = () => {
             Why Choose Us
           </div>
 
-          <h2 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight text-gray-800">
+          <h2 className="mt-4 text-2xl sm:text-3xl font-normal leading-tight text-purple-800">
             Built for performance. <br />
             Designed for long-term growth.
           </h2>
@@ -97,7 +94,9 @@ const WhyUs = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{item.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  {item.title}
+                </h3>
 
                 {/* Stat */}
                 <p className="text-sm text-gray-600">{item.stat}</p>

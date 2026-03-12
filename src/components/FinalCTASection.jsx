@@ -28,7 +28,6 @@ const FinalCTASection = () => {
       id="final-cta"
       className="scroll-mt-24 py-20 sm:py-24 lg:py-28 bg-white text-purple-700 relative overflow-hidden"
     >
-
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main CTA Card */}
         <div className="bg-white/10 backdrop-blur-xl rounded-3xl sm:rounded-4xl p-8 sm:p-12 lg:p-16 border border-white/20 shadow-2xl">
@@ -36,10 +35,10 @@ const FinalCTASection = () => {
           <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-12">
             {/* Rocket Icon Animation */}
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6 animate-bounce">
-              <FaRocket className="text-3xl text-black" />
+              <FaRocket className="text-2xl text-black" />
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-4">
               Ready to Build a{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-300 to-amber-500">
                 Digital Platform
@@ -71,7 +70,7 @@ const FinalCTASection = () => {
           <div className="text-center mb-8">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-3 bg-fuchsia-200 text-purple-900 px-8 sm:px-12 py-4 sm:py-5 rounded-full font-bold text-lg sm:text-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              className="group inline-flex items-center gap-3 bg-fuchsia-200 text-purple-900 px-8 sm:px-12 py-4 sm:py-5 rounded-full font-normal text-lg sm:text-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <FaCalendarAlt className="text-purple-600 group-hover:rotate-12 transition-transform" />
               <span>Schedule a Strategy Call</span>

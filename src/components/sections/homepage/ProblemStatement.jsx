@@ -1,12 +1,11 @@
 import {
-  FaRocket,
   FaMousePointer,
   FaChartLine,
   FaClock,
   FaCheckCircle,
   FaUsers,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
 import { memo } from "react";
 
 const ProblemStatement = () => {
@@ -17,7 +16,7 @@ const ProblemStatement = () => {
       description: "Costing you revenue daily",
       stat: "53% of users abandon sites loading >3s",
       color: "amber",
-      gradient: "from-amber-500 to-amber-700",
+      gradient: "from-fuchsia-500 to-purple-700",
     },
     {
       icon: FaMousePointer,
@@ -25,7 +24,7 @@ const ProblemStatement = () => {
       description: "Driving customers away",
       stat: "88% won't return after bad UX",
       color: "amber",
-      gradient: "from-amber-500 to-amber-700",
+      gradient: "from-fuchsia-500 to-purple-700",
     },
     {
       icon: FaChartLine,
@@ -33,7 +32,7 @@ const ProblemStatement = () => {
       description: "Hiding you from customers",
       stat: "75% never scroll past page 1",
       color: "amber",
-      gradient: "from-amber-500 to-amber-700",
+      gradient: "from-fuchsia-500 to-purple-700",
     },
     {
       icon: FaUsers,
@@ -41,7 +40,7 @@ const ProblemStatement = () => {
       description: "Wasting time & resources",
       stat: "Businesses lose 20-30% revenue to inefficiency",
       color: "amber",
-      gradient: "from-amber-500 to-amber-700",
+      gradient: "from-fuchsia-500 to-purple-700",
     },
   ];
 
@@ -53,7 +52,7 @@ const ProblemStatement = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-md font-normal font-[autography] mb-6">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
@@ -61,7 +60,7 @@ const ProblemStatement = () => {
             The Reality Check
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 leading-tight">
             Most Businesses Don't Have a{" "}
             <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-fuchsia-500">
               Website Problem.
@@ -102,7 +101,7 @@ const ProblemStatement = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-normal text-gray-900 mb-2">
                     {problem.title}
                   </h3>
                   <p className="text-gray-600 mb-4 text-sm">

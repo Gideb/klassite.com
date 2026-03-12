@@ -52,7 +52,9 @@ const SocialProofSection = () => {
         <div
           className={`w-full h-full rounded-xl bg-linear-to-br ${gradient} flex items-center justify-center`}
         >
-          <span className="text-white font-bold text-xl">{name.charAt(0)}</span>
+          <span className="text-white font-semibold text-xl">
+            {name.charAt(0)}
+          </span>
         </div>
       );
     }
@@ -90,7 +92,7 @@ const SocialProofSection = () => {
           {/* RIGHT SIDE — TRUST CONTENT */}
           <div>
             {/* Small Badge */}
-            <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0 order-1">
+            <div className="font-[autography] inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-md font-medium w-fit mx-auto lg:mx-0 order-1">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
@@ -99,7 +101,7 @@ const SocialProofSection = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 mt-3">
+            <h2 className="text-2xl sm:text-2xl lg:text-3xl font-normal text-gray-900 mb-6 mt-3">
               Trusted by{" "}
               <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-600 to-fuchsia-600">
                 Industry Leaders

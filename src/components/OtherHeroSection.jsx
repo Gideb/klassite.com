@@ -161,7 +161,7 @@ const OtherHeroSection = ({
           )}
 
           {/* Page Title */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center">
+          <h1 className="text-2xl sm:text-3xl lg:text-3xl font-semibold text-white text-center">
             {pageName}
           </h1>
         </div>

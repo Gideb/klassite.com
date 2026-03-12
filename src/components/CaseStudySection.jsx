@@ -11,8 +11,6 @@ import {
 } from "react-icons/fa";
 
 const CaseStudySection = () => {
-  
-
   const caseStudies = [
     {
       id: 1,
@@ -128,7 +126,7 @@ const CaseStudySection = () => {
             Case Studies
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 mb-4">
             Real Results.{" "}
             <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
               Real Impact.
@@ -173,7 +171,7 @@ const CaseStudySection = () => {
                 {/* Content Side */}
                 <div className="lg:w-7/12 p-6 sm:p-8 lg:p-10">
                   {/* Title */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                     {study.title}
                   </h3>
 

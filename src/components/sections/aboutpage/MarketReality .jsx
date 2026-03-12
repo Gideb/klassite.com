@@ -37,39 +37,39 @@ const MarketReality = () => {
   ];
 
   const stats = [
-    { 
-      label: "Conversion Drop", 
-      value: 2.4, 
-      suffix: "%", 
+    {
+      label: "Conversion Drop",
+      value: 2.4,
+      suffix: "%",
       prefix: "↓ ",
-      desc: "per second delay", 
+      desc: "per second delay",
       color: "text-red-600",
       duration: 2.5,
     },
-    { 
-      label: "Bounce Rate", 
-      value: 32, 
-      suffix: "%", 
+    {
+      label: "Bounce Rate",
+      value: 32,
+      suffix: "%",
       prefix: "↑ ",
-      desc: "on slow sites", 
+      desc: "on slow sites",
       color: "text-orange-600",
       duration: 2.5,
     },
-    { 
-      label: "Scale Limit", 
-      value: 10, 
-      suffix: "x", 
+    {
+      label: "Scale Limit",
+      value: 10,
+      suffix: "x",
       prefix: "",
-      desc: "traffic spikes", 
+      desc: "traffic spikes",
       color: "text-orange-600",
       duration: 2,
     },
-    { 
-      label: "Revenue Loss", 
-      value: 1.6, 
-      suffix: "B", 
+    {
+      label: "Revenue Loss",
+      value: 1.6,
+      suffix: "B",
       prefix: "$",
-      desc: "annual (est.)", 
+      desc: "annual (est.)",
       color: "text-red-600",
       duration: 3,
     },
@@ -87,8 +87,8 @@ const MarketReality = () => {
             </span>
             Market Reality
           </div>
-          
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+
+          <h2 className="text-2xl sm:text-3xl font-normal text-gray-900 mt-2">
             The Hidden Cost of{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-orange-500">
               Weak Digital Infrastructure
@@ -115,9 +115,9 @@ const MarketReality = () => {
                       <Icon className={`w-5 h-5 ${item.color}`} />
                     </div>
                     <span className="text-gray-700">{item.text}</span>
-                    <span className={`font-mono font-bold ${item.color}`}>
-                     
-                    </span>
+                    <span
+                      className={`font-mono font-semibold ${item.color}`}
+                    ></span>
                   </li>
                 );
               })}
@@ -136,7 +136,7 @@ const MarketReality = () => {
                 key={idx}
                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow shadow-red-200 hover:shadow-red-300"
               >
-                <div className={`text-2xl font-bold ${stat.color} mb-1`}>
+                <div className={`text-2xl font-semibold ${stat.color} mb-1`}>
                   {stat.prefix}
                   {statsInView ? (
                     <CountUp

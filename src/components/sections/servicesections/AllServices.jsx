@@ -128,9 +128,9 @@ const AllServices = () => {
   const WhyUsCard = ({ icon: Icon, title, desc }) => (
     <div className="bg-white px-8 py-10 rounded-xl shadow hover:shadow-xl cursor-pointer border-2 border-gray-200 border-t-5 border-t-amber-600 transform transition duration-300 ease-in-out hover:-translate-y-3 hover:border-t-3">
       <div className="text-white bg-linear-to-br from-purple-600 to-fuchsia-600 w-16 h-16 flex items-center justify-center rounded-lg mb-4 mx-auto shadow-lg">
-        <Icon className="text-3xl" aria-hidden="true" />
+        <Icon className="text-2xl" aria-hidden="true" />
       </div>
-      <h4 className="font-bold text-xl mb-4 text-black">{title}</h4>
+      <h4 className="font-normal text-xl mb-4 text-black">{title}</h4>
       <p className="text-gray-500 text-md leading-relaxed">{desc}</p>
     </div>
   );
@@ -144,7 +144,7 @@ const AllServices = () => {
           What We Do
         </div>
 
-        <h2 className="text-4xl sm:text-5xl font-bold mt-4 text-black">
+        <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
           Our{" "}
           <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
             Services
@@ -157,8 +157,8 @@ const AllServices = () => {
 
         {/* Digital Solutions */}
         <div className="mt-16">
-          <div className="flex items-center gap-2 text-purple-600 text-xl font-bold mb-8">
-            <FaGlobe className="text-3xl" aria-hidden="true" />
+          <div className="flex items-center gap-2 text-purple-600 text-xl font-normal mb-8">
+            <FaGlobe className="text-2xl" aria-hidden="true" />
             <span>Digital Solutions</span>
             <span className="flex-1 h-px bg-linear-to-r from-purple-600 to-transparent ml-4"></span>
           </div>
@@ -172,8 +172,8 @@ const AllServices = () => {
 
         {/* Creative & Media */}
         <div className="mt-16">
-          <div className="flex items-center gap-2 text-amber-600 text-xl font-bold mb-8">
-            <FaPalette className="text-3xl" aria-hidden="true" />
+          <div className="flex items-center gap-2 text-amber-600 text-xl font-normal mb-8">
+            <FaPalette className="text-2xl" aria-hidden="true" />
             <span>Creative & Media</span>
             <span className="flex-1 h-px bg-linear-to-r from-amber-600 to-transparent ml-4"></span>
           </div>
@@ -187,8 +187,8 @@ const AllServices = () => {
 
         {/* Security Solutions */}
         <div className="mt-16">
-          <div className="flex items-center gap-2 text-purple-600 text-xl font-bold mb-8">
-            <FaShieldAlt className="text-3xl" aria-hidden="true" />
+          <div className="flex items-center gap-2 text-purple-600 text-xl font-normal mb-8">
+            <FaShieldAlt className="text-2xl" aria-hidden="true" />
             <span>Security Solutions</span>
             <span className="flex-1 h-px bg-linear-to-r from-purple-600 to-transparent ml-4"></span>
           </div>
@@ -212,7 +212,7 @@ const AllServices = () => {
             Why Us
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-bold mt-4 text-black">
+          <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
             Why Choose{" "}
             <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-800 to-fuchsia-500">
               Klass Koncepts
@@ -233,19 +233,19 @@ const AllServices = () => {
           {/* Stats Section */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-20">
             <div>
-              <div className="text-4xl font-bold text-purple-600">50+</div>
+              <div className="text-3xl font-semibold text-purple-600">50+</div>
               <div className="text-gray-500 mt-2">Projects Completed</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-600">30+</div>
+              <div className="text-3xl font-semibold text-purple-600">30+</div>
               <div className="text-gray-500 mt-2">Happy Clients</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-600">5+</div>
+              <div className="text-3xl font-semibold text-purple-600">5+</div>
               <div className="text-gray-500 mt-2">Years Experience</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-600">24/7</div>
+              <div className="text-3xl font-semibold text-purple-600">24/7</div>
               <div className="text-gray-500 mt-2">Support</div>
             </div>
           </div>

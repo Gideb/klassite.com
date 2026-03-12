@@ -4,13 +4,13 @@ import { FaGithub, FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const PortfolioSection = () => {
-
   const portfolioItems = [
     {
       id: 1,
       title: "TechCorp Website Redesign",
       category: "Web Development",
-      description: "Modern corporate website with CMS integration and SEO optimization.",
+      description:
+        "Modern corporate website with CMS integration and SEO optimization.",
       image: placeholder,
       tags: ["React", "Node.js", "Tailwind"],
       liveLink: "https://example.com",
@@ -109,7 +109,8 @@ const PortfolioSection = () => {
       >
         {/* Rolling Fuchsia Overlay - Your creative effect */}
         <div
-          className={`absolute inset-0 bg-linear-to-br from-purple-600/10 to-fuchsia-500/10 transition-transform duration-700 ease-out z-10 ${isHovered ? "translate-y-0" : "-translate-y-full"
+          className={`absolute inset-0 bg-linear-to-br from-purple-600/10 to-fuchsia-500/10 transition-transform duration-700 ease-out z-10 ${
+            isHovered ? "translate-y-0" : "-translate-y-full"
           }`}
         ></div>
 
@@ -139,7 +140,8 @@ const PortfolioSection = () => {
 
           {/* Hover Overlay Links */}
           <div
-            className={`absolute inset-0 bg-black/60 flex items-center justify-center gap-4 transition-opacity duration-300 z-20 ${isHovered ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0 bg-black/60 flex items-center justify-center gap-4 transition-opacity duration-300 z-20 ${
+              isHovered ? "opacity-100" : "opacity-0"
             }`}
           >
             {item.liveLink && (
@@ -200,7 +202,7 @@ const PortfolioSection = () => {
           Portfolio
         </div>
 
-        <h2 className="text-4xl sm:text-5xl font-bold mt-4 text-black">
+        <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
           Our{" "}
           <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
             Work

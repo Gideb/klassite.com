@@ -76,7 +76,7 @@ const Stats = () => {
                   className="relative shadow-sm hover:shadow-md transition-all duration-300 bg-white/30 backdrop-blur-md border border-white/30 p-5 rounded-2xl hover:scale-105 hover:bg-white/40 mx-2"
                 >
                   {/* Faded index number */}
-                  <span className="absolute bottom-3 right-5 text-4xl font-semibold text-gray-200 opacity-40">
+                  <span className="absolute bottom-3 right-5 text-3xl font-semibold text-gray-200 opacity-40">
                     00{index + 1}
                   </span>
 
@@ -84,7 +84,7 @@ const Stats = () => {
                   <div className="flex items-center justify-between mb-6">
                     {/* Stat Number */}
                     <div>
-                      <h3 className="text-3xl font-bold text-gray-100 leading-none">
+                      <h3 className="text-2xl font-semibold text-gray-100 leading-none">
                         {statsInView ? (
                           <>
                             <CountUp

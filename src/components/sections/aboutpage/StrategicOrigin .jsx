@@ -55,7 +55,7 @@ const StrategicOrigin = () => {
                 </span>
                 Strategic Origin
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
+              <h2 className="text-2xl sm:text-3xl font-normal text-gray-900 mt-3">
                 Closing the{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
                   Performance Gap
@@ -128,17 +128,19 @@ const StrategicOrigin = () => {
             {/* Optional: Stats or metrics */}
             <div className="flex items-center gap-6 pt-4">
               <div>
-                <div className="text-2xl font-bold text-purple-600">3+</div>
+                <div className="text-2xl font-semibold text-purple-600">3+</div>
                 <div className="text-xs text-gray-500">Years Building</div>
               </div>
               <div className="w-px h-8 bg-gray-200" />
               <div>
-                <div className="text-2xl font-bold text-fuchsia-600">100%</div>
+                <div className="text-2xl font-semibold text-fuchsia-600">
+                  100%
+                </div>
                 <div className="text-xs text-gray-500">Performance Focus</div>
               </div>
               <div className="w-px h-8 bg-gray-200" />
               <div>
-                <div className="text-2xl font-bold text-purple-600">∞</div>
+                <div className="text-2xl font-semibold text-purple-600">∞</div>
                 <div className="text-xs text-gray-500">Scalable Solutions</div>
               </div>
             </div>

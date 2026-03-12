@@ -75,7 +75,7 @@ const PerformanceFramework = () => {
             </span>
             Systematic Approach
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-2">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 mt-2">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
               Performance Framework
@@ -109,7 +109,7 @@ const PerformanceFramework = () => {
                 {/* Number badge */}
                 <div className="shrink-0">
                   <div
-                    className={`w-14 h-14 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     {item.id}
                   </div>
@@ -163,7 +163,7 @@ const PerformanceFramework = () => {
                 {/* Number badge */}
                 <div className="shrink-0">
                   <div
-                    className={`w-14 h-14 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     {item.id}
                   </div>
@@ -202,7 +202,7 @@ const PerformanceFramework = () => {
         <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-y-1/2 w-px h-64 bg-linear-to-b from-transparent via-purple-300 to-transparent"></div>
 
         {/* Bottom CTA or decorative element */}
-     {/*    <motion.div
+        {/*    <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

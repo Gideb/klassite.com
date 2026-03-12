@@ -59,7 +59,7 @@ const AboutFounder = () => {
               />
             </div>
 
-            <h3 className="text-2xl font-bold text-gray-900">
+            <h3 className="text-2xl font-semibold text-gray-900">
               Gilbert Larbi Debrah
             </h3>
             <p className="text-purple-600 font-medium mt-1">
@@ -103,11 +103,10 @@ const AboutFounder = () => {
 
           {/* RIGHT – Text Content */}
           <div className="order-1 lg:order-2">
-         
-            <h2 className="text-4xl sm:text-5xl font-bold mt-6 leading-tight">
-              Built By a{" "}
+            <h2 className="text-3xl sm:text-4xl font-normal mt-6 leading-tight">
+              Built By {" "}
               <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-600 to-fuchsia-500">
-                Developer
+               A Developer
               </span>{" "}
               Who Gets It
             </h2>
@@ -168,7 +167,7 @@ const AboutFounder = () => {
               Tech Stack
             </div>
 
-            <h2 className="text-4xl sm:text-5xl font-bold mt-4 text-black">
+            <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
               Tools &{" "}
               <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-800 to-fuchsia-500">
                 Technologies

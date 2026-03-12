@@ -104,15 +104,15 @@ const TestimonialSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto animate-fadeIn">
+        <div className="font-[autography] inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-md font-medium mx-auto animate-fadeIn">
           <span className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse"></span>
           Testimonials
         </div>
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 text-gray-900">
-          What Clients{" "}
+        <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal mt-4 text-gray-900">
+          What{" "}
           <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
-            Say
+            Clients Say
           </span>
         </h2>
         <p className="text-gray-500 mt-3 max-w-2xl mx-auto text-sm sm:text-base">
@@ -153,7 +153,7 @@ const TestimonialSection = () => {
                 >
                   <div className="bg-white shadow-lg hover:shadow-xl p-6 sm:p-8 lg:p-10 rounded-2xl text-gray-600 leading-relaxed h-full flex flex-col transition-all duration-300 hover:-translate-y-1 border border-gray-100">
                     <div className="text-purple-200 mb-4">
-                      <FaQuoteRight className="text-3xl sm:text-4xl opacity-50" />
+                      <FaQuoteRight className="text-2xl sm:text-3xl opacity-50" />
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6 gap-4 sm:gap-0">

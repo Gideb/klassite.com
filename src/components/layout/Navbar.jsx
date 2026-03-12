@@ -92,7 +92,7 @@ const Navbar = () => {
         <div className="p-6 flex flex-col h-full ">
           {/* Close Button */}
           <button
-            className="self-end text-4xl font-semibold cursor-pointer hover:text-purple-600 transition"
+            className="self-end text-3xl font-semibold cursor-pointer hover:text-purple-600 transition"
             onClick={() => setMenuOpen(false)}
           >
             ×

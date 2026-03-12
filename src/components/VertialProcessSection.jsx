@@ -81,7 +81,7 @@ const VerticalProcessSection = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-normal mb-4">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
               Proven Process
@@ -123,7 +123,7 @@ const VerticalProcessSection = () => {
                         <Icon className="text-xl" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">
+                        <h3 className="text-xl font-semibold text-gray-900">
                           {process.title}
                         </h3>
                         <p className="text-sm text-gray-500">

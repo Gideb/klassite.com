@@ -1,5 +1,5 @@
 import { memo, useRef } from "react";
- // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import {
   FaRocket,
@@ -106,7 +106,7 @@ const Differentiators = () => {
             <FaStar className="text-xs" />
             Why Choose Us
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-2">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 mt-2">
             Why{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
               Growth-Focused Brands
@@ -157,7 +157,7 @@ const Differentiators = () => {
                       {item.title}
                     </h3>
                     <span
-                      className={`text-sm font-bold ${item.metricColor} bg-white px-2 py-1 rounded-full border border-gray-100`}
+                      className={`text-sm font-semibold ${item.metricColor} bg-white px-2 py-1 rounded-full border border-gray-100`}
                     >
                       {item.metric}
                     </span>
@@ -182,7 +182,6 @@ const Differentiators = () => {
             );
           })}
         </motion.div>
-
 
         {/* Bottom CTA */}
         <motion.div
