@@ -42,7 +42,7 @@ const LeadershipGrid = () => {
               <img
                 src={leader.image}
                 alt={leader.name}
-                className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
+                className="w-full h-125 object-cover rounded-2xl shadow-lg"
               />
               <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-purple-800/10 group-hover:ring-purple-800/30 transition-colors"></div>
             </div>

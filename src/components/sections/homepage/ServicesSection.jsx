@@ -61,7 +61,7 @@ const ServicesSection = () => {
       <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
         {/* Simple Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-normal w-fit mx-auto lg:mx-0 font-[autography]">
+          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-md font-semibold w-fit mx-auto lg:mx-0 font-script">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>

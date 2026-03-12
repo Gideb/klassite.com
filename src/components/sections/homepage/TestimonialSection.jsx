@@ -104,7 +104,7 @@ const TestimonialSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
-        <div className="font-[autography] inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto animate-fadeIn">
+        <div className="font-script inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-md font-semibold mx-auto animate-fadeIn">
           <span className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse"></span>
           Testimonials
         </div>

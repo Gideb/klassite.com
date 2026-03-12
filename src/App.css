@@ -382,8 +382,16 @@ html {
 
 @font-face {
     font-family: "Autography";
-    src: url("./assets/fonts/Autography.woff2") format("woff2");
-    font-weight: semibold;
+    src: url("./assets/fonts/Autography-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Autography";
+    src: url("./assets/fonts/Autography-SemiBold.woff2") format("woff2");
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
