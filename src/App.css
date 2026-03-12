@@ -370,3 +370,24 @@ html {
     }
 }
 
+
+
+@font-face {
+    font-family: "Autography";
+    src: url("./assets/fonts/Autography.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Autography";
+    src: url("./assets/fonts/Autography.woff2") format("woff2");
+    font-weight: semibold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-script: "Autography", "poppins", cursive;
+}
