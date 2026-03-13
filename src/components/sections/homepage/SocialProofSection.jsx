@@ -8,6 +8,7 @@ import logo3 from "../../../assets/images/brandLogo/logo3.png";
 import logo4 from "../../../assets/images/brandLogo/logo4.png";
 import logo5 from "../../../assets/images/brandLogo/logo5.png";
 import logo6 from "../../../assets/images/brandLogo/logo6.png";
+import Topicbg from "../../ui/topicbg";
 
 const SocialProofSection = () => {
   const brands = [
@@ -91,14 +92,8 @@ const SocialProofSection = () => {
 
           {/* RIGHT SIDE — TRUST CONTENT */}
           <div>
-            {/* Small Badge */}
-            <div className="font-script inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-md font-semibold w-fit mx-auto lg:mx-0 order-1">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
-              </span>
-              Trusted Partners
-            </div>
+            
+            <Topicbg topic="Trusted Partners" />
 
             {/* Heading */}
             <h2 className="text-2xl sm:text-2xl lg:text-3xl font-normal text-gray-900 mb-6 mt-3">

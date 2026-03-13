@@ -25,19 +25,19 @@ const CTASection = () => {
         </h2>
 
         <p className="text-white mb-8">
-          Let's discuss your project over a free 30-minute strategic call.
+          Let's discuss your project.
         </p>
 
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 group cursor-pointer"
+          className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 group cursor-pointer"
         >
           <span>Get Your Free Consultation</span>
-          <FaArrowRight className="text-sm group-hover:translate-x-1.5 transition-transform" />
-        </Link>
 
+          <FaArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1.5" />
+        </Link>
         <p className="text-sm text-gray-300 mt-4">
-          No pressure • Just honest advice
+          Schedule A 30 Minute Call • Just Honest Advice
         </p>
       </div>
     </section>

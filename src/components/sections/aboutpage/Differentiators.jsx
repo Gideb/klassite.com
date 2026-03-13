@@ -10,7 +10,8 @@ import {
   FaStar,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Stats from "../../Stats";
+import Topicbg from "../../ui/topicbg";
+
 
 const Differentiators = () => {
   const differentiators = [
@@ -86,11 +87,11 @@ const Differentiators = () => {
   };
 
   return (
-    <section className="relative w-full py-20 sm:py-22 bg-gray-200 overflow-hidden">
+    <section className="relative w-full py-20 sm:py-22 bg-white/90 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
       </div>
 
       <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -102,10 +103,7 @@ const Differentiators = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <FaStar className="text-xs" />
-            Why Choose Us
-          </div>
+          <Topicbg topic="Why Choose Us" />
           <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 mt-2">
             Why{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
@@ -119,7 +117,7 @@ const Differentiators = () => {
           </p>
         </motion.div>
 
-        <Stats />
+     
 
         {/* 2x2 Grid */}
         <motion.div

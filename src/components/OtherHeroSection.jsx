@@ -2,7 +2,7 @@ import { memo, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Team from "../assets/images/serviceSpecific/teamWorking.jpg";
 
-// Reusable Hero Section Component
+
 const OtherHeroSection = ({
   pageName = "About",
   backgroundImage = Team,

@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { memo } from "react";
+import Topicbg from "../../ui/topicbg";
 
 const WhyUs = () => {
   const differentiators = [
@@ -41,7 +42,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section id="why-us" className="relative w-full py-28 bg-gray-300">
+    <section id="why-us" className="relative w-full py-28 bg-gray-200">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         {/* Floating Orbs */}{" "}
@@ -49,13 +50,7 @@ const WhyUs = () => {
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-300 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
         <div className="max-w-3xl mb-20">
           {/* Badge */}
-          <div className="font-script inline-flex items-center gap-2 bg-purple-300 text-purple-600 px-4 py-2 rounded-full text-md font-semibold w-fit mx-auto lg:mx-0">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
-            </span>
-            Why Choose Us
-          </div>
+          <Topicbg topic="Why Choose Us" />
 
           <h2 className="mt-4 text-2xl sm:text-3xl font-normal leading-tight text-purple-800">
             Built for performance. <br />
@@ -75,16 +70,16 @@ const WhyUs = () => {
             return (
               <div
                 key={item.id}
-                className="group bg-white/30 border border-white/90 
+                className="group bg-white/70 border border-white/80 
                        rounded-2xl p-8 
                        backdrop-blur-md
                        transition-all duration-300
-                       hover:bg-white/10 hover:-translate-y-2 hover:shadow-xs hover:shadow-purple-600"
+                       hover:bg-white/30 hover:-translate-y-2 hover:shadow-xs hover:shadow-purple-600"
               >
                 {/* Icon */}
                 <div className="mb-6">
                   <div
-                    className="w-12 h-12 rounded-xl bg-white/80 
+                    className="w-12 h-12 rounded-xl bg-white/90 
                               flex items-center justify-center
                               transition-all duration-300
                               group-hover:bg-purple-600/80 "

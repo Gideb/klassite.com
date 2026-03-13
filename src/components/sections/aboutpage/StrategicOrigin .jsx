@@ -2,6 +2,7 @@ import { memo, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import { FaBullseye, FaEye } from "react-icons/fa";
+import Topicbg from "../../ui/topicbg";
 
 const StrategicOrigin = () => {
   const ref = useRef(null);
@@ -26,7 +27,7 @@ const StrategicOrigin = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 bg-white overflow-hidden">
+    <section className="relative w-full py-20 bg-purple-50 overflow-hidden">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 opacity-5"
@@ -48,23 +49,18 @@ const StrategicOrigin = () => {
           >
             {/* Section Header */}
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600" />
-                </span>
-                Strategic Origin
-              </div>
+              <Topicbg topic="Strategic Origin" />
               <h2 className="text-2xl sm:text-3xl font-normal text-gray-900 mt-3">
                 Closing the{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
                   Performance Gap
                 </span>
               </h2>
+              <div className="h-px w-32 bg-purple-800 mt-5"></div>
             </div>
 
             {/* Story paragraphs */}
-            <div className="space-y-4">
+            <div className="space-y-6 text-justify">
               {storyParagraphs.map((paragraph, index) => (
                 <p
                   key={index}
@@ -83,7 +79,7 @@ const StrategicOrigin = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6 lg:mt-12"
+            className="space-y-8 lg:mt-30"
           >
             {/* Mission Card */}
             <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-200">

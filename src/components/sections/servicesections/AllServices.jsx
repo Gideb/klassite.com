@@ -13,7 +13,39 @@ import {
   FaChartLine,
   FaBolt,
   FaMobile,
+  FaRocket,
+  FaStore,
+  FaUniversity,
+  FaHeartbeat,
+  FaGraduationCap,
+  FaBuilding,
+  FaUtensils,
+  FaArrowRight,
+  FaChevronDown,
+  FaStar,
+  FaQuoteLeft,
 } from "react-icons/fa";
+
+
+const testimonials = [
+  {
+    name: "John Doe",
+    company: "TechStart Inc.",
+    quote: "Klass Koncepts transformed our online presence completely. Their attention to detail and creative approach exceeded our expectations.",
+    rating: 5,
+    image: "/client1.jpg" // Optional
+  },
+  {
+    name: "Jane Smith",
+    company: "Creative Agency",
+    quote: "Professional, reliable, and incredibly talented. They delivered our project ahead of schedule and within budget.",
+    rating: 5,
+    image: "/client2.jpg"
+  },
+  // Add more testimonials...
+];
+
+
 
 const AllServices = () => {
   const services = {
@@ -78,6 +110,100 @@ const AllServices = () => {
       },
     ],
   };
+
+  const faqs = [
+    {
+      question: "What is your typical project timeline?",
+      answer:
+        "Project timelines vary based on complexity. A standard website takes 4-6 weeks, while more complex applications may take 8-12 weeks.",
+    },
+    {
+      question: "Do you offer ongoing maintenance?",
+      answer:
+        "Yes! We offer various maintenance packages to keep your website secure, updated, and performing optimally.",
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer:
+        "We accept bank transfers, credit cards, and PayPal. Payment plans are available for larger projects.",
+    },
+    // Add more FAQs...
+  ];
+
+  const processSteps = [
+    {
+      icon: FaLightbulb,
+      title: "Discovery",
+      desc: "We analyze your needs, goals, and target audience to create a tailored strategy.",
+      color: "purple",
+    },
+    {
+      icon: FaCode,
+      title: "Planning & Design",
+      desc: "Wireframing, prototyping, and design concepts aligned with your brand vision.",
+      color: "purple",
+    },
+    {
+      icon: FaBolt,
+      title: "Development",
+      desc: "Agile development with regular updates and feedback loops.",
+      color: "purple",
+    },
+    {
+      icon: FaRocket,
+      title: "Launch & Support",
+      desc: "Deployment, testing, and ongoing maintenance to ensure peak performance.",
+      color: "purple",
+    },
+  ];
+
+  const industries = [
+    {
+      icon: FaStore,
+      name: "Retail & E-commerce",
+      desc: "Online stores and retail solutions",
+    },
+    {
+      icon: FaUniversity,
+      name: "Financial Services",
+      desc: "Secure banking & fintech platforms",
+    },
+    {
+      icon: FaHeartbeat,
+      name: "Healthcare",
+      desc: "Medical practices & wellness centers",
+    },
+    {
+      icon: FaGraduationCap,
+      name: "Education",
+      desc: "E-learning & institutional websites",
+    },
+    {
+      icon: FaBuilding,
+      name: "Real Estate",
+      desc: "Property listings & virtual tours",
+    },
+    {
+      icon: FaUtensils,
+      name: "Food & Beverage",
+      desc: "Restaurants & hospitality",
+    },
+  ];
+
+  const portfolio = [
+    {
+      title: "E-commerce Platform",
+      category: "Web Development",
+      image: "../../../assets/images/profile.jpg",
+      tags: ["React", "Node.js", "MongoDB"],
+    },
+    {
+      title: "Brand Identity Design",
+      category: "Graphic Design",
+      image: "../../../assets/images/profile.jpg",
+      tags: ["Logo Design", "Brand Guidelines"],
+    },
+  ];
 
   const whyUs = [
     {
@@ -200,7 +326,117 @@ const AllServices = () => {
           </div>
         </div>
       </section>
+      <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24 text-center">
+        <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto">
+          <span className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse"></span>
+          Our Process
+        </div>
 
+        <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
+          How We{" "}
+          <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
+            Work
+          </span>
+        </h2>
+
+        <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-lg">
+          A streamlined approach to bringing your vision to life.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+          {processSteps.map((step, index) => (
+            <div key={index} className="relative">
+              {index < processSteps.length - 1 && (
+                <div className="hidden lg:block absolute top-12 left-[60%] w-full h-0.5 bg-gradient-to-r from-purple-600 to-transparent"></div>
+              )}
+              <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 relative z-10">
+                <div className="text-4xl font-bold text-purple-200 absolute top-4 right-4">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-2xl mb-6">
+                  <step.icon />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                <p className="text-gray-500">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="bg-gray-50 px-6 sm:px-12 py-24 text-center">
+        <div className="max-w-7xl mx-auto">
+          <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
+            Industries We Serve
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
+            Solutions for{" "}
+            <span className="bg-clip-text text-transparent bg-linear-to-br from-amber-600 to-orange-500">
+              Every Industry
+            </span>
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-16">
+            {industries.map((industry, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-amber-600">
+                  <div className="text-amber-600 text-3xl mb-3 group-hover:scale-110 transition-transform">
+                    <industry.icon />
+                  </div>
+                  <h4 className="font-semibold text-sm">{industry.name}</h4>
+                  <p className="text-xs text-gray-400 mt-1 hidden group-hover:block">
+                    {industry.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      // Add this before the Why Us section
+      <section className="bg-white px-6 sm:px-12 py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
+              Testimonials
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
+              What Our{" "}
+              <span className="bg-clip-text text-transparent bg-linear-to-br from-amber-600 to-orange-500">
+                Clients Say
+              </span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 p-8 rounded-xl relative hover:shadow-xl transition-shadow"
+              >
+                <FaQuoteLeft className="text-amber-200 text-4xl absolute top-4 right-4" />
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <FaStar key={i} className="text-amber-400" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">
+                  "{testimonial.quote}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-fuchsia-600 rounded-full"></div>
+                  <div>
+                    <h4 className="font-semibold">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-400">
+                      {testimonial.company}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Why Us Section */}
       <section
         id="why-us"
@@ -248,6 +484,99 @@ const AllServices = () => {
               <div className="text-3xl font-semibold text-purple-600">24/7</div>
               <div className="text-gray-500 mt-2">Support</div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24 text-center">
+        <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
+          Our Work
+        </div>
+
+        <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
+          Featured{" "}
+          <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
+            Projects
+          </span>
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          {portfolio.map((project, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="aspect-video bg-gradient-to-br from-purple-400 to-fuchsia-400 relative overflow-hidden">
+                {/* Replace with actual images */}
+                <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all"></div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-95 backdrop-blur-sm p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <h4 className="font-semibold text-lg">{project.title}</h4>
+                <p className="text-purple-600 text-sm mb-2">
+                  {project.category}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button className="mt-12 px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors inline-flex items-center gap-2">
+          View All Projects <FaArrowRight />
+        </button>
+      </section>
+      <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
+            FAQ
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
+            Frequently Asked{" "}
+            <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
+              Questions
+            </span>
+          </h2>
+        </div>
+
+        <div className="max-w-3xl mx-auto mt-16 space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-lg overflow-hidden"
+            >
+              <button className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                <span className="font-semibold">{faq.question}</span>
+                <FaChevronDown className="text-purple-600" />
+              </button>
+              <div className="px-6 pb-4 text-gray-500">{faq.answer}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+      // Add at the very end
+      <section className="bg-gradient-to-r from-purple-600 to-fuchsia-600 px-6 sm:px-12 py-20 text-center text-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Ready to Transform Your Digital Presence?
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            Let's discuss how we can help you achieve your business goals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get a Free Consultation
+            </button>
+            <button className="px-8 py-4 border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+              View Our Portfolio
+            </button>
           </div>
         </div>
       </section>

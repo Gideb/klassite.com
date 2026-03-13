@@ -27,13 +27,12 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent page refresh
 
-    // Here you would typically send the data to a backend
+  
     console.log("Form submitted:", formData);
 
-    // Show success message
+    
     setSuccess(true);
 
-    // Reset form after 3 seconds
     setTimeout(() => {
       setSuccess(false);
       setFormData({
@@ -67,7 +66,7 @@ const ContactSection = () => {
     {
       icon: FaWhatsapp,
       label: "WhatsApp",
-      value: "Chat on WhatsApp",
+      value: "Chat us on WhatsApp",
       href: "https://wa.me/233552649953",
     },
   ];
@@ -94,10 +93,10 @@ const ContactSection = () => {
 
         <div className="max-w-7xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
+         {/*  <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
             <span className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse"></span>
             Contact
-          </div>
+          </div> */}
 
           {/* Title */}
           <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal mt-4 text-gray-900">
@@ -162,6 +161,28 @@ const ContactSection = () => {
                   );
                   return <Content key={index} />;
                 })}
+              </div>
+              <div className="mt-6 space-y-3 text-gray-700">
+                <h2 className="text-lg font-semibold text-gray-900">
+                  Business Hours
+                </h2>
+
+                <p className="flex justify-between border-b border-gray-200 pb-1">
+                  <span className="font-medium">Mon - Fri</span>
+                  <span className="text-gray-600">9am - 7pm GMT</span>
+                </p>
+
+                <p className="flex justify-between border-b border-gray-200 pb-1">
+                  <span className="font-medium">Sat</span>
+                  <span className="text-gray-600">10am - 3pm GMT</span>
+                </p>
+
+                <p className="pt-2 text-sm text-gray-600">
+                  Response Time:{" "}
+                  <span className="font-medium text-gray-800">
+                    3–10 hours during business days
+                  </span>
+                </p>
               </div>
             </div>
 
@@ -301,6 +322,18 @@ const ContactSection = () => {
           </div>
         </div>
       </section>
+
+      {/*  <section>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127066.72273054127!2d-0.2621303729990889!3d5.591373806167042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra!5e0!3m2!1sen!2sgh!4v1773408836177!5m2!1sen!2sgh"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section> */}
     </div>
   );
 };

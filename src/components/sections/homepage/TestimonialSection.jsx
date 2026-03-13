@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
+import Topicbg from "../../ui/topicbg";
 
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -104,10 +105,8 @@ const TestimonialSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
-        <div className="font-script inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-md font-semibold mx-auto animate-fadeIn">
-          <span className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse"></span>
-          Testimonials
-        </div>
+        
+        <Topicbg topic="Testimonials" />
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal mt-4 text-gray-900">
           What{" "}

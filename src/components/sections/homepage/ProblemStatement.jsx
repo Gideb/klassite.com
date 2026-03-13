@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 
 import { memo } from "react";
+import Topicbg from "../../ui/topicbg";
 
 const ProblemStatement = () => {
   const problems = [
@@ -15,15 +16,15 @@ const ProblemStatement = () => {
       title: "Slow Websites",
       description: "Costing you revenue daily",
       stat: "53% of users abandon sites loading >3s",
-      color: "amber",
-      gradient: "from-fuchsia-500 to-purple-700",
+      color: "fuchsia",
+      gradient: "from-purple-500 to-fuchsia-700",
     },
     {
       icon: FaMousePointer,
       title: "Poor User Experience",
       description: "Driving customers away",
       stat: "88% won't return after bad UX",
-      color: "amber",
+      color: "purple",
       gradient: "from-fuchsia-500 to-purple-700",
     },
     {
@@ -31,15 +32,15 @@ const ProblemStatement = () => {
       title: "Weak SEO Performance",
       description: "Hiding you from customers",
       stat: "75% never scroll past page 1",
-      color: "amber",
-      gradient: "from-fuchsia-500 to-purple-700",
+      color: "fuchsia",
+      gradient: "from-purple-500 to-fuchsia-700",
     },
     {
       icon: FaUsers,
       title: "Disconnected Systems",
       description: "Wasting time & resources",
       stat: "Businesses lose 20-30% revenue to inefficiency",
-      color: "amber",
+      color: "purple",
       gradient: "from-fuchsia-500 to-purple-700",
     },
   ];
@@ -52,16 +53,7 @@ const ProblemStatement = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div
-          
-            className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-md font-semibold mb-6 font-script"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
-            </span>
-            The Reality Check
-          </div>
+          <Topicbg topic="The Reality Check" />
 
           <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 leading-tight">
             Most Businesses Don't Have a{" "}

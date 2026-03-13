@@ -2,6 +2,7 @@ import { memo, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { HiOutlineCheckCircle } from "react-icons/hi";
+import Topicbg from "../../ui/topicbg";
 
 const PerformanceFramework = () => {
   const sectionRef = useRef(null);
@@ -63,18 +64,12 @@ const PerformanceFramework = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-24 bg-white overflow-hidden"
+      className="relative w-full py-24 bg-white/90 overflow-hidden"
     >
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
-            </span>
-            Systematic Approach
-          </div>
+          <Topicbg topic="Systematic Approach" />
           <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 mt-2">
             Our{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">

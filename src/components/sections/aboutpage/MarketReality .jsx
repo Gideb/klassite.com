@@ -2,6 +2,7 @@ import { memo } from "react";
 import { FiTrendingDown, FiClock, FiWifi, FiUsers } from "react-icons/fi";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import Topicbg from "../../ui/topicbg";
 
 const MarketReality = () => {
   const { ref: statsRef, inView: statsInView } = useInView({
@@ -76,21 +77,15 @@ const MarketReality = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 sm:py-24 bg-gray-50">
+    <section className="relative w-full py-20 sm:py-24 bg-purple-50">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 bg-purple-100 backdrop-blur-sm text-purple-600 px-4 py-2 rounded-full mb-6 text-sm font-semibold tracking-wider">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-500 "></span>
-            </span>
-            Market Reality
-          </div>
+        <div className="max-w-xl mb-8">
+          <Topicbg topic="Market Reality" />
 
-          <h2 className="text-2xl sm:text-3xl font-normal text-gray-900 mt-2">
+          <h2 className="text-2xl sm:text-3xl  font-normal text-gray-900 mt-2">
             The Hidden Cost of{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-orange-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-500">
               Weak Digital Infrastructure
             </span>
           </h2>
