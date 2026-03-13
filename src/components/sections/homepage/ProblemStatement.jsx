@@ -8,6 +8,8 @@ import {
 
 import { memo } from "react";
 import Topicbg from "../../ui/topicbg";
+import Headings from "../../ui/Headings";
+import Subheading from "../../ui/Subheading";
 
 const ProblemStatement = () => {
   const problems = [
@@ -55,22 +57,13 @@ const ProblemStatement = () => {
         <div className="max-w-3xl mb-16">
           <Topicbg topic="The Reality Check" />
 
-          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 leading-tight">
-            Most Businesses Don't Have a{" "}
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-fuchsia-500">
-              Website Problem.
-            </span>
-            <br />
-            They Have a{" "}
-            <span className="bg-clip-text text-transparent bg-linear-to-r from-fuchsia-700 to-fuchsia-500">
-              Performance Problem
-            </span>
-          </h2>
+          <Headings black="Most Businesses Don't Have A Website Problem." />
+          <Headings colored="They Have A Performance Problem." />
 
-          <p className="text-lg text-gray-600 mt-6">
-            If your digital presence isn't performing, you're leaving money on
-            the table. Here's what's holding you back.
-          </p>
+          <Subheading
+            description="If your digital presence isn't performing, you're leaving money on
+            the table. Here's what's holding you back."
+          />
         </div>
 
         {/* Problems Grid */}

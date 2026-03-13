@@ -3,6 +3,8 @@ import { memo, useRef } from "react";
 import { motion } from "framer-motion";
 import { HiOutlineCheckCircle } from "react-icons/hi";
 import Topicbg from "../../ui/topicbg";
+import Subheading from "../../ui/Subheading";
+import Headings from "../../ui/Headings";
 
 const PerformanceFramework = () => {
   const sectionRef = useRef(null);
@@ -70,16 +72,14 @@ const PerformanceFramework = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Topicbg topic="Systematic Approach" />
-          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 mt-2">
-            Our{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
-              Performance Framework
-            </span>
-          </h2>
-          <p className="text-gray-600 mt-4 text-lg">
-            A repeatable process that turns technical complexity into measurable
-            business growth.
-          </p>
+
+          <Headings black="Our" colored=" Performance Framework" />
+
+          <Subheading
+            description=" A repeatable process that turns technical complexity into measurable
+            business growth."
+          />
+
         </div>
 
         {/* Two Column Layout */}

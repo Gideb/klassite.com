@@ -11,7 +11,8 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Topicbg from "../../ui/topicbg";
-
+import Subheading from "../../ui/Subheading";
+import Headings from "../../ui/Headings";
 
 const Differentiators = () => {
   const differentiators = [
@@ -104,20 +105,14 @@ const Differentiators = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <Topicbg topic="Why Choose Us" />
-          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal text-gray-900 mt-2">
-            Why{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
-              Growth-Focused Brands
-            </span>{" "}
-            Choose Us
-          </h2>
-          <p className="text-gray-600 mt-4 text-lg">
-            We don't just build websites—we build competitive advantages that
-            drive real business results.
-          </p>
-        </motion.div>
 
-     
+          <Headings black="Why Growth-Focused Brands " colored="   Choose Us" />
+
+          <Subheading
+            description=" We don't just build websites—we build competitive advantages that
+            drive real business results."
+          />
+        </motion.div>
 
         {/* 2x2 Grid */}
         <motion.div

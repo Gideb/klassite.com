@@ -3,6 +3,7 @@ import { memo, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FaBullseye, FaEye } from "react-icons/fa";
 import Topicbg from "../../ui/topicbg";
+import Headings from "../../ui/Headings";
 
 const StrategicOrigin = () => {
   const ref = useRef(null);
@@ -50,12 +51,9 @@ const StrategicOrigin = () => {
             {/* Section Header */}
             <div className="mb-8">
               <Topicbg topic="Strategic Origin" />
-              <h2 className="text-2xl sm:text-3xl font-normal text-gray-900 mt-3">
-                Closing the{" "}
-                <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
-                  Performance Gap
-                </span>
-              </h2>
+
+              <Headings black=" Closing the" colored="  Performance Gap" />
+
               <div className="h-px w-32 bg-purple-800 mt-5"></div>
             </div>
 

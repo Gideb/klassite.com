@@ -8,6 +8,7 @@ import webDev from "../../../assets/images/serviceSpecific/web-dev.jpg";
 import camera from "../../../assets/images/serviceSpecific/camera.jpg";
 import Stats from "../../Stats.jsx";
 import Topicbg from "../../ui/topicbg.jsx";
+import Headings from "../../ui/Headings.jsx";
 
 const ServicesSection = () => {
   const serviceGroups = [
@@ -63,12 +64,7 @@ const ServicesSection = () => {
         {/* Simple Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <Topicbg topic="Our Services" />
-          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal mt-2 mb-4 text-gray-900">
-            What We{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
-              Build
-            </span>
-          </h2>
+         <Headings black='What We' colored=' Build' />
         </div>
 
         <Stats />

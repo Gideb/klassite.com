@@ -8,6 +8,8 @@ import {
 import { Link } from "react-router-dom";
 import { memo } from "react";
 import Topicbg from "../../ui/topicbg";
+import Subheading from "../../ui/Subheading";
+import Headings from "../../ui/Headings";
 
 const WhyUs = () => {
   const differentiators = [
@@ -52,15 +54,13 @@ const WhyUs = () => {
           {/* Badge */}
           <Topicbg topic="Why Choose Us" />
 
-          <h2 className="mt-4 text-2xl sm:text-3xl font-normal leading-tight text-purple-800">
-            Built for performance. <br />
-            Designed for long-term growth.
-          </h2>
+          <Headings black="  Built for performance. " />
+          <Headings colored=" Designed for long-term growth." />
 
-          <p className="mt-6 text-lg text-gray-600">
-            We don’t just ship websites — we build scalable digital
-            infrastructure that supports serious business growth.
-          </p>
+          <Subheading
+            description="We don’t just ship websites — we build scalable digital
+            infrastructure that supports serious business growth."
+          />
         </div>
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

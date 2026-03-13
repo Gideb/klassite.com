@@ -3,6 +3,8 @@ import { FiTrendingDown, FiClock, FiWifi, FiUsers } from "react-icons/fi";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Topicbg from "../../ui/topicbg";
+import Headings from "../../ui/Headings";
+import Subheading from "../../ui/Subheading";
 
 const MarketReality = () => {
   const { ref: statsRef, inView: statsInView } = useInView({
@@ -82,25 +84,16 @@ const MarketReality = () => {
         {/* Section Header */}
         <div className="max-w-xl mb-8">
           <Topicbg topic="Market Reality" />
+          <Headings
+            black="The Hidden Cost of "
+            colored=" Weak Digital Infrastructure"
+          />
 
-          <h2 className="text-2xl sm:text-3xl  font-normal text-gray-900 mt-2">
-            The Hidden Cost of{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-500">
-              Weak Digital Infrastructure
-            </span>
-          </h2>
+          <Subheading description="  In today's digital landscape, speed isn't just a feature—it's the price of entry. Yet most businesses operate on foundations that can't keep up." />
         </div>
 
-        {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Column - Text */}
-          <div className="space-y-6">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              In today's digital landscape, speed isn't just a feature—it's the
-              price of entry. Yet most businesses operate on foundations that
-              can't keep up.
-            </p>
-
+          <div className="space-y-3">
             <ul className="space-y-4">
               {problems.map((item, idx) => {
                 const Icon = item.icon;

@@ -9,6 +9,8 @@ import logo4 from "../../../assets/images/brandLogo/logo4.png";
 import logo5 from "../../../assets/images/brandLogo/logo5.png";
 import logo6 from "../../../assets/images/brandLogo/logo6.png";
 import Topicbg from "../../ui/topicbg";
+import Subheading from "../../ui/Subheading";
+import Headings from "../../ui/Headings";
 
 const SocialProofSection = () => {
   const brands = [
@@ -90,26 +92,19 @@ const SocialProofSection = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE — TRUST CONTENT */}
+         
           <div>
-            
             <Topicbg topic="Trusted Partners" />
 
-            {/* Heading */}
-            <h2 className="text-2xl sm:text-2xl lg:text-3xl font-normal text-gray-900 mb-6 mt-3">
-              Trusted by{" "}
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-600 to-fuchsia-600">
-                Industry Leaders
-              </span>
-            </h2>
+            <Headings black=" Trusted by " colored="Industry Leaders" />
 
-            {/* Description */}
-            <p className="text-lg text-gray-600 mb-10">
-              We collaborate with forward-thinking brands who trust us to
-              deliver exceptional digital experiences.
-            </p>
+            <Subheading
+              description="We collaborate with forward-thinking brands who trust us to
+              deliver exceptional digital experiences."
+            />
+            <br />
 
-            {/* Logo Grid — Cleaner Version */}
+          
             <div className="grid grid-cols-3 gap-6">
               {brands.map((brand, index) => (
                 <div

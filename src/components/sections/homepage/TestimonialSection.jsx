@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 import Topicbg from "../../ui/topicbg";
+import Headings from "../../ui/Headings";
+import Subheading from "../../ui/Subheading";
 
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -105,20 +107,15 @@ const TestimonialSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
-        
+
         <Topicbg topic="Testimonials" />
-        {/* Title */}
-        <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal mt-4 text-gray-900">
-          What{" "}
-          <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
-            Clients Say
-          </span>
-        </h2>
-        <p className="text-gray-500 mt-3 max-w-2xl mx-auto text-sm sm:text-base">
-          Don't just take our word for it - hear from some of our satisfied
-          clients
-        </p>
-        {/* Testimonials Wrapper */}
+        <Headings black="What " colored=" Clients Say" />
+
+        <Subheading
+          description="Don't just take our word for it - hear from some of our satisfied
+          clients"
+        />
+
         <div className="relative mt-12 sm:mt-16 px-4 sm:px-8 lg:px-12">
           {/* Navigation Buttons */}
           <button
