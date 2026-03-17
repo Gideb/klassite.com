@@ -102,7 +102,7 @@ const WhyUs = () => {
         {/* CTA */}
         <div className="mt-20">
           <Link
-            to="/services"
+            to="/about"
             className="inline-flex items-center gap-3 
                    bg-purple-600 hover:bg-purple-500
                    px-7 py-3 rounded-full

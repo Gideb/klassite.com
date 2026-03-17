@@ -1,5 +1,4 @@
 import hero from "../../../assets/images/hero.png";
-import blob from "../../../assets/images/blob.svg";
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaPlay } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
@@ -7,22 +6,8 @@ import { GoRocket } from "react-icons/go";
 import CountUp from "react-countup";
 import { memo } from "react";
 import { useInView } from "react-intersection-observer";
+import BlobBackground from "../../ui/BlobBackground";
 
-const BLOB_CONFIG = [
-  {
-    className: "-top-20 -left-20 w-[600px] h-[600px]",
-    color: "purple",
-  },
-
-  {
-    className: "bottom-0 right-0 w-[700px] h-[800px]",
-    color: "default",
-  },
-  {
-    className: "top-40 -right-20 w-[200px] h-[300px]",
-    color: "default",
-  },
-];
 
 // Services array
 const SERVICES = ["Web Development", "Branding", "Media", "Security Solutions"];
@@ -34,30 +19,6 @@ const STATS = [
   { end: 98, suffix: "%", label: "Client Satisfaction", duration: 6 },
 ];
 
-const BlobBackground = memo(() => (
-  <>
-    {BLOB_CONFIG.map((config, index) => (
-      <img
-        key={index}
-        src={blob}
-        alt=""
-        aria-hidden="true"
-        className={`absolute ${config.className} z-0 pointer-events-none select-none object-contain ${
-          index === 0
-            ? "animate-blobfluid"
-            : index === 1
-              ? "animate-blobfluid-slow"
-              : "animate-blobfluid-fast"
-        }`}
-        style={{
-          opacity: 0.1,
-        }}
-      />
-    ))}
-  </>
-));
-
-BlobBackground.displayName = "BlobBackground";
 
 const ServiceTags = memo(() => (
   <div className="flex flex-wrap gap-3" aria-label="Our services">
@@ -93,14 +54,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-12 lg:py-0">
           {/* Left Content */}
           <div className="flex flex-col space-y-8 lg:space-y-10 order-2 lg:order-1">
-            {/* Badge */}
-         {/*    <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium w-fit mx-auto lg:mx-0">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-fuchsia-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-fuchsia-600"></span>
-              </span>
-              Digital Agency & Portfolio
-            </div> */}
+       
 
             {/* Main Heading */}
             <h1 className="font-bold text-2xl sm:text-3xl lg:text-5xl xl:text-6xl leading-tight lg:leading-[1.2] text-gray-900">
@@ -119,7 +73,7 @@ const HeroSection = () => {
 
             <ServiceTags />
 
-            {/* CTA Buttons */}
+     
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
               <Link
                 to="/contact"
@@ -149,7 +103,7 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/*   <StatsSection /> */}
+          
             <div
               ref={STATSRef}
               className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 lg:pt-10 border-t border-gray-200"

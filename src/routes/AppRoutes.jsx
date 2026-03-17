@@ -34,7 +34,7 @@ const AppRoutes = () => {
 
         {/* Individual Services */}
         <Route path="/services/web-development" element={<WebDevelopment />} />
-        <Route path="/services/ui-ux-design" element={<UIUXDesign />} />
+        <Route path="/services/ux-design" element={<UIUXDesign />} />
         <Route path="/services/seo" element={<SEO />} />
         <Route path="/services/branding" element={<Branding />} />
         <Route

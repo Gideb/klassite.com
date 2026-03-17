@@ -10,7 +10,7 @@ const Stats = () => {
   const stats = [
     {
       icon: GoRocket,
-      value: 50,
+      value: 90,
       suffix: "+",
       label: "Projects",
       color: "from-amber-600 to-amber-600",
@@ -18,7 +18,7 @@ const Stats = () => {
     },
     {
       icon: PiUsersThreeLight,
-      value: 30,
+      value: 60,
       suffix: "+",
       label: "Clients",
       color: "from-amber-600 to-amber-600",
@@ -26,7 +26,7 @@ const Stats = () => {
     },
     {
       icon: LiaAwardSolid,
-      value: 5,
+      value: 4,
       suffix: "+",
       label: "Years",
       color: "from-amber-600 to-amber-600",

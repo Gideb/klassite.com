@@ -20,6 +20,7 @@ const ServicesSection = () => {
         "Custom websites that are fast, responsive, and built to convert.",
       services: ["Website Development", "Web Design"],
       gradient: "from-purple-600 to-fuchsia-600",
+      to: "/services/web-development",
     },
     {
       id: 2,
@@ -29,6 +30,7 @@ const ServicesSection = () => {
         "Data-driven SEO strategies that get you to the top of Google.",
       services: ["SEO Optimization"],
       gradient: "from-blue-600 to-cyan-500",
+      to: "/services/seo",
     },
     {
       id: 3,
@@ -37,6 +39,7 @@ const ServicesSection = () => {
       description: "Professional photography, videography, and video editing.",
       services: ["Photography", "Videography", "Video Editing"],
       gradient: "from-green-600 to-emerald-500",
+      to: "/services/video-production",
     },
     {
       id: 4,
@@ -46,6 +49,7 @@ const ServicesSection = () => {
         "Graphic design and security solutions for complete peace of mind.",
       services: ["Graphic Design", "CCTV Installation"],
       gradient: "from-orange-600 to-red-500",
+      to: "/services/branding",
     },
   ];
 
@@ -64,7 +68,7 @@ const ServicesSection = () => {
         {/* Simple Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <Topicbg topic="Our Services" />
-         <Headings black='What We' colored=' Build' />
+          <Headings black="What We" colored=" Build" />
         </div>
 
         <Stats />
@@ -114,7 +118,7 @@ const ServicesSection = () => {
                   </div>
 
                   <Link
-                    to="/services"
+                    to={`${group.to}`}
                     className="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium group/link"
                   >
                     <span>Learn more</span>
@@ -129,15 +133,13 @@ const ServicesSection = () => {
         {/* Simple CTA */}
         <div className="text-center mt-12">
           <Link
-            to="/contact"
+            to="/services"
             className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             <span>Free Consultation</span>
             <FaArrowRight className="text-sm" />
           </Link>
-          <p className="text-xs text-gray-400 mt-3">
-            30-min strategy call • No obligation
-          </p>
+        
         </div>
       </div>
     </section>

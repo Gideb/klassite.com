@@ -1,4 +1,6 @@
 import { memo, useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 import teamImage from "../../../assets/images/serviceSpecific/teamWorking.jpg";
 
@@ -11,6 +13,81 @@ import logo6 from "../../../assets/images/brandLogo/logo6.png";
 import Topicbg from "../../ui/topicbg";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const slideInLeftVariants = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
+      duration: 0.8,
+    },
+  },
+};
+
+const slideInRightVariants = {
+  hidden: {
+    opacity: 0,
+    x: 100,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
+      duration: 0.8,
+    },
+  },
+};
+
+const slideInUpVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
+      duration: 0.6,
+    },
+  },
+};
+
+const staggerChildrenVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 const SocialProofSection = () => {
   const brands = [
@@ -53,7 +130,7 @@ const SocialProofSection = () => {
     if (hasError || !logo) {
       return (
         <div
-          className={`w-full h-full rounded-xl bg-linear-to-br ${gradient} flex items-center justify-center`}
+          className={`w-full h-full rounded-xl bg-lineaer-to-br ${gradient} flex items-center justify-center`}
         >
           <span className="text-white font-semibold text-xl">
             {name.charAt(0)}
@@ -74,65 +151,140 @@ const SocialProofSection = () => {
   };
 
   return (
-    <section
+    <motion.section
       id="social-proof"
-      className="scroll-mt-16 relative w-full bg-white py-20 sm:py-24 lg:py-28"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2, margin: "-50px" }}
+      variants={containerVariants}
+      className="scroll-mt-16 relative w-full bg-white py-20 sm:py-24 lg:py-28 overflow-hidden"
     >
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* Background Decoration */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 0.1, scale: 1 }}
+        transition={{ duration: 1.2 }}
+        className="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full blur-3xl"
+      />
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 0.1, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.3 }}
+        className="absolute bottom-0 left-0 w-96 h-96 bg-fuchsia-200 rounded-full blur-3xl"
+      />
+
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* LEFT SIDE — TEAM IMAGE */}
-          <div className="relative order-2">
+          {/* Left Side - Image with slide from left */}
+          <motion.div
+            variants={slideInLeftVariants}
+            className="relative order-2 lg:order-1"
+          >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-              <img
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
                 src={teamImage}
-                alt="Our Team"
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                alt="Our Team working together"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-purple-900/20"></div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="absolute inset-0 bg-linear-to-tr from-purple-900/30 to-transparent"
+              ></motion.div>
             </div>
-          </div>
 
-         
-          <div>
-            <Topicbg topic="Trusted Partners" />
+            {/* Floating badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8, type: "spring" }}
+              className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 hidden lg:block"
+            >
+              <p className="text-purple-900 font-bold text-xl">4+ Years</p>
+              <p className="text-gray-600 text-sm">Of Excellence</p>
+            </motion.div>
+          </motion.div>
 
-            <Headings black=" Trusted by " colored="Industry Leaders" />
+          {/* Right Side - Content with slide from right */}
+          <motion.div
+            variants={slideInRightVariants}
+            className="order-1 lg:order-2"
+          >
+            <motion.div variants={staggerChildrenVariants}>
+              <Topicbg topic="Trusted Partners" />
+            </motion.div>
 
-            <Subheading
-              description="We collaborate with forward-thinking brands who trust us to
-              deliver exceptional digital experiences."
-            />
+            <motion.div variants={staggerChildrenVariants}>
+              <Headings black=" Trusted by " colored="Industry Leaders" />
+            </motion.div>
+
+            <motion.div variants={staggerChildrenVariants}>
+              <Subheading
+                description="We collaborate with forward-thinking brands who trust us to
+                deliver exceptional digital experiences."
+              />
+            </motion.div>
             <br />
 
-          
-            <div className="grid grid-cols-3 gap-6">
+            {/* Brand Logos Grid with staggered animation */}
+            <motion.div
+              variants={containerVariants}
+              className="grid grid-cols-3 gap-6"
+            >
               {brands.map((brand, index) => (
-                <div
+                <motion.div
                   key={index}
+                  variants={slideInUpVariants}
+                  custom={index}
+                  whileHover={{
+                    scale: 1.1,
+                    y: -5,
+                    transition: { type: "spring", stiffness: 400, damping: 10 },
+                  }}
+                  whileTap={{ scale: 0.95 }}
                   className="flex items-center justify-center 
                          bg-gray-50 rounded-xl p-4 shadow-sm
                          hover:bg-white hover:shadow-fuchsia-300 hover:shadow-md 
-                         transition duration-300"
+                         transition-all duration-300 cursor-pointer"
                 >
-                  <img
+                  <motion.img
+                    initial={{ filter: "grayscale(100%)" }}
+                    whileHover={{ filter: "grayscale(0%)" }}
+                    transition={{ duration: 0.3 }}
                     src={brand.logo}
                     alt={brand.name}
-                    className="h-10 object-contain grayscale hover:grayscale-0 transition duration-300"
+                    className="h-10 object-contain"
                   />
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
-            {/* Subtext */}
-            <p className="text-gray-500 text-sm mt-8">
-              ...and 40+ other innovative companies across fintech, healthcare,
+            {/* Subtext with fade up animation */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.6 }}
+              className="text-gray-500 text-sm mt-8"
+            >
+              ...and 50+ other innovative companies across fintech, healthcare,
               and e-commerce.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default memo(SocialProofSection);
+// Custom comparison for memo optimization
+// eslint-disable-next-line no-unused-vars
+const arePropsEqual = (prevProps, nextProps) => {
+  // Since this component doesn't accept props, always return true
+  // to prevent unnecessary re-renders
+  return true;
+};
+
+export default memo(SocialProofSection, arePropsEqual);

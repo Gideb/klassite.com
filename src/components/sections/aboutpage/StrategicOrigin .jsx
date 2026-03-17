@@ -28,7 +28,7 @@ const StrategicOrigin = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 bg-purple-50 overflow-hidden">
+    <section className="relative w-full py-20 bg-purple-50/70 overflow-hidden">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 opacity-5"

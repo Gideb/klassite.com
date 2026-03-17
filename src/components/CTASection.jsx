@@ -1,47 +1,215 @@
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { memo } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
-const CTASection = () => {
+// Constants for easy customization
+const GRADIENTS = {
+  background: "from-purple-900 via-purple-800 to-fuchsia-900",
+  button: "from-purple-600 to-fuchsia-600",
+  orbs: {
+    left: "bg-purple-500",
+    right: "bg-fuchsia-500",
+  },
+};
+
+// Animation variants for better performance
+const fadeInUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const CTASection = ({
+  id = "cta",
+  title = "Ready to Transform Your Digital Presence?",
+  subtitle = "Let's discuss your project.",
+  buttonText = "Get Your Free Consultation",
+  disclaimer = "Schedule A Call • Just A Healthy Discourse",
+  className = "",
+}) => {
+
+
   return (
-    <section className="scroll-mt-16 relative w-full overflow-hidden bg-linear-to-br from-purple-900 via-purple-800 to-fuchsia-900 py-20 sm:py-24 lg:py-28">
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
-      </div>
+    <motion.section
+      id={id}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.2,
+            delayChildren: 0.1,
+          },
+        },
+      }}
+      className={`
+        scroll-mt-16 
+        relative 
+        w-full 
+        overflow-hidden 
+        bg-linear-to-br 
+        ${GRADIENTS.background}
+        py-16 
+        sm:py-20 
+        lg:py-24
+        ${className}
+      `}
+      aria-labelledby="cta-title"
+    >
+      {/* Floating Orbs with staggered animation */}
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.5, 0.8, 0.5],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className={`
+          absolute 
+          top-0 
+          left-0 
+          w-64 
+          h-64 
+          ${GRADIENTS.orbs.left} 
+          rounded-full 
+          mix-blend-overlay 
+          filter 
+          blur-3xl
+        `}
+        aria-hidden="true"
+      />
 
-      {/* Floating Orbs */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-500 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
+      <motion.div
+        animate={{
+          scale: [1, 1.3, 1],
+          opacity: [0.4, 0.7, 0.4],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
+        className={`
+          absolute 
+          bottom-0 
+          right-0 
+          w-80 
+          h-80 
+          ${GRADIENTS.orbs.right} 
+          rounded-full 
+          mix-blend-overlay 
+          filter 
+          blur-3xl
+        `}
+        aria-hidden="true"
+      />
 
+      {/* Content Container */}
       <div className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-2xl lg:text-3xl font-normal text-white mb-4">
-          Ready to Transform Your Digital Presence?
-        </h2>
-
-        <p className="text-white mb-8">
-          Let's discuss your project.
-        </p>
-
-        <Link
-          to="/contact"
-          className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 group cursor-pointer"
+        <motion.h2
+          id="cta-title"
+          variants={fadeInUpVariants}
+          className="text-2xl sm:text-2xl lg:text-3xl font-normal text-white mb-3"
         >
-          <span>Get Your Free Consultation</span>
+          {title}
+        </motion.h2>
 
-          <FaArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1.5" />
-        </Link>
-        <p className="text-sm text-gray-300 mt-4">
-          Schedule A 30 Minute Call • Just Honest Advice
-        </p>
+        <motion.p
+          variants={fadeInUpVariants}
+          className="text-white mb-8 text-lg sm:text-base"
+        >
+          {subtitle}
+        </motion.p>
+
+        <motion.div
+          variants={fadeInUpVariants}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link
+            to="/contact"
+            className={`
+              inline-flex 
+              items-center 
+              gap-2 
+              bg-linear-to-r 
+              ${GRADIENTS.button}
+              text-white 
+              px-6 
+              py-3
+              rounded-full 
+              font-semibold 
+              transition-all 
+              duration-300 
+              group 
+              cursor-pointer
+              focus:outline-none 
+              focus:ring 
+              focus:ring-white 
+              focus:ring-offset 
+              focus:ring-offset-purple-900
+            `}
+            aria-label={buttonText}
+          >
+            <span>{buttonText}</span>
+            <motion.span
+              animate={{ x: 0 }}
+              whileHover={{ x: 6 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <FaArrowRight className="text-sm" aria-hidden="true" />
+            </motion.span>
+          </Link>
+        </motion.div>
+
+        <motion.p
+          variants={fadeInUpVariants}
+          className="text-sm text-gray-300 mt-2"
+        >
+          {disclaimer}
+        </motion.p>
       </div>
-    </section>
+
+      {/* Skip link for keyboard navigation */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white text-purple-900 px-4 py-2 rounded-lg z-50"
+      >
+        Skip to main content
+      </a>
+    </motion.section>
   );
 };
 
-export default memo(CTASection);
+
+const arePropsEqual = (prevProps, nextProps) => {
+  return (
+    prevProps.id === nextProps.id &&
+    prevProps.title === nextProps.title &&
+    prevProps.subtitle === nextProps.subtitle &&
+    prevProps.buttonText === nextProps.buttonText &&
+    prevProps.disclaimer === nextProps.disclaimer &&
+    prevProps.className === nextProps.className
+  );
+};
+
+
+const MemoizedCTASection = memo(CTASection, arePropsEqual);
+MemoizedCTASection.displayName = "CTASection";
+
+export default MemoizedCTASection;

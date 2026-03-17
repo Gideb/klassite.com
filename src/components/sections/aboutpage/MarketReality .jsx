@@ -6,6 +6,7 @@ import Topicbg from "../../ui/topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
 
+
 const MarketReality = () => {
   const { ref: statsRef, inView: statsInView } = useInView({
     triggerOnce: true,
@@ -79,7 +80,9 @@ const MarketReality = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 sm:py-24 bg-purple-50">
+    <section className="relative w-full py-20 sm:py-24 bg-purple-50/70">
+   
+
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="max-w-xl mb-8">
@@ -122,9 +125,9 @@ const MarketReality = () => {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow shadow-red-200 hover:shadow-red-300"
+                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow shadow-red-200 hover:shadow-red-300 "
               >
-                <div className={`text-2xl font-semibold ${stat.color} mb-1`}>
+                <div className={`text-2xl font-semibold ${stat.color} mb-1 `}>
                   {stat.prefix}
                   {statsInView ? (
                     <CountUp

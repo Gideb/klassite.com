@@ -7,12 +7,12 @@ import {
   FaChartLine,
   FaHandshake,
   FaArrowRight,
-  FaStar,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Topicbg from "../../ui/topicbg";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
+import Stats from "../../Stats";
 
 const Differentiators = () => {
   const differentiators = [
@@ -105,13 +105,19 @@ const Differentiators = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <Topicbg topic="Why Choose Us" />
-
           <Headings black="Why Growth-Focused Brands " colored="   Choose Us" />
-
           <Subheading
             description=" We don't just build websites—we build competitive advantages that
             drive real business results."
-          />
+          />{" "}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <Stats />
         </motion.div>
 
         {/* 2x2 Grid */}
