@@ -9,8 +9,6 @@ import {
   FaShareAlt,
   FaShieldAlt,
   FaLightbulb,
-  FaAward,
-  FaChartLine,
   FaBolt,
   FaMobile,
   FaRocket,
@@ -21,31 +19,29 @@ import {
   FaBuilding,
   FaUtensils,
   FaArrowRight,
-  FaChevronDown,
   FaStar,
   FaQuoteLeft,
 } from "react-icons/fa";
-
 
 const testimonials = [
   {
     name: "John Doe",
     company: "TechStart Inc.",
-    quote: "Klass Koncepts transformed our online presence completely. Their attention to detail and creative approach exceeded our expectations.",
+    quote:
+      "Klass Koncepts transformed our online presence completely. Their attention to detail and creative approach exceeded our expectations.",
     rating: 5,
-    image: "/client1.jpg" // Optional
+    image: "/client1.jpg", // Optional
   },
   {
     name: "Jane Smith",
     company: "Creative Agency",
-    quote: "Professional, reliable, and incredibly talented. They delivered our project ahead of schedule and within budget.",
+    quote:
+      "Professional, reliable, and incredibly talented. They delivered our project ahead of schedule and within budget.",
     rating: 5,
-    image: "/client2.jpg"
+    image: "/client2.jpg",
   },
-  // Add more testimonials...
+ 
 ];
-
-
 
 const AllServices = () => {
   const services = {
@@ -110,25 +106,6 @@ const AllServices = () => {
       },
     ],
   };
-
-  const faqs = [
-    {
-      question: "What is your typical project timeline?",
-      answer:
-        "Project timelines vary based on complexity. A standard website takes 4-6 weeks, while more complex applications may take 8-12 weeks.",
-    },
-    {
-      question: "Do you offer ongoing maintenance?",
-      answer:
-        "Yes! We offer various maintenance packages to keep your website secure, updated, and performing optimally.",
-    },
-    {
-      question: "What payment methods do you accept?",
-      answer:
-        "We accept bank transfers, credit cards, and PayPal. Payment plans are available for larger projects.",
-    },
-    // Add more FAQs...
-  ];
 
   const processSteps = [
     {
@@ -202,29 +179,6 @@ const AllServices = () => {
       category: "Graphic Design",
       image: "../../../assets/images/profile.jpg",
       tags: ["Logo Design", "Brand Guidelines"],
-    },
-  ];
-
-  const whyUs = [
-    {
-      icon: FaAward,
-      title: "Professional & Reliable",
-      desc: "We deliver on our promises. Every project is executed with precision, professionalism, and on-time delivery you can count on.",
-    },
-    {
-      icon: FaLightbulb,
-      title: "Creative & Strategic Approach",
-      desc: "We blend bold creativity with data-driven strategy to produce digital experiences that stand out and perform.",
-    },
-    {
-      icon: FaChartLine,
-      title: "Affordable & Scalable Solutions",
-      desc: "Premium quality without the premium price tag. Our solutions grow with your business at every stage.",
-    },
-    {
-      icon: FaBolt,
-      title: "End-to-End Service Delivery",
-      desc: "From concept to launch and beyond. We handle the full lifecycle so you can focus on what matters most.",
     },
   ];
 
@@ -347,7 +301,7 @@ const AllServices = () => {
           {processSteps.map((step, index) => (
             <div key={index} className="relative">
               {index < processSteps.length - 1 && (
-                <div className="hidden lg:block absolute top-12 left-[60%] w-full h-0.5 bg-gradient-to-r from-purple-600 to-transparent"></div>
+                <div className="hidden lg:block absolute top-12 left-[60%] w-full h-0.5 bg-linear-to-r from-purple-600 to-transparent"></div>
               )}
               <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 relative z-10">
                 <div className="text-4xl font-bold text-purple-200 absolute top-4 right-4">
@@ -393,7 +347,7 @@ const AllServices = () => {
           </div>
         </div>
       </section>
-      // Add this before the Why Us section
+
       <section className="bg-white px-6 sm:px-12 py-24">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -424,7 +378,7 @@ const AllServices = () => {
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-fuchsia-600 rounded-full"></div>
+                  <div className="w-12 h-12 bg-linear-to-br from-purple-600 to-fuchsia-600 rounded-full"></div>
                   <div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
                     <p className="text-sm text-gray-400">
@@ -437,56 +391,7 @@ const AllServices = () => {
           </div>
         </div>
       </section>
-      {/* Why Us Section */}
-      <section
-        id="why-us"
-        className="px-6 sm:px-12 py-24 text-center bg-linear-to-b from-purple-50 to-white"
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-purple-200 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
-            <span className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse"></span>
-            Why Us
-          </div>
 
-          <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
-            Why Choose{" "}
-            <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-800 to-fuchsia-500">
-              Klass Koncepts
-            </span>
-          </h2>
-
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-lg">
-            We don't just build websites - we build digital experiences that
-            drive results.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-            {whyUs.map((item, index) => (
-              <WhyUsCard key={index} {...item} />
-            ))}
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-20">
-            <div>
-              <div className="text-3xl font-semibold text-purple-600">50+</div>
-              <div className="text-gray-500 mt-2">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-3xl font-semibold text-purple-600">30+</div>
-              <div className="text-gray-500 mt-2">Happy Clients</div>
-            </div>
-            <div>
-              <div className="text-3xl font-semibold text-purple-600">5+</div>
-              <div className="text-gray-500 mt-2">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl font-semibold text-purple-600">24/7</div>
-              <div className="text-gray-500 mt-2">Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24 text-center">
         <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
           Our Work
@@ -505,7 +410,7 @@ const AllServices = () => {
               key={index}
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="aspect-video bg-gradient-to-br from-purple-400 to-fuchsia-400 relative overflow-hidden">
+              <div className="aspect-video bg-linear-to-br from-purple-400 to-fuchsia-400 relative overflow-hidden">
                 {/* Replace with actual images */}
                 <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all"></div>
               </div>
@@ -532,53 +437,6 @@ const AllServices = () => {
         <button className="mt-12 px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors inline-flex items-center gap-2">
           View All Projects <FaArrowRight />
         </button>
-      </section>
-      <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24">
-        <div className="text-center">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
-            FAQ
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-normal mt-4 text-black">
-            Frequently Asked{" "}
-            <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
-              Questions
-            </span>
-          </h2>
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-16 space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 rounded-lg overflow-hidden"
-            >
-              <button className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
-                <span className="font-semibold">{faq.question}</span>
-                <FaChevronDown className="text-purple-600" />
-              </button>
-              <div className="px-6 pb-4 text-gray-500">{faq.answer}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-      // Add at the very end
-      <section className="bg-gradient-to-r from-purple-600 to-fuchsia-600 px-6 sm:px-12 py-20 text-center text-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Ready to Transform Your Digital Presence?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Let's discuss how we can help you achieve your business goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get a Free Consultation
-            </button>
-            <button className="px-8 py-4 border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View Our Portfolio
-            </button>
-          </div>
-        </div>
       </section>
     </div>
   );

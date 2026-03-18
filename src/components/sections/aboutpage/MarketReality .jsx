@@ -125,7 +125,7 @@ const MarketReality = () => {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow shadow-red-200 hover:shadow-red-300 "
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xs transition-shadow shadow-red-300 "
               >
                 <div className={`text-2xl font-semibold ${stat.color} mb-1 `}>
                   {stat.prefix}
@@ -148,7 +148,7 @@ const MarketReality = () => {
             ))}
 
             {/* Performance Gap Chart with CountUp */}
-            <div className="col-span-2 bg-white p-6 rounded-xl border border-red-100 mt-2 shadow-sm">
+            <div className="col-span-2 bg-white p-6 rounded-xl border border-red-200 mt-2 shadow-md">
               <div className="text-sm font-medium text-gray-700 mb-4 ">
                 Performance Gap (seconds)
               </div>

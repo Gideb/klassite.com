@@ -159,19 +159,9 @@ const SocialProofSection = () => {
       variants={containerVariants}
       className="scroll-mt-16 relative w-full bg-white py-20 sm:py-24 lg:py-28 overflow-hidden"
     >
-      {/* Background Decoration */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 0.1, scale: 1 }}
-        transition={{ duration: 1.2 }}
-        className="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full blur-3xl"
-      />
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 0.1, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.3 }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-fuchsia-200 rounded-full blur-3xl"
-      />
+      <motion.div variants={staggerChildrenVariants} className="absolute left-1/2 top-10">
+        <Topicbg topic="Trusted Partners" />
+      </motion.div>
 
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -201,10 +191,10 @@ const SocialProofSection = () => {
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, type: "spring" }}
-              className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 hidden lg:block"
+              className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-3 hidden lg:block"
             >
-              <p className="text-purple-900 font-bold text-xl">4+ Years</p>
-              <p className="text-gray-600 text-sm">Of Excellence</p>
+              <p className="text-purple-900 font-bold text-md">4+ Years</p>
+              <p className="text-gray-600 text-xs">Of Excellence</p>
             </motion.div>
           </motion.div>
 
@@ -213,10 +203,6 @@ const SocialProofSection = () => {
             variants={slideInRightVariants}
             className="order-1 lg:order-2"
           >
-            <motion.div variants={staggerChildrenVariants}>
-              <Topicbg topic="Trusted Partners" />
-            </motion.div>
-
             <motion.div variants={staggerChildrenVariants}>
               <Headings black=" Trusted by " colored="Industry Leaders" />
             </motion.div>
@@ -251,7 +237,7 @@ const SocialProofSection = () => {
                          transition-all duration-300 cursor-pointer"
                 >
                   <motion.img
-                    initial={{ filter: "grayscale(100%)" }}
+                    initial={{ filter: "grayscale(50%)" }}
                     whileHover={{ filter: "grayscale(0%)" }}
                     transition={{ duration: 0.3 }}
                     src={brand.logo}

@@ -7,6 +7,8 @@ import {
   FaUser,
   FaPaperPlane,
 } from "react-icons/fa";
+import Headings from "../../ui/Headings";
+import Subheading from "../../ui/Subheading";
 
 const ContactSection = () => {
   const [success, setSuccess] = useState(false);
@@ -27,10 +29,8 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent page refresh
 
-  
     console.log("Form submitted:", formData);
 
-    
     setSuccess(true);
 
     setTimeout(() => {
@@ -84,41 +84,30 @@ const ContactSection = () => {
   ];
 
   return (
-    <div id="contact" className="scroll-mt-24">
-      <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center bg-linear-to-b from-purple-50 via-white to-white overflow-hidden">
+    <div id="contact" className="scroll-mt-24 relative px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center bg-linear-to-b from-purple-50 via-white to-white overflow-hidden">
+      <section >
         {/* Background Glow - Fixed positioning */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-75 sm:w-100 lg:w-125 h-75 sm:h-100 lg:h-125 bg-purple-500/10 blur-[120px] rounded-full"></div>
         </div>
 
         <div className="max-w-7xl mx-auto">
-          {/* Badge */}
-         {/*  <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto">
-            <span className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse"></span>
-            Contact
-          </div> */}
-
           {/* Title */}
-          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-normal mt-4 text-gray-900">
-            Let's{" "}
-            <span className="bg-clip-text text-transparent bg-linear-to-br from-purple-700 to-fuchsia-500">
-              Work Together
-            </span>
-          </h2>
+          <Headings black="Let's" colored=" Work Together" />
 
-          <p className="text-gray-500 mt-3 max-w-2xl mx-auto text-sm sm:text-base px-4">
-            Ready to transform your digital presence? Get in touch and let's
-            create something amazing.
-          </p>
+          <Subheading
+            description=" Ready to transform your digital presence? Get in touch and let's
+            create something amazing."
+          />
 
-          {/* Main Grid */}
+          {/* Main Grid - Modified for alignment */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 py-12 lg:py-16">
             {/* Left Column - Contact Info */}
             <div className="text-left px-4 sm:px-0">
               <h3 className="font-semibold text-xl sm:text-2xl text-gray-900">
                 Get In Touch
               </h3>
-              <p className="my-4 sm:my-5 text-gray-600 text-sm sm:text-base">
+              <p className="py-5 text-gray-500 text-[8px] sm:text-base">
                 Whether you have a project in mind or just want to say hello,
                 we'd love to hear from you.
               </p>
@@ -127,7 +116,10 @@ const ContactSection = () => {
                 {contactMethods.map((method, index) => {
                   const Icon = method.icon;
                   const Content = () => (
-                    <div className="group bg-white/70 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-purple-100 shadow-lg flex items-center gap-4 sm:gap-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div
+                      key={index}
+                      className="group bg-white/70 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-purple-100 shadow-lg flex items-center gap-4 sm:gap-5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    >
                       <div className="text-white bg-linear-to-br from-purple-600 to-fuchsia-600 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg sm:rounded-xl shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
                         <Icon className="text-lg sm:text-xl" />
                       </div>
@@ -147,7 +139,7 @@ const ContactSection = () => {
                                 ? "noopener noreferrer"
                                 : ""
                             }
-                            className="font-semibold text-sm sm:text-base text-gray-900 hover:text-purple-600 transition-colors truncate"
+                            className="font-semibold text-sm sm:text-base text-gray-900 hover:text-green-600 transition-colors truncate"
                           >
                             {method.value}
                           </a>
@@ -162,7 +154,7 @@ const ContactSection = () => {
                   return <Content key={index} />;
                 })}
               </div>
-              <div className="mt-6 space-y-3 text-gray-700">
+              <div className="mt-10 space-y-3 text-gray-700">
                 <h2 className="text-lg font-semibold text-gray-900">
                   Business Hours
                 </h2>
@@ -178,19 +170,19 @@ const ContactSection = () => {
                 </p>
 
                 <p className="pt-2 text-sm text-gray-600">
-                  Response Time:{" "}
+                 ✨ Response Time:{" "}
                   <span className="font-medium text-gray-800">
-                    3–10 hours during business days
+                    Within 24 hours during business days
                   </span>
                 </p>
               </div>
             </div>
 
-            {/* Right Column - Form */}
-            <div className="px-4 sm:px-0">
-              <div className="bg-white/80 backdrop-blur-xl p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl shadow-[0_20px_60px_rgba(124,58,237,0.15)] border border-purple-100">
+            {/* Right Column - Form - Now with margin-top to align with first contact method */}
+            <div className="px-4 sm:px-0 lg:mt-30 mt-10">
+              <div className="bg-white/80 backdrop-blur-xl p-6 sm:p-8 lg:p-10 rounded-xl sm:rounded-2xl shadow-[0_10px_30px_rgba(124,58,237,0.15)] border border-purple-100">
                 <form
-                  className="flex flex-col space-y-4 sm:space-y-5"
+                  className="flex flex-col space-y-5 sm:space-y-5"
                   onSubmit={handleSubmit}
                 >
                   {/* Name Input */}
@@ -323,17 +315,19 @@ const ContactSection = () => {
         </div>
       </section>
 
-      {/*  <section>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127066.72273054127!2d-0.2621303729990889!3d5.591373806167042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra!5e0!3m2!1sen!2sgh!4v1773408836177!5m2!1sen!2sgh"
-          width="600"
-          height="450"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </section> */}
+      <section className="w-full flex justify-center pb-8">
+        <div className="w-full max-w-7xl ">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127066.72273054127!2d-0.2621303729990889!3d5.591373806167042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra!5e0!3m2!1sen!2sgh!4v1773408836177!5m2!1sen!2sgh"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Maps - Accra"
+            className=" shadow-lg w-full h-100"
+          ></iframe>
+        </div>
+      </section>
     </div>
   );
 };
