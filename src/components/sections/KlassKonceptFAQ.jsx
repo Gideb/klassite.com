@@ -6,7 +6,7 @@ import React, {
   useMemo,
 } from "react";
 // eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from "framer-motion"; // Remove the eslint-disable comment
+import { motion, AnimatePresence } from "framer-motion"; 
 import {
   FaChevronDown,
   FaSearch,

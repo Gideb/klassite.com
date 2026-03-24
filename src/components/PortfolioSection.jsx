@@ -13,7 +13,6 @@ import {
   FaHeart,
 } from "react-icons/fa";
 
-
 import project1 from "../assets/images/portfolio/klass.png";
 import project2 from "../assets/images/portfolio/klass.png";
 import project3 from "../assets/images/portfolio/klass.png";
@@ -298,8 +297,6 @@ const PortfolioSection = () => {
 
   return (
     <>
-    
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -316,7 +313,7 @@ const PortfolioSection = () => {
                 className="text-center"
               >
                 <div className="text-4xl mb-2">{stat.icon}</div>
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-fuchsia-600">
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
                   {stat.value}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -360,7 +357,7 @@ const PortfolioSection = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-linear-to-t from-purple-900/90 via-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <div className="flex gap-2 mb-3">
                         {project.tags.slice(0, 2).map((tag, i) => (
@@ -377,7 +374,7 @@ const PortfolioSection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                  <div className="absolute top-4 right-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
                     <FaStar className="text-yellow-300" />
                     Featured
                   </div>
@@ -422,7 +419,7 @@ const PortfolioSection = () => {
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all ${
                   activeFilter === filter.id
-                    ? "bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white shadow-lg"
+                    ? "bg-linear-to-r from-purple-600 to-fuchsia-600 text-white shadow-lg"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
@@ -454,7 +451,7 @@ const PortfolioSection = () => {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="absolute inset-0 bg-linear-to-t from-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 text-white">
                         <div className="flex gap-2 mb-2">
                           {project.tags.slice(0, 3).map((tag, i) => (
@@ -544,7 +541,7 @@ const PortfolioSection = () => {
                   alt={selectedProject.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
                 <button
                   onClick={() => setSelectedProject(null)}
                   className="absolute top-6 right-6 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/40 transition"
@@ -584,7 +581,7 @@ const PortfolioSection = () => {
                           key={index}
                           className="flex items-center gap-2 text-gray-700"
                         >
-                          <span className="w-1.5 h-1.5 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-full"></span>
+                          <span className="w-1.5 h-1.5 bg-linear-to-r from-purple-600 to-fuchsia-600 rounded-full"></span>
                           {feature}
                         </li>
                       ))}
@@ -672,14 +669,14 @@ const PortfolioSection = () => {
                       {selectedProject.tags.map((tag, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-gradient-to-r from-purple-100 to-fuchsia-100 text-fuchsia-700 rounded-full text-sm"
+                          className="px-3 py-1 bg-linear-to-r from-purple-100 to-fuchsia-100 text-fuchsia-700 rounded-full text-sm"
                         >
                           #{tag}
                         </span>
                       ))}
                     </div>
 
-                    <button className="w-full mt-8 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white font-semibold py-3 rounded-xl hover:shadow-lg transition">
+                    <button className="w-full mt-8 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white font-semibold py-3 rounded-xl hover:shadow-lg transition">
                       <Link to="/contact">Discuss Similar Project</Link>
                     </button>
                   </div>
@@ -691,7 +688,7 @@ const PortfolioSection = () => {
       </AnimatePresence>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 to-fuchsia-900">
+      <section className="py-20 bg-linear-to-br from-purple-900 to-fuchsia-900">
         <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

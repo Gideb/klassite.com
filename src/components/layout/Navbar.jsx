@@ -1,8 +1,10 @@
 import logo from "../../assets/images/logo.png";
 import { useEffect, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
-import { FiHome, FiBriefcase } from "react-icons/fi";
-import { HiOutlineHome, HiOutlineUser } from "react-icons/hi";
+import { FaServicestack } from "react-icons/fa";
+import { HiOutlineUser } from "react-icons/hi";
+import { IoHomeOutline } from "react-icons/io5";
+import { PiNewspaperThin } from "react-icons/pi";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -24,10 +26,10 @@ const Navbar = () => {
   }, [menuOpen]);
 
   const navLinks = [
-    { name: "Home", path: "/", icon: HiOutlineHome },
+    { name: "Home", path: "/", icon: IoHomeOutline },
     { name: "About", path: "/about", icon: HiOutlineUser },
-    { name: "Services", path: "/services", icon: FiBriefcase },
-    { name: "Blog", path: "/blog", icon: FiHome },
+    { name: "Services", path: "/services", icon: FaServicestack },
+    { name: "Blog", path: "/blog", icon: PiNewspaperThin },
   ];
 
   return (
@@ -62,7 +64,7 @@ const Navbar = () => {
             className="w-full sm:w-auto group bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-9 py-3 rounded-full font-semibold text-lg hover:shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 invisible md:visible flex items-center justify-center gap-2"
           >
             Get a Quote
-            <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+            <TfiHeadphoneAlt className="text-sm group-hover:translate-x-1 transition-transform" />
           </Link>
 
           {/* Mobile Hamburger */}
@@ -122,7 +124,7 @@ const Navbar = () => {
             className="bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 absolute bottom-20 flex items-center justify-center gap-2"
           >
             Get a Quote
-            <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+            <TfiHeadphoneAlt className="text-sm group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>

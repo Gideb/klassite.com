@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { memo } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 
 // Constants for easy customization
 const GRADIENTS = {
@@ -31,65 +32,29 @@ const fadeInUpVariants = {
 const CTASection = ({
   id = "cta",
   title = "Ready to Transform Your Digital Presence?",
-  subtitle = "  Let's discuss how we can help you achieve your business goals.",
+  subtitle = "Let's discuss how we can help you achieve your business goals.",
   buttonText = "Get Free Consultation",
   button2Text = "View Our Portfolio",
   disclaimer = "Schedule A Call • Just A Healthy Discourse",
   className = "",
 }) => {
   return (
-    <motion.section
-      id={id}
+    <motion.section  id={id}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      variants={{
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: {
-            staggerChildren: 0.2,
-            delayChildren: 0.1,
-          },
+      variants={{ hidden: { opacity: 0 },visible: { opacity: 1, transition: {           staggerChildren: 0.2,  delayChildren: 0.1,     },
         },
       }}
-      className={`
-        scroll-mt-16 
-        relative 
-        w-full 
-        overflow-hidden 
-        bg-linear-to-br 
-        ${GRADIENTS.background}
-        py-16 
-        sm:py-20 
-        lg:py-24
-        ${className}
-      `}
+      className={`scroll-mt-16 relative w-full overflow-hidden bg-linear-to-br ${GRADIENTS.background} py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6  ${className} `}
       aria-labelledby="cta-title"
     >
-      {/* Floating Orbs with staggered animation */}
+      {/* Floating Orbs with staggered animation - Responsive sizing */}
       <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.5, 0.8, 0.5],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className={`
-          absolute 
-          top-0 
-          left-0 
-          w-64 
-          h-64 
-          ${GRADIENTS.orbs.left} 
-          rounded-full 
-          mix-blend-overlay 
-          filter 
-          blur-3xl
-        `}
+        animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className={` absolute top-0  left-0  w-48  sm:w-64  md:w-72 lg:w-80 h-48 sm:h-64 
+          md:h-72 lg:h-80    ${GRADIENTS.orbs.left}  rounded-full  mix-blend-overlay filter   blur-2xl sm:blur-3xl  `}
         aria-hidden="true"
       />
 
@@ -104,91 +69,169 @@ const CTASection = ({
           ease: "easeInOut",
           delay: 1,
         }}
-        className={`
-          absolute 
-          bottom-0 
-          right-0 
-          w-80 
-          h-80 
-          ${GRADIENTS.orbs.right} 
-          rounded-full 
-          mix-blend-overlay 
-          filter 
-          blur-3xl
-        `}
+        className={`absolute bottom-0 right-0 sm:w-72 w-7xl lg:w-100 h-56 sm:h-72 
+          md:h-80 lg:h-96  ${GRADIENTS.orbs.right}  rounded-full  mix-blend-overlay 
+          filter blur-2xl  sm:blur-3xl`}
         aria-hidden="true"
       />
 
-      {/* Content Container */}
-      <div className="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center">
-        <motion.h2
-          id="cta-title"
-          variants={fadeInUpVariants}
-          className="text-2xl sm:text-2xl lg:text-3xl font-normal text-white mb-3"
-        >
-          {title}
-        </motion.h2>
-
-        <motion.p
-          variants={fadeInUpVariants}
-          className="text-white mb-8 text-lg sm:text-base"
-        >
-          {subtitle}
-        </motion.p>
-
-        <div className="flex gap-3 items-center justify-center py-3">
-          <motion.div
+      {/* Content Container - Full responsive width */}
+      <div className="relative z-10 w-full max-w-full px-4 sm:px-6 md:px-8 lg:px-0">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Title - Responsive font sizes */}
+          <motion.h2
+            id="cta-title"
             variants={fadeInUpVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="
+              text-xl 
+              sm:text-2xl 
+              md:text-3xl 
+              lg:text-4xl 
+              font-bold 
+              text-white 
+              mb-3 
+              sm:mb-4 
+              md:mb-5
+              leading-tight
+              sm:leading-tight
+              md:leading-snug
+              px-2
+              sm:px-0
+            "
           >
-            <Link
-              to="/contact"
-              className={`inline-flex items-center gap-2 bg-linear-to-r ${GRADIENTS.button}
-              text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 group cursor-pointer focus:outline-none focus:ring  focus:ring-white focus:ring-offset  focus:ring-offset-purple-900
-            `}
-              aria-label={buttonText}
-            >
-              <span>{buttonText}</span>
-              <motion.span
-                animate={{ x: 0 }}
-                whileHover={{ x: 6 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <MdMeetingRoom className="text-md " aria-hidden="true"  />
-              </motion.span>
-            </Link>
-          </motion.div>
+            {title}
+          </motion.h2>
 
-          <motion.div
+          {/* Subtitle - Responsive text size and spacing */}
+          <motion.p
             variants={fadeInUpVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="
+              text-white/90 
+              mb-6 
+              sm:mb-7 
+              md:mb-8 
+              text-base 
+              sm:text-lg 
+              md:text-xl 
+              lg:text-xl
+              max-w-2xl 
+              mx-auto
+              px-4
+              sm:px-6
+              leading-relaxed
+            "
           >
-            <Link
-              to="/portfolio"
-              className={`inline-flex items-center gap-2 bg-transparent border text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 group cursor-pointer  focus:outline-none focus:ring focus:ring-black  focus:ring-offset 
-              focus:ring-offset-purple-900
-            `}
-              aria-label={buttonText}
+            {subtitle}
+          </motion.p>
+
+          {/* Buttons Container - Responsive layout */}
+          <div className="flex   flex-col  sm:flex-row gap-3 sm:gap-4 md:gap-5 items-center  justify-center py-2  sm:py-3 md:py-4 px-4 sm:px-0 ">
+            {/* Primary Button */}
+            <motion.div
+              variants={fadeInUpVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto"
             >
-              <span>{button2Text}</span>
-              <motion.span
-                animate={{ x: 0 }}
-                whileHover={{ x: 6 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              <Link
+                to="/contact"
+                className={`inline-flex items-center justify-center gap-2 bg-linear-to-r ${GRADIENTS.button} text-white px-6 sm:px-7  md:px-8 py-3  sm:py-3.5  md:py-4 rounded-full font-semibold text-sm sm:text-base  md:text-lg  transition-all duration-300  group  cursor-pointer focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2  focus:ring-offset-purple-900 w-full sm:w-auto  shadow-lg hover:shadow-xl`}
+                aria-label={buttonText}
               >
-                <FaDiagramProject className="text-sm" aria-hidden="true" />
-              </motion.span>
-            </Link>
-          </motion.div>
+                <span className="whitespace-nowrap">{buttonText}</span>
+                <motion.span
+                  animate={{ x: 0 }}
+                  whileHover={{ x: 6 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="inline-flex"
+                >
+                  <TfiHeadphoneAlt
+                    className="text-base sm:text-lg md:text-xl"
+                    aria-hidden="true"
+                  />
+                </motion.span>
+              </Link>
+            </motion.div>
+
+            {/* Secondary Button */}
+            <motion.div
+              variants={fadeInUpVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto"
+            >
+              <Link
+                to="/portfolio"
+                className="
+                  inline-flex 
+                  items-center 
+                  justify-center
+                  gap-2 
+                  bg-transparent 
+                  border-2 
+                  border-white 
+                  text-white 
+                  px-6 
+                  sm:px-7 
+                  md:px-8 
+                  py-3 
+                  sm:py-3.5 
+                  md:py-4
+                  rounded-full 
+                  font-semibold 
+                  text-sm
+                  sm:text-base
+                  md:text-lg
+                  transition-all 
+                  duration-300 
+                  group 
+                  cursor-pointer  
+                  focus:outline-none 
+                  focus:ring-2 
+                  focus:ring-white 
+                  focus:ring-offset-2
+                  focus:ring-offset-purple-900
+                  hover:bg-white/10
+                  w-full
+                  sm:w-auto
+                "
+                aria-label={button2Text}
+              >
+                <span className="whitespace-nowrap">{button2Text}</span>
+                <motion.span
+                  animate={{ x: 0 }}
+                  whileHover={{ x: 6 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="inline-flex"
+                >
+                  <FaDiagramProject
+                    className="text-sm sm:text-base md:text-lg"
+                    aria-hidden="true"
+                  />
+                </motion.span>
+              </Link>
+            </motion.div>
+          </div>
+
+          {/* Disclaimer - Responsive text */}
+          <motion.p
+            variants={fadeInUpVariants}
+            className="
+              text-xs 
+              sm:text-sm 
+              md:text-base 
+              text-gray-300 
+              mt-4 
+              sm:mt-5 
+              md:mt-6
+              opacity-80
+              px-4
+              sm:px-0
+            "
+          >
+            {disclaimer}
+          </motion.p>
         </div>
-        <motion.p
-          variants={fadeInUpVariants}
-          className="text-sm text-gray-300 mt-2"
-        >
-          {disclaimer}
-        </motion.p>
       </div>
 
       {/* Skip link for keyboard navigation */}
@@ -208,6 +251,7 @@ const arePropsEqual = (prevProps, nextProps) => {
     prevProps.title === nextProps.title &&
     prevProps.subtitle === nextProps.subtitle &&
     prevProps.buttonText === nextProps.buttonText &&
+    prevProps.button2Text === nextProps.button2Text &&
     prevProps.disclaimer === nextProps.disclaimer &&
     prevProps.className === nextProps.className
   );

@@ -84,7 +84,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <div id="contact" className="scroll-mt-24 relative px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center bg-linear-to-b from-purple-50 via-white to-white overflow-hidden">
+    <div id="contact" className="scroll-mt-24 relative px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center bg-linear-to-b from-purple-50 via-white to-white overflow-hidden">
       <section >
         {/* Background Glow - Fixed positioning */}
         <div className="absolute inset-0 -z-10">
@@ -92,16 +92,19 @@ const ContactSection = () => {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          {/* Title */}
+          <div>
+             {/* Title */}
           <Headings black="Let's" colored=" Work Together" />
 
           <Subheading
             description=" Ready to transform your digital presence? Get in touch and let's
-            create something amazing."
+            create something amazing." 
           />
+          </div>
+         
 
           {/* Main Grid - Modified for alignment */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 py-12 lg:py-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 py-10 lg:py-12">
             {/* Left Column - Contact Info */}
             <div className="text-left px-4 sm:px-0">
               <h3 className="font-semibold text-xl sm:text-2xl text-gray-900">
@@ -315,7 +318,7 @@ const ContactSection = () => {
         </div>
       </section>
 
-      <section className="w-full flex justify-center pb-8">
+      <section className="w-full flex justify-center pb-2">
         <div className="w-full max-w-7xl ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127066.72273054127!2d-0.2621303729990889!3d5.591373806167042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra!5e0!3m2!1sen!2sgh!4v1773408836177!5m2!1sen!2sgh"

@@ -7,6 +7,8 @@ import CountUp from "react-countup";
 import { memo } from "react";
 import { useInView } from "react-intersection-observer";
 import BlobBackground from "../../ui/BlobBackground";
+import Subheading from "../../ui/Subheading";
+import Headings from "../../ui/Headings";
 
 
 // Services array
@@ -54,10 +56,8 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-12 lg:py-0">
           {/* Left Content */}
           <div className="flex flex-col space-y-8 lg:space-y-10 order-2 lg:order-1">
-       
-
             {/* Main Heading */}
-            <h1 className="font-bold text-2xl sm:text-3xl lg:text-5xl xl:text-6xl leading-tight lg:leading-[1.2] text-gray-900">
+            <h1 className="font-black text-2xl sm:text-3xl lg:text-5xl xl:text-6xl leading-tight lg:leading-[1.2] text-gray-900">
               We Build{" "}
               <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-fuchsia-500">
                 High Performance
@@ -65,15 +65,17 @@ const HeroSection = () => {
               <br className="hidden sm:block" />
               Digital Systems That Grow Your Business
             </h1>
+         
 
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
-              Klass Koncepts partners with ambitious brands to architect and
-              scale performance-driven digital platforms.
-            </p>
+            <div className="text-base sm:text-lg text-gray-600 max-w-2xl -mt-4">
+              <Subheading
+                description="Klass Koncepts partners with ambitious brands to architect and
+              scale performance-driven digital platforms."
+              />
+            </div>
 
             <ServiceTags />
 
-     
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
               <Link
                 to="/contact"
@@ -88,7 +90,7 @@ const HeroSection = () => {
               </Link>
 
               <a
-                href="#services"
+                href="/services"
                 className="w-full sm:w-auto group text-purple-700 px-8 py-3.5 rounded-full font-medium border-2 border-purple-600 hover:bg-purple-50 transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2"
                 onClick={(e) => {
                   e.preventDefault();
@@ -103,7 +105,6 @@ const HeroSection = () => {
               </a>
             </div>
 
-          
             <div
               ref={STATSRef}
               className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 lg:pt-10 border-t border-gray-200"

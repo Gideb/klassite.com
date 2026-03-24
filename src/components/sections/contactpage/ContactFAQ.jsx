@@ -48,18 +48,17 @@ const ContactFAQ = () => {
 
   return (
     <section className="relative">
-      <div className="pointer-events-none absolute right-40 -top-10 text-[420px] font-black text-fuchsia-100 rotate-130 select-none">
+      <div className="pointer-events-none absolute right-40 -top-10 text-[420px] font-black text-fuchsia-300 rotate-130 select-none">
         ?
       </div>
       <div className="relative max-w-6xl mx-auto mt-10 px-4 sm:px-4 lg:px-6 sm:py-17 lg:py-20 py-10 overflow-hidden">
-        {/* BIG QUESTION MARK BACKGROUND */}
-       {/*  <div className="pointer-events-none absolute right-10 -top-10 text-[420px] font-black text-fuchsia-100 rotate-100 select-none">
+          <div className="pointer-events-none absolute right-50 top-10 text-[420px] font-black text-fuchsia-100 rotate-100 select-none">
           ?
-        </div> */}
-        <div className="pointer-events-none absolute right-40 top-50 text-[420px] font-black text-fuchsia-100 rotate-60 select-none">
+        </div> 
+        <div className="pointer-events-none absolute right-40 top-50 text-[420px] font-black text-purple-300 rotate-60 select-none">
           ?
         </div>
-        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[420px] font-black text-fuchsia-100 -rotate-60 select-none">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[420px] font-black text-fuchsia-300 -rotate-60 select-none">
           ?
         </div>
         <Topicbg topic="Faqs" />
