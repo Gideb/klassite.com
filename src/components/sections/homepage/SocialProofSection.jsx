@@ -10,7 +10,7 @@ import logo3 from "../../../assets/images/brandLogo/logo3.png";
 import logo4 from "../../../assets/images/brandLogo/logo4.png";
 import logo5 from "../../../assets/images/brandLogo/logo5.png";
 import logo6 from "../../../assets/images/brandLogo/logo6.png";
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
 
@@ -159,7 +159,10 @@ const SocialProofSection = () => {
       variants={containerVariants}
       className="scroll-mt-16 relative w-full bg-white py-20 sm:py-24 lg:py-28 overflow-hidden"
     >
-      <motion.div variants={staggerChildrenVariants} className="absolute left-1/2 top-10">
+      <motion.div
+        variants={staggerChildrenVariants}
+        className="absolute left-1/2 top-10"
+      >
         <Topicbg topic="Trusted Partners" />
       </motion.div>
 

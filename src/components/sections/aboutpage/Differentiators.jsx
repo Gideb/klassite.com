@@ -9,7 +9,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
 import Stats from "../../Stats";

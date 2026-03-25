@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { memo } from "react";
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
 
@@ -51,7 +51,6 @@ const WhyUs = () => {
         <div className="absolute top-0 left-0 w-64 h-64 bg-purple-400 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-300 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
         <div className="max-w-3xl mb-20">
-         
           <Topicbg topic="Why Choose Us" />
 
           <Headings black="  Built for performance. " />

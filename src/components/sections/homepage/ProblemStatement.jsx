@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 import { memo } from "react";
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
 

@@ -2,7 +2,7 @@ import { memo, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import { FaBullseye, FaEye } from "react-icons/fa";
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 
 const StrategicOrigin = () => {

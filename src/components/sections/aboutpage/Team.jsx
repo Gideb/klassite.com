@@ -1,5 +1,4 @@
-
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
 import klass from "../../../assets/images/klass.png";
 
 const LeadershipGrid = () => {

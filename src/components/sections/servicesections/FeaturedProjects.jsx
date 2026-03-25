@@ -61,7 +61,7 @@ const FeaturedProjects = () => {
 
   const ProjectCard = ({ project }) => {
     const isPurple = getCategoryColor(project.serviceMatch) === "purple";
-// eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
     const isHovered = hoveredProject === project.id;
 
     return (
@@ -92,12 +92,12 @@ const FeaturedProjects = () => {
             </Link>
           </div>
 
-         
           <div className="absolute top-4 left-4">
             <div
               className={`flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-md`}
             >
-              <project.icon className={`text-sm ${isPurple ? "text-purple-600" : "text-amber-600"}`}
+              <project.icon
+                className={`text-sm ${isPurple ? "text-purple-600" : "text-amber-600"}`}
               />
               <span className="text-xs font-semibold text-gray-700">
                 {project.serviceMatch}
@@ -174,17 +174,14 @@ const FeaturedProjects = () => {
             description="A glimpse of what we've created for our clients. Each project
             represents our commitment to excellence."
           />
-
         </div>
 
-       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-      
         <div className="text-center">
           <Link
             to="/portfolio"

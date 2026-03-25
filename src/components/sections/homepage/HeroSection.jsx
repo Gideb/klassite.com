@@ -82,7 +82,7 @@ const HeroSection = () => {
                 className="w-full sm:w-auto group bg-linear-to-r from-purple-500 to-fuchsia-500 text-white px-8 py-3.5 rounded-full font-medium text-md hover:shadow-xl transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex items-center justify-center gap-2"
               >
                 <SlCalender />
-                <span> Book a Strategic Call</span>
+                <span> Book a Strategic Call </span>
                 <FaArrowRight
                   className="text-sm group-hover:translate-x-1 transition-transform"
                   aria-hidden="true"

@@ -2,7 +2,7 @@ import { memo, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { HiOutlineCheckCircle } from "react-icons/hi";
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
 
@@ -79,7 +79,6 @@ const PerformanceFramework = () => {
             description=" A repeatable process that turns technical complexity into measurable
             business growth."
           />
-
         </div>
 
         {/* Two Column Layout */}

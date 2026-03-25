@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaCaretDown, FaUserAlt } from "react-icons/fa";
+import { FaArrowRight, FaCaretDown, FaUserAlt } from "react-icons/fa";
 import Topicbg from "../../ui/Topicbg";
 import { Link } from "react-router-dom";
 
@@ -114,15 +114,21 @@ const ContactFAQ = () => {
                 </div>
               </div>
             ))}
+            <div className="pl-5 py-3 text-md">
+              <p>
+                Can’t find your answer here? We’ve got more in our full
+                <Link
+                  className="text-purple-800 font-semibold items-center inline-flex transition-all group hover:text-purple-600 "
+                  to="..\faqs"
+                >
+                  {" "}
+                  &nbsp; FAQ Page
+                  <FaArrowRight className="text-sm ml-2 group-hover:translate-x-1 duration-400" />
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="text-center py-3">
-        <p>
-          Can’t find your answer here? We’ve got more in our full
-          
-          <Link className="text-purple-800" to="..\faqs"> FAQ</Link>
-        </p>
       </div>
     </section>
   );

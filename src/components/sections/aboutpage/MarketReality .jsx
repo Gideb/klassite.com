@@ -2,10 +2,9 @@ import { memo } from "react";
 import { FiTrendingDown, FiClock, FiWifi, FiUsers } from "react-icons/fi";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
-
 
 const MarketReality = () => {
   const { ref: statsRef, inView: statsInView } = useInView({
@@ -81,8 +80,6 @@ const MarketReality = () => {
 
   return (
     <section className="relative w-full py-20 sm:py-24 bg-purple-50/70">
-   
-
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="max-w-xl mb-8">

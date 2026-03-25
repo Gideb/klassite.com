@@ -6,7 +6,7 @@ import React, {
   useMemo,
 } from "react";
 // eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from "framer-motion"; 
+import { motion, AnimatePresence } from "framer-motion";
 import {
   FaChevronDown,
   FaSearch,
@@ -19,11 +19,11 @@ import {
   FaStar,
   FaArrowRight,
   FaMagic,
-  /* FaSparkles, */
   FaGem,
   FaCrown,
 } from "react-icons/fa";
-import { BsChatQuote } from "react-icons/bs"; // Remove unused imports
+import { BsChatQuote } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 // Background Decorations Component
 const BackgroundDecorations = () => {
@@ -63,7 +63,6 @@ const CategoryCard = ({
   isActive,
   onClick,
 }) => {
-  // Define color classes based on the color prop
   const getColorClasses = (color) => {
     const colorMap = {
       purple: "text-purple-600",
@@ -265,9 +264,7 @@ const PremiumFAQItem = ({
   );
 };
 
-// Search Bar Component
 const SearchBar = ({ searchTerm, setSearchTerm }) => {
-  // Use useCallback to memoize the clear function
   const handleClear = useCallback(() => {
     setSearchTerm("");
   }, [setSearchTerm]);
@@ -286,7 +283,6 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
       className="relative max-w-2xl mx-auto mb-12"
     >
       <div className="relative group">
-        {/* Animated gradient border */}
         <div className="absolute -inset-0.5 bg-linear-to-r from-purple-600 to-fuchsia-600 rounded-2xl opacity-75 group-hover:opacity-100 blur transition duration-500 group-hover:duration-200" />
 
         <div className="relative flex items-center">
@@ -329,7 +325,6 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
         transition={{ delay: 0.5 }}
         className="flex items-center gap-2 mt-3 text-sm text-gray-500"
       >
-        {/* <FaSparkles className="text-purple-500" /> */}
         <span>Popular searches:</span>
         {["Pricing", "Timeline", "Support", "Custom work"].map((term) => (
           <button
@@ -345,9 +340,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
   );
 };
 
-// Stats Cards Component
 const StatsCards = () => {
-  // Define stats data with proper color mapping
   const stats = useMemo(
     () => [
       {
@@ -419,7 +412,7 @@ const KlassKonceptFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
-  const [showScrollTop, setShowScrollTop] = useState(false);
+
 
   // FAQ Categories - moved to useMemo to prevent recalculation
   const categories = useMemo(
@@ -547,15 +540,6 @@ const KlassKonceptFAQ = () => {
     },
     [categories],
   );
-
-  // Scroll to top button visibility
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Handlers
   const handleCategoryClick = useCallback((categoryId) => {
@@ -721,55 +705,50 @@ const KlassKonceptFAQ = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="group px-8 py-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white rounded-xl font-semibold text-lg shadow-xl shadow-purple-600/30 hover:shadow-2xl transition-all"
-                >
-                  <span className="flex items-center gap-2">
-                    Chat with our team
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </motion.button>
+                <Link to="/portfolio">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="group px-8 py-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white rounded-xl font-semibold text-lg shadow-xl shadow-purple-600/30 hover:shadow-2xl transition-all"
+                  >
+                    <span className="flex items-center gap-2">
+                      Check Out Our Works
+                      <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </motion.button>
+                </Link>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-purple-300 transition-all"
-                >
-                  Schedule a consultation
-                </motion.button>
+                <Link to="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-purple-300 transition-all"
+                  >
+                    Schedule a consultation
+                  </motion.button>
+                </Link>
               </div>
 
               {/* Quick contact options */}
-              <div className="flex items-center justify-center gap-6 mt-8 text-sm text-gray-500">
-                <span>✨ hello@klasskoncept.com</span>
-                <span className="w-1 h-1 bg-gray-300 rounded-full" />
-                <span>✨ +233 55 264 9953</span>
-                <span className="w-1 h-1 bg-gray-300 rounded-full" />
-                <span>✨ 24/7 Premium Support</span>
+              <div className="flex items-center justify-center gap-3 mt-6 text-sm text-gray-600">
+                <span className="bg-gray-200 shadow-sm p-2 rounded-2xl">
+                  ✨ hello@klasskoncept.com
+                </span>
+
+                <span className="bg-gray-200 shadow-sm p-2 rounded-2xl">
+                  ✨ +233 55 264 9953
+                </span>
+
+                <span className="bg-gray-200 shadow-sm p-2 rounded-2xl">
+                  ✨ 24/7 Premium Support
+                </span>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Scroll to top button */}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="fixed bottom-8 right-8 p-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white rounded-full shadow-2xl z-50"
-          >
-            <FaArrowRight className="-rotate-90" />
-          </motion.button>
-        )}
-      </AnimatePresence>
+     
     </div>
   );
 };
