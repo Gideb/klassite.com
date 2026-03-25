@@ -7,9 +7,11 @@ import ProblemStatement from "../components/sections/homepage/ProblemStatement.j
 import Transition from "../components/ui/Transition.jsx";
 import CTASection from "../components/CTASection.jsx";
 
+
 const Home = () => {
   return (
     <>
+     
       <HeroSection />
       <ProblemStatement />
       <Transition />

@@ -126,7 +126,7 @@ const CTASection = ({
             >
               <Link
                 to="/contact"
-                className={`inline-flex items-center justify-center gap-2 bg-linear-to-r ${GRADIENTS.button} text-white px-6 sm:px-7  md:px-8 py-2  sm:py-3  md:py-3 rounded-full font-semibold text-sm sm:text-base  md:text-lg  transition-all duration-300  group  cursor-pointer focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2  focus:ring-offset-purple-900 w-full sm:w-auto  shadow-lg hover:shadow-xl`}
+                className={`inline-flex items-center justify-center gap-2 bg-linear-to-r ${GRADIENTS.button} text-white px-6 sm:px-7 md:px-8 py-2 sm:py-3  md:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg transition-all duration-300  group  cursor-pointer focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-900 w-full sm:w-auto  shadow-lg hover:shadow-xl`}
                 aria-label={buttonText}
               >
                 <span className="whitespace-nowrap">{buttonText}</span>
@@ -153,40 +153,12 @@ const CTASection = ({
             >
               <Link
                 to="/portfolio"
-                className="
-                  inline-flex 
-                  items-center 
-                  justify-center
-                  gap-2 
-                  bg-transparent 
-                  border
-                  border-white 
-                  text-white 
-                  px-4 
-                  sm:px-5 
-                  md:px-6 
-                  py-2 
-                  sm:py-3 
-                  md:py-3
-                  rounded-full 
-                  font-semibold 
-                  text-sm
-                  sm:text-base
-                  md:text-lg
-                  transition-all 
-                  duration-300 
-                  group 
-                  cursor-pointer  
-                  focus:outline-none 
-                  focus:ring
-                  focus:ring-white 
-                  focus:ring-offset
-                  focus:ring-offset-purple-900
-                  hover:bg-white/10
-                  w-full
-                  sm:w-auto
-                  
-                "
+                className=" inline-flex items-center justify-center gap-2 bg-transparent  border
+                  border-white  text-white px-4  sm:px-5 md:px-6 py-2 sm:py-3 md:py-3
+                  rounded-full font-semibold text-sm  sm:text-base md:text-lg transition-all 
+                  duration-300 group cursor-pointer focus:outline-none focus:ring
+                  focus:ring-white focus:ring-offset focus:ring-offset-purple-900
+                  hover:bg-white/10 w-full  sm:w-auto "
                 aria-label={button2Text}
               >
                 <span className="whitespace-nowrap">{button2Text}</span>
@@ -209,30 +181,14 @@ const CTASection = ({
           <motion.p
             variants={fadeInUpVariants}
             className="
-              text-xs 
-              sm:text-sm 
-              md:text-base 
-              text-gray-300 
-              mt-1
-              sm:mt-3 
-              md:mt-4
-              opacity-80
-              px-4
-              sm:px-0
-            "
+              text-xs sm:text-sm md:text-base text-gray-300 mt-1 sm:mt-3 md:mt-4 opacity-80 px-4 sm:px-0 "
           >
             {disclaimer}
           </motion.p>
         </div>
       </div>
 
-      {/* Skip link for keyboard navigation */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white text-purple-900 px-4 py-2 rounded-lg z-50"
-      >
-        Skip to main content
-      </a>
+      
     </motion.section>
   );
 };

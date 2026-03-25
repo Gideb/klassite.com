@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCaretDown, FaUserAlt } from "react-icons/fa";
-import Topicbg from "../../ui/topicbg";
+import Topicbg from "../../ui/Topicbg";
+import { Link } from "react-router-dom";
 
 const ContactFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -52,9 +53,9 @@ const ContactFAQ = () => {
         ?
       </div>
       <div className="relative max-w-6xl mx-auto mt-10 px-4 sm:px-4 lg:px-6 sm:py-17 lg:py-20 py-10 overflow-hidden">
-          <div className="pointer-events-none absolute right-50 top-10 text-[420px] font-black text-fuchsia-100 rotate-100 select-none">
+        <div className="pointer-events-none absolute right-50 top-10 text-[420px] font-black text-fuchsia-100 rotate-100 select-none">
           ?
-        </div> 
+        </div>
         <div className="pointer-events-none absolute right-40 top-50 text-[420px] font-black text-purple-300 rotate-60 select-none">
           ?
         </div>
@@ -115,6 +116,12 @@ const ContactFAQ = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div>
+        <p>
+          Can’t find your answer here? We’ve got more in our full{" "}
+          <Link to="\faqs">FAQ</Link>{" "}
+        </p>
       </div>
     </section>
   );
