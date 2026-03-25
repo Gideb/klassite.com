@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { FaArrowRight, FaEye, FaExternalLinkAlt, FaStar } from "react-icons/fa";
 import { HiOutlineRocketLaunch, HiOutlinePaintBrush } from "react-icons/hi2";
 import { LuCodeXml } from "react-icons/lu";
-import klass from "../../../assets/images/klass.png";
+import poster from "../../../assets/images/poster.jpg";
+import Topicbg from "../../ui/Topicbg";
+import Headings from "../../ui/Headings";
+import Subheading from "../../ui/Subheading";
 
 const FeaturedProjects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -11,13 +14,13 @@ const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      name: "Klass Realty Website",
+      name: "poster Realty Website",
       description:
         "A modern real estate platform designed to showcase listings and drive qualified inquiries.",
       category: "Web Development",
       serviceMatch: "Website Development",
       icon: LuCodeXml,
-      image: klass,
+      image: poster,
       tags: ["Real Estate", "Property Listings", "Lead Generation"],
       results: "+150% inquiries",
     },
@@ -29,7 +32,7 @@ const FeaturedProjects = () => {
       category: "Branding",
       serviceMatch: "Branding",
       icon: HiOutlinePaintBrush,
-      image: klass,
+      image: poster,
       tags: ["Brand Identity", "Packaging", "Visual Strategy"],
       results: "40% brand recognition increase",
     },
@@ -41,7 +44,7 @@ const FeaturedProjects = () => {
       category: "Web Application",
       serviceMatch: "Web Applications",
       icon: HiOutlineRocketLaunch,
-      image: klass,
+      image: poster,
       tags: ["FinTech", "Dashboard", "Data Visualization"],
       results: "80% faster reporting",
     },
@@ -63,7 +66,7 @@ const FeaturedProjects = () => {
 
     return (
       <div
-        className="group relative rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ease-out"
+        className="group relative rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500 ease-out"
         onMouseEnter={() => setHoveredProject(project.id)}
         onMouseLeave={() => setHoveredProject(null)}
       >
@@ -82,21 +85,19 @@ const FeaturedProjects = () => {
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
             <Link
               to={`/portfolio/${project.id}`}
-              className={`transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500
-                ${isPurple ? "bg-purple-600 hover:bg-purple-700" : "bg-amber-600 hover:bg-amber-700"} text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg`}
+              className={`transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ${isPurple ? "bg-purple-600 hover:bg-purple-700" : "bg-amber-600 hover:bg-amber-700"} text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg`}
             >
               <FaEye />
               View Project
             </Link>
           </div>
 
-          {/* Service Match Badge on Image */}
+         
           <div className="absolute top-4 left-4">
             <div
               className={`flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-md`}
             >
-              <project.icon
-                className={`text-sm ${isPurple ? "text-purple-600" : "text-amber-600"}`}
+              <project.icon className={`text-sm ${isPurple ? "text-purple-600" : "text-amber-600"}`}
               />
               <span className="text-xs font-semibold text-gray-700">
                 {project.serviceMatch}
@@ -110,19 +111,17 @@ const FeaturedProjects = () => {
           {/* Category */}
           <div className="mb-3">
             <span
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold
-              ${isPurple ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${isPurple ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}
             >
               {project.category}
             </span>
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-bold text-gray-800 mb-2">
+          <h3 className="text-xl font-semibold text-gray-800 mb-2">
             {project.name}
           </h3>
 
-          {/* Description */}
           <p className="text-gray-600 text-sm leading-relaxed mb-3">
             {project.description}
           </p>
@@ -163,45 +162,33 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <section className="bg-linear-to-b from-white to-gray-50 py-24">
+    <section className="bg-linear-to-b from-white to-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-linear-to-r from-purple-100 to-purple-50 text-purple-700 px-5 py-2 rounded-full text-sm font-semibold mb-5">
-            <FaStar className="text-xs" />
-            <span>Selected Work</span>
-          </div>
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <Topicbg topic="Selected Work" />
 
-          <h2 className="text-4xl sm:text-5xl font-bold mb-5">
-            Featured{" "}
-            <span className="bg-linear-to-r from-purple-600 to-fuchsia-500 bg-clip-text text-transparent">
-              Projects
-            </span>
-          </h2>
+          <Headings black="Featured " colored="Projects" />
 
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            A glimpse of what we've created for our clients. Each project
-            represents our commitment to excellence.
-          </p>
+          <Subheading
+            description="A glimpse of what we've created for our clients. Each project
+            represents our commitment to excellence."
+          />
 
-          <div className="w-20 h-1 bg-linear-to-r from-purple-500 to-purple-300 rounded-full mx-auto mt-6" />
         </div>
 
-        {/* Projects Grid */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        {/* CTA Button */}
+      
         <div className="text-center">
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-3 bg-linear-to-r from-purple-600 to-purple-700 
-              hover:from-purple-700 hover:to-purple-800 text-white px-8 py-4 rounded-full 
-              font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 
-              transform hover:-translate-y-0.5 group"
+            className="inline-flex items-center gap-3 bg-linear-to-br from-purple-600 to-fuchsia-700 hover:from-purple-700 hover:to-fuchsia-800 text-white px-8 py-3 rounded-full font-semibold text-md shadow hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 group"
           >
             <span>View Full Portfolio</span>
             <FaExternalLinkAlt className="text-sm transition-transform duration-300 group-hover:translate-x-1" />

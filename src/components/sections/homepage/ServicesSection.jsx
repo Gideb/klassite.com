@@ -7,49 +7,50 @@ import cctv from "../../../assets/images/serviceSpecific/cctv.jpg";
 import webDev from "../../../assets/images/serviceSpecific/web-dev.jpg";
 import camera from "../../../assets/images/serviceSpecific/camera.jpg";
 import Stats from "../../Stats.jsx";
-import Topicbg from "../../ui/topicbg.jsx";
+import Topicbg from "../../ui/Topicbg.jsx";
 import Headings from "../../ui/Headings.jsx";
 
 const ServicesSection = () => {
   const serviceGroups = [
     {
       id: 1,
-      title: "Web Development & Design",
+      title: "Website Development",
       image: webDev,
       description:
-        "Custom websites that are fast, responsive, and built to convert.",
-      services: ["Website Development", "Web Design"],
+        "Custom, responsive websites designed to elevate your brand and drive results.",
+      services: ["Website Development", "SEO Optimization"],
       gradient: "from-purple-600 to-fuchsia-600",
       to: "/services/web-development",
     },
     {
       id: 2,
-      title: "Digital Marketing",
+      title: "UI/UX Design & Web Applications",
       image: digitalMark,
       description:
-        "Data-driven SEO strategies that get you to the top of Google.",
-      services: ["SEO Optimization"],
+        "Clean, user-focused interfaces paired with scalable, functional applications tailored to your business needs.",
+      services: ["Web Design", "Mobile App Development"],
       gradient: "from-blue-600 to-cyan-500",
-      to: "/services/seo",
+      to: "/services/ux-design",
     },
     {
       id: 3,
-      title: "Creative & Media",
-      image: camera,
-      description: "Professional photography, videography, and video editing.",
-      services: ["Photography", "Videography", "Video Editing"],
+      title: "Graphic Design & Branding",
+      image: cctv,
+      description:
+        "Modern, eye-catching designs for digital and print that build a strong identity and connect with your audience.",
+      services: ["Graphic Design"],
       gradient: "from-green-600 to-emerald-500",
-      to: "/services/video-production",
+      to: "/services/branding",
     },
     {
       id: 4,
-      title: "Brand & Security",
-      image: cctv,
+      title: "Content Creation",
+      image: camera,
       description:
-        "Graphic design and security solutions for complete peace of mind.",
-      services: ["Graphic Design", "CCTV Installation"],
+        "Engaging visuals and media that tell your story effectively.",
+      services: ["Photography", "Videography", "Video Editing", "Film Making"],
       gradient: "from-orange-600 to-red-500",
-      to: "/services/branding",
+      to: "/services/video-production",
     },
   ];
 
@@ -139,7 +140,6 @@ const ServicesSection = () => {
             <span>Free Consultation</span>
             <FaArrowRight className="text-sm" />
           </Link>
-        
         </div>
       </div>
     </section>

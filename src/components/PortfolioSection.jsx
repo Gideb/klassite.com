@@ -22,7 +22,7 @@ import project6 from "../assets/images/portfolio/klass.png";
 import project7 from "../assets/images/portfolio/klass.png";
 import project8 from "../assets/images/portfolio/klass.png";
 import project9 from "../assets/images/portfolio/klass.png";
-import Topicbg from "./ui/topicbg";
+import Topicbg from "./ui/Topicbg";
 import Headings from "./ui/Headings";
 
 // Animation variants

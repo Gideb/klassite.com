@@ -39,11 +39,16 @@ const CTASection = ({
   className = "",
 }) => {
   return (
-    <motion.section  id={id}
+    <motion.section
+      id={id}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      variants={{ hidden: { opacity: 0 },visible: { opacity: 1, transition: {           staggerChildren: 0.2,  delayChildren: 0.1,     },
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { staggerChildren: 0.2, delayChildren: 0.1 },
         },
       }}
       className={`scroll-mt-16 relative w-full overflow-hidden bg-linear-to-br ${GRADIENTS.background} py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6  ${className} `}
@@ -82,22 +87,8 @@ const CTASection = ({
           <motion.h2
             id="cta-title"
             variants={fadeInUpVariants}
-            className="
-              text-xl 
-              sm:text-2xl 
-              md:text-3xl 
-              lg:text-4xl 
-              font-bold 
-              text-white 
-              mb-3 
-              sm:mb-4 
-              md:mb-5
-              leading-tight
-              sm:leading-tight
-              md:leading-snug
-              px-2
-              sm:px-0
-            "
+            className=" text-xl  sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white   mb-3  sm:mb-4 md:mb-5 leading-tight sm:leading-tight  md:leading-snug
+              px-2 sm:px-0  "
           >
             {title}
           </motion.h2>
@@ -107,9 +98,9 @@ const CTASection = ({
             variants={fadeInUpVariants}
             className="
               text-white/90 
-              mb-6 
-              sm:mb-7 
-              md:mb-8 
+              mb-3
+              sm:mb-5 
+              md:mb-4 
               text-base 
               sm:text-lg 
               md:text-xl 
@@ -125,7 +116,7 @@ const CTASection = ({
           </motion.p>
 
           {/* Buttons Container - Responsive layout */}
-          <div className="flex   flex-col  sm:flex-row gap-3 sm:gap-4 md:gap-5 items-center  justify-center py-2  sm:py-3 md:py-4 px-4 sm:px-0 ">
+          <div className="flex flex-col  sm:flex-row gap-3 sm:gap-4 md:gap-5 items-center  justify-center py-1  sm:py-2 md:py-3 px-4 sm:px-0 ">
             {/* Primary Button */}
             <motion.div
               variants={fadeInUpVariants}
@@ -135,7 +126,7 @@ const CTASection = ({
             >
               <Link
                 to="/contact"
-                className={`inline-flex items-center justify-center gap-2 bg-linear-to-r ${GRADIENTS.button} text-white px-6 sm:px-7  md:px-8 py-3  sm:py-3.5  md:py-4 rounded-full font-semibold text-sm sm:text-base  md:text-lg  transition-all duration-300  group  cursor-pointer focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2  focus:ring-offset-purple-900 w-full sm:w-auto  shadow-lg hover:shadow-xl`}
+                className={`inline-flex items-center justify-center gap-2 bg-linear-to-r ${GRADIENTS.button} text-white px-6 sm:px-7  md:px-8 py-2  sm:py-3  md:py-3 rounded-full font-semibold text-sm sm:text-base  md:text-lg  transition-all duration-300  group  cursor-pointer focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2  focus:ring-offset-purple-900 w-full sm:w-auto  shadow-lg hover:shadow-xl`}
                 aria-label={buttonText}
               >
                 <span className="whitespace-nowrap">{buttonText}</span>
@@ -168,15 +159,15 @@ const CTASection = ({
                   justify-center
                   gap-2 
                   bg-transparent 
-                  border-2 
+                  border
                   border-white 
                   text-white 
-                  px-6 
-                  sm:px-7 
-                  md:px-8 
-                  py-3 
-                  sm:py-3.5 
-                  md:py-4
+                  px-4 
+                  sm:px-5 
+                  md:px-6 
+                  py-2 
+                  sm:py-3 
+                  md:py-3
                   rounded-full 
                   font-semibold 
                   text-sm
@@ -187,13 +178,14 @@ const CTASection = ({
                   group 
                   cursor-pointer  
                   focus:outline-none 
-                  focus:ring-2 
+                  focus:ring
                   focus:ring-white 
-                  focus:ring-offset-2
+                  focus:ring-offset
                   focus:ring-offset-purple-900
                   hover:bg-white/10
                   w-full
                   sm:w-auto
+                  
                 "
                 aria-label={button2Text}
               >
@@ -221,9 +213,9 @@ const CTASection = ({
               sm:text-sm 
               md:text-base 
               text-gray-300 
-              mt-4 
-              sm:mt-5 
-              md:mt-6
+              mt-1
+              sm:mt-3 
+              md:mt-4
               opacity-80
               px-4
               sm:px-0
