@@ -117,10 +117,11 @@ const ContactFAQ = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="text-center py-3">
         <p>
-          Can’t find your answer here? We’ve got more in our full{" "}
-          <Link to="\faqs">FAQ</Link>{" "}
+          Can’t find your answer here? We’ve got more in our full
+          
+          <Link className="text-purple-800" to="..\faqs"> FAQ</Link>
         </p>
       </div>
     </section>
