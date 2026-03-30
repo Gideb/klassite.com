@@ -99,7 +99,7 @@ const Footer = () => {
               <h2 className="text-3xl font-bold bg-linear-to-r from-purple-400 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent">
                 Klass Koncepts
               </h2>
-              <p className="text-gray-400 leading-relaxed text-sm max-w-md">
+              <p className="text-gray-200 leading-relaxed text-sm max-w-md">
                 Crafting digital excellence through innovation, strategy, and
                 uncompromising quality. We transform ambitious ideas into
                 extraordinary digital experiences.
@@ -108,11 +108,11 @@ const Footer = () => {
 
             {/* Trust Indicators */}
             <div className="flex flex-wrap gap-4 pt-2">
-              <div className="flex items-center gap-2 text-xs text-gray-500">
+              <div className="flex items-center gap-2 text-xs text-gray-300">
                 <FaAward className="text-purple-500" />
                 <span>Global Award Winner</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-gray-500">
+              <div className="flex items-center gap-2 text-xs text-gray-300">
                 <FaShieldAlt className="text-purple-500" />
                 <span>ISO 27001 Certified</span>
               </div>
@@ -129,7 +129,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className={`group relative p-3 bg-white/5 rounded-xl ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-500/20`}
+                    className={`group relative p-3 bg-white/15 rounded-xl ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-500/20`}
                   >
                     <Icon className="w-4 h-4 transition-colors group-hover:text-white" />
                   </a>
@@ -140,7 +140,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="lg:col-span-2 space-y-4">
-            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+            <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
               Navigation
             </h3>
             <ul className="space-y-3">
@@ -148,7 +148,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     to={item.path === "home" ? "/" : `/${item.path}`}
-                    className="text-gray-400 hover:text-purple-400 transition-colors text-sm group flex items-center gap-2"
+                    className="text-gray-300 hover:text-purple-400 transition-colors text-sm group flex items-center gap-2"
                   >
                     <span className="w-0 group-hover:w-2 h-px bg-purple-500 transition-all duration-300" />
                     {item.name}
@@ -160,7 +160,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+            <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
               Expertise
             </h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -168,7 +168,7 @@ const Footer = () => {
                 <Link
                   key={index}
                   to="/services"
-                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
                 >
                   {service}
                 </Link>
@@ -179,13 +179,13 @@ const Footer = () => {
           {/* Contact & Info */}
           <div className="lg:col-span-3 space-y-6">
             <div className="space-y-4">
-              <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+              <h3 className="text-xs font-semibold text-gray-200 uppercase tracking-wider">
                 Connect
               </h3>
               <div className="space-y-3">
                 <a
                   href="mailto:gidebdesigns@gmail.com"
-                  className="flex items-center gap-3 text-gray-400 hover:text-purple-400 transition-colors group"
+                  className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors group"
                 >
                   <div className="p-2 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20 transition-colors">
                     <FaEnvelope className="w-4 h-4 text-purple-500" />
@@ -194,20 +194,20 @@ const Footer = () => {
                 </a>
                 <a
                   href="tel:+233552649953"
-                  className="flex items-center gap-3 text-gray-400 hover:text-purple-400 transition-colors group"
+                  className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition-colors group"
                 >
                   <div className="p-2 bg-purple-500/10 rounded-lg group-hover:bg-purple-500/20 transition-colors">
                     <FaPhone className="w-4 h-4 text-purple-500" />
                   </div>
                   <span className="text-sm">+233 55 264 9953</span>
                 </a>
-                <div className="flex items-center gap-3 text-gray-400">
+                <div className="flex items-center gap-3 text-gray-300">
                   <div className="p-2 bg-purple-500/10 rounded-lg">
                     <FaMapMarkerAlt className="w-4 h-4 text-purple-500" />
                   </div>
                   <span className="text-sm">Accra, Ghana / Global Remote</span>
                 </div>
-                <div className="flex items-center gap-3 text-gray-400">
+                <div className="flex items-center gap-3 text-gray-300">
                   <div className="p-2 bg-purple-500/10 rounded-lg">
                     <FaRegClock className="w-4 h-4 text-purple-500" />
                   </div>

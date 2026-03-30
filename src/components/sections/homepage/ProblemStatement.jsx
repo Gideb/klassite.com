@@ -18,32 +18,25 @@ const ProblemStatement = () => {
       title: "Slow Websites",
       description: "Costing you revenue daily",
       stat: "53% of users abandon sites loading >3s",
-      
-      
     },
     {
       icon: FaMousePointer,
       title: "Poor User Experience",
       description: "Driving customers away",
       stat: "88% won't return after bad UX",
-     
-     
     },
     {
       icon: FaChartLine,
       title: "Weak SEO Performance",
       description: "Hiding you from customers",
       stat: "75% never scroll past page 1",
-      
-     
     },
     {
       icon: FaUsers,
       title: "Disconnected Systems",
       description: "Wasting time & resources",
       stat: "Businesses lose 20-30% revenue to inefficiency",
-     
-      },
+    },
   ];
 
   return (
@@ -75,15 +68,11 @@ const ProblemStatement = () => {
                 className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100"
               >
                 {/* Background gradient on Hover */}
-                <div
-                  className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"
-                />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
 
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div
-                    className="inline-flex items-center justify-center w-14 h-14 bg-gray-700 rounded-xl mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg"
-                  >
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gray-700 rounded-xl mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                     <Icon className="text-2xl text-white" />
                   </div>
 

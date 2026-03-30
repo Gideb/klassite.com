@@ -135,7 +135,7 @@ const ServicesSection = () => {
         <div className="text-center mt-12">
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             <span>Free Consultation</span>
             <FaArrowRight className="text-sm" />
