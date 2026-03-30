@@ -21,44 +21,44 @@ const Differentiators = () => {
       title: "Performance-First Engineering",
       description:
         "We don't bolt on speed—we build it in. Every decision prioritizes load times, Core Web Vitals, and user experience. The result? Sites that load 2.4x faster than industry average.",
-      gradient: "from-purple-600 to-fuchsia-600",
-      bgLight: "bg-purple-50",
-      iconColor: "text-purple-600",
+      gradient: "from-amber-600 to-amber-200",
+      bgLight: "bg-amber-500",
+      iconColor: "text-white",
       metric: "2.4x faster",
-      metricColor: "text-purple-600",
+      metricColor: "text-amber-600",
     },
     {
       icon: FaBrain,
       title: "Systems Thinking",
       description:
         "Your digital presence isn't isolated. We architect for how your business actually works—tools, teams, and workflows included. No more disconnected tools or siloed data.",
-      gradient: "from-blue-600 to-cyan-500",
-      bgLight: "bg-blue-50",
-      iconColor: "text-blue-600",
+      gradient: "from-amber-600 to-amber-200",
+      bgLight: "bg-amber-500",
+      iconColor: "text-white",
       metric: "100% integrated",
-      metricColor: "text-blue-600",
+      metricColor: "text-amber-600",
     },
     {
       icon: FaChartLine,
       title: "Measurable Outcomes",
       description:
         "If it doesn't move a metric, we don't do it. Every feature ties back to conversion rates, engagement, or revenue. We're obsessed with ROI, not just aesthetics.",
-      gradient: "from-green-600 to-emerald-500",
-      bgLight: "bg-green-50",
-      iconColor: "text-green-600",
+      gradient: "from-amber-600 to-amber-200",
+      bgLight: "bg-amber-500",
+      iconColor: "text-white",
       metric: "43% avg. uplift",
-      metricColor: "text-green-600",
+      metricColor: "text-amber-600",
     },
     {
       icon: FaHandshake,
       title: "Long-Term Partnerships",
       description:
         "We're not interested in one-off projects. We build relationships that evolve as your business grows. 85% of our clients have worked with us for 2+ years.",
-      gradient: "from-orange-600 to-red-500",
-      bgLight: "bg-orange-50",
-      iconColor: "text-orange-600",
+      gradient: "from-amber-600 to-amber-200",
+      bgLight: "bg-amber-500",
+      iconColor: "text-white",
       metric: "85% retention",
-      metricColor: "text-orange-600",
+      metricColor: "text-amber-600",
     },
   ];
 
@@ -196,7 +196,7 @@ const Differentiators = () => {
             </span>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+              className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
             >
               <span>Let's build together</span>
               <FaArrowRight className="text-sm group-hover:translate-x-1.5 transition-transform" />

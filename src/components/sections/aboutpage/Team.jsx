@@ -1,5 +1,6 @@
 import Topicbg from "../../ui/Topicbg";
 import klass from "../../../assets/images/klass.png";
+import Headings from "../../ui/Headings";
 
 const LeadershipGrid = () => {
   const leadershipTeam = [
@@ -33,12 +34,9 @@ const LeadershipGrid = () => {
         <div className="mb-16">
           <Topicbg topic="Leadership" />
 
-          <h2 className="text-3xl font-light text-gray-900 mt-4 mb-6">
-            Founder-Led.
-            <br />
-            <span className="text-purple-800">Performance-Driven.</span>
-          </h2>
-          <div className="h-px w-32 bg-purple-800"></div>
+          <Headings black="Founder-Led" />
+          <Headings colored=" Performance Driven" />
+          <div className="h-px w-32 bg-purple-800 mt-3"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 ">

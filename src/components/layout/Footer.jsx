@@ -228,7 +228,7 @@ const Footer = () => {
                 <h3 className="text-2xl font-bold mb-2 bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
                   Join the Inner Circle
                 </h3>
-                <p className="text-gray-400 text-sm max-w-md">
+                <p className="text-gray-300 text-sm max-w-md">
                   Get exclusive insights, early access to case studies, and
                   industry trends.
                 </p>
@@ -255,7 +255,7 @@ const Footer = () => {
               </form>
             </div>
 
-            <p className="relative text-center text-xs text-gray-500 mt-6">
+            <p className="relative text-center text-xs text-gray-300 mt-6">
               By subscribing, you agree to our Privacy Policy. No spam, ever.
             </p>
           </div>
@@ -264,7 +264,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <p className="text-gray-500 text-center md:text-left">
+            <p className="text-gray-300 text-center md:text-left">
               © {new Date().getFullYear()} Klass Koncepts. All rights reserved.
               <span className="hidden md:inline"> — </span>
               <br className="md:hidden" />
@@ -274,31 +274,31 @@ const Footer = () => {
             <div className="flex gap-6 text-xs">
               <Link
                 to="/privacy"
-                className="text-gray-500 hover:text-purple-400 transition-colors"
+                className="text-gray-300 hover:text-purple-400 transition-colors"
               >
                 Privacy
               </Link>
               <Link
                 to="/terms"
-                className="text-gray-500 hover:text-purple-400 transition-colors"
+                className="text-gray-300 hover:text-purple-400 transition-colors"
               >
                 Terms
               </Link>
               <Link
                 to="/cookies"
-                className="text-gray-500 hover:text-purple-400 transition-colors"
+                className="text-gray-300 hover:text-purple-400 transition-colors"
               >
                 Cookies
               </Link>
               <Link
                 to="/accessibility"
-                className="text-gray-500 hover:text-purple-400 transition-colors"
+                className="text-gray-300 hover:text-purple-400 transition-colors"
               >
                 Accessibility
               </Link>
             </div>
 
-            <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="flex items-center gap-2 text-xs text-gray-300">
               <FaGlobe className="text-purple-500" />
               <span>English (Global)</span>
             </div>

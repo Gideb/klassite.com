@@ -14,7 +14,7 @@ const PerformanceFramework = () => {
       title: "Strategic Architecture",
       description:
         "We map your business goals to technical requirements before writing a single line of code.",
-      gradient: "from-purple-600 to-fuchsia-600",
+
       details: [
         "Business goal mapping",
         "Technical requirement analysis",
@@ -26,7 +26,7 @@ const PerformanceFramework = () => {
       title: "Experience Engineering",
       description:
         "Every interaction is engineered for speed and clarity. Optimized for how users actually behave.",
-      gradient: "from-blue-600 to-cyan-500",
+
       details: [
         "User behavior analysis",
         "Interaction optimization",
@@ -38,7 +38,7 @@ const PerformanceFramework = () => {
       title: "Scalable Development",
       description:
         "Clean code that grows with you. Handles traffic spikes and future integration without breaking.",
-      gradient: "from-green-600 to-emerald-500",
+
       details: [
         "Clean code architecture",
         "Traffic spike handling",
@@ -50,7 +50,7 @@ const PerformanceFramework = () => {
       title: "Optimization & Growth",
       description:
         "Launch is just the beginning. We continuously refine based on real data.",
-      gradient: "from-orange-600 to-red-500",
+
       details: [
         "Data-driven refinement",
         "Performance monitoring",
@@ -66,7 +66,7 @@ const PerformanceFramework = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-24 bg-white/90 overflow-hidden"
+      className="relative w-full py-24 bg-white overflow-hidden"
     >
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
@@ -103,7 +103,7 @@ const PerformanceFramework = () => {
                 {/* Number badge */}
                 <div className="shrink-0">
                   <div
-                    className={`w-14 h-14 rounded-xl bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 rounded-xl bg-black flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     {item.id}
                   </div>
@@ -157,7 +157,7 @@ const PerformanceFramework = () => {
                 {/* Number badge */}
                 <div className="shrink-0">
                   <div
-                    className={`w-14 h-14 rounded-xl bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 rounded-xl bg-amber-600 flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     {item.id}
                   </div>

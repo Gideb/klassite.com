@@ -72,7 +72,7 @@ const ProblemStatement = () => {
 
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gray-700 rounded-xl mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-amber-600 rounded-xl mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                     <Icon className="text-2xl text-white" />
                   </div>
 

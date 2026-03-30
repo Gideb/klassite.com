@@ -5,6 +5,7 @@ import { memo } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
+import { FaPen } from "react-icons/fa";
 
 // Constants for easy customization
 const GRADIENTS = {
@@ -126,7 +127,7 @@ const CTASection = ({
             >
               <Link
                 to="/contact"
-                className={`inline-flex items-center justify-center gap-2 bg-linear-to-r ${GRADIENTS.button} text-white px-6 sm:px-7 md:px-8 py-2 sm:py-3  md:py-3 rounded-xl font-semibold text-sm sm:text-base md:text-lg transition-all duration-300  group  cursor-pointer focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-900 w-full sm:w-auto  shadow-lg hover:shadow-xl`}
+                className={`inline-flex items-center justify-center gap-2 bg-white text-purple-700 px-6 sm:px-7 md:px-8 py-2 sm:py-3  md:py-3 rounded-xl font-semibold text-sm sm:text-base md:text-lg transition-all duration-300   group  cursor-pointer focus:outline-none focus:ring  focus:ring-white focus:ring-offset focus:ring-offset-purple-900 w-full sm:w-auto shadow-md hover:shadow-lg`}
                 aria-label={buttonText}
               >
                 <span className="whitespace-nowrap">{buttonText}</span>
@@ -136,8 +137,10 @@ const CTASection = ({
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   className="inline-flex"
                 >
-                  <TfiHeadphoneAlt
-                    className="text-base sm:text-lg md:text-xl"
+                  
+
+                  <FaPen
+                    className="text-base "
                     aria-hidden="true"
                   />
                 </motion.span>
