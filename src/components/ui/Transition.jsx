@@ -4,7 +4,7 @@ const Transition = () => (
       <div className="relative">
         {/* Animated arrow */}
         <div className="absolute left-1/2 top-14 transform -translate-x-1/2">
-          <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center animate-bounce">
+          <div className="w-8 h-8 bg-purple-100 rounded-xl flex items-center justify-center animate-bounce">
             <span className="text-purple-600 text-xs">▼</span>
           </div>
         </div>

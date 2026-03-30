@@ -103,7 +103,7 @@ const PerformanceFramework = () => {
                 {/* Number badge */}
                 <div className="shrink-0">
                   <div
-                    className={`w-14 h-14 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 rounded-xl bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     {item.id}
                   </div>
@@ -134,7 +134,7 @@ const PerformanceFramework = () => {
             ))}
 
             {/* Optional: Add some decorative element for left column */}
-            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-1 h-48 bg-linear-to-b from-purple-600 via-fuchsia-500 to-transparent rounded-full opacity-20"></div>
+            <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-1 h-48 bg-linear-to-b from-purple-600 via-fuchsia-500 to-transparent rounded-xl opacity-20"></div>
           </motion.div>
 
           {/* Right Column - Last Two Items */}
@@ -157,7 +157,7 @@ const PerformanceFramework = () => {
                 {/* Number badge */}
                 <div className="shrink-0">
                   <div
-                    className={`w-14 h-14 rounded-full bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 rounded-xl bg-linear-to-br ${item.gradient} flex items-center justify-center text-white font-semibold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
                     {item.id}
                   </div>
@@ -188,7 +188,7 @@ const PerformanceFramework = () => {
             ))}
 
             {/* Optional: Add some decorative element for right column */}
-            <div className="hidden lg:block absolute right-0 bottom-0 w-32 h-32 bg-linear-to-tl from-fuchsia-200 to-purple-200 rounded-full filter blur-3xl opacity-30"></div>
+            <div className="hidden lg:block absolute right-0 bottom-0 w-32 h-32 bg-linear-to-tl from-fuchsia-200 to-purple-200 rounded-xl filter blur-3xl opacity-30"></div>
           </motion.div>
         </div>
 
@@ -203,10 +203,10 @@ const PerformanceFramework = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <div className="inline-flex items-center gap-3 bg-purple-50 px-6 py-3 rounded-full">
+          <div className="inline-flex items-center gap-3 bg-purple-50 px-6 py-3 rounded-xl">
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-purple-600"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-xl bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-xl h-3 w-3 bg-purple-600"></span>
             </span>
             <span className="text-sm text-gray-600">
               <span className="font-semibold text-purple-600">

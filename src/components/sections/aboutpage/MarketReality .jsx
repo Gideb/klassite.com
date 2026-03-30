@@ -163,9 +163,9 @@ const MarketReality = () => {
                     s
                   </span>
                 </div>
-                <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-2 bg-gray-100 rounded-xl overflow-hidden">
                   <div
-                    className="h-full bg-green-500 rounded-full transition-all duration-1000"
+                    className="h-full bg-green-500 rounded-xl transition-all duration-1000"
                     style={{ width: statsInView ? "75%" : "0%" }}
                   ></div>
                 </div>
@@ -184,9 +184,9 @@ const MarketReality = () => {
                     s
                   </span>
                 </div>
-                <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-2 bg-gray-100 rounded-xl overflow-hidden">
                   <div
-                    className="h-full bg-yellow-500 rounded-full transition-all duration-1000 delay-100"
+                    className="h-full bg-yellow-500 rounded-xl transition-all duration-1000 delay-100"
                     style={{ width: statsInView ? "50%" : "0%" }}
                   ></div>
                 </div>
@@ -205,9 +205,9 @@ const MarketReality = () => {
                     s
                   </span>
                 </div>
-                <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-2 bg-gray-100 rounded-xl overflow-hidden">
                   <div
-                    className="h-full bg-red-500 rounded-full transition-all duration-1000 delay-200"
+                    className="h-full bg-red-500 rounded-xl transition-all duration-1000 delay-200"
                     style={{ width: statsInView ? "25%" : "0%" }}
                   ></div>
                 </div>

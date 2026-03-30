@@ -82,7 +82,7 @@ const StrategicOrigin = () => {
             {/* Mission Card */}
             <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-200">
               <div className="flex items-start gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-full bg-linear-to-br from-purple-100 to-fuchsia-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-purple-100 to-fuchsia-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <FaBullseye className="text-xl text-purple-600" />
                 </div>
                 <div>
@@ -102,7 +102,7 @@ const StrategicOrigin = () => {
             {/* Vision Card */}
             <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-fuchsia-200">
               <div className="flex items-start gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-full bg-linear-to-br from-fuchsia-100 to-purple-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-fuchsia-100 to-purple-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <FaEye className="text-xl text-fuchsia-600" />
                 </div>
                 <div>

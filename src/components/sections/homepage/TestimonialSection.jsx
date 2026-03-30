@@ -120,7 +120,7 @@ const TestimonialSection = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 sm:-left-2 lg:-left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-fuchsia-600 text-white rounded-full hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+            className="absolute left-0 sm:-left-2 lg:-left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-fuchsia-600 text-white rounded-xl hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
             aria-label="Previous testimonial"
           >
             <FaChevronLeft className="text-sm sm:text-base" />
@@ -128,7 +128,7 @@ const TestimonialSection = () => {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 sm:-right-2 lg:-right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-fuchsia-600 text-white rounded-full hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+            className="absolute right-0 sm:-right-2 lg:-right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-fuchsia-600 text-white rounded-xl hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
             aria-label="Next testimonial"
           >
             <FaChevronRight className="text-sm sm:text-base" />
@@ -156,7 +156,7 @@ const TestimonialSection = () => {
                       <img
                         src="https://cdn-icons-png.flaticon.com/512/74/74464.png"
                         alt={testimonial.name}
-                        className="w-16 h-16 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover border-4 border-purple-100 sm:mr-4"
+                        className="w-16 h-16 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl object-cover border-4 border-purple-100 sm:mr-4"
                       />
                       <div className="text-left">
                         <h3 className="text-purple-700 font-semibold text-base sm:text-lg">
@@ -174,7 +174,7 @@ const TestimonialSection = () => {
                       "{testimonial.text}"
                     </p>
 
-                    <div className="h-1 w-20 bg-linear-to-r from-purple-600 to-fuchsia-500 rounded-full mt-6"></div>
+                    <div className="h-1 w-20 bg-linear-to-r from-purple-600 to-fuchsia-500 rounded-xl mt-6"></div>
                   </div>
                 </li>
               ))}
@@ -191,7 +191,7 @@ const TestimonialSection = () => {
                   index === currentIndex
                     ? "w-8 bg-fuchsia-600"
                     : "w-2 bg-purple-200 hover:bg-purple-400"
-                } h-2 rounded-full`}
+                } h-2 rounded-xl`}
                 aria-label={`Go to slide group ${index + 1}`}
               />
             ))}

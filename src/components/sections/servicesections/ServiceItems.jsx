@@ -190,7 +190,7 @@ const ServiceItems = () => {
             <p className="text-gray-600 text-md max-w-2xl ml-18">
               {services.digital.intro}
             </p>
-            <div className="w-1/4 h-0.5 bg-linear-to-r from-purple-500 to-purple-100 rounded-full mt-3 ml-18" />
+            <div className="w-1/4 h-0.5 bg-linear-to-r from-purple-500 to-purple-100 rounded-xl mt-3 ml-18" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -214,7 +214,7 @@ const ServiceItems = () => {
             <p className="text-gray-600 text-md max-w-2xl ml-18">
               {services.creative.intro}
             </p>
-            <div className="w-1/4 h-0.5 bg-linear-to-r from-amber-500 to-amber-100 rounded-full mt-3 ml-18" />
+            <div className="w-1/4 h-0.5 bg-linear-to-r from-amber-500 to-amber-100 rounded-xl mt-3 ml-18" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

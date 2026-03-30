@@ -48,8 +48,8 @@ const WhyUs = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         {/* Floating Orbs */}{" "}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-purple-400 rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-300 rounded-full mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-0 left-0 w-64 h-64 bg-purple-400 rounded-xl mix-blend-overlay filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-fuchsia-300 rounded-xl mix-blend-overlay filter blur-3xl animate-pulse animation-delay-2000"></div>
         <div className="max-w-3xl mb-20">
           <Topicbg topic="Why Choose Us" />
 
@@ -104,7 +104,7 @@ const WhyUs = () => {
             to="/about"
             className="inline-flex items-center gap-3 
                    bg-purple-600 hover:bg-purple-500
-                   px-7 py-3 rounded-full
+                   px-7 py-3 rounded-xl
                    font-medium
                    transition-all duration-300 group hover:scale-105 text-white"
           >

@@ -9,11 +9,11 @@ const ServiceHero = () => {
       {/* Animated Blobs - Abstract shapes for visual interest */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Blob 1 - Large purple */}
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-purple-300/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-purple-300/30 rounded-xl mix-blend-multiply filter blur-3xl animate-blob" />
         {/* Blob 2 - Medium pink/purple */}
-        <div className="absolute top-20 -right-20 w-72 h-72 bg-purple-400/30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute top-20 -right-20 w-72 h-72 bg-purple-400/30 rounded-xl mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
         {/* Blob 3 - Bottom center */}
-        <div className="absolute -bottom-32 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-purple-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+        <div className="absolute -bottom-32 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-purple-200/40 rounded-xl mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
@@ -45,15 +45,15 @@ const ServiceHero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Link
               to="/contact"
-              className="group relative px-8 py-3.5 bg-linear-to-br from-purple-700 to-fuchsia-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:bg-purple-800 transform transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex gap-3 items-center"
+              className="group relative px-8 py-3.5 bg-linear-to-br from-purple-700 to-fuchsia-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-purple-800 transform transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex gap-3 items-center"
             >
               Get a Quote
               <TfiHeadphoneAlt />
-              <span className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+              <span className="absolute inset-0 rounded-xl bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </Link>
             <Link
               to="/portfolio"
-              className="px-8 py-3.5 border-2 border-purple-600 text-purple-700 font-semibold rounded-full bg-transparent hover:bg-purple-50 hover:border-purple-700 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex gap-3 items-center"
+              className="px-8 py-3.5 border-2 border-purple-600 text-purple-700 font-semibold rounded-xl bg-transparent hover:bg-purple-50 hover:border-purple-700 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex gap-3 items-center"
             >
               <FaEye />
               View Our Work

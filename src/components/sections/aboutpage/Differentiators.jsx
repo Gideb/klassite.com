@@ -91,8 +91,8 @@ const Differentiators = () => {
     <section className="relative w-full py-16 sm:py-18 bg-white/90 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-100 rounded-xl mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-100 rounded-xl mix-blend-multiply filter blur-3xl opacity-30"></div>
       </div>
 
       <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -156,7 +156,7 @@ const Differentiators = () => {
                       {item.title}
                     </h3>
                     <span
-                      className={`text-sm font-semibold ${item.metricColor} bg-white px-2 py-1 rounded-full border border-gray-100`}
+                      className={`text-sm font-semibold ${item.metricColor} bg-white px-2 py-1 rounded-xl border border-gray-100`}
                     >
                       {item.metric}
                     </span>
@@ -196,7 +196,7 @@ const Differentiators = () => {
             </span>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+              className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
             >
               <span>Let's build together</span>
               <FaArrowRight className="text-sm group-hover:translate-x-1.5 transition-transform" />

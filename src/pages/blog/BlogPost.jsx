@@ -1,4 +1,3 @@
-
 import { memo, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
@@ -14,9 +13,6 @@ import {
   FaComment,
   FaShare,
 } from "react-icons/fa";
-
-
-
 
 // Blog Images (replace with your actual imports)
 import blog1 from "../../assets/images/blog/klass.png";
@@ -213,9 +209,6 @@ const BlogPost = () => {
 
   return (
     <>
-     
-
-     
       {/* Main Blog Content */}
       <section className="py-20 bg-gray-50">
         <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -249,7 +242,7 @@ const BlogPost = () => {
                                 alt={post.title}
                                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                               />
-                              <div className="absolute top-4 left-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-3 py-1 rounded-full text-sm">
+                              <div className="absolute top-4 left-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-3 py-1 rounded-xl text-sm">
                                 Featured
                               </div>
                             </div>
@@ -286,7 +279,7 @@ const BlogPost = () => {
                                   <img
                                     src={post.author.avatar}
                                     alt={post.author.name}
-                                    className="w-8 h-8 rounded-full object-cover"
+                                    className="w-8 h-8 rounded-xl object-cover"
                                   />
                                   <span className="text-sm text-gray-700">
                                     {post.author.name}
@@ -379,7 +372,7 @@ const BlogPost = () => {
                       <button
                         key={page}
                         onClick={() => setCurrentPage(page)}
-                        className={`w-10 h-10 rounded-full font-semibold transition-all ${
+                        className={`w-10 h-10 rounded-xl font-semibold transition-all ${
                           currentPage === page
                             ? "bg-linear-to-r from-purple-600 to-fuchsia-600 text-white"
                             : "bg-white text-gray-700 hover:bg-gray-100"
@@ -492,7 +485,7 @@ const BlogPost = () => {
                   {popularTags.map((tag, index) => (
                     <button
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gradient-to-r hover:from-purple-600 hover:to-fuchsia-600 hover:text-white transition-all"
+                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-xl text-sm hover:bg-gradient-to-r hover:from-purple-600 hover:to-fuchsia-600 hover:text-white transition-all"
                     >
                       #{tag}
                     </button>
@@ -525,8 +518,6 @@ const BlogPost = () => {
           </div>
         </div>
       </section>
-
-  
     </>
   );
 };

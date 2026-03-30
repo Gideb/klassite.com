@@ -84,24 +84,26 @@ const ContactSection = () => {
   ];
 
   return (
-    <div id="contact" className="scroll-mt-24 relative px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center bg-linear-to-b from-purple-50 via-white to-white overflow-hidden">
-      <section >
+    <div
+      id="contact"
+      className="scroll-mt-24 relative px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center bg-linear-to-b from-purple-50 via-white to-white overflow-hidden"
+    >
+      <section>
         {/* Background Glow - Fixed positioning */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-20 left-1/2 -translate-x-1/2 w-75 sm:w-100 lg:w-125 h-75 sm:h-100 lg:h-125 bg-purple-500/10 blur-[120px] rounded-full"></div>
+          <div className="absolute top-20 left-1/2 -translate-x-1/2 w-75 sm:w-100 lg:w-125 h-75 sm:h-100 lg:h-125 bg-purple-500/10 blur-[120px] rounded-xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto">
           <div>
-             {/* Title */}
-          <Headings black="Let's" colored=" Work Together" />
+            {/* Title */}
+            <Headings black="Let's" colored=" Work Together" />
 
-          <Subheading
-            description=" Ready to transform your digital presence? Get in touch and let's
-            create something amazing." 
-          />
+            <Subheading
+              description=" Ready to transform your digital presence? Get in touch and let's
+            create something amazing."
+            />
           </div>
-         
 
           {/* Main Grid - Modified for alignment */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 py-10 lg:py-12">
@@ -173,7 +175,7 @@ const ContactSection = () => {
                 </p>
 
                 <p className="pt-2 text-sm text-gray-600">
-                 ✨ Response Time:{" "}
+                  ✨ Response Time:{" "}
                   <span className="font-medium text-gray-800">
                     Within 24 hours during business days
                   </span>

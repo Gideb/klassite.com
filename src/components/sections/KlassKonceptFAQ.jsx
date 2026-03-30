@@ -38,7 +38,7 @@ const BackgroundDecorations = () => {
           y: [0, -50, 0],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute top-20 left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px]"
+        className="absolute top-20 left-20 w-96 h-96 bg-purple-600/20 rounded-xl blur-[100px]"
       />
       <motion.div
         animate={{
@@ -48,7 +48,7 @@ const BackgroundDecorations = () => {
           y: [0, 60, 0],
         }}
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-20 right-20 w-96 h-96 bg-fuchsia-600/20 rounded-full blur-[100px]"
+        className="absolute bottom-20 right-20 w-96 h-96 bg-fuchsia-600/20 rounded-xl blur-[100px]"
       />
     </div>
   );
@@ -113,7 +113,7 @@ const CategoryCard = ({
       <motion.div
         animate={isActive ? { rotate: 360 } : {}}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute -right-8 -bottom-8 w-24 h-24 bg-white/10 rounded-full blur-2xl"
+        className="absolute -right-8 -bottom-8 w-24 h-24 bg-white/10 rounded-xl blur-2xl"
       />
     </motion.button>
   );
@@ -180,7 +180,7 @@ const PremiumFAQItem = ({
                 <div className="flex items-center gap-2 mb-2">
                   {/* Category tag */}
                   <span
-                    className={`text-xs px-3 py-1 rounded-full ${
+                    className={`text-xs px-3 py-1 rounded-xl ${
                       isOpen
                         ? "bg-white/20 text-white"
                         : "bg-linear-to-r from-purple-100 to-fuchsia-100 text-purple-600"
@@ -191,7 +191,7 @@ const PremiumFAQItem = ({
 
                   {/* Premium badge for special questions */}
                   {index % 3 === 0 && (
-                    <span className="flex items-center gap-1 text-xs px-3 py-1 rounded-full bg-linear-to-r from-yellow-400 to-orange-400 text-white">
+                    <span className="flex items-center gap-1 text-xs px-3 py-1 rounded-xl bg-linear-to-r from-yellow-400 to-orange-400 text-white">
                       <FaCrown className="text-xs" /> Premium
                     </span>
                   )}
@@ -330,7 +330,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
           <button
             key={term}
             onClick={() => handleSuggestionClick(term)}
-            className="px-3 py-1 bg-gray-100 hover:bg-purple-100 rounded-full transition-colors"
+            className="px-3 py-1 bg-gray-100 hover:bg-purple-100 rounded-xl transition-colors"
           >
             {term}
           </button>
@@ -412,7 +412,6 @@ const KlassKonceptFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
-
 
   // FAQ Categories - moved to useMemo to prevent recalculation
   const categories = useMemo(
@@ -582,7 +581,7 @@ const KlassKonceptFAQ = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600/10 to-fuchsia-600/10 backdrop-blur-xl px-4 py-2 rounded-full border border-purple-200/50 mb-6"
+              className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600/10 to-fuchsia-600/10 backdrop-blur-xl px-4 py-2 rounded-xl border border-purple-200/50 mb-6"
             >
               <FaStar className="text-yellow-500" />
               <span className="text-sm font-semibold bg-linear-to-r from-purple-600 to-fuchsia-600 bg-clip-text text-transparent">
@@ -747,8 +746,6 @@ const KlassKonceptFAQ = () => {
           </motion.div>
         </div>
       </section>
-
-     
     </div>
   );
 };

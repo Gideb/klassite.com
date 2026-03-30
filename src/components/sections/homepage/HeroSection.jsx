@@ -10,7 +10,6 @@ import BlobBackground from "../../ui/BlobBackground";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
 
-
 // Services array
 const SERVICES = ["Web Development", "Branding", "Media", "Security Solutions"];
 
@@ -21,13 +20,12 @@ const STATS = [
   { end: 98, suffix: "%", label: "Client Satisfaction", duration: 6 },
 ];
 
-
 const ServiceTags = memo(() => (
   <div className="flex flex-wrap gap-3" aria-label="Our services">
     {SERVICES.map((service) => (
       <span
         key={service}
-        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-purple-100 hover:text-purple-600 transition-colors duration-300 cursor-default"
+        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl text-sm font-medium hover:bg-purple-100 hover:text-purple-600 transition-colors duration-300 cursor-default"
       >
         {service}
       </span>
@@ -59,13 +57,12 @@ const HeroSection = () => {
             {/* Main Heading */}
             <h1 className="font-black text-2xl sm:text-3xl lg:text-5xl xl:text-6xl leading-tight lg:leading-[1.2] text-gray-900">
               We Build{" "}
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-fuchsia-500">
+              <span className="bg-clip-text text-transparent bg-fuchsia-600">
                 High Performance
               </span>{" "}
               <br className="hidden sm:block" />
               Digital Systems That Grow Your Business
             </h1>
-         
 
             <div className="text-base sm:text-lg text-gray-600 max-w-2xl -mt-4">
               <Subheading
@@ -79,7 +76,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
               <Link
                 to="/contact"
-                className="w-full sm:w-auto group bg-linear-to-r from-purple-500 to-fuchsia-500 text-white px-8 py-3.5 rounded-full font-medium text-md hover:shadow-xl transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto grouptext-md shadow-md hover:shadow-xl px-8 py-3.5 rounded-xl font-medium text-md transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring focus:ring-purple-300 focus:ring-offset flex items-center justify-center gap-2"
               >
                 <SlCalender />
                 <span> Book a Strategic Call </span>
@@ -91,7 +88,7 @@ const HeroSection = () => {
 
               <a
                 href="/services"
-                className="w-full sm:w-auto group text-purple-700 px-8 py-3.5 rounded-full font-medium border-2 border-purple-600 hover:bg-purple-50 transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2"
+                className="w-full sm:w-auto group text-white bg-black/90 px-8 py-3.5 rounded-xl font-medium border-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -111,7 +108,7 @@ const HeroSection = () => {
             >
               {STATS.map((stat) => (
                 <div key={stat.label} className="text-center sm:text-left">
-                  <h5 className="text-xl sm:text-2xl font-semibold bg-clip-text text-transparent bg-linear-to-br from-purple-600 to-fuchsia-600">
+                  <h5 className="text-xl sm:text-2xl font-semibold text-gray-700">
                     {STATSInView ? (
                       <>
                         <CountUp end={stat.end} duration={stat.duration} />
@@ -134,7 +131,7 @@ const HeroSection = () => {
                 {[...Array(4)].map((_, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full bg-linear-to-br from-purple-400 to-fuchsia-400 border-2 border-white shadow-sm"
+                    className="w-8 h-8 rounded-xl bg-linear-to-br from-purple-400 to-fuchsia-400 border-2 border-white shadow-sm"
                   />
                 ))}
               </div>
@@ -158,10 +155,10 @@ const HeroSection = () => {
               />
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 motion-safe:animate-bounce">
+              <div className="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-xl shadow-lg flex items-center gap-2 motion-safe:animate-bounce">
                 <div className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-xl bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-xl h-2 w-2 bg-green-500"></span>
                 </div>
                 <span className="text-sm font-medium">Available for work</span>
               </div>
@@ -185,8 +182,8 @@ const HeroSection = () => {
           <span className="text-xs uppercase tracking-widest sr-only lg:not-sr-only">
             Scroll
           </span>
-          <div className="w-5 h-9 border-2 border-current rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-current rounded-full motion-safe:animate-[bounce_1s_ease-in-out_infinite]"></div>
+          <div className="w-5 h-9 border-2 border-current rounded-xl flex justify-center p-1">
+            <div className="w-1 h-2 bg-current rounded-xl motion-safe:animate-[bounce_1s_ease-in-out_infinite]"></div>
           </div>
         </a>
       </div>

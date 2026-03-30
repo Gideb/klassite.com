@@ -114,15 +114,15 @@ const CaseStudySection = () => {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-40 left-20 w-72 h-72 bg-purple-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-20 w-80 h-80 bg-fuchsia-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-40 left-20 w-72 h-72 bg-purple-200/20 rounded-xl blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-80 h-80 bg-fuchsia-200/20 rounded-xl blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mx-auto mb-6">
-            <span className="w-2 h-2 bg-fuchsia-600 rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-xl text-sm font-medium mx-auto mb-6">
+            <span className="w-2 h-2 bg-fuchsia-600 rounded-xl animate-pulse"></span>
             Case Studies
           </div>
 
@@ -162,7 +162,7 @@ const CaseStudySection = () => {
 
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="bg-white/90 backdrop-blur-sm text-purple-700 px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                    <span className="bg-white/90 backdrop-blur-sm text-purple-700 px-4 py-2 rounded-xl text-sm font-semibold shadow-lg">
                       {study.category}
                     </span>
                   </div>
@@ -215,7 +215,7 @@ const CaseStudySection = () => {
                       {study.metrics.map((metric, idx) => (
                         <span
                           key={idx}
-                          className="text-xs sm:text-sm bg-white px-3 py-1.5 rounded-full text-gray-700 shadow-sm"
+                          className="text-xs sm:text-sm bg-white px-3 py-1.5 rounded-xl text-gray-700 shadow-sm"
                         >
                           {metric.label}: {metric.value}
                         </span>
@@ -246,7 +246,7 @@ const CaseStudySection = () => {
         <div className="text-center mt-12 lg:mt-16">
           <a
             href="/case-studies"
-            className="inline-flex items-center gap-2 bg-fuchsia-900 text-white px-8 py-4 rounded-full font-semibold hover:bg-fuchsia-800 transition-all duration-300 hover:shadow-xl hover:scale-105 group"
+            className="inline-flex items-center gap-2 bg-fuchsia-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-fuchsia-800 transition-all duration-300 hover:shadow-xl hover:scale-105 group"
           >
             View All Case Studies
             <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />

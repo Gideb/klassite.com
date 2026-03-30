@@ -85,7 +85,7 @@ const FeaturedProjects = () => {
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
             <Link
               to={`/portfolio/${project.id}`}
-              className={`transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ${isPurple ? "bg-purple-600 hover:bg-purple-700" : "bg-amber-600 hover:bg-amber-700"} text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-lg`}
+              className={`transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ${isPurple ? "bg-purple-600 hover:bg-purple-700" : "bg-amber-600 hover:bg-amber-700"} text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg`}
             >
               <FaEye />
               View Project
@@ -94,7 +94,7 @@ const FeaturedProjects = () => {
 
           <div className="absolute top-4 left-4">
             <div
-              className={`flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-md`}
+              className={`flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-1.5 shadow-md`}
             >
               <project.icon
                 className={`text-sm ${isPurple ? "text-purple-600" : "text-amber-600"}`}
@@ -111,7 +111,7 @@ const FeaturedProjects = () => {
           {/* Category */}
           <div className="mb-3">
             <span
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${isPurple ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-semibold ${isPurple ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}
             >
               {project.category}
             </span>
@@ -140,7 +140,7 @@ const FeaturedProjects = () => {
             {project.tags.slice(0, 3).map((tag, idx) => (
               <span
                 key={idx}
-                className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full"
+                className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-xl"
               >
                 {tag}
               </span>
@@ -185,7 +185,7 @@ const FeaturedProjects = () => {
         <div className="text-center">
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-3 bg-linear-to-br from-purple-600 to-fuchsia-700 hover:from-purple-700 hover:to-fuchsia-800 text-white px-8 py-3 rounded-full font-semibold text-md shadow hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 group"
+            className="inline-flex items-center gap-3 bg-linear-to-br from-purple-600 to-fuchsia-700 hover:from-purple-700 hover:to-fuchsia-800 text-white px-8 py-3 rounded-xl font-semibold text-md shadow hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 group"
           >
             <span>View Full Portfolio</span>
             <FaExternalLinkAlt className="text-sm transition-transform duration-300 group-hover:translate-x-1" />

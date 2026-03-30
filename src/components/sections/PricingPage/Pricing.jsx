@@ -119,7 +119,7 @@ const ServiceCard = ({
         {features.map((feature, idx) => (
           <span
             key={idx}
-            className={`text-xs px-2 py-1 rounded-full ${getBadgeClass(color)} font-medium`}
+            className={`text-xs px-2 py-1 rounded-xl ${getBadgeClass(color)} font-medium`}
           >
             {feature}
           </span>
@@ -161,7 +161,7 @@ const SectionHeader = ({ title, badge, intro, gradient, controls }) => (
   >
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-600 px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-sm"
+      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-600 px-6 py-2 rounded-xl text-sm font-semibold mb-6 shadow-sm"
     >
       <IoSparklesOutline className="text-xs" />
       <span>{badge}</span>
@@ -180,7 +180,7 @@ const SectionHeader = ({ title, badge, intro, gradient, controls }) => (
     </p>
 
     <div
-      className={`w-24 h-1 bg-gradient-to-r ${gradient} rounded-full mx-auto mt-8`}
+      className={`w-24 h-1 bg-gradient-to-r ${gradient} rounded-xl mx-auto mt-8`}
     />
   </motion.div>
 );
@@ -213,7 +213,7 @@ const StatsSection = ({ controls }) => {
           className="text-center group"
         >
           <div
-            className={`w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-br from-${stat.color}-100 to-${stat.color}-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+            className={`w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-${stat.color}-100 to-${stat.color}-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
           >
             <stat.icon className={`text-${stat.color}-600 text-xl`} />
           </div>
@@ -247,7 +247,7 @@ const CtaSection = ({ controls }) => (
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.98 }}
-        className="bg-white text-purple-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2"
+        className="bg-white text-purple-700 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 inline-flex items-center gap-2"
       >
         Start Your Project
         <FaArrowRight className="text-sm" />
@@ -532,7 +532,7 @@ const Pricing = () => {
           variants={itemVariants}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-purple-50 text-purple-700 px-6 py-2 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-purple-50 text-purple-700 px-6 py-2 rounded-xl text-sm font-semibold mb-6">
             <FaStar className="text-yellow-500" />
             <span>Trusted by Industry Leaders</span>
           </div>

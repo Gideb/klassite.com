@@ -101,7 +101,7 @@ const Stats = () => {
 
                     {/* Soft Icon Circle */}
                     <div
-                      className="w-12 h-12 rounded-full bg-white 
+                      className="w-12 h-12 rounded-xl bg-white 
                                   flex items-center justify-center 
                                   shadow-sm"
                     >

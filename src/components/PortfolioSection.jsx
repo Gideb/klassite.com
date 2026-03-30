@@ -363,7 +363,7 @@ const PortfolioSection = () => {
                         {project.tags.slice(0, 2).map((tag, i) => (
                           <span
                             key={i}
-                            className="text-xs bg-white/20 px-2 py-1 rounded-full"
+                            className="text-xs bg-white/20 px-2 py-1 rounded-xl"
                           >
                             #{tag}
                           </span>
@@ -374,7 +374,7 @@ const PortfolioSection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="absolute top-4 right-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
+                  <div className="absolute top-4 right-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-3 py-1 rounded-xl text-sm flex items-center gap-1">
                     <FaStar className="text-yellow-300" />
                     Featured
                   </div>
@@ -417,7 +417,7 @@ const PortfolioSection = () => {
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all ${
+                className={`px-6 py-3 rounded-xl font-semibold transition-all ${
                   activeFilter === filter.id
                     ? "bg-linear-to-r from-purple-600 to-fuchsia-600 text-white shadow-lg"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -457,7 +457,7 @@ const PortfolioSection = () => {
                           {project.tags.slice(0, 3).map((tag, i) => (
                             <span
                               key={i}
-                              className="text-xs bg-white/20 px-2 py-1 rounded-full"
+                              className="text-xs bg-white/20 px-2 py-1 rounded-xl"
                             >
                               {tag}
                             </span>
@@ -480,7 +480,7 @@ const PortfolioSection = () => {
                       {project.description}
                     </p>
                     <div className="flex justify-between items-center">
-                      <span className="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-700">
+                      <span className="text-xs px-2 py-1 bg-gray-100 rounded-xl text-gray-700">
                         {project.category}
                       </span>
                       <button className="text-fuchsia-600 hover:text-fuchsia-700 font-semibold text-sm">
@@ -544,7 +544,7 @@ const PortfolioSection = () => {
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-6 right-6 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/40 transition"
+                  className="absolute top-6 right-6 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-white hover:bg-white/40 transition"
                 >
                   <FaTimes />
                 </button>
@@ -581,7 +581,7 @@ const PortfolioSection = () => {
                           key={index}
                           className="flex items-center gap-2 text-gray-700"
                         >
-                          <span className="w-1.5 h-1.5 bg-linear-to-r from-purple-600 to-fuchsia-600 rounded-full"></span>
+                          <span className="w-1.5 h-1.5 bg-linear-to-r from-purple-600 to-fuchsia-600 rounded-xl"></span>
                           {feature}
                         </li>
                       ))}
@@ -627,7 +627,7 @@ const PortfolioSection = () => {
                       {selectedProject.technologies.map((tech, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                          className="px-3 py-1 bg-gray-100 text-gray-700 rounded-xl text-sm"
                         >
                           {tech}
                         </span>
@@ -669,7 +669,7 @@ const PortfolioSection = () => {
                       {selectedProject.tags.map((tag, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-linear-to-r from-purple-100 to-fuchsia-100 text-fuchsia-700 rounded-full text-sm"
+                          className="px-3 py-1 bg-linear-to-r from-purple-100 to-fuchsia-100 text-fuchsia-700 rounded-xl text-sm"
                         >
                           #{tag}
                         </span>
@@ -715,7 +715,7 @@ const PortfolioSection = () => {
           >
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-purple-900 px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+              className="inline-flex items-center gap-2 bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 group"
             >
               Get in Touch
               <FaArrowRight className="group-hover:translate-x-1.5 transition" />

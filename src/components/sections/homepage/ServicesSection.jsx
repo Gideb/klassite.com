@@ -61,8 +61,8 @@ const ServicesSection = () => {
     >
       {/* Decorative Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200 rounded-xl mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-200 rounded-xl mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
@@ -111,7 +111,7 @@ const ServicesSection = () => {
                     {group.services.map((service, idx) => (
                       <span
                         key={idx}
-                        className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
+                        className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-xl"
                       >
                         {service}
                       </span>
@@ -135,7 +135,7 @@ const ServicesSection = () => {
         <div className="text-center mt-12">
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             <span>Free Consultation</span>
             <FaArrowRight className="text-sm" />

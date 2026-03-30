@@ -1,6 +1,6 @@
 import logo from "../../assets/images/logo.png";
 import { useEffect, useState } from "react";
-import { FaServicestack } from "react-icons/fa";
+import { FaPen, FaServicestack } from "react-icons/fa";
 import { HiOutlineUser } from "react-icons/hi";
 import { IoHomeOutline } from "react-icons/io5";
 import { PiNewspaperThin } from "react-icons/pi";
@@ -36,7 +36,7 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-10"
+          scrolled ? "bg-white shadow-md py-7" : "bg-transparent py-15"
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 pt-3">
@@ -61,10 +61,10 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="w-full sm:w-auto group bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-9 py-3 rounded-full font-semibold text-lg hover:shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 invisible md:visible flex items-center justify-center gap-2"
+            className="w-full sm:w-auto group  px-9 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105 focus:outline-none focus:ring focus:ring-black focus:ring-offset invisible md:visible flex items-center justify-center gap-2"
           >
             Get a Quote
-            <TfiHeadphoneAlt className="text-sm group-hover:translate-x-1 transition-transform" />
+            <FaPen className="text-sm group-hover:translate-x-1 transition-transform" />
           </Link>
 
           {/* Mobile Hamburger */}
@@ -109,7 +109,7 @@ const Navbar = () => {
                 onClick={() => setMenuOpen(false)}
                 className="font-normal text-base text-gray-700 hover:text-fuchsia-600 transition"
               >
-                <div className="flex gap-3">
+                <div className="flex gap-3 hover:translate-x-1.5 transition-all duration-300">
                   <link.icon className="text-xl " />
                   {link.name}
                 </div>
@@ -121,10 +121,10 @@ const Navbar = () => {
           <Link
             to="/contact"
             onClick={() => setMenuOpen(false)}
-            className="bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 absolute bottom-20 flex items-center justify-center gap-2"
+            className="text-md shadow-md hover:shadow-xl text-black/80 px-8 py-4 rounded-xl font-semibold  transform transition duration-300 hover:scale-105 focus:outline-none focus:ring focus:ring-black focus:ring-offset absolute bottom-20 flex items-center justify-center gap-2"
           >
             Get a Quote
-            <TfiHeadphoneAlt className="text-sm group-hover:translate-x-1 transition-transform" />
+            <FaPen className="text-sm group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>
