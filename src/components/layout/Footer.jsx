@@ -29,14 +29,12 @@ const Footer = () => {
   ];
 
   const services = [
-    "Digital Transformation",
-    "Enterprise Web Solutions",
-    "AI & Machine Learning",
-    "Cloud Architecture",
-    "UX/UI Strategy",
-    "Brand Experience",
-    "Cybersecurity",
-    "Data Analytics",
+    " Enterprise Web Solutions",
+    " Mobile Applications",
+    " Content Creation",
+    " Brand Experience",
+    " UI/UX Strategy",
+    " Graphic Design",
   ];
 
   const socialLinks = [
@@ -168,9 +166,10 @@ const Footer = () => {
                 <Link
                   key={index}
                   to="/services"
-                  className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-400 transition-colors text-sm flex  gap-2"
                 >
-                  {service}
+                  <span>•</span>
+                   {service}
                 </Link>
               ))}
             </div>

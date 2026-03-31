@@ -15,11 +15,13 @@ import CaseStudyDetails from "../pages/portfolio/CaseStudyDetails";
 import Blog from "../pages/blog/Blog";
 import BlogPost from "../pages/blog/BlogPost";
 
-import WebDevelopment from "../pages/individualServices/WebDevelopment";
-import UIUXDesign from "../pages/individualServices/UIUXDesign";
-import SEO from "../pages/individualServices/SEO";
-import VideoProduction from "../pages/individualServices/VideoProduction";
-import Branding from "../pages/individualServices/Branding";
+import WebDevelopment from "../pages/digitalsolutions/WebDevelopment";
+import MobileApp from "../pages/digitalsolutions/MobileApps";
+import UIUXDesign from "../pages/digitalsolutions/UIUXDesign";
+
+import GraphicDesign from "../pages/creativeservices/GraphicDesign";
+import Branding from "../pages/creativeservices/Branding";
+import ContentCreation from "../pages/creativeservices/ContentCreation";
 
 const AppRoutes = () => {
   return (
@@ -32,15 +34,15 @@ const AppRoutes = () => {
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<Contact />} />
 
-        {/* Individual Services */}
-        <Route path="/services/web-development" element={<WebDevelopment />} />
-        <Route path="/services/ux-design" element={<UIUXDesign />} />
-        <Route path="/services/seo" element={<SEO />} />
+        {/* digital Services */}
+        <Route path="/services/webdev" element={<WebDevelopment />} />
+        <Route path="/services/uxdesign" element={<UIUXDesign />} />
+        <Route path="/services/mobileapp" element={<MobileApp />} />
+
+        {/* creative Services */}
         <Route path="/services/branding" element={<Branding />} />
-        <Route
-          path="/services/video-production"
-          element={<VideoProduction />}
-        />
+        <Route path="/services/graphicdesign" element={<GraphicDesign />} />
+        <Route path="/services/contentcreation" element={<ContentCreation />} />
 
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:slug" element={<CaseStudyDetails />} />

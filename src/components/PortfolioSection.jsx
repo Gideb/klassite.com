@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import {
   FaExternalLinkAlt,
   FaGithub,
-  FaSearch,
-  FaFilter,
+
   FaTimes,
   FaArrowRight,
   FaStar,
@@ -287,41 +286,10 @@ const PortfolioSection = () => {
   // Featured projects
   const featuredProjects = projects.filter((p) => p.featured);
 
-  // Statistics
-  const stats = [
-    { label: "Projects Completed", value: "60+", icon: "🚀" },
-    { label: "Happy Clients", value: "40+", icon: "😊" },
-    { label: "Countries Served", value: "15+", icon: "🌍" },
-    { label: "Awards Won", value: "6", icon: "🏆" },
-  ];
 
   return (
     <>
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="text-center"
-              >
-                <div className="text-4xl mb-2">{stat.icon}</div>
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-fuchsia-600">
-                  {stat.value}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+   
 
       {/* Featured Projects */}
       <section className="py-20 bg-gray-50">

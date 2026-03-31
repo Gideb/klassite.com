@@ -1,14 +1,16 @@
-import React from 'react'
-import CTASection from '../components/CTASection'
-import OtherHeroSection from '../components/OtherHeroSection'
+import React from "react";
+
+import OtherHeroSection from "../components/OtherHeroSection";
+import CareerSection from "../components/CareerSection";
 
 const Careers = () => {
   return (
     <div>
       <OtherHeroSection pageName="Careers" />
-      <CTASection />
+
+      <CareerSection />
     </div>
   );
-}
+};
 
-export default Careers
+export default Careers;

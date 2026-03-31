@@ -15,6 +15,7 @@ import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
 import Stats from "../../Stats";
+import { Link } from "react-router-dom";
 
 const ServiceItems = () => {
   const services = {
@@ -28,21 +29,25 @@ const ServiceItems = () => {
       items: [
         {
           icon: LuCodeXml,
-          title: "Website Development",
+          title: "Enterprise Web Solutions",
           desc: "Custom, responsive websites designed to elevate your brand and drive results.",
           color: "purple",
+          lead: "/services/webdev",
         },
+
         {
           icon: FaLayerGroup,
-          title: "UI/UX Design",
+          title: "UI/UX Strategy",
           desc: "Clean, user-focused interfaces that enhance user experience and engagement.",
           color: "purple",
+          lead: "/services/uxdesign",
         },
         {
           icon: HiOutlineRocketLaunch,
-          title: "Web Applications",
+          title: "Mobile Applications",
           desc: "Scalable and functional applications tailored to your business needs.",
           color: "purple",
+          lead: "/services/webapp",
         },
       ],
     },
@@ -59,24 +64,27 @@ const ServiceItems = () => {
           title: "Graphic Design",
           desc: "Modern, eye-catching designs for digital and print.",
           color: "amber",
+          lead: "/services/graphicdesign",
         },
         {
           icon: HiOutlinePaintBrush,
-          title: "Branding",
+          title: "Brand Experience",
           desc: "Build a strong identity that connects with your audience.",
           color: "amber",
+          lead: "/services/branding",
         },
         {
           icon: HiOutlineVideoCamera,
           title: "Content Creation",
           desc: "Engaging visuals and media that tell your story effectively.",
           color: "amber",
+          lead: "/services/contentcreation",
         },
       ],
     },
   };
   // eslint-disable-next-line no-unused-vars
-  const ServiceCard = ({ icon: Icon, title, desc, color }) => {
+  const ServiceCard = ({ icon: Icon, title, desc, color, lead }) => {
     const isPurple = color === "purple";
 
     // Color configurations
@@ -116,6 +124,7 @@ const ServiceItems = () => {
         />
 
         {/* Icon with animation */}
+
         <div
           className={`relative w-16 h-16 ${style.iconBg} rounded-xl 
             flex items-center justify-center mb-6 
@@ -140,12 +149,14 @@ const ServiceItems = () => {
         </p>
 
         {/* Learn More Link with Arrow Animation */}
-        <div
-          className={`relative inline-flex items-center gap-2 ${style.linkColor} ${style.linkHover} font-medium text-sm transition-all duration-300 cursor-pointer group-hover:gap-3 group-hover:translate-x-1`}
-        >
-          <span>Learn More</span>
-          <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
-        </div>
+        <Link to={lead}>
+          <div
+            className={`relative inline-flex items-center gap-2 ${style.linkColor} ${style.linkHover} font-medium text-sm transition-all duration-300 cursor-pointer group-hover:gap-3 group-hover:translate-x-1`}
+          >
+            <span>Learn More</span>
+            <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
+          </div>
+        </Link>
 
         {/* Decorative corner element */}
         <div
