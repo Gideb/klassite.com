@@ -107,12 +107,8 @@ const ServiceItems = () => {
 
     return (
       <div
-        className={`group relative bg-white rounded-2xl p-8 
-          shadow-lg hover:shadow-2xl ${style.glow}
-          transition-all duration-500 ease-out 
-          hover:-translate-y-2 hover:scale-[1.02]
-          border border-gray-100 ${style.borderGlow}
-          cursor-pointer overflow-hidden`}
+        className={`group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg ${style.glow} transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02]
+          border border-gray-100 ${style.borderGlow} cursor-pointer overflow-hidden`}
       >
         {/* Background gradient on hover */}
         <div

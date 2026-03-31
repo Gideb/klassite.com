@@ -21,6 +21,8 @@ import {
   FaMagic,
   FaGem,
   FaCrown,
+  FaArrowUp,
+  FaArrowDown,
 } from "react-icons/fa";
 import { BsChatQuote } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -148,8 +150,8 @@ const PremiumFAQItem = ({
         whileHover={{ scale: 1.02 }}
         className={`relative rounded-2xl overflow-hidden transition-all duration-500 ${
           isOpen
-            ? "bg-linear-to-br from-purple-600 to-fuchsia-600 text-white shadow-2xl scale-105 z-10"
-            : "bg-white/80 backdrop-blur-xl hover:shadow-xl border border-gray-200/50"
+            ? "bg-black text-black shadow-2xl scale-105 z-10"
+            : "bg-white shadow-md backdrop-blur-xl hover:shadow-xl border border-gray-200/50"
         }`}
       >
         {/* Glass morphism overlay */}
@@ -176,8 +178,8 @@ const PremiumFAQItem = ({
                 <span className="font-bold text-sm">{index + 1}</span>
               </motion.div>
 
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-2">
+              <div className="flex-1 ">
+                <div className="flex items-center gap-2 mb-2 ">
                   {/* Category tag */}
                   <span
                     className={`text-xs px-3 py-1 rounded-xl ${
@@ -190,15 +192,15 @@ const PremiumFAQItem = ({
                   </span>
 
                   {/* Premium badge for special questions */}
-                  {index % 3 === 0 && (
+                  {/*    {index % 3 === 0 && (
                     <span className="flex items-center gap-1 text-xs px-3 py-1 rounded-xl bg-linear-to-r from-yellow-400 to-orange-400 text-white">
                       <FaCrown className="text-xs" /> Premium
                     </span>
-                  )}
+                  )} */}
                 </div>
 
                 <h3
-                  className={`text-lg font-semibold pr-8 ${isOpen ? "text-white" : "text-gray-900"}`}
+                  className={`text-lg  font-semibold pr-8 ${isOpen ? "text-white" : "text-gray-900"}`}
                 >
                   {question}
                 </h3>
@@ -228,10 +230,10 @@ const PremiumFAQItem = ({
               transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
               className="overflow-hidden"
             >
-              <div className="p-6 pt-0 border-t border-white/20">
-                <div className="flex gap-4">
+              <div className="p-6 pt-0 border-t border-white/20 ">
+                <div className="flex gap-4 py-4">
                   {/* Answer icon */}
-                  <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center shrink-0 ">
                     <FaMagic className="text-white/80" />
                   </div>
 
@@ -283,7 +285,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
       className="relative max-w-2xl mx-auto mb-12"
     >
       <div className="relative group">
-        <div className="absolute -inset-0.5 bg-linear-to-r from-purple-600 to-fuchsia-600 rounded-2xl opacity-75 group-hover:opacity-100 blur transition duration-500 group-hover:duration-200" />
+        <div className="absolute -inset-0.5 bg-gray-300 shadow-md rounded-2xl opacity-75 group-hover:opacity-100 blur transition duration-500 group-hover:duration-200" />
 
         <div className="relative flex items-center">
           <input
@@ -291,7 +293,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
             placeholder="Ask me anything about Klass Koncept..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-6 py-4 bg-white/90 backdrop-blur-xl rounded-xl border-0 focus:ring-4 focus:ring-purple-600/30 text-gray-800 placeholder-gray-400 text-lg"
+            className="w-full px-6 py-4 bg-white backdrop-blur-xl rounded-xl text-gray-800 placeholder-gray-400 text-lg"
           />
 
           <div className="absolute right-2 flex items-center gap-2">
@@ -362,14 +364,14 @@ const StatsCards = () => {
         label: "Satisfaction",
         value: "100%",
         color: "blue",
-        iconColor: "text-blue-600",
+        iconColor: "text-purple-600",
       },
       {
         icon: FaRocket,
         label: "Projects",
         value: "500+",
         color: "orange",
-        iconColor: "text-orange-600",
+        iconColor: "text-fuchsia-600",
       },
     ],
     [],
@@ -428,28 +430,28 @@ const KlassKonceptFAQ = () => {
         name: "Services",
         icon: FaRocket,
         count: 8,
-        color: "blue",
+        color: "fuchsia",
       },
       {
         id: "pricing",
         name: "Pricing",
         icon: FaCrown,
         count: 6,
-        color: "yellow",
+        color: "gray",
       },
       {
         id: "support",
         name: "Support",
         icon: FaHeadset,
         count: 5,
-        color: "green",
+        color: "fuchsia",
       },
       {
         id: "process",
         name: "Process",
         icon: FaMagic,
         count: 5,
-        color: "pink",
+        color: "purple",
       },
     ],
     [],
@@ -583,11 +585,9 @@ const KlassKonceptFAQ = () => {
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
               className="inline-flex items-center gap-2 bg-linear-to-r from-purple-600/10 to-fuchsia-600/10 backdrop-blur-xl px-4 py-2 rounded-xl border border-purple-200/50 mb-6"
             >
-              <FaStar className="text-yellow-500" />
               <span className="text-sm font-semibold bg-linear-to-r from-purple-600 to-fuchsia-600 bg-clip-text text-transparent">
                 Premium Knowledge Base
               </span>
-              <FaStar className="text-yellow-500" />
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -616,7 +616,7 @@ const KlassKonceptFAQ = () => {
 
       {/* Main FAQ Section */}
       <section className="relative pb-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           {/* Categories */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -684,8 +684,8 @@ const KlassKonceptFAQ = () => {
             viewport={{ once: true }}
             className="relative mt-32"
           >
-            <div className="absolute inset-0 bg-linear-to-r from-purple-600/10 to-fuchsia-600/10 rounded-3xl blur-3xl" />
-            <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl p-12 text-center border border-gray-200/50">
+            <div  />
+            <div className="relative bg-gray-200 backdrop-blur-xl rounded-2xl p-10 text-center">
               <motion.div
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
@@ -698,7 +698,7 @@ const KlassKonceptFAQ = () => {
                 Still have questions?
               </h2>
 
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+              <p className="text-md text-gray-600 max-w-2xl mx-auto mb-8">
                 Our premium support team is ready to provide personalized
                 answers and guide you through your journey with Klass Koncept.
               </p>
@@ -708,11 +708,11 @@ const KlassKonceptFAQ = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group px-8 py-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white rounded-xl font-semibold text-lg shadow-xl shadow-purple-600/30 hover:shadow-2xl transition-all"
+                    className="group px-8 py-3 bg-black text-white rounded-xl font-medium text-md shadow-md hover:shadow-lg transition-all"
                   >
                     <span className="flex items-center gap-2">
                       Check Out Our Works
-                      <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                      <FaArrowUp className="group-hover:translate-x-1 transition-transform text-xs" />
                     </span>
                   </motion.button>
                 </Link>
@@ -721,24 +721,27 @@ const KlassKonceptFAQ = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-purple-300 transition-all"
+                    className="px-8 py-3 bg-white text-gray-900 rounded-xl shadow-md font-medium text-md  hover:shadow-lg transition-all"
                   >
-                    Schedule a consultation
+                    <span className="flex items-center gap-2">
+                      Schedule a consultation
+                      <FaArrowDown className="group-hover:translate-x-1 transition-transform text-xs" />
+                    </span>
                   </motion.button>
                 </Link>
               </div>
 
               {/* Quick contact options */}
-              <div className="flex items-center justify-center gap-3 mt-6 text-sm text-gray-600">
-                <span className="bg-gray-200 shadow-sm p-2 rounded-2xl">
+              <div className="flex items-center justify-center gap-3 mt-3 text-sm text-gray-600">
+                <span className="bg-white shadow-md p-2 rounded-2xl">
                   ✨ hello@klasskoncept.com
                 </span>
 
-                <span className="bg-gray-200 shadow-sm p-2 rounded-2xl">
+                <span className="bg-white mx-2 shadow-md p-2 rounded-2xl">
                   ✨ +233 55 264 9953
                 </span>
 
-                <span className="bg-gray-200 shadow-sm p-2 rounded-2xl">
+                <span className="bg-white shadow-md p-2 rounded-2xl">
                   ✨ 24/7 Premium Support
                 </span>
               </div>
