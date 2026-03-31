@@ -4,7 +4,7 @@ import MainLayout from "../components/layout/MainLayout";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Services from "../pages/Services";
-import Pricings from "../pages/Pricings";
+
 import Contact from "../pages/Contact";
 import FAQs from "../pages/FAQs";
 import Careers from "../pages/Careers";
@@ -41,8 +41,6 @@ const AppRoutes = () => {
           path="/services/video-production"
           element={<VideoProduction />}
         />
-
-        <Route path="/pricing" element={<Pricings />} />
 
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:slug" element={<CaseStudyDetails />} />

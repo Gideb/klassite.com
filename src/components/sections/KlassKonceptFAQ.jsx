@@ -342,72 +342,6 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
   );
 };
 
-const StatsCards = () => {
-  const stats = useMemo(
-    () => [
-      {
-        icon: FaClock,
-        label: "Avg. Response",
-        value: "< 2 hours",
-        color: "purple",
-        iconColor: "text-purple-600",
-      },
-      {
-        icon: FaHeadset,
-        label: "24/7 Support",
-        value: "Premium",
-        color: "fuchsia",
-        iconColor: "text-fuchsia-600",
-      },
-      {
-        icon: FaShieldAlt,
-        label: "Satisfaction",
-        value: "100%",
-        color: "blue",
-        iconColor: "text-purple-600",
-      },
-      {
-        icon: FaRocket,
-        label: "Projects",
-        value: "500+",
-        color: "orange",
-        iconColor: "text-fuchsia-600",
-      },
-    ],
-    [],
-  );
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 }}
-      className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16"
-    >
-      {stats.map((stat, index) => {
-        const IconComponent = stat.icon;
-        return (
-          <motion.div
-            key={index}
-            whileHover={{ y: -5, scale: 1.02 }}
-            className="relative group"
-          >
-            <div className="absolute inset-0 bg-linear-to-r from-purple-600/10 to-fuchsia-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all" />
-            <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/50 text-center">
-              <div className={`text-3xl ${stat.iconColor} mb-2`}>
-                <IconComponent />
-              </div>
-              <div className="text-2xl font-bold text-gray-900">
-                {stat.value}
-              </div>
-              <div className="text-sm text-gray-500">{stat.label}</div>
-            </div>
-          </motion.div>
-        );
-      })}
-    </motion.div>
-  );
-};
 
 // Main Component
 const KlassKonceptFAQ = () => {
@@ -609,8 +543,7 @@ const KlassKonceptFAQ = () => {
           {/* Search Bar */}
           <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-          {/* Stats Cards */}
-          <StatsCards />
+          
         </div>
       </section>
 
