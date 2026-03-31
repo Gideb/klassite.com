@@ -185,7 +185,7 @@ const FeaturedProjects = () => {
         <div className="text-center">
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-3 bg-linear-to-br from-purple-600 to-fuchsia-700 hover:from-purple-700 hover:to-fuchsia-800 text-white px-8 py-3 rounded-xl font-semibold text-md shadow hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 group"
+            className="inline-flex items-center gap-3 bg-white  hover:text-fuchsia-800 text-fuchsia-800 px-8 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 group"
           >
             <span>View Full Portfolio</span>
             <FaExternalLinkAlt className="text-sm transition-transform duration-300 group-hover:translate-x-1" />

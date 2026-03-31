@@ -132,13 +132,13 @@ const ServicesSection = () => {
         </div>
 
         {/* Simple CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 group">
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 bg-amber-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-white shadow-md hover:shadow-lg px-6 py-3 rounded-xl font-semibold  hover:scale-105 transition-all duration-300"
           >
             <span>Free Consultation</span>
-            <FaArrowRight className="text-sm" />
+            <FaArrowRight className="text-sm group-hover:translate-x-1 duration-200 " />
           </Link>
         </div>
       </div>

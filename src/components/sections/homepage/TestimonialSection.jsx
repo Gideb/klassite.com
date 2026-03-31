@@ -120,7 +120,7 @@ const TestimonialSection = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 sm:-left-2 lg:-left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-black text-white rounded-xl hover:bg-black/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset"
+            className="absolute left-0 sm:-left-2 lg:-left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white text-black shadow-md rounded-xl hover:bg-white/90 transition-all duration-300 hover:shadow-lg hover:scale-110 focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset"
             aria-label="Previous testimonial"
           >
             <FaChevronLeft className="text-sm sm:text-base" />
@@ -128,7 +128,7 @@ const TestimonialSection = () => {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 sm:-right-2 lg:-right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-black text-white rounded-xl hover:bg-black/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset"
+            className="absolute right-0 sm:-right-2 lg:-right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white text-black shadow-md rounded-xl hover:bg-white/90 transition-all duration-300 hover:shadow-lg  hover:scale-110 focus:outline-none focus:ring focus:ring-purple-600 focus:ring-offset"
             aria-label="Next testimonial"
           >
             <FaChevronRight className="text-sm sm:text-base" />
