@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import { memo } from "react";
 import digitalMark from "../../../assets/images/serviceSpecific/digi-mark.jpg";
-import cctv from "../../../assets/images/serviceSpecific/cctv.jpg";
-import webDev from "../../../assets/images/serviceSpecific/web-dev.jpg";
+import branding from "../../../assets/images/serviceSpecific/branding.jpg";
+import enterprise from "../../../assets/images/serviceSpecific/enterprise.jpg";
 import camera from "../../../assets/images/serviceSpecific/camera.jpg";
 import Stats from "../../Stats.jsx";
 import Topicbg from "../../ui/Topicbg.jsx";
@@ -14,43 +14,52 @@ const ServicesSection = () => {
   const serviceGroups = [
     {
       id: 1,
-      title: "Website Development",
-      image: webDev,
+      title: "Enterprise Mobile & Web Application Development ",
+      image: enterprise,
       description:
-        "Custom, responsive websites designed to elevate your brand and drive results.",
-      services: ["Website Development", "SEO Optimization"],
+        "Creating secure, efficient mobile apps that streamline workflows and deliver smooth user experiences.",
+      services: [
+        "Website Development",
+        "Mobile App Development",
+        "Web Application Development",
+      ],
       gradient: "from-purple-600 to-fuchsia-600",
       to: "/services/web-development",
     },
     {
       id: 2,
-      title: "UI/UX Design & Web Applications",
+      title: "Digital Experience Strategy & Optimization",
       image: digitalMark,
       description:
-        "Clean, user-focused interfaces paired with scalable, functional applications tailored to your business needs.",
-      services: ["Web Design", "Mobile App Development"],
+        "Turns business needs into wireframes, prototypes, and design systems for consistent, scalable, user-friendly digital experiences.",
+      services: ["Web Design", "UI/UX Strategy", "SEO Optimization"],
       gradient: "from-blue-600 to-cyan-500",
       to: "/services/ux-design",
     },
     {
       id: 3,
-      title: "Graphic Design & Branding",
-      image: cctv,
+      title: "Strategic Brand Experience Design ",
+      image: branding,
       description:
-        "Modern, eye-catching designs for digital and print that build a strong identity and connect with your audience.",
-      services: ["Graphic Design"],
+        "Modern, cohesive visual identities encompassing logos, custom illustrations, UI elements, and interactive assets that ensure consistency across all digital touchpoints.",
+      services: ["Graphic Design", "Brand Experience"],
       gradient: "from-green-600 to-emerald-500",
       to: "/services/branding",
     },
     {
       id: 4,
-      title: "Content Creation",
+      title: "Interactive Design & Content Management",
       image: camera,
       description:
-        "Engaging visuals and media that tell your story effectively.",
-      services: ["Photography", "Videography", "Video Editing", "Film Making"],
+        "Strategic development and management of content tailored for digital platforms, ensuring consistent and engaging user experiences.",
+      services: [
+        "Photography",
+        "Videography",
+        "Video Editing",
+        "Content Creation",
+      ],
       gradient: "from-orange-600 to-red-500",
-      to: "/services/video-production",
+      to: "/services/contentcreation",
     },
   ];
 

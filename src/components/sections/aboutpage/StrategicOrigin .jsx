@@ -119,25 +119,6 @@ const StrategicOrigin = () => {
               </div>
             </div>
 
-            {/* Optional: Stats or metrics */}
-            <div className="flex items-center gap-6 pt-4">
-              <div>
-                <div className="text-2xl font-semibold text-purple-600">3+</div>
-                <div className="text-xs text-gray-500">Years Building</div>
-              </div>
-              <div className="w-px h-8 bg-gray-200" />
-              <div>
-                <div className="text-2xl font-semibold text-fuchsia-600">
-                  100%
-                </div>
-                <div className="text-xs text-gray-500">Performance Focus</div>
-              </div>
-              <div className="w-px h-8 bg-gray-200" />
-              <div>
-                <div className="text-2xl font-semibold text-purple-600">∞</div>
-                <div className="text-xs text-gray-500">Scalable Solutions</div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
