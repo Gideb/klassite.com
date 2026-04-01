@@ -6,11 +6,13 @@ import {
   FaWhatsapp,
   FaUser,
   FaPaperPlane,
+  FaChevronDown,
 } from "react-icons/fa";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
 
 const ContactSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -72,15 +74,16 @@ const ContactSection = () => {
   ];
 
   const serviceOptions = [
-    "Web Development",
-    "Web Design",
-    "SEO Optimization",
+    "Branding Experience",
+    "Content Creation",
+    "Enterprise Web Solutions",
     "Graphic Design",
-    "Video Editing",
-    "Photography & Videography",
-    "CCTV Installation",
-    "Branding",
+    "Photography",
+    "SEO Optimization",
     "Social Media Management",
+    "UI/UX Strategy",
+    "Videography",
+    "Video Editing",
   ];
 
   return (
@@ -187,7 +190,7 @@ const ContactSection = () => {
             <div className="px-4 sm:px-0 lg:mt-30 mt-10">
               <div className="bg-white/80 backdrop-blur-xl p-6 sm:p-8 lg:p-10 rounded-xl sm:rounded-2xl shadow-[0_10px_30px_rgba(124,58,237,0.15)] border border-purple-100">
                 <form
-                  className="flex flex-col space-y-5 sm:space-y-5"
+                  className="flex flex-col space-y-5 sm:space-y-5 pt-8 -mb-20"
                   onSubmit={handleSubmit}
                 >
                   {/* Name Input */}
@@ -244,31 +247,36 @@ const ContactSection = () => {
                     >
                       Service Type
                     </label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-white border border-purple-200 rounded-xl px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500/40 focus:border-purple-500 transition appearance-none"
-                      style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E")`,
-                        backgroundPosition: "right 0.75rem center",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "1.5em 1.5em",
-                        paddingRight: "2.5rem",
-                      }}
+                    <div
+                      className="relative w-full"
+                      onClick={() => setIsOpen(!isOpen)}
                     >
-                      <option value="">Select a service</option>
-                      {serviceOptions.map((service) => (
-                        <option
-                          key={service}
-                          value={service.toLowerCase().replace(/\s+/g, "-")}
-                        >
-                          {service}
-                        </option>
-                      ))}
-                    </select>
+                      <select
+                        id="service"
+                        name="service"
+                        value={formData.service}
+                        onChange={handleChange}
+                        required
+                        className="w-full bg-white border border-purple-200 rounded-xl px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring focus:ring-purple-500/40 focus:border-purple-500 transition appearance-none "
+                      >
+                        <option value="">Select a service</option>
+                        {serviceOptions.map((service) => (
+                          <option
+                            key={service}
+                            value={service.toLowerCase().replace(/\s+/g, "-")}
+                          >
+                            {service}
+                          </option>
+                        ))}
+                      </select>
+                      <FaChevronDown
+                        onFocus={() => setIsOpen(true)}
+                        onBlur={() => setIsOpen(false)}
+                        className={`absolute right-5 top-1/2 -translate-y-1/2  transition-transform duration-300 ${
+                          isOpen ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
+                    </div>
                   </div>
 
                   {/* Message Textarea */}

@@ -211,7 +211,7 @@ export const CareerSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#roles"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-white px-8 py-4 text-base font-semibol shadow-md shadow-purple-700 transition-all hover:shadow-lg"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-white px-8 py-4 text-base font-semibol shadow-md transition-all hover:shadow-lg"
             >
               <span className="relative z-10">View Open Roles</span>
              
@@ -227,7 +227,7 @@ export const CareerSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#cta"
-              className="inline-flex items-center gap-2 rounded-xl  backdrop-blur-sm px-8 py-4 text-base font-semibold transition-all bg-black text-white shadow-md hover:shadow-lg shadow-purple-700"
+              className="inline-flex items-center gap-2 rounded-xl  backdrop-blur-sm px-8 py-4 text-base font-semibold transition-all bg-black text-white shadow-md hover:shadow-lg "
             >
               Join Our Talent Pool
             </motion.a>
@@ -278,7 +278,7 @@ export const CareerSection = () => {
               >
                 <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-primary/10 to-purple-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative">
-                  <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-linear-to-br from-primary/20 to-purple-500/20 group-hover:scale-110 transition-transform">
+                  <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-amber-600 text-white group-hover:scale-110 transition-transform">
                     <value.icon className="h-7 w-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
