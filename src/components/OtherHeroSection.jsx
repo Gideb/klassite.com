@@ -137,7 +137,7 @@ const OtherHeroSection = ({
                 <li className="flex items-center">
                   <Link
                     to="/"
-                    className="text-white/80 hover:text-white transition-colors duration-200"
+                    className="text-white/90 hover:underline px-2 hover:text-white transition-colors duration-200"
                   >
                     Home
                   </Link>
@@ -154,7 +154,7 @@ const OtherHeroSection = ({
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-white font-medium">{pageName}</span>
+                  <span className="text-white px-2 font-medium">{pageName}</span>
                 </li>
               </ol>
             </nav>

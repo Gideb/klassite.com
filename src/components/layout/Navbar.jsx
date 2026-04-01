@@ -4,7 +4,6 @@ import { FaPen, FaServicestack } from "react-icons/fa";
 import { HiOutlineUser } from "react-icons/hi";
 import { IoHomeOutline } from "react-icons/io5";
 import { PiNewspaperThin } from "react-icons/pi";
-import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -41,7 +40,9 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 pt-3">
           {/* Logo */}
-          <img src={logo} alt="klass koncepts logo" className="w-16" />
+          <Link to="/">
+            <img src={logo} alt="klass koncepts logo" className="w-16" />
+          </Link>
 
           {/* Desktop Links */}
           <div className="space-x-8 hidden md:flex">
@@ -61,7 +62,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="w-full sm:w-auto group  px-9 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105 focus:outline-none focus:ring focus:ring-black focus:ring-offset invisible md:visible flex items-center justify-center gap-2"
+            className="w-full sm:w-auto group bg-white  px-9 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105 focus:outline-none focus:ring focus:ring-black focus:ring-offset invisible md:visible flex items-center justify-center gap-2"
           >
             Get a Quote
             <FaPen className="text-sm group-hover:translate-x-1 transition-transform" />
