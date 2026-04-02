@@ -29,6 +29,7 @@ import { Link } from "react-router-dom";
 import DiffPageColors from "../../components/ui/DiffPageColors";
 import Headings from "../../components/ui/Headings";
 import Subheading from "../../components/ui/Subheading";
+import ExpertiseCta from "../../components/ui/ExpertiseCta";
 
 const WebDevelopment = () => {
   const services = [
@@ -561,7 +562,20 @@ const WebDevelopment = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-white">
+
+      <ExpertiseCta
+        color="emerald"
+        header="Ready to Build Your Web Application?"
+        paragragh="Let's discuss your project requirements. Whether you need a simple
+              website or a complex enterprise platform, we have the expertise to
+              bring your vision to life."
+        btn1="Schedule a Free Consultation"
+        btn2=" View Technical Capabilities"
+        tiny="Klass Koncepts — Engineering Digital Excellence"
+        path="portfolio"
+      />
+
+     {/*  <div className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-3xl p-12 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -585,7 +599,7 @@ const WebDevelopment = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
 
 const ScrollToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -39,15 +39,15 @@ const ScrollToTopButton = () => {
             padding: "15px 15px",
             fontSize: "15px",
             borderRadius: "50%",
-            border: "1px solid #acacac",
-            background: "linear-gradient(to right, white, #ebebeb)",
-            color: "fuchsia",
+            border: "none",
+            background: "linear-gradient(to top, white, #ebebeb)",
+            color: "purple",
             boxShadow: "0px 0px 0px rgba(0,4,0,0.6)",
             zIndex: 50,
             cursor: "pointer",
           }}
         >
-          <FaArrowRight style={{ transform: "rotate(-90deg)" }} />
+          <FaArrowUp />
         </motion.button>
       )}
     </AnimatePresence>

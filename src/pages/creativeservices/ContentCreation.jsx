@@ -21,6 +21,9 @@ import {
 import { PiInstagramLogo, PiYoutubeLogo } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import DiffPageColors from "../../components/ui/DiffPageColors";
+import Headings from "../../components/ui/Headings";
+import Subheading from "../../components/ui/Subheading";
+import ExpertiseCta from "../../components/ui/ExpertiseCta";
 
 const ContentCreation = () => {
   const services = [
@@ -211,16 +214,14 @@ const ContentCreation = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <DiffPageColors color="blue" topic="Our Philosophy" />
-              <h3 className="text-4xl font-bold text-gray-900 mb-6">
-                Content That Tells Your Story
-              </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Great content doesn't happen by accident. At Klass Koncepts, we
+              <Headings black="Content That Tells Your Story" />
+              <Subheading
+                description=" Great content doesn't happen by accident. At Klass Koncepts, we
                 combine strategic thinking with creative execution to produce
                 content that resonates with your audience. Whether you need blog
                 posts, videos, or social media content, we deliver quality that
-                builds trust and authority.
-              </p>
+                builds trust and authority. "
+              />
               <div className="space-y-4">
                 {benefits.slice(0, 4).map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
@@ -231,7 +232,7 @@ const ContentCreation = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl p-8 shadow-xl">
+              <div className="bg-linear-to-br from-blue-100 to-cyan-100 rounded-2xl p-8 shadow-xl">
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
@@ -306,13 +307,11 @@ const ContentCreation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <DiffPageColors color="blue" topic="What We Create" />
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Content Services
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From words to video, we produce everything you need to dominate
-              your niche
-            </p>
+            <Headings black="Comprehensive Content Services" />
+            <Subheading
+              description=" From words to video, we produce everything you need to dominate
+              your niche"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -341,11 +340,8 @@ const ContentCreation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <DiffPageColors color="blue" topic="Multi-Platform Excellence" />
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">Content for Every Channel</h3>
-            
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Tailored content optimized for each platform's unique requirements
-            </p>
+            <Headings black="Content for Every Channel" />
+            <Subheading description="  Tailored content optimized for each platform's unique requirements" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -409,13 +405,11 @@ const ContentCreation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <DiffPageColors color="blue" topic=" Our Process" />
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              From Idea to Published Content
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A streamlined workflow that delivers consistent, high-quality
-              content
-            </p>
+            <Headings black="From Idea to Published Content" />
+            <Subheading
+              description=" A streamlined workflow that delivers consistent, high-quality
+              content"
+            />
           </div>
 
           <div className="relative">
@@ -443,14 +437,10 @@ const ContentCreation = () => {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            
             <DiffPageColors color="blue" topic=" Flexible Solutions" />
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              Content Packages for Every Need
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your content goals and budget
-            </p>
+
+            <Headings black=" Content Packages for Every Need" />
+            <Subheading description="  Choose the plan that fits your content goals and budget " />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -539,7 +529,7 @@ const ContentCreation = () => {
       </div>
 
       {/* Testimonial Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-900 to-cyan-900">
+      <div className="py-20 bg-linear-to-r from-blue-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">
@@ -559,9 +549,22 @@ const ContentCreation = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-white">
+
+      <ExpertiseCta
+        color="blue"
+        header="Ready to Scale Your Content?"
+        paragragh="Stop struggling with content creation. Let our team of expert
+              creators handle everything while you focus on growing your
+              business."
+        btn1="Get a Free Content Audit"
+        btn2=" View Content Samples"
+        tiny="Klass Koncepts — Content That Works as Hard as You Do"
+        path="portfolio"
+      />
+
+     {/*  <div className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-12 shadow-lg">
+          <div className="bg-linear-to-r from-blue-50 to-cyan-50 rounded-3xl p-12 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Ready to Scale Your Content?
             </h2>
@@ -583,7 +586,7 @@ const ContentCreation = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -21,6 +21,7 @@ import { FaMapPin, FaPalette, FaFigma } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import DiffPageColors from "../../components/ui/DiffPageColors";
 import Headings from "../../components/ui/Headings";
+import Subheading from "../../components/ui/Subheading";
 
 const UIUXDesign = () => {
   const services = [
@@ -179,6 +180,7 @@ const UIUXDesign = () => {
       {/* Hero Section */}
       <div className="relative bg-linear-to-br from-gray-900 via-indigo-900 to-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10" />
+
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-indigo-500 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 -left-32 w-96 h-96 bg-purple-600 rounded-full blur-[120px]" />
@@ -225,16 +227,13 @@ const UIUXDesign = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <DiffPageColors color="indigo" topic="Our Philosophy" />
-
-              <h3 className="text-4xl font-bold text-gray-900 mb-6">
-                Human-Centered Design That Delivers
-              </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                UI/UX isn't just about making things look pretty—it's about
+              <Headings black=" Human-Centered Design That Delivers" />
+              <Subheading
+                description=" UI/UX isn't just about making things look pretty—it's about
                 creating intuitive, accessible, and meaningful experiences. At
                 Klass Koncepts, we put users at the center of every decision,
-                using research and data to guide our design process.
-              </p>
+                using research and data to guide our design process."
+              />
               <div className="space-y-4">
                 {benefits.slice(0, 4).map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
@@ -322,14 +321,13 @@ const UIUXDesign = () => {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            
             <DiffPageColors color="indigo" topic="What We Do" />
-            
+
             <Headings black="Comprehensive UI/UX Services" />
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From research to implementation, we cover every aspect of user
-              experience design
-            </p>
+            <Subheading
+              description=" From research to implementation, we cover every aspect of user
+              experience design"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -357,16 +355,13 @@ const UIUXDesign = () => {
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-sm uppercase tracking-wider text-indigo-600 font-semibold mb-3">
-              Our Approach
-            </h2>
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              Proven UX Methodologies
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We blend industry-leading frameworks to deliver exceptional
-              results
-            </p>
+            <DiffPageColors color="indigo" topic=" Our Approach" />
+
+            <Headings black=" Proven UX Methodologies" />
+            <Subheading
+              description=" We blend industry-leading frameworks to deliver exceptional
+              results"
+            />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -375,7 +370,7 @@ const UIUXDesign = () => {
                 key={index}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className={`bg-gradient-to-r ${method.bg} p-6 text-white`}>
+                <div className={`bg-linear-to-r ${method.bg} p-6 text-white`}>
                   <div className="flex items-center gap-3 mb-4">
                     <method.icon className="w-8 h-8" />
                     <h4 className="text-xl font-bold">{method.name}</h4>
@@ -403,15 +398,9 @@ const UIUXDesign = () => {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-sm uppercase tracking-wider text-indigo-600 font-semibold mb-3">
-              What You Get
-            </h2>
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              Tangible UX Deliverables
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Every project includes comprehensive documentation and assets
-            </p>
+            <DiffPageColors color="indigo" topic="   What You Get" />
+            <Headings black="  Tangible UX Deliverables" />
+            <Subheading description=" Every project includes comprehensive documentation and assets" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -420,7 +409,7 @@ const UIUXDesign = () => {
                 key={index}
                 className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center shrink-0">
                   <item.icon className="w-5 h-5 text-indigo-600" />
                 </div>
                 <div>
@@ -439,16 +428,12 @@ const UIUXDesign = () => {
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-sm uppercase tracking-wider text-indigo-600 font-semibold mb-3">
-              Our Process
-            </h2>
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              From Research to Rollout
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A structured approach that ensures nothing falls through the
-              cracks
-            </p>
+            <DiffPageColors color="indigo" topic=" Our Process" />
+            <Headings black=" From Research to Rollout" />
+            <Subheading
+              description=" A structured approach that ensures nothing falls through the
+              cracks"
+            />
           </div>
 
           <div className="relative">
@@ -479,7 +464,7 @@ const UIUXDesign = () => {
             {metrics.map((metric, index) => (
               <div
                 key={index}
-                className="text-center p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl"
+                className="text-center p-6 bg-linear-to-br from-indigo-50 to-purple-50 rounded-2xl"
               >
                 <div className="inline-flex p-3 bg-indigo-100 rounded-full mb-4">
                   <metric.icon className="w-6 h-6 text-indigo-600" />
@@ -498,12 +483,9 @@ const UIUXDesign = () => {
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-sm uppercase tracking-wider text-indigo-600 font-semibold mb-3">
-              Expert Tools
-            </h2>
-            <h3 className="text-3xl font-bold text-gray-900">
-              Industry-Leading Design Tools
-            </h3>
+           
+            <DiffPageColors color="indigo" topic=" Expert Tools" />
+            <Headings black="Industry-Leading Design Tools" />
           </div>
           <div className="flex flex-wrap justify-center gap-8">
             {[
@@ -528,7 +510,7 @@ const UIUXDesign = () => {
       </div>
 
       {/* CTA */}
-      <div className="py-20 bg-gradient-to-r from-indigo-900 to-purple-900">
+      <div className="py-20 bg-linear-to-r from-indigo-900 to-purple-900">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Create Amazing Experiences?
@@ -537,6 +519,7 @@ const UIUXDesign = () => {
             Let's collaborate on a UX strategy that transforms your digital
             product into something users can't live without.
           </p>
+
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg text-lg">
               Book a UX Audit

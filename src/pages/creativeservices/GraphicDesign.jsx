@@ -18,9 +18,11 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import DiffPageColors from "../../components/ui/DiffPageColors";
+import Headings from "../../components/ui/Headings";
+import Subheading from "../../components/ui/Subheading";
+import ExpertiseCta from "../../components/ui/ExpertiseCta";
 
 const GraphicDesign = () => {
- 
   const services = [
     {
       icon: Layout,
@@ -197,16 +199,15 @@ const GraphicDesign = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <DiffPageColors color="purple" topic="Our Approach" />
-              <h3 className="text-4xl font-bold text-gray-900 mb-6">
-                Design With Purpose & Precision
-              </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Graphic design is visual communication that bridges creativity
+
+              <Headings black="Design With Purpose & Precision" />
+              <Subheading
+                description="   Graphic design is visual communication that bridges creativity
                 and strategy. At Klass Koncepts, we create designs that don't
                 just look beautiful—they work hard for your business. Every
                 color, font, and layout choice is intentional, designed to evoke
-                emotion and drive action.
-              </p>
+                emotion and drive action."
+              />
               <div className="space-y-4">
                 {[
                   "Strategic visual communication",
@@ -271,13 +272,11 @@ const GraphicDesign = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <DiffPageColors color="purple" topic="What we create" />
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Design Services
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From concept to completion, we deliver exceptional design across
-              every medium
-            </p>
+            <Headings black="Comprehensive Design Services" />
+            <Subheading
+              description="From concept to completion, we deliver exceptional design across
+              every medium"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -306,14 +305,12 @@ const GraphicDesign = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <DiffPageColors color="purple" topic="Recent Work" />
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              Design That Delivers Results
-            </h3>
 
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore some of our favorite projects that showcase our creative
-              range
-            </p>
+            <Headings black="  Design That Delivers Results" />
+            <Subheading
+              description="Explore some of our favorite projects that showcase our creative
+              range"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -351,9 +348,8 @@ const GraphicDesign = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <DiffPageColors color="purple" topic="Why choose us" />
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              The Klass Koncepts Difference
-            </h3>
+
+            <Headings black=" The Klass Koncepts Difference" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -377,13 +373,8 @@ const GraphicDesign = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <DiffPageColors color="purple" topic="Our Process" />
-
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              From Concept to Creation
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A collaborative workflow that ensures your vision becomes reality
-            </p>
+            <Headings black=" From Concept to Creation" />
+            <Subheading description=" A collaborative workflow that ensures your vision becomes reality" />
           </div>
 
           <div className="relative">
@@ -412,9 +403,8 @@ const GraphicDesign = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <DiffPageColors color="purple" topic="Expert tools" />
-            <h3 className="text-3xl font-bold text-gray-900">
-              Industry-Standard Software
-            </h3>
+
+            <Headings black=" Industry-Standard Software" />
           </div>
           <div className="flex flex-wrap justify-center gap-8">
             {[
@@ -461,7 +451,18 @@ const GraphicDesign = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-white">
+
+      <ExpertiseCta
+        color="purple"
+        header="Ready to Bring Your Ideas to Life?"
+        paragragh=" Let's collaborate on something amazing. Whether you need a single design or a complete visual system, we're here to help."
+        btn1=" Get a Free Consultation"
+        btn2=" View Pricing"
+        tiny="Klass Koncepts — Visual Excellence, Delivered "
+        path="pricing"
+      />
+
+      {/* <div className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="bg-linear-to-r from-purple-50 to-pink-50 rounded-3xl p-12 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -484,7 +485,7 @@ const GraphicDesign = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

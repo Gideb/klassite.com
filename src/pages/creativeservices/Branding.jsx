@@ -16,10 +16,10 @@ import {
 import { FaDiagramProject } from "react-icons/fa6";
 
 import { Link } from "react-router-dom";
-import Topicbg from "../../components/ui/Topicbg";
 import Headings from "../../components/ui/Headings";
 import Subheading from "../../components/ui/Subheading";
-import team from "../../assets/images/serviceSpecific/brand.jpg";
+/* import team from "../../assets/images/serviceSpecific/brand.jpg"; */
+import DiffPageColors from "../../components/ui/DiffPageColors";
 
 const Branding = () => {
   const services = [
@@ -101,28 +101,24 @@ const Branding = () => {
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
       <div
-        className="relative bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden"
-        style={{ backgroundImage: `url(${team})`, backgroundSize: "cover" }}
+        className="relative bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden "
+        /* style={{ backgroundImage: `url(${team})`, backgroundSize: "cover" }} */
       >
-        <div className="absolute inset-0 grid grid-cols-3 z-10">
-          <div className=" bg-black/70 " />
-          <div className=" bg-black/30 backdrop-blur-xs" />
-          <div className=" bg-black/70 " />
-        </div>
+        <div className="absolute inset-0 bg-black/40 z-10" />
 
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-amber-500 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 -left-32 w-96 h-96 bg-amber-700 rounded-full blur-[120px]" />
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 mt-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-amber-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-amber-400" />
               <span className="text-sm font-medium text-amber-300">
                 Klass Koncepts • Premium Branding
               </span>
-            </div> 
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mt-10 mb-6">
               Forge a{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-amber-600">
@@ -181,8 +177,7 @@ const Branding = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <Topicbg topic="Our Philosophy" />
-
+                <DiffPageColors color="amber" topic="Our Philosophy" />
                 <Headings black=" Beyond Aesthetics — Brand Alchemy" />
                 <Subheading
                   description=" Branding is the art of shaping perception. At Klass Koncepts,
@@ -262,8 +257,7 @@ const Branding = () => {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Topicbg topic="Comprehensive Solutions" />
-
+            <DiffPageColors color="amber" topic="Comprehensive Solutions" />{" "}
             <Headings black="Our Branding Services" />
             <Subheading
               description="End-to-end branding solutions tailored to your unique vision and
@@ -296,7 +290,7 @@ const Branding = () => {
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <Topicbg topic="Our Methodology" />
+            <DiffPageColors color="amber" topic="Our Methodology" />
 
             <Headings black="The Brand Building Process" />
             <Subheading description="A proven framework that transforms ideas into iconic brands" />
@@ -351,7 +345,7 @@ const Branding = () => {
         </div>
       </div>
       {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
+      <div className="py-20 bg-linear-to-r from-gray-900 to-gray-800">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Build an Iconic Brand?
