@@ -168,7 +168,7 @@ const FeaturedProjects = () => {
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <Topicbg topic="Selected Work" />
 
-          <Headings black="Featured " colored="Projects" />
+          <Headings black="Featured Projects" />
 
           <Subheading
             description="A glimpse of what we've created for our clients. Each project

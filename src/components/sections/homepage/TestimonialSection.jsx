@@ -109,7 +109,7 @@ const TestimonialSection = () => {
         {/* Badge */}
 
         <Topicbg topic="Testimonials" />
-        <Headings black="What " colored=" Clients Say" />
+        <Headings black="What Clients Say" />
 
         <Subheading
           description="Don't just take our word for it - hear from some of our satisfied

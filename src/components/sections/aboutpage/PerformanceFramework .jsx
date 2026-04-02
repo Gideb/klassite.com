@@ -73,7 +73,7 @@ const PerformanceFramework = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Topicbg topic="Systematic Approach" />
 
-          <Headings black="Our" colored=" Performance Framework" />
+          <Headings black="Our Performance Framework" />
 
           <Subheading
             description=" A repeatable process that turns technical complexity into measurable

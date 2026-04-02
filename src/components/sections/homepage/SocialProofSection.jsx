@@ -216,7 +216,7 @@ const SocialProofSection = () => {
             className="order-1 lg:order-2"
           >
             <motion.div variants={staggerChildrenVariants}>
-              <Headings black=" Trusted by " colored="Industry Leaders" />
+              <Headings black=" Trusted by Industry Leaders" />
             </motion.div>
 
             <motion.div variants={staggerChildrenVariants}>

@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 import Topicbg from "../../components/ui/Topicbg";
 import Headings from "../../components/ui/Headings";
 import Subheading from "../../components/ui/Subheading";
+import team from "../../assets/images/serviceSpecific/brand.jpg";
 
 const Branding = () => {
   const services = [
@@ -99,8 +100,16 @@ const Branding = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/40 z-10" />
+      <div
+        className="relative bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden"
+        style={{ backgroundImage: `url(${team})`, backgroundSize: "cover" }}
+      >
+        <div className="absolute inset-0 grid grid-cols-3 z-10">
+          <div className=" bg-black/70 " />
+          <div className=" bg-black/30 backdrop-blur-xs" />
+          <div className=" bg-black/70 " />
+        </div>
+
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-amber-500 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 -left-32 w-96 h-96 bg-amber-700 rounded-full blur-[120px]" />
@@ -108,13 +117,13 @@ const Branding = () => {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-amber-500/30 mb-6">
+           {/*  <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-amber-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-amber-400" />
               <span className="text-sm font-medium text-amber-300">
                 Klass Koncepts • Premium Branding
               </span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+            </div> */}
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mt-10 mb-6">
               Forge a{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-amber-600">
                 Legendary

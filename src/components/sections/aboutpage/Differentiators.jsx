@@ -105,7 +105,7 @@ const Differentiators = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <Topicbg topic="Why Choose Us" />
-          <Headings black="Why Growth-Focused Brands " colored="   Choose Us" />
+          <Headings black="Why Growth-Focused Brands Choose Us" />
           <Subheading
             description=" We don't just build websites—we build competitive advantages that
             drive real business results."

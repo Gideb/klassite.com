@@ -100,7 +100,7 @@ const ContactSection = () => {
         <div className="max-w-7xl mx-auto">
           <div>
             {/* Title */}
-            <Headings black="Let's" colored=" Work Together" />
+            <Headings black="Let's Work Together" />
 
             <Subheading
               description=" Ready to transform your digital presence? Get in touch and let's

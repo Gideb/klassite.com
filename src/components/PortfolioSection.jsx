@@ -301,7 +301,7 @@ const PortfolioSection = () => {
             className="text-center mb-12"
           >
             <Topicbg topic="Featured Work" />
-            <Headings black="Featured " colored="Projects" />
+            <Headings black="Featured Projects" />
           </motion.div>
 
           <motion.div

@@ -52,7 +52,7 @@ const StrategicOrigin = () => {
             <div className="mb-8">
               <Topicbg topic="Strategic Origin" />
 
-              <Headings black=" Closing the" colored="  Performance Gap" />
+              <Headings black=" Closing the Performance Gap" />
 
               <div className="h-px w-32 bg-purple-800 mt-5"></div>
             </div>

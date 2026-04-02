@@ -78,7 +78,7 @@ const ServicesSection = () => {
         {/* Simple Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <Topicbg topic="Our Services" />
-          <Headings black="What We" colored=" Build" />
+          <Headings black="What We Build" />
         </div>
 
         <Stats />

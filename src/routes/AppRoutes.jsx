@@ -16,7 +16,7 @@ import Blog from "../pages/blog/Blog";
 import BlogPost from "../pages/blog/BlogPost";
 
 import WebDevelopment from "../pages/digitalsolutions/WebDevelopment";
-import MobileApp from "../pages/digitalsolutions/MobileApps";
+import MobileApps from "../pages/digitalsolutions/MobileApps";
 import UIUXDesign from "../pages/digitalsolutions/UIUXDesign";
 
 import GraphicDesign from "../pages/creativeservices/GraphicDesign";
@@ -37,7 +37,7 @@ const AppRoutes = () => {
         {/* digital Services */}
         <Route path="/services/webdev" element={<WebDevelopment />} />
         <Route path="/services/uxdesign" element={<UIUXDesign />} />
-        <Route path="/services/mobileapp" element={<MobileApp />} />
+        <Route path="/services/mobileapp" element={<MobileApps />} />
 
         {/* creative Services */}
         <Route path="/services/branding" element={<Branding />} />

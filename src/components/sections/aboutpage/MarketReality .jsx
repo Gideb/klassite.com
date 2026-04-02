@@ -85,8 +85,7 @@ const MarketReality = () => {
         <div className="max-w-xl mb-3">
           <Topicbg topic="Market Reality" />
           <Headings
-            black="The Hidden Cost of "
-            colored=" Weak Digital Infrastructure"
+            black="The Hidden Cost of Weak Digital Infrastructure"
           />
         </div>
         <div className="mb-8 max-w-4xl">

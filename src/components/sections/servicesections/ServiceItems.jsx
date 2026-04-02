@@ -47,7 +47,7 @@ const ServiceItems = () => {
           title: "Mobile Applications",
           desc: "Scalable and functional applications tailored to your business needs.",
           color: "purple",
-          lead: "/services/webapp",
+          lead: "/services/mobileapp",
         },
       ],
     },
@@ -176,7 +176,7 @@ const ServiceItems = () => {
         <div className="text-center mb-20">
           <Topicbg topic="What We Do" />
 
-          <Headings black="Our" colored=" Services" />
+          <Headings black="Our Services" />
 
           <div className="max-w-2xl mx-auto">
             <Subheading description="End-to-end digital and creative solutions tailored to your unique business needs." />

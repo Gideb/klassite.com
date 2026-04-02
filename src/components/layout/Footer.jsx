@@ -28,13 +28,13 @@ const Footer = () => {
     { name: "Contact", path: "contact" },
   ];
 
-  const services = [
-    " Enterprise Web Solutions",
-    " Mobile Applications",
-    " Content Creation",
-    " Brand Experience",
-    " UI/UX Strategy",
-    " Graphic Design",
+  const individualpages = [
+    { service: " Enterprise Web Solutions", path: "webdev" },
+    { service: " Mobile Applications", path: "mobileapp" },
+    { service: " Content Creation", path: "contentcreation" },
+    { service: " Brand Experience", path: "branding" },
+    { service: " UI/UX Strategy", path: "uxdesign" },
+    { service: " Graphic Design", path: "graphicdesign" },
   ];
 
   const socialLinks = [
@@ -162,15 +162,15 @@ const Footer = () => {
               Expertise
             </h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-              {services.map((service, index) => (
-                <Link
-                  key={index}
-                  to="/services"
-                  className="text-gray-300 hover:text-purple-400 transition-colors text-sm flex  gap-2"
-                >
-                  <span>•</span>
-                   {service}
-                </Link>
+              {individualpages.map((item) => (
+                <li key={item.service}>
+                  <Link
+                    to={`/services/${item.path}`}
+                    className="text-gray-300 hover:text-purple-400 transition-colors text-sm flex  gap-2"
+                  >
+                    {item.service}
+                  </Link>
+                </li>
               ))}
             </div>
           </div>
