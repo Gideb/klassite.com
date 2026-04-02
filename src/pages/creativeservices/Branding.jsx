@@ -117,12 +117,12 @@ const Branding = () => {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
-           {/*  <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-amber-500/30 mb-6">
+            <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-amber-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-amber-400" />
               <span className="text-sm font-medium text-amber-300">
                 Klass Koncepts • Premium Branding
               </span>
-            </div> */}
+            </div> 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mt-10 mb-6">
               Forge a{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-amber-600">

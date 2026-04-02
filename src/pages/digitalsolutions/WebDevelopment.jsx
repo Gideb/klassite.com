@@ -188,7 +188,11 @@ const WebDevelopment = () => {
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
       <div className="relative bg-linear-to-br from-gray-900 via-emerald-900 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 grid grid-cols-3 z-10">
+          <div className=" bg-black/70 " />
+          <div className=" bg-black/30 backdrop-blur-xs" />
+          <div className=" bg-black/70 " />
+        </div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-emerald-500 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 -left-32 w-96 h-96 bg-teal-600 rounded-full blur-[120px]" />
@@ -235,17 +239,16 @@ const WebDevelopment = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <DiffPageColors color="emerald" topic="Our expertise" />;
-              <h3 className="text-4xl font-bold text-gray-900 mb-6">
-                Enterprise-Grade Web Development
-              </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                We don't just build websites—we engineer comprehensive web
+              <DiffPageColors color="emerald" topic="Our expertise" />
+              <Headings black="Enterprise-Grade Web Development" />
+              <Subheading
+                description="We don't just build websites—we engineer comprehensive web
                 solutions that solve real business problems. Using modern
                 frameworks and cloud architecture, we create applications that
                 are secure, scalable, and future-proof. From MVP to enterprise
-                scale, we've got you covered.
-              </p>
+                scale, we've got you covered."
+              />
+
               <div className="space-y-4">
                 {benefits.slice(0, 4).map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
@@ -313,13 +316,9 @@ const WebDevelopment = () => {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <DiffPageColors color="emerald" topic="What we build" />;
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Web Development Services
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              End-to-end solutions for every digital need
-            </p>
+            <DiffPageColors color="emerald" topic="What we build" />
+            <Headings black="  Comprehensive Web Development Services" />
+            <Subheading description="End-to-end solutions for every digital need" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -347,13 +346,9 @@ const WebDevelopment = () => {
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <DiffPageColors color="emerald" topic="Why Choose Us" />;
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">
-              Enterprise Features Built-In
-            </h3>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Every project includes these enterprise-grade capabilities
-            </p>
+            <DiffPageColors color="emerald" topic="Why Choose Us" />
+            <Headings black=" Enterprise Features Built-In" />
+            <Subheading description="Every project includes these enterprise-grade capabilities" />
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -376,8 +371,7 @@ const WebDevelopment = () => {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <DiffPageColors color="emerald" topic="Modern tech stack" />;
-          
+            <DiffPageColors color="emerald" topic="Modern tech stack" />
             <Headings black=" Cutting-Edge Technologies" />
             <Subheading
               description="We use the latest tools and frameworks to build future-proof
