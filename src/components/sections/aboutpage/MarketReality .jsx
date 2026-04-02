@@ -79,7 +79,7 @@ const MarketReality = () => {
   ];
 
   return (
-    <section className="relative w-full py-16 sm:py-20 bg-gray-100">
+    <section className="relative w-full py-16 sm:py-20 bg-gray-50">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="max-w-xl mb-3">

@@ -40,15 +40,16 @@ const WhyUs = () => {
   ];
 
   return (
-    <section id="why-us" className="relative w-full py-28 bg-gray-100">
+    <section id="why-us" className="relative w-full py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-       
-        <div className="max-w-3xl mb-20">
-          <Topicbg topic="Why Choose Us" />
 
-          <Headings black="  Built for performance. " />
-          <Headings colored=" Designed for long-term growth." />
+        <div className="max-w-3xl mb-10">
+          <Topicbg topic="Why Choose Us" />
+          <div className="max-w-xl ">
+            {" "}
+            <Headings black="  Built for performance.   Designed for long-term growth." />
+          </div>
 
           <Subheading
             description="We don’t just ship websites — we build scalable digital
@@ -63,27 +64,22 @@ const WhyUs = () => {
             return (
               <div
                 key={item.id}
-                className="group bg-black rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xs "
+                className="group bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg shadow-md "
               >
                 {/* Icon */}
                 <div className="mb-6">
-                  <div
-                    className="w-12 h-12 rounded-xl bg-white flex items-center justify-center
-                              transition-all duration-300 group-hover:bg-white/90 "
-                  >
-                    <Icon className="text-2xl text-black  transition-colors" />
+                  <div className="w-18 h-18 rounded-xl bg-purple-100 flex items-center justify-center transition-all duration-300 group-hover:scale-105 ">
+                    <Icon className="text-4xl text-purple-600    transition-colors" />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold mb-2 text-white">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">
                   {item.title}
                 </h3>
 
                 {/* Stat */}
-                <p className="text-sm text-white ">
-                  {item.stat}
-                </p>
+                <p className="text-sm text-gray-800">{item.stat}</p>
               </div>
             );
           })}

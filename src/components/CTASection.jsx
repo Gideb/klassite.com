@@ -1,10 +1,9 @@
-import { MdMeetingRoom } from "react-icons/md";
+
 import { FaDiagramProject } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { memo } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { FaPen } from "react-icons/fa";
 
 // Constants for easy customization

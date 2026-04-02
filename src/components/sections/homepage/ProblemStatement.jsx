@@ -42,15 +42,15 @@ const ProblemStatement = () => {
   return (
     <section
       id="problem"
-      className="scroll-mt-24 py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gray-100"
+      className="scroll-mt-24 py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gray-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <Topicbg topic="The Reality Check" />
 
-          <Headings black="Most Businesses Don't Have A Website Problem." />
-          <Headings colored="They Have A Performance Problem." />
+          <Headings black="Most Businesses Don't Have A Website Problem. They Have A Performance Problem." />
+        
 
           <Subheading
             description="If your digital presence isn't performing, you're leaving money on
@@ -65,15 +65,15 @@ const ProblemStatement = () => {
             return (
               <div
                 key={index}
-                className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100"
+                className="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100"
               >
                 {/* Background gradient on Hover */}
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-amber-100 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
 
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-amber-600 rounded-xl mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Icon className="text-2xl text-white" />
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-amber-100 rounded-xl mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                    <Icon className="text-2xl text-amber-500" />
                   </div>
 
                   {/* Content */}

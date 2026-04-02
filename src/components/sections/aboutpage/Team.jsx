@@ -28,14 +28,15 @@ const LeadershipGrid = () => {
   ];
 
   return (
-    <section className=" bg-gray-200">
+    <section className=" bg-white">
       <div className="max-w-7xl mx-auto px-6 py-24">
         {/* Header */}
         <div className="mb-16">
           <Topicbg topic="Leadership" />
+          
+            <Headings black=" Performance Driven" />
+         
 
-          <Headings black="Founder-Led" />
-          <Headings colored=" Performance Driven" />
           <div className="h-px w-32 bg-purple-800 mt-3"></div>
         </div>
 

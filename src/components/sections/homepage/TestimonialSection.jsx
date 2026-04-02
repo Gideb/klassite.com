@@ -103,7 +103,7 @@ const TestimonialSection = () => {
   return (
     <section
       id="testimonials"
-      className="scroll-mt-24  min-h-70 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-20 text-center bg-gray-100"
+      className="scroll-mt-24  min-h-70 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-20 text-center bg-white"
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}

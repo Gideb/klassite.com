@@ -28,7 +28,7 @@ const StrategicOrigin = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 bg-gray-100 overflow-hidden">
+    <section className="relative w-full py-20 bg-white overflow-hidden">
       {/* Subtle background pattern */}
       <div
         className="absolute inset-0 opacity-5"
@@ -80,7 +80,7 @@ const StrategicOrigin = () => {
             className="space-y-8 lg:mt-30"
           >
             {/* Mission Card */}
-            <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-200">
+            <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 hover:border-purple-200">
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-purple-100 to-fuchsia-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <FaBullseye className="text-xl text-purple-600" />
@@ -100,7 +100,7 @@ const StrategicOrigin = () => {
             </div>
 
             {/* Vision Card */}
-            <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:border-fuchsia-200">
+            <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 hover:border-fuchsia-200">
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-fuchsia-100 to-purple-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <FaEye className="text-xl text-fuchsia-600" />

@@ -13,6 +13,7 @@ import logo6 from "../../../assets/images/brandLogo/logo6.png";
 import Topicbg from "../../ui/Topicbg";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
+import { FaWandMagic, FaWandMagicSparkles } from "react-icons/fa6";
 
 // Animation variants
 const containerVariants = {
@@ -196,8 +197,16 @@ const SocialProofSection = () => {
               transition={{ delay: 0.8, type: "spring" }}
               className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-3 hidden lg:block"
             >
-              <p className="text-purple-900 font-bold text-md">4+ Years</p>
-              <p className="text-gray-600 text-xs">Of Excellence</p>
+              <div className="flex justify-center items-center gap-4">
+                <span>
+                  <FaWandMagicSparkles className="text-amber-600 font-bold text-lg" />
+                </span>
+
+                <div>
+                  <p className="text-purple-900 font-bold text-md">4+ Years</p>
+                  <p className="text-gray-600 text-xs">Of Excellence</p>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
 

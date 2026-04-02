@@ -196,12 +196,12 @@ const PerformanceFramework = () => {
         <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-y-1/2 w-px h-64 bg-linear-to-b from-transparent via-purple-300 to-transparent"></div>
 
         {/* Bottom CTA or decorative element */}
-        {/*    <motion.div
+            <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-center mt-16"
+          className="text-center mt-8"
         >
           <div className="inline-flex items-center gap-3 bg-purple-50 px-6 py-3 rounded-xl">
             <span className="relative flex h-3 w-3">
@@ -215,7 +215,7 @@ const PerformanceFramework = () => {
               to transform your digital presence
             </span>
           </div>
-        </motion.div> */}
+        </motion.div> 
       </div>
     </section>
   );

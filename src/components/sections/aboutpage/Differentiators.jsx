@@ -22,8 +22,8 @@ const Differentiators = () => {
       description:
         "We don't bolt on speed—we build it in. Every decision prioritizes load times, Core Web Vitals, and user experience. The result? Sites that load 2.4x faster than industry average.",
       gradient: "from-amber-600 to-amber-200",
-      bgLight: "bg-amber-500",
-      iconColor: "text-white",
+      bgLight: "bg-amber-200",
+      iconColor: "text-amber-600",
       metric: "2.4x faster",
       metricColor: "text-amber-600",
     },
@@ -33,8 +33,8 @@ const Differentiators = () => {
       description:
         "Your digital presence isn't isolated. We architect for how your business actually works—tools, teams, and workflows included. No more disconnected tools or siloed data.",
       gradient: "from-amber-600 to-amber-200",
-      bgLight: "bg-amber-500",
-      iconColor: "text-white",
+      bgLight: "bg-amber-200",
+      iconColor: "text-amber-600",
       metric: "100% integrated",
       metricColor: "text-amber-600",
     },
@@ -44,8 +44,8 @@ const Differentiators = () => {
       description:
         "If it doesn't move a metric, we don't do it. Every feature ties back to conversion rates, engagement, or revenue. We're obsessed with ROI, not just aesthetics.",
       gradient: "from-amber-600 to-amber-200",
-      bgLight: "bg-amber-500",
-      iconColor: "text-white",
+      bgLight: "bg-amber-200",
+      iconColor: "text-amber-600",
       metric: "43% avg. uplift",
       metricColor: "text-amber-600",
     },
@@ -55,8 +55,8 @@ const Differentiators = () => {
       description:
         "We're not interested in one-off projects. We build relationships that evolve as your business grows. 85% of our clients have worked with us for 2+ years.",
       gradient: "from-amber-600 to-amber-200",
-      bgLight: "bg-amber-500",
-      iconColor: "text-white",
+      bgLight: "bg-amber-200",
+      iconColor: "text-amber-600",
       metric: "85% retention",
       metricColor: "text-amber-600",
     },
@@ -88,7 +88,7 @@ const Differentiators = () => {
   };
 
   return (
-    <section className="relative w-full py-16 sm:py-18 bg-white/90 overflow-hidden">
+    <section className="relative w-full py-16 sm:py-18 bg-gray-50 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-100 rounded-xl mix-blend-multiply filter blur-3xl opacity-30"></div>
@@ -138,7 +138,7 @@ const Differentiators = () => {
               >
                 {/* linear background on hover */}
                 <div
-                  className={`absolute inset-0 bg-linear-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-linear-to-br ${item.gradient}  opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 ></div>
 
                 {/* Content */}
@@ -196,7 +196,7 @@ const Differentiators = () => {
             </span>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+              className="inline-flex items-center gap-2 bg-amber-100 hover:bg-amber-200/70 text-amber-600 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
             >
               <span>Let's build together</span>
               <FaArrowRight className="text-sm group-hover:translate-x-1.5 transition-transform" />

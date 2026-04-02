@@ -3,7 +3,9 @@ import React from "react";
 const Subheading = ({ description }) => {
   return (
     <div>
-      <p className="mt-4 text-lg text-gray-600">{description}</p>
+      <p className="mb-6 text-lg text-gray-600 leading-relaxed">
+        {description}
+      </p>
     </div>
   );
 };
