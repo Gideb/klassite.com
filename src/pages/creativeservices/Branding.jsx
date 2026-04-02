@@ -362,7 +362,6 @@ const Branding = () => {
             </Link>
 
             <Link to="/portfolio">
-              {" "}
               <button className="border border-amber-500 text-amber-400 hover:bg-amber-500/10 font-medium px-8 py-4 rounded-full transition-all text-lg">
                 View Case Studies
               </button>

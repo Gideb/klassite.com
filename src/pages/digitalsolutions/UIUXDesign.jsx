@@ -22,6 +22,7 @@ import { Link } from "react-router-dom";
 import DiffPageColors from "../../components/ui/DiffPageColors";
 import Headings from "../../components/ui/Headings";
 import Subheading from "../../components/ui/Subheading";
+import ExpertiseCta from "../../components/ui/ExpertiseCta";
 
 const UIUXDesign = () => {
   const services = [
@@ -483,7 +484,6 @@ const UIUXDesign = () => {
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-           
             <DiffPageColors color="indigo" topic=" Expert Tools" />
             <Headings black="Industry-Leading Design Tools" />
           </div>
@@ -509,7 +509,6 @@ const UIUXDesign = () => {
         </div>
       </div>
 
-      {/* CTA */}
       <div className="py-20 bg-linear-to-r from-indigo-900 to-purple-900">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -521,12 +520,17 @@ const UIUXDesign = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg text-lg">
-              Book a UX Audit
-            </button>
-            <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-500/10 font-medium px-8 py-4 rounded-full transition-all text-lg">
-              View Portfolio
-            </button>
+            <Link to="/contact">
+              <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg text-lg">
+                Book a UX Audit
+              </button>
+            </Link>
+
+            <Link to="/portfolio">
+              <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-500/10 font-medium px-8 py-4 rounded-full transition-all text-lg">
+                View Portfolio
+              </button>
+            </Link>
           </div>
           <p className="text-gray-400 text-sm mt-8">
             Klass Koncepts — Designing Digital Excellence
