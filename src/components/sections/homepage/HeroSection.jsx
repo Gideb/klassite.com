@@ -52,14 +52,14 @@ const HeroSection = () => {
       {/* Main Content Container */}
       <div className=" z-10  px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center mt-5">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-12 lg:py-0">
-          {/* Left Content */}
+       
           <div className="flex flex-col space-y-8 lg:space-y-10 order-2 lg:order-1">
-            {/* Main Heading */}
+        
             <h1 className="font-black text-2xl sm:text-3xl lg:text-5xl xl:text-6xl leading-tight lg:leading-[1.2] text-gray-900">
-              We Build{" "}
+              We Build
               <span className="bg-clip-text text-transparent bg-fuchsia-600">
                 High Performance
-              </span>{" "}
+              </span>
               <br className="hidden sm:block" />
               Digital Systems That Grow Your Business
             </h1>

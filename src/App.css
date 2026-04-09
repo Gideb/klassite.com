@@ -371,7 +371,10 @@ html {
 }
 
 
-
+@theme {
+    --font-script: "Autography", "poppins", cursive;
+    --font-topic: "Figtree", cursive;
+}
 @font-face {
     font-family: "Autography";
     src: url("./assets/fonts/Autography.woff2") format("woff2");
@@ -395,7 +398,46 @@ html {
     font-style: normal;
     font-display: swap;
 }
-
-@theme {
-    --font-script: "Autography", "poppins", cursive;
+@font-face {
+    font-family: "Figree";
+    src: url("./assets/fonts/Figtree-Black.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
+@font-face {
+    font-family: "Figree";
+    src: url("./assets/fonts/Figtree-ExtraBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Figree";
+    src: url("./assets/fonts/Figtree-Bold.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Figree";
+    src: url("./assets/fonts/Figtree-Medium.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Figree";
+    src: url("./assets/fonts/Figtree-Regular.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Figree";
+    src: url("./assets/fonts/Figtree-Light.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
