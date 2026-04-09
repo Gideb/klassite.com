@@ -9,8 +9,6 @@ import {
   FaArrowUp,
   FaLightbulb,
   FaUsers,
-  FaRocket,
-  FaHeart,
   FaEnvelope,
 } from "react-icons/fa";
 import { PiTarget } from "react-icons/pi";
@@ -214,7 +212,7 @@ export const CareerSection = () => {
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-white px-8 py-4 text-base font-semibol shadow-md transition-all hover:shadow-lg"
             >
               <span className="relative z-10">View Open Roles</span>
-             
+
               <motion.div
                 className="absolute inset-0 bg-linear-to-r from-purple-600 to-primary"
                 initial={{ x: "100%" }}
@@ -276,9 +274,9 @@ export const CareerSection = () => {
                 whileHover={{ y: -8 }}
                 className="group relative rounded-2xl bg-card p-8 shadow-lg transition-all hover:shadow-xl"
               >
-                <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-primary/10 to-purple-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 rounded-2xl bg-amber-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative">
-                  <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-amber-600 text-white group-hover:scale-110 transition-transform">
+                  <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-amber-500 text-white group-hover:scale-110 transition-transform">
                     <value.icon className="h-7 w-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
@@ -351,7 +349,7 @@ export const CareerSection = () => {
                   whileHover={{ x: 8 }}
                   onHoverStart={() => setHoveredJob(job.title)}
                   onHoverEnd={() => setHoveredJob(null)}
-                  className="group relative rounded-2xl bg-card p-6 md:p-8 shadow-lg transition-all hover:shadow-lg hover:shadow-amber-400 bg-white"
+                  className="group relative rounded-2xl bg-card p-6 md:p-8 shadow-lg transition-all hover:shadow-lg hover:shadow-amber-400/50 bg-white"
                 >
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="flex-1">
@@ -377,7 +375,7 @@ export const CareerSection = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="shrink-0 inline-flex items-center gap-2 rounded-full bg-amber-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg"
+                      className="shrink-0 inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg"
                     >
                       Apply Now
                       <FaArrowUp className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

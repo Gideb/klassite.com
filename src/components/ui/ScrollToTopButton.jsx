@@ -29,7 +29,10 @@ const ScrollToTopButton = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{
+            scale: 1.1,
+            background: "purple", color: "white"
+          }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
           style={{
@@ -44,6 +47,7 @@ const ScrollToTopButton = () => {
             color: "purple",
             boxShadow: "0px 0px 0px rgba(0,4,0,0.6)",
             zIndex: 50,
+            transition: '0.3s',
             cursor: "pointer",
           }}
         >
