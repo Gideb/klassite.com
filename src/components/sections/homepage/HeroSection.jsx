@@ -25,7 +25,7 @@ const ServiceTags = memo(() => (
     {SERVICES.map((service) => (
       <span
         key={service}
-        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl text-sm font-medium hover:bg-purple-100 hover:text-purple-600 transition-colors duration-300 cursor-default"
+        className="px-4 py-2 hover:bg-gray-100 hover:text-gray-700 rounded-xl text-sm font-medium bg-purple-100 text-purple-600 transition-colors duration-300 cursor-default"
       >
         {service}
       </span>
@@ -51,15 +51,15 @@ const HeroSection = () => {
 
       {/* Main Content Container */}
       <div className=" z-10 mt-10  px-4 sm:px-4 lg:px-6 max-w-7xl mx-auto min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center w-full py-12 lg:py-0">
-          <div className="flex flex-col space-y-8 lg:space-y-10 order-2 lg:order-1">
+        <div className="grid lg:grid-cols-2 gap-5 lg:gap-10 items-center w-full py-12 lg:py-0">
+          <div className="flex flex-col space-y-6 lg:space-y-8 order-2 lg:order-1">
             <h1 className="font-black text-3xl sm:text-5xl lg:text-6xl xl:text-7xl leading-none text-gray-900">
               We Build{" "}
               <span className="bg-clip-text text-transparent bg-purple-600"> High Performance
               </span> Digital Systems That Grow Your Business
             </h1>
 
-            <div className="text-base sm:text-lg text-gray-600 max-w-2xl -mt-4">
+            <div className="text-base sm:text-lg text-gray-600 max-w-2xl -mt-2">
               <Subheading
                 description="Klass Koncepts partners with ambitious brands to architect and
               scale performance-driven digital platforms."
@@ -68,7 +68,7 @@ const HeroSection = () => {
 
             <ServiceTags />
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-center gap-4 pt-1">
               <Link
                 to="/contact"
                 className="w-full sm:w-auto grouptext-md shadow-md hover:shadow-lg px-8 py-3.5 rounded-xl font-medium text-md transform transition-all duration-300 hover:scale-105 focus:outline-none ring ring-purple-600 hover:text-purple-700 focus:ring-purple-300 focus:ring-offset flex items-center justify-center gap-2"
