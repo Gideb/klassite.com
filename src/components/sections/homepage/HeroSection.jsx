@@ -50,18 +50,13 @@ const HeroSection = () => {
       <BlobBackground />
 
       {/* Main Content Container */}
-      <div className=" z-10  px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center mt-5">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-12 lg:py-0">
-       
+      <div className=" z-10 mt-10  px-4 sm:px-4 lg:px-6 max-w-7xl mx-auto min-h-screen flex items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center w-full py-12 lg:py-0">
           <div className="flex flex-col space-y-8 lg:space-y-10 order-2 lg:order-1">
-        
-            <h1 className="font-black text-2xl sm:text-3xl lg:text-5xl xl:text-6xl leading-tight lg:leading-[1.2] text-gray-900">
-              We Build
-              <span className="bg-clip-text text-transparent bg-fuchsia-600">
-                High Performance
-              </span>
-              <br className="hidden sm:block" />
-              Digital Systems That Grow Your Business
+            <h1 className="font-black text-3xl sm:text-5xl lg:text-6xl xl:text-7xl leading-none text-gray-900">
+              We Build{" "}
+              <span className="bg-clip-text text-transparent bg-purple-600"> High Performance
+              </span> Digital Systems That Grow Your Business
             </h1>
 
             <div className="text-base sm:text-lg text-gray-600 max-w-2xl -mt-4">
@@ -76,7 +71,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
               <Link
                 to="/contact"
-                className="w-full sm:w-auto grouptext-md shadow-md hover:shadow-xl px-8 py-3.5 rounded-xl font-medium text-md transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring focus:ring-purple-300 focus:ring-offset flex items-center justify-center gap-2"
+                className="w-full sm:w-auto grouptext-md shadow-md hover:shadow-lg px-8 py-3.5 rounded-xl font-medium text-md transform transition-all duration-300 hover:scale-105 focus:outline-none ring ring-purple-600 hover:text-purple-700 focus:ring-purple-300 focus:ring-offset flex items-center justify-center gap-2"
               >
                 <SlCalender />
                 <span> Book a Strategic Call </span>
@@ -88,7 +83,7 @@ const HeroSection = () => {
 
               <a
                 href="/services"
-                className="w-full sm:w-auto group text-white bg-black/90 px-8 py-3.5 rounded-xl font-medium border-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto group text-white bg-purple-700 px-9 py-4 rounded-xl font-medium border-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
                 onClick={(e) => {
                   e.preventDefault();
                   document
