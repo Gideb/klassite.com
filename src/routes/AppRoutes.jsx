@@ -9,8 +9,8 @@ import Contact from "../pages/Contact";
 import FAQs from "../pages/FAQs";
 import Careers from "../pages/Careers";
 
-import Portfolio from "../pages/portfolio/Portfolio";
-import CaseStudyDetails from "../pages/portfolio/CaseStudyDetails";
+import Portfolio from "../pages/Portfolio";
+
 
 import Blog from "../pages/blog/Blog";
 import BlogPost from "../pages/blog/BlogPost";
@@ -45,7 +45,7 @@ const AppRoutes = () => {
         <Route path="/services/contentcreation" element={<ContentCreation />} />
 
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/:slug" element={<CaseStudyDetails />} />
+        
 
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />

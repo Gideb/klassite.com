@@ -15,14 +15,14 @@ import {
 } from "react-icons/fa";
 
 // Blog Images (replace with your actual imports)
-import blog1 from "../../assets/images/blog/klass.png";
-import blog2 from "../../assets/images/blog/klass.png";
-import blog3 from "../../assets/images/blog/klass.png";
-import blog4 from "../../assets/images/blog/klass.png";
-import blog5 from "../../assets/images/blog/klass.png";
-import blog6 from "../../assets/images/blog/klass.png";
-import author1 from "../../assets/images/blog/klass.png";
-import author2 from "../../assets/images/blog/klass.png";
+import blog1 from "../../assets/images/blog/klass.jpeg";
+import blog2 from "../../assets/images/blog/klass.jpeg";
+import blog3 from "../../assets/images/blog/klass.jpeg";
+import blog4 from "../../assets/images/blog/klass.jpeg";
+import blog5 from "../../assets/images/blog/klass.jpeg";
+import blog6 from "../../assets/images/blog/klass.jpeg";
+import author1 from "../../assets/images/blog/klass.jpeg";
+import author2 from "../../assets/images/blog/klass.jpeg";
 
 // Animation variants
 const fadeInUp = {

@@ -1,5 +1,5 @@
 import Topicbg from "../../ui/Topicbg";
-import klass from "../../../assets/images/klass.png";
+import klass from "../../../assets/images/portfolio/klass.jpeg";
 import Headings from "../../ui/Headings";
 
 const LeadershipGrid = () => {
@@ -33,9 +33,8 @@ const LeadershipGrid = () => {
         {/* Header */}
         <div className="mb-16">
           <Topicbg topic="Leadership" />
-          
-            <Headings black=" Performance Driven" />
-         
+
+          <Headings black=" Performance Driven" />
 
           <div className="h-px w-32 bg-purple-800 mt-3"></div>
         </div>

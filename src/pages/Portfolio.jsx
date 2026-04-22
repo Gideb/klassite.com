@@ -1,6 +1,6 @@
 import React from "react";
-import PortfolioSection from "../../components/PortfolioSection";
-import OtherHeroSection from "../../components/OtherHeroSection";
+import OtherHeroSection from "../components/OtherHeroSection";
+
 
 const Portfolio = () => {
   return (
@@ -13,3 +13,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
