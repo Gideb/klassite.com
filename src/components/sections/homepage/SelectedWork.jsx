@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import projectImg from "../../../assets/images/portfolio/klass.jpeg";
 import Topicbg from "../../ui/Topicbg";
 import Subheading from "../../ui/Subheading";
+import Headings from "../../ui/Headings";
 
 const projects = [
   {
@@ -38,8 +39,9 @@ const SelectedWork = () => {
     <section className="py-20 bg-gray-50">
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* header */}
-        <div className="text-center mb-14">
+        <div className="text-left mb-14">
           <Topicbg topic="Selected Work" />
+          <Headings black="Our Work" />
           <Subheading description="A glimpse into some of the solutions we've built for our clients" />
         </div>
 
@@ -103,7 +105,7 @@ const SelectedWork = () => {
         </div>
 
         {/* view more */}
-        <div className="text-center mt-12 transition duration-300 ease-in-out hover:-translate-y-1">
+        <div className="lg:text-right mt-20 transition duration-300 ease-in-out hover:-translate-y-1 text-center ">
           <a
             href="https://my-portfolio.com"
             target="_blank"

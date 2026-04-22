@@ -162,9 +162,12 @@ const SocialProofSection = () => {
     >
       <motion.div
         variants={staggerChildrenVariants}
-        className="absolute left-1/2 top-10"
+        className="absolute lg:left-1/2 lg:top-10 md:top-10 top-6 left-5"
       >
-        <Topicbg topic="Trusted Partners" />
+        <div className="lg:ml-9 sm:text-left ">
+           <Topicbg topic="Trusted Partners" />
+        </div>
+       
       </motion.div>
 
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
