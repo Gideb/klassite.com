@@ -4,7 +4,7 @@ import SocialProofSection from "../components/sections/homepage/SocialProofSecti
 import ServicesSection from "../components/sections/homepage/ServicesSection.jsx";
 import WhyUs from "../components/sections/homepage/WhyUs.jsx";
 import ProblemStatement from "../components/sections/homepage/ProblemStatement.jsx";
-import Transition from "../components/ui/Transition.jsx";
+
 import CTASection from "../components/CTASection.jsx";
 
 import FeaturedProjects from "../components/sections/servicesections/FeaturedProjects.jsx";
@@ -13,10 +13,9 @@ import FeaturedProjects from "../components/sections/servicesections/FeaturedPro
 const Home = () => {
   return (
     <>
-     
       <HeroSection />
       <ProblemStatement />
-      <Transition />
+
       <ServicesSection />
       <FeaturedProjects />
       <SocialProofSection />

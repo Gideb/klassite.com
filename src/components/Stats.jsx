@@ -4,17 +4,17 @@ import { WiTime4 } from "react-icons/wi";
 import { PiUsersThreeLight } from "react-icons/pi";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import team from "../assets/images/serviceSpecific/teamWorking.jpg";
+import team from "../assets/images/header/teamWorking.jpg";
 
 const Stats = () => {
   const stats = [
     {
       icon: GoRocket,
-      value: 90,
+      value: 120,
       suffix: "+",
       label: "Projects",
       color: "from-amber-600 to-amber-600",
-      duration: 8,
+      duration: 7,
     },
     {
       icon: PiUsersThreeLight,
@@ -22,11 +22,11 @@ const Stats = () => {
       suffix: "+",
       label: "Clients",
       color: "from-amber-600 to-amber-600",
-      duration: 8,
+      duration: 6,
     },
     {
       icon: LiaAwardSolid,
-      value: 4,
+      value: 7,
       suffix: "+",
       label: "Years",
       color: "from-amber-600 to-amber-600",
@@ -38,7 +38,7 @@ const Stats = () => {
       suffix: "/7",
       label: "Support",
       color: "from-amber-600 to-amber-600",
-      duration: 8,
+      duration: 5,
     },
   ];
 

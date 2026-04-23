@@ -62,7 +62,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="w-full sm:w-auto group bg-white hover:text-purple-600 px-9 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105 focus:outline-none focus:ring focus:ring-black focus:ring-offset invisible md:visible flex items-center justify-center gap-2"
+            className="w-full sm:w-auto group bg-white text-purple-700 hover:text-purple-600 px-9 py-3 rounded-xl font-semibold text-md shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105 focus:outline-none ring-2 focus:ring focus:ring-black focus:ring-offset invisible md:visible flex items-center justify-center gap-2"
           >
             Get a Quote
             <FaPen className="text-sm group-hover:translate-x-1 transition-transform" />

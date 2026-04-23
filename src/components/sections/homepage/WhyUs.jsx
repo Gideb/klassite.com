@@ -88,7 +88,7 @@ const WhyUs = () => {
         <div className="mt-20">
           <Link
             to="/about"
-            className="inline-flex items-center gap-3  bg-white shadow-md hover:shadow-lg px-7 py-3 rounded-xl font-medium transition-all duration-300 group hover:scale-105 "
+            className="inline-flex items-center gap-3  bg-white  text-amber-600 shadow-md hover:shadow-lg px-7 py-3 rounded-xl font-medium transition-all duration-300 group hover:scale-105 "
           >
             Let’s Build Together
             <FaArrowRight className="text-sm transition-transform group-hover:translate-x-1" />

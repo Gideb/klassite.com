@@ -1,5 +1,11 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
+import portrait1 from "../../../assets/images/portrait/portrait-1.jpg";
+import portrait2 from "../../../assets/images/portrait/portrait-2.jpg";
+import portrait3 from "../../../assets/images/portrait/portrait-3.jpg";
+import portrait4 from "../../../assets/images/portrait/portrait-4.jpg";
+import portrait5 from "../../../assets/images/portrait/portrait-5.jpg";
+import portrait6 from "../../../assets/images/portrait/portrait-6.jpg";
 import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
@@ -12,27 +18,30 @@ const TestimonialSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Founder",
+      name: "Sarah Mensah",
       company: "FinTech Startup",
-      location: "Sunyani, Ghana",
+      location: "Tema, Ghana",
       text: "Klass Koncepts didn’t just redesign our platform — they restructured our entire digital strategy. Within 90 days, we saw measurable growth across every key metric.",
       rating: 5,
+      image: portrait1,
     },
     {
       id: 2,
-      name: "Sarah Mensah",
+      name: "George Greg",
       company: "TechStart",
-      location: "Accra, Ghana",
+      location: "Cincinnati, USA",
       text: "Klass Koncepts transformed our online presence completely. Their attention to detail and technical expertise is unmatched. The website they built for us has increased our conversions by 200%.",
       rating: 5,
+      image: portrait2,
     },
     {
       id: 3,
-      name: "John Doe",
+      name: "Aarav Sanjay",
       company: "Global Media",
-      location: "Lagos, Nigeria",
+      location: "Mumbai, India",
       text: "Working with Gilbert was a pleasure. He understood our vision perfectly and delivered beyond expectations. The project was completed on time and within budget.",
       rating: 4,
+      image: portrait3,
     },
     {
       id: 4,
@@ -41,22 +50,25 @@ const TestimonialSection = () => {
       location: "Nairobi, Kenya",
       text: "The team's creative direction and technical implementation are top-notch. They don't just build websites; they create digital experiences that resonate with users.",
       rating: 5,
+      image: portrait4,
     },
     {
       id: 5,
-      name: "John Doe",
+      name: "Arthur Kwame",
       company: "Global Media",
-      location: "Lagos, Nigeria",
+      location: "Accra, Ghana",
       text: "Working with Gilbert was a pleasure. He understood our vision perfectly and delivered beyond expectations. The project was completed on time and within budget.",
       rating: 4,
+      image: portrait5,
     },
     {
       id: 6,
-      name: "Amara Okafor",
+      name: "Theo Shelby",
       company: "Creative Hub",
-      location: "Nairobi, Kenya",
+      location: "Glasgow, UK",
       text: "The team's creative direction and technical implementation are top-notch. They don't just build websites; they create digital experiences that resonate with users.",
       rating: 5,
+      image: portrait6,
     },
   ];
 
@@ -152,19 +164,22 @@ const TestimonialSection = () => {
                       <FaQuoteRight className="text-2xl sm:text-3xl opacity-50" />
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6 gap-4 sm:gap-0">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center mb-6 gap-4 sm:gap-1">
                       <img
-                        src="https://cdn-icons-png.flaticon.com/512/74/74464.png"
+                        src={testimonial.image}
                         alt={testimonial.name}
-                        className="w-16 h-16 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl object-cover border-4 border-purple-100 sm:mr-4"
+                        className="w-16 h-16 sm:w-14 sm:h-14 lg:w-18 lg:h-18 rounded-xl object-cover border-4 border-purple-100 sm:mr-4"
                       />
                       <div className="text-left">
                         <h3 className="text-purple-700 font-semibold text-base sm:text-lg">
                           {testimonial.name}
                         </h3>
                         <span className="text-sm text-gray-500">
-                          {testimonial.company}, {testimonial.location}
+                          {testimonial.company}
                         </span>
+                        <div className="text-sm text-gray-500">
+                          {testimonial.location}
+                        </div>
 
                         <StarRating rating={testimonial.rating} />
                       </div>

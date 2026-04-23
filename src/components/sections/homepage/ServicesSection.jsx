@@ -66,7 +66,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="scroll-mt-16 relative w-full overflow-hidden bg-white py-20 sm:py-24"
+      className="scroll-mt-16 relative w-full overflow-hidden bg-gray-50 py-20 sm:py-24"
     >
       {/* Decorative Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -129,7 +129,7 @@ const ServicesSection = () => {
 
                   <Link
                     to={`${group.to}`}
-                    className="inline-flex items-center gap-1 text-sm text-purple-600 hover:text-purple-700 font-medium group/link"
+                    className="inline-flex items-center gap-1 text-sm text-purple-500 hover:text-purple-400 font-medium group/link"
                   >
                     <span>Learn more</span>
                     <FaArrowRight className="text-xs group-hover/link:translate-x-1 transition-transform" />
@@ -144,7 +144,7 @@ const ServicesSection = () => {
         <div className="text-center mt-12 group">
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 bg-white text-purple-600 shadow-md hover:shadow-lg px-6 py-3 rounded-xl font-semibold  hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-white text-amber-600 shadow-md hover:shadow-lg px-7 py-4 rounded-xl font-semibold  hover:scale-105 transition-all duration-300"
           >
             <span>Free Consultation</span>
             <FaArrowRight className="text-sm group-hover:translate-x-1 duration-200 " />

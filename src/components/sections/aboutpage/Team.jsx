@@ -1,27 +1,29 @@
 import Topicbg from "../../ui/Topicbg";
-import klass from "../../../assets/images/portfolio/klass.jpeg";
+import profile1 from "../../../assets/images/portrait/portrait-1.jpg";
+import profile2 from "../../../assets/images/portrait/portrait-2.jpg";
+import profile3 from "../../../assets/images/portrait/portrait-3.jpg";
 import Headings from "../../ui/Headings";
 
 const LeadershipGrid = () => {
   const leadershipTeam = [
     {
-      name: "Klass A",
+      name: "Gideb",
       title: "Founder & CEO",
-      image: klass,
+      image: profile1,
       bio: "Former product leader at Google and Microsoft. Founded the company to bridge the gap between data and execution in enterprise environments.",
       philosophy: '"Systems over heroics."',
     },
     {
-      name: "Klass B",
+      name: "Jeff Beau",
       title: "Chief Operating Officer ",
-      image: klass,
+      image: profile2,
       bio: "Scaled three startups from seed to Series C. Expert in operational systems that maintain quality while accelerating growth.",
       philosophy: '"Clarity before consensus."',
     },
     {
-      name: "Klass B",
+      name: "Samira Dot",
       title: "Chief Operating Officer ",
-      image: klass,
+      image: profile3,
       bio: "Scaled three startups from seed to Series C. Expert in operational systems that maintain quality while accelerating growth.",
       philosophy: '"Clarity before consensus."',
     },

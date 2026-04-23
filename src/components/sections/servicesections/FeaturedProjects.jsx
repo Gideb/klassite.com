@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { FaArrowRight, FaEye, FaExternalLinkAlt, FaStar } from "react-icons/fa";
 import { HiOutlineRocketLaunch, HiOutlinePaintBrush } from "react-icons/hi2";
 import { LuCodeXml } from "react-icons/lu";
-import poster from "../../../assets/images/poster.jpg";
+import project1 from "../../../assets/images/project/project-1.jpg";
+import project2 from "../../../assets/images/project/project-2.jpg";
+import project3 from "../../../assets/images/project/project-3.png";
 import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
@@ -20,7 +22,7 @@ const FeaturedProjects = () => {
       category: "Web Development",
       serviceMatch: "Website Development",
       icon: LuCodeXml,
-      image: poster,
+      image: project1,
       tags: ["React", "Tailwind", "Node.js"],
       results: "+450% inquiries",
       caseStudy: "https://my_portfolio.com/works/codeuni",
@@ -33,7 +35,7 @@ const FeaturedProjects = () => {
       category: "Branding",
       serviceMatch: "Branding",
       icon: HiOutlinePaintBrush,
-      image: poster,
+      image: project2,
       tags: ["Brand Identity", "Packaging", "Visual Strategy"],
       results: "40% brand recognition increase",
       caseStudy: "https://my_portfolio.com/works/brand",
@@ -46,7 +48,7 @@ const FeaturedProjects = () => {
       category: "Web Application",
       serviceMatch: "Web Applications",
       icon: HiOutlineRocketLaunch,
-      image: poster,
+      image: project3,
       tags: ["JavaScript", "PHP", "MySQL"],
       results: "85% faster skill progression",
       caseStudy: "https://my_portfolio.com/works/utsportal",
@@ -55,8 +57,8 @@ const FeaturedProjects = () => {
 
   const getCategoryColor = (serviceMatch) => {
     const colors = {
-      "Website Development": "purple",
-      "Web Applications": "purple",
+      "Website Development": "amber",
+      "Web Applications": "amber",
       Branding: "amber",
     };
     return colors[serviceMatch] || "purple";
@@ -182,8 +184,9 @@ const FeaturedProjects = () => {
     );
   };
 
+
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
         {/* Header */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
@@ -206,13 +209,13 @@ const FeaturedProjects = () => {
         <div className="text-center">
           <Link
             to="https://www.portfolio.com"
-            className="inline-flex items-center gap-3 bg-white  hover:text-fuchsia-800 text-fuchsia-800 px-8 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 group"
+            className="inline-flex items-center gap-3 bg-white  hover:text-amber-700 text-amber-600 px-8 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 group"
           >
             <span>View Full Portfolio</span>
             <FaExternalLinkAlt className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
           <p className="text-gray-500 text-sm mt-4">
-            Explore 20+ more projects across different industries
+            Explore 50+ more projects across different industries
           </p>
         </div>
       </div>

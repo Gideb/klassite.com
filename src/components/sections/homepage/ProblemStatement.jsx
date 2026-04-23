@@ -10,6 +10,7 @@ import { memo } from "react";
 import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
+import Button from "../../ui/Button";
 
 const ProblemStatement = () => {
   const problems = [
@@ -42,7 +43,7 @@ const ProblemStatement = () => {
   return (
     <section
       id="problem"
-      className="scroll-mt-24 py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-gray-50"
+      className="scroll-mt-24 py-12 sm:py-16 lg:py-20 relative overflow-hidden bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -50,7 +51,6 @@ const ProblemStatement = () => {
           <Topicbg topic="The Reality Check" />
 
           <Headings black="Most Businesses Don't Have A Website Problem. They Have A Performance Problem." />
-        
 
           <Subheading
             description="If your digital presence isn't performing, you're leaving money on
@@ -59,7 +59,7 @@ const ProblemStatement = () => {
         </div>
 
         {/* Problems Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-16">
           {problems.map((problem, index) => {
             const Icon = problem.icon;
             return (
@@ -68,12 +68,12 @@ const ProblemStatement = () => {
                 className="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100"
               >
                 {/* Background gradient on Hover */}
-                <div className="absolute inset-0 bg-amber-100 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-amber-500/60 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
 
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-purple-100 rounded-xl mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Icon className="text-3xl text-purple-700" />
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-amber-100 rounded-xl mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                    <Icon className="text-3xl text-amber-600" />
                   </div>
 
                   {/* Content */}
@@ -99,6 +99,7 @@ const ProblemStatement = () => {
           })}
         </div>
       </div>
+      
     </section>
   );
 };

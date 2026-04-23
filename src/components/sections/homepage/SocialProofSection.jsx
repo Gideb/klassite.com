@@ -2,7 +2,7 @@ import { memo, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
-import teamImage from "../../../assets/images/serviceSpecific/teamWorking.jpg";
+import teamImage from "../../../assets/images/header/teamWorking.jpg";
 
 import logo1 from "../../../assets/images/brandLogo/logo1.png";
 import logo2 from "../../../assets/images/brandLogo/logo2.png";
@@ -206,7 +206,7 @@ const SocialProofSection = () => {
                 </span>
 
                 <div>
-                  <p className="text-purple-900 font-bold text-md">4+ Years</p>
+                  <p className="text-purple-900 font-bold text-md">7+ Years</p>
                   <p className="text-gray-600 text-xs">Of Excellence</p>
                 </div>
               </div>
@@ -270,7 +270,7 @@ const SocialProofSection = () => {
               transition={{ delay: 1.0, duration: 0.6 }}
               className="text-gray-500 text-sm mt-8"
             >
-              ...and 50+ other innovative companies across fintech, healthcare,
+              ...and 60+ other innovative companies across fintech, healthcare,
               and e-commerce.
             </motion.p>
           </motion.div>

@@ -1,4 +1,4 @@
-import hero from "../../../assets/images/hero.png";
+import hero from "../../../assets/images/ipages/homepage/hero1.jpg";
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaPlay } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
@@ -13,12 +13,14 @@ import Headings from "../../ui/Headings";
 // Services array
 const SERVICES = ["Web Development", "Branding", "Media", "Security Solutions"];
 
+
 // Stats array
 const STATS = [
-  { end: 5, suffix: "+", label: "Years Experience", duration: 5 },
-  { end: 50, suffix: "+", label: "Projects Delivered", duration: 6 },
-  { end: 98, suffix: "%", label: "Client Satisfaction", duration: 6 },
+  { end: 7, suffix: "+", label: "Years Experience", duration: 5 },
+  { end: 120, suffix: "+", label: "Projects Delivered", duration: 6 },
+  { end: 97, suffix: "%", label: "Client Satisfaction", duration: 5 },
 ];
+
 
 const ServiceTags = memo(() => (
   <div className="flex flex-wrap gap-3" aria-label="Our services">
@@ -50,13 +52,16 @@ const HeroSection = () => {
       <BlobBackground />
 
       {/* Main Content Container */}
-      <div className=" z-10 mt-10  px-4 sm:px-4 lg:px-6 max-w-7xl mx-auto min-h-screen flex items-center">
+      <div className=" z-10 mt-10  px-4 sm:px-4 lg:px-7 max-w-7xl mx-auto min-h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-10 items-center w-full py-12 lg:py-0">
           <div className="flex flex-col space-y-6 lg:space-y-8 order-2 lg:order-1">
             <h1 className="font-black text-3xl sm:text-5xl lg:text-6xl xl:text-7xl leading-none text-gray-900">
               We Build{" "}
-              <span className="bg-clip-text text-transparent bg-purple-600"> High Performance
-              </span> Digital Systems That Grow Your Business
+              <span className="bg-clip-text text-transparent bg-amber-600">
+                {" "}
+                High Performance
+              </span>{" "}
+              Digital Systems That Grow Your Business
             </h1>
 
             <div className="text-base sm:text-lg text-gray-600 max-w-2xl -mt-2">
@@ -83,7 +88,7 @@ const HeroSection = () => {
 
               <a
                 href="/services"
-                className="w-full sm:w-auto group text-white bg-purple-700 px-9 py-4 rounded-xl font-medium border-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto group text-white bg-purple-600 px-9 py-4 rounded-xl font-medium border-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -123,15 +128,15 @@ const HeroSection = () => {
             {/* Trust Badge */}
             <div className="flex items-center gap-4 text-sm text-gray-600">
               <div className="flex -space-x-2" aria-hidden="true">
-                {[...Array(4)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-xl bg-linear-to-br from-purple-400 to-fuchsia-400 border-2 border-white shadow-sm"
+                    className="w-8 h-8 rounded-xl bg-linear-to-br from-amber-400 to-purple-400 border-2 border-white shadow-sm"
                   />
                 ))}
               </div>
               <span className="font-medium">
-                Trusted by 50+ businesses worldwide
+                Trusted by 60+ businesses worldwide
               </span>
             </div>
           </div>
@@ -144,8 +149,8 @@ const HeroSection = () => {
 
               <img
                 src={hero}
-                alt="Modern laptop displaying digital solutions interface"
-                className="relative w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl will-change-transform group-hover:scale-105 transition-transform duration-500"
+                alt="team members in a discussion"
+                className="relative w-full max-w-md lg:max-w-lg rounded-xl shadow-xl will-change-transform group-hover:scale-105 transition-transform duration-500"
                 loading="eager"
               />
 
@@ -166,7 +171,7 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block">
         <a
           href="#problem"
-          className="flex flex-col items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors group p-2"
+          className="flex flex-col items-center gap-2 hover:text-purple-500 text-purple-600 transition-colors group p-2"
           onClick={(e) => {
             e.preventDefault();
             document
