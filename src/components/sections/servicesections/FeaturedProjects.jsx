@@ -167,7 +167,7 @@ const FeaturedProjects = () => {
               to={`${project.caseStudy}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm mt-3 font-semibold text-fuchsia-600  hover:text-fuchsia-500 "
+              className="text-sm mt-3 font-semibold text-purple-600  hover:text-fuchsia-500 "
             >
               View Case Study →
             </Link>

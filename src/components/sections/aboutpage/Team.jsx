@@ -1,6 +1,6 @@
 import Topicbg from "../../ui/Topicbg";
 import profile1 from "../../../assets/images/portrait/portrait-1.jpg";
-import profile2 from "../../../assets/images/portrait/portrait-2.jpg";
+import profile2 from "../../../assets/images/portrait/portrait-5.jpg";
 import profile3 from "../../../assets/images/portrait/portrait-3.jpg";
 import Headings from "../../ui/Headings";
 
@@ -9,7 +9,7 @@ const LeadershipGrid = () => {
     {
       name: "Gideb",
       title: "Founder & CEO",
-      image: profile1,
+      image: profile3,
       bio: "Former product leader at Google and Microsoft. Founded the company to bridge the gap between data and execution in enterprise environments.",
       philosophy: '"Systems over heroics."',
     },
@@ -21,9 +21,9 @@ const LeadershipGrid = () => {
       philosophy: '"Clarity before consensus."',
     },
     {
-      name: "Samira Dot",
+      name: "Samira Dotti",
       title: "Chief Operating Officer ",
-      image: profile3,
+      image: profile1,
       bio: "Scaled three startups from seed to Series C. Expert in operational systems that maintain quality while accelerating growth.",
       philosophy: '"Clarity before consensus."',
     },

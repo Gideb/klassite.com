@@ -47,8 +47,7 @@ const WhyUs = () => {
         <div className="max-w-3xl mb-10">
           <Topicbg topic="Why Choose Us" />
           <div className="max-w-xl ">
-            {" "}
-            <Headings black="  Built for performance.   Designed for long-term growth." />
+            <Headings black="Built for performance. Designed for long-term growth." />
           </div>
 
           <Subheading
@@ -68,8 +67,8 @@ const WhyUs = () => {
               >
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="w-18 h-18 rounded-xl bg-purple-100 flex items-center justify-center transition-all duration-300 group-hover:scale-105 ">
-                    <Icon className="text-4xl text-purple-600    transition-colors" />
+                  <div className="w-18 h-18 rounded-xl bg-amber-100 flex items-center justify-center transition-all duration-300 group-hover:scale-105 ">
+                    <Icon className="text-4xl text-amber-600    transition-colors" />
                   </div>
                 </div>
 

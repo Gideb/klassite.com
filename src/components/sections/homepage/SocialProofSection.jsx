@@ -2,7 +2,7 @@ import { memo, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
-import teamImage from "../../../assets/images/header/teamWorking.jpg";
+import teamImage from "../../../assets/images/ipages/homepage/trust1.jpg";
 
 import logo1 from "../../../assets/images/brandLogo/logo1.png";
 import logo2 from "../../../assets/images/brandLogo/logo2.png";
@@ -165,9 +165,8 @@ const SocialProofSection = () => {
         className="absolute lg:left-1/2 lg:top-10 md:top-10 top-6 left-5"
       >
         <div className="lg:ml-9 sm:text-left ">
-           <Topicbg topic="Trusted Partners" />
+          <Topicbg topic="Trusted Partners" />
         </div>
-       
       </motion.div>
 
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">

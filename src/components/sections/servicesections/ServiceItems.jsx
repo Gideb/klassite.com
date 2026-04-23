@@ -14,7 +14,7 @@ import {
 import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
-import Stats from "../../Stats";
+
 import { Link } from "react-router-dom";
 
 const ServiceItems = () => {
@@ -115,16 +115,73 @@ const ServiceItems = () => {
 
     return (
       <div
+        className={`group relative bg-white rounded-2xl p-8 border border-gray-100 
+  transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-3 hover:shadow-xl ${style.glow} overflow-hidden`}
+      >
+        {/* Soft gradient hover wash */}
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${
+            isPurple ? "from-purple-50/40" : "from-amber-50/40"
+          } to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+        />
+
+        {/* Top accent line (very premium touch) */}
+        <div
+          className={`absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500 ${
+            isPurple
+              ? "bg-gradient-to-r from-purple-500 to-purple-300"
+              : "bg-gradient-to-r from-amber-500 to-amber-300"
+          }`}
+        />
+
+        {/* Icon */}
+        <div
+          className={`relative w-14 h-14 ${style.iconBg} rounded-lg 
+    flex items-center justify-center mb-6 
+    transition-all duration-500 group-hover:scale-105`}
+        >
+          <Icon className={`text-xl ${style.iconColor}`} />
+        </div>
+
+        {/* Title */}
+        <h3 className="relative text-lg font-semibold text-gray-900 mb-3">
+          {title}
+        </h3>
+
+        {/* Description */}
+        <p className="relative text-gray-600 text-sm leading-relaxed mb-6">
+          {desc}
+        </p>
+
+        {/* Link */}
+        <Link to={lead}>
+          <div
+            className={`relative inline-flex items-center gap-2 text-sm font-medium ${style.linkColor}`}
+          >
+            <span>Learn more</span>
+
+            {/* Arrow motion (clean + intentional) */}
+            <FaArrowRight className="text-xs transition-all duration-300 group-hover:translate-x-1" />
+          </div>
+        </Link>
+
+        {/* Bottom glow (depth, not noise) */}
+        <div
+          className={`absolute inset-x-0 bottom-0 h-0 group-hover:h-20 transition-all duration-500 ${
+            isPurple ? "bg-purple-500/5" : "bg-amber-500/5"
+          }`}
+        />
+      </div>
+      /*  <div
         className={`group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg ${style.glow} transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02]
           border border-gray-100 ${style.borderGlow} cursor-pointer overflow-hidden`}
       >
-        {/* Background gradient on hover */}
+       
         <div
           className={`absolute inset-0 bg-linear-to-br ${isPurple ? "from-purple-50/50" : "from-amber-50/50"} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
         />
 
-        {/* Icon with animation */}
-
+     
         <div
           className={`relative w-16 h-16 ${style.iconBg} rounded-xl 
             flex items-center justify-center mb-6 
@@ -138,17 +195,17 @@ const ServiceItems = () => {
           />
         </div>
 
-        {/* Title */}
+      
         <h3 className="relative text-xl font-medium text-gray-800 mb-3 group-hover:text-gray-900 transition-colors">
           {title}
         </h3>
 
-        {/* Description */}
+  
         <p className="relative text-gray-600 text-sm leading-relaxed mb-5">
           {desc}
         </p>
 
-        {/* Learn More Link with Arrow Animation */}
+
         <Link to={lead}>
           <div
             className={`relative inline-flex items-center gap-2 ${style.linkColor} ${style.linkHover} font-medium text-sm transition-all duration-300 cursor-pointer group-hover:gap-3 group-hover:translate-x-1`}
@@ -158,18 +215,18 @@ const ServiceItems = () => {
           </div>
         </Link>
 
-        {/* Decorative corner element */}
+      
         <div
           className={`absolute bottom-0 right-0 w-20 h-20 bg-linear-to-tl ${isPurple ? "from-purple-500/8" : "from-amber-500/8"} to-transparent rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
         />
-      </div>
+      </div> */
     );
   };
 
   return (
     <div
       id="services"
-      className="scroll-mt-24 bg-linear-to-b from-gray-50 to-white"
+      className="scroll-mt-24 bg-gray-50"
     >
       <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24">
         {/* Header Section */}
@@ -197,7 +254,7 @@ const ServiceItems = () => {
             <p className="text-gray-600 text-md max-w-2xl ml-18">
               {services.digital.intro}
             </p>
-            <div className="w-1/4 h-0.5 bg-linear-to-r from-purple-500 to-purple-100 rounded-xl mt-3 ml-18" />
+            {/* <div className="w-1/4 h-0.5 bg-linear-to-r from-purple-500 to-purple-100 rounded-xl mt-3 ml-18" /> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -206,6 +263,9 @@ const ServiceItems = () => {
             ))}
           </div>
         </div>
+        
+       {/*  <div className="w-full h-0.5 bg-linear-to-r from-gray-100 via-gray-300 to-gray-100 rounded-xl my-9 ml-18 mx-auto flex items-center" />  */}
+
 
         {/* Creative Services Section */}
         <div>
@@ -221,7 +281,7 @@ const ServiceItems = () => {
             <p className="text-gray-600 text-md max-w-2xl ml-18">
               {services.creative.intro}
             </p>
-            <div className="w-1/4 h-0.5 bg-linear-to-r from-amber-500 to-amber-100 rounded-xl mt-3 ml-18" />
+            {/* <div className="w-1/4 h-0.5 bg-linear-to-r from-amber-500 to-amber-100 rounded-xl mt-3 ml-18" /> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -230,9 +290,7 @@ const ServiceItems = () => {
             ))}
           </div>
         </div>
-        <div className="mt-20">
-          <Stats />
-        </div>
+        <div className="mt-20"></div>
       </section>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import projectImg from "../../../assets/images/portfolio/klass.jpeg";
-import Topicbg from "../../ui/Topicbg";
-import Subheading from "../../ui/Subheading";
-import Headings from "../../ui/Headings";
+import Topicbg from "../ui/Topicbg";
+import Subheading from "../ui/Subheading";
+import Headings from "../ui/Headings";
 
 const projects = [
   {
@@ -87,7 +87,7 @@ const SelectedWork = () => {
                     href={project.caseStudy}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm mt-3 font-semibold text-fuchsia-600  hover:text-fuchsia-500 "
+                    className="text-sm mt-3 font-semibold text-red-600  hover:text-fuchsia-500 "
                   >
                     View Case Study →
                   </a>

@@ -1,57 +1,59 @@
 import React from "react";
-import { FaEye, FaPen } from "react-icons/fa";
-import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
+import Button from "../../ui/Button";
 
 const ServiceHero = () => {
   return (
-    <section className="relative overflow-hidden bg-linear-to-b from-purple-50 via-purple-100/70 to-white">
-    
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
-        <div className="text-center space-y-8">
-          {/* Big Bold Heading */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight">
-            <span className="bg-linear-to-r from-purple-800 via-purple-700 to-purple-600 bg-clip-text text-transparent">
-              Ideas That
-            </span>
-            <br />
-            <span className="bg-linear-to-r from-purple-700 via-purple-600 to-purple-500 bg-clip-text text-transparent">
-              Leave a Mark
-            </span>
-          </h1>
-
-          {/* Description text */}
-          <div className="max-w-3xl mx-auto space-y-4 text-gray-600 text-lg sm:text-xl">
-            <p className="font-medium">
-              We design, build, and elevate brands through powerful digital and
-              creative solutions.
-            </p>
-            <p>
-              From high-performing websites to compelling visual content, Klass
-              Koncepts helps you stand out and scale with confidence.
-            </p>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Link
-              to="/contact"
-              className="group relative px-8 py-3 bg-white font-medium rounded-xl shadow-md hover:shadow-lg transform transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring focus:ring-purple-500 focus:ring-offset flex gap-3 items-center"
+    <section className="bg-white border-b border-gray-100">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        {/* Headline */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-900 leading-tight tracking-tight">
+          Not just services —{" "}
+          <span className="text-purple-600">solutions that work</span>
+        </h1>
+        {/* Supporting text */}
+        <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          We design and build with intention—focusing on performance, growth,
+          and real business impact, not just aesthetics.
+        </p>
+        {/* 3 Key Points */}
+        <div className="mt-12 grid sm:grid-cols-3 gap-6 text-left">
+          {[
+            {
+              title: "Strategy First",
+              desc: "Every decision is guided by clear thinking and purpose.",
+            },
+            {
+              title: "Built to Convert",
+              desc: "Designed to drive engagement, action, and results.",
+            },
+            {
+              title: "Tailored Approach",
+              desc: "Every solution is crafted specifically for your brand.",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="group p-5 rounded-xl border border-gray-100 hover:border-purple-200 hover:shadow-md transition-all duration-300"
             >
-              Get a Quote
-              <FaPen />
-              <span className="absolute inset-0 rounded-xl bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            </Link>
-            <Link
-              to="/portfolio"
-              className="px-8 py-3 text-white bg-black font-medium rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1 focus:outline-none focus:ring focus:ring-purple-500 focus:ring-offset flex gap-3 items-center"
-            >
-              
-              View Our Work
-              <FaEye />
-            </Link>
-          </div>
+              <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+        {/* CTA */}
+
+        <div className="mt-12">
+          <Button
+            link="/contact"
+            text="Start Your Project"
+            icon={FaArrowRight}
+          />
         </div>
       </div>
     </section>

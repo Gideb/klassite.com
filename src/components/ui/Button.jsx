@@ -1,7 +1,7 @@
-import React from "react";
+/* import React from "react";
 import { Link } from "react-router-dom";
 
-const Button = ({link, icon, text}) => {
+const Button = ({link, icon:Icon, text}) => {
   return (
     <div className="mt-20">
       <Link
@@ -10,11 +10,40 @@ const Button = ({link, icon, text}) => {
       >
         {text}
 
-        <div className="text-sm transition-transform group-hover:translate-x-1">
-          {`<Fa${icon} />`}
-        </div>
+         <Icon className="text-sm transition-transform group-hover:translate-x-1" />
+    
       </Link>
     </div>
+  );
+};
+
+export default Button;
+ */
+
+
+
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
+  const base =
+    "inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300";
+
+  const styles = {
+    primary:
+      "bg-purple-600 text-white hover:bg-purple-700 shadow-md hover:shadow-lg",
+    secondary:
+      "bg-white text-amber-600 border border-gray-200 hover:bg-gray-50 shadow-sm hover:shadow-md",
+  };
+
+  return (
+    <Link to={link} className={`${base} ${styles[variant]} group`}>
+      <span>{text}</span>
+
+      {Icon && (
+        <Icon className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+      )}
+    </Link>
   );
 };
 
