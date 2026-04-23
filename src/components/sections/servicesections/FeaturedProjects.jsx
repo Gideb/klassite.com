@@ -14,15 +14,16 @@ const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      name: "poster Realty Website",
+      name: "Code University Website",
       description:
-        "A modern real estate platform designed to showcase listings and drive qualified inquiries.",
+        "Discover the Modern Programming University Website — Showcasing a Full Spectrum of Programs at Every Level.",
       category: "Web Development",
       serviceMatch: "Website Development",
       icon: LuCodeXml,
       image: poster,
-      tags: ["Real Estate", "Property Listings", "Lead Generation"],
-      results: "+150% inquiries",
+      tags: ["React", "Tailwind", "Node.js"],
+      results: "+450% inquiries",
+      caseStudy: "https://my_portfolio.com/works/codeuni",
     },
     {
       id: 2,
@@ -35,18 +36,20 @@ const FeaturedProjects = () => {
       image: poster,
       tags: ["Brand Identity", "Packaging", "Visual Strategy"],
       results: "40% brand recognition increase",
+      caseStudy: "https://my_portfolio.com/works/brand",
     },
     {
       id: 3,
-      name: "Nexus Financial Dashboard",
+      name: "DevPath – Computing Programs for Every Stage",
       description:
-        "Intuitive web application that simplifies complex financial data for enterprise clients.",
+        "A Structured Learning Portal — Teaching Computing from Amateur to Mastery.",
       category: "Web Application",
       serviceMatch: "Web Applications",
       icon: HiOutlineRocketLaunch,
       image: poster,
-      tags: ["FinTech", "Dashboard", "Data Visualization"],
-      results: "80% faster reporting",
+      tags: ["JavaScript", "PHP", "MySQL"],
+      results: "85% faster skill progression",
+      caseStudy: "https://my_portfolio.com/works/utsportal",
     },
   ];
 
@@ -84,7 +87,7 @@ const FeaturedProjects = () => {
           {/* View Button */}
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
             <Link
-              to={`/portfolio/${project.id}`}
+              to={`${project.caseStudy}`}
               className={`transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ${isPurple ? "bg-purple-600 hover:bg-purple-700" : "bg-amber-600 hover:bg-amber-700"} text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg`}
             >
               <FaEye />
@@ -148,21 +151,39 @@ const FeaturedProjects = () => {
           </div>
 
           {/* View Link */}
-          <Link
+          {/*   <Link
             to={`/portfolio/${project.id}`}
             className={`inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300 group/link
               ${isPurple ? "text-purple-600 hover:text-purple-700" : "text-amber-600 hover:text-amber-700"}`}
           >
             <span>View Project</span>
             <FaArrowRight className="text-xs transition-transform duration-300 group-hover/link:translate-x-1" />
-          </Link>
+          </Link> */}
+          {/* actions */}
+          <div className="flex gap-3 mt-5">
+            <Link
+              to={`${project.caseStudy}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm mt-3 font-semibold text-fuchsia-600  hover:text-fuchsia-500 "
+            >
+              View Case Study →
+            </Link>
+
+            <Link
+              to="/contact"
+              className="text-sm font-semibold text-gray-700 hover:text-gray-900 mt-3"
+            >
+              Get Similar
+            </Link>
+          </div>
         </div>
       </div>
     );
   };
 
   return (
-    <section className="bg-linear-to-b from-white to-gray-50 py-16">
+    <section className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
         {/* Header */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
@@ -184,7 +205,7 @@ const FeaturedProjects = () => {
 
         <div className="text-center">
           <Link
-            to="/portfolio"
+            to="https://www.portfolio.com"
             className="inline-flex items-center gap-3 bg-white  hover:text-fuchsia-800 text-fuchsia-800 px-8 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 group"
           >
             <span>View Full Portfolio</span>

@@ -6,7 +6,8 @@ import WhyUs from "../components/sections/homepage/WhyUs.jsx";
 import ProblemStatement from "../components/sections/homepage/ProblemStatement.jsx";
 import Transition from "../components/ui/Transition.jsx";
 import CTASection from "../components/CTASection.jsx";
-import SelectedWork from "../components/sections/homepage/SelectedWork.jsx";
+
+import FeaturedProjects from "../components/sections/servicesections/FeaturedProjects.jsx";
 
 
 const Home = () => {
@@ -17,7 +18,7 @@ const Home = () => {
       <ProblemStatement />
       <Transition />
       <ServicesSection />
-      <SelectedWork />
+      <FeaturedProjects />
       <SocialProofSection />
       <WhyUs />
       <TestimonialSection />
