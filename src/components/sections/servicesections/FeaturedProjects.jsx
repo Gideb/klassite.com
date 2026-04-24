@@ -9,6 +9,7 @@ import project3 from "../../../assets/images/project/project-3.png";
 import Topicbg from "../../ui/Topicbg";
 import Headings from "../../ui/Headings";
 import Subheading from "../../ui/Subheading";
+import Button from "../../ui/Button";
 
 const FeaturedProjects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -57,8 +58,8 @@ const FeaturedProjects = () => {
 
   const getCategoryColor = (serviceMatch) => {
     const colors = {
-      "Website Development": "amber",
-      "Web Applications": "amber",
+      "Website Development": "purple",
+      "Web Applications": "blue",
       Branding: "amber",
     };
     return colors[serviceMatch] || "purple";
@@ -66,6 +67,7 @@ const FeaturedProjects = () => {
 
   const ProjectCard = ({ project }) => {
     const isPurple = getCategoryColor(project.serviceMatch) === "purple";
+    const isBlue = getCategoryColor(project.serviceMatch) === "blue";
     // eslint-disable-next-line no-unused-vars
     const isHovered = hoveredProject === project.id;
 
@@ -90,7 +92,7 @@ const FeaturedProjects = () => {
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
             <Link
               to={`${project.caseStudy}`}
-              className={`transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ${isPurple ? "bg-purple-600 hover:bg-purple-700" : "bg-amber-600 hover:bg-amber-700"} text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg`}
+              className={`transform -translate-y-4 group-hover:translate-y-0 transition-all duration-500 ${isPurple ? "bg-purple-600 hover:bg-purple-700" : isBlue ? "bg-blue-700 hover:bg-blue-800" : "bg-amber-600 hover:bg-amber-700"} text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg`}
             >
               <FaEye />
               View Project
@@ -116,7 +118,7 @@ const FeaturedProjects = () => {
           {/* Category */}
           <div className="mb-3">
             <span
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-semibold ${isPurple ? "bg-purple-100 text-purple-700" : "bg-amber-100 text-amber-700"}`}
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-semibold ${isPurple ? "bg-purple-100 text-purple-700" :isBlue ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}       `}
             >
               {project.category}
             </span>
@@ -134,7 +136,7 @@ const FeaturedProjects = () => {
           {/* Results / Metrics */}
           {project.results && (
             <div
-              className={`text-xs font-semibold mb-3 ${isPurple ? "text-purple-600" : "text-amber-600"}`}
+              className={`text-xs font-semibold mb-3 ${isPurple ? " text-purple-700" : isBlue ? "text-blue-700" : "text-amber-600"}`}
             >
               📈 {project.results}
             </div>
@@ -152,22 +154,13 @@ const FeaturedProjects = () => {
             ))}
           </div>
 
-          {/* View Link */}
-          {/*   <Link
-            to={`/portfolio/${project.id}`}
-            className={`inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300 group/link
-              ${isPurple ? "text-purple-600 hover:text-purple-700" : "text-amber-600 hover:text-amber-700"}`}
-          >
-            <span>View Project</span>
-            <FaArrowRight className="text-xs transition-transform duration-300 group-hover/link:translate-x-1" />
-          </Link> */}
           {/* actions */}
           <div className="flex gap-3 mt-5">
             <Link
               to={`${project.caseStudy}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm mt-3 font-semibold text-purple-600  hover:text-fuchsia-500 "
+              className={`text-sm mt-3 font-semibold ${isPurple ? " text-purple-700" : isBlue ? "text-blue-700" : "text-amber-600"}`}
             >
               View Case Study →
             </Link>
@@ -183,7 +176,6 @@ const FeaturedProjects = () => {
       </div>
     );
   };
-
 
   return (
     <section className="bg-white py-16">
@@ -207,13 +199,12 @@ const FeaturedProjects = () => {
         </div>
 
         <div className="text-center">
-          <Link
-            to="https://www.portfolio.com"
-            className="inline-flex items-center gap-3 bg-white  hover:text-amber-700 text-amber-600 px-8 py-3 rounded-xl font-semibold text-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 group"
-          >
-            <span>View Full Portfolio</span>
-            <FaExternalLinkAlt className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          <Button
+            link="/contact"
+            text="View Full Portfolio"
+            icon={FaExternalLinkAlt}
+            variant="tetiary"
+          />
           <p className="text-gray-500 text-sm mt-4">
             Explore 50+ more projects across different industries
           </p>

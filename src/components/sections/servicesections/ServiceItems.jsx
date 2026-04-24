@@ -120,25 +120,22 @@ const ServiceItems = () => {
       >
         {/* Soft gradient hover wash */}
         <div
-          className={`absolute inset-0 bg-gradient-to-br ${
+          className={`absolute inset-0 bg-linear-to-br ${
             isPurple ? "from-purple-50/40" : "from-amber-50/40"
           } to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
         />
 
         {/* Top accent line (very premium touch) */}
         <div
-          className={`absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500 ${
+          className={`absolute top-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500 ${
             isPurple
-              ? "bg-gradient-to-r from-purple-500 to-purple-300"
-              : "bg-gradient-to-r from-amber-500 to-amber-300"
+              ? "bg-linear-to-r from-purple-500 to-purple-300"
+              : "bg-linear-to-r from-amber-500 to-amber-300"
           }`}
         />
 
-        {/* Icon */}
         <div
-          className={`relative w-14 h-14 ${style.iconBg} rounded-lg 
-    flex items-center justify-center mb-6 
-    transition-all duration-500 group-hover:scale-105`}
+          className={`relative w-14 h-14 ${style.iconBg} rounded-lg flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-105`}
         >
           <Icon className={`text-xl ${style.iconColor}`} />
         </div>
@@ -154,24 +151,24 @@ const ServiceItems = () => {
         </p>
 
         {/* Link */}
-        <Link to={lead}>
-          <div
-            className={`relative inline-flex items-center gap-2 text-sm font-medium ${style.linkColor}`}
-          >
-            <span>Learn more</span>
+        <Link
+          to={lead}
+          className={`relative z-10 inline-flex items-center gap-2 text-sm font-medium ${style.linkColor}`}
+        >
+          <span>Learn more</span>
 
-            {/* Arrow motion (clean + intentional) */}
-            <FaArrowRight className="text-xs transition-all duration-300 group-hover:translate-x-1" />
-          </div>
+          {/* Arrow motion (clean + intentional) */}
+          <FaArrowRight className="text-xs transition-all duration-300 group-hover:translate-x-1" />
         </Link>
 
         {/* Bottom glow (depth, not noise) */}
         <div
-          className={`absolute inset-x-0 bottom-0 h-0 group-hover:h-20 transition-all duration-500 ${
+          className={`absolute z-0 inset-x-0 bottom-0 h-0 group-hover:h-20 transition-all duration-500 ${
             isPurple ? "bg-purple-500/5" : "bg-amber-500/5"
           }`}
         />
       </div>
+
       /*  <div
         className={`group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg ${style.glow} transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02]
           border border-gray-100 ${style.borderGlow} cursor-pointer overflow-hidden`}
@@ -224,10 +221,7 @@ const ServiceItems = () => {
   };
 
   return (
-    <div
-      id="services"
-      className="scroll-mt-24 bg-gray-50"
-    >
+    <div id="services" className="scroll-mt-24 bg-gray-50">
       <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24">
         {/* Header Section */}
         <div className="text-center mb-20">
@@ -263,9 +257,8 @@ const ServiceItems = () => {
             ))}
           </div>
         </div>
-        
-       {/*  <div className="w-full h-0.5 bg-linear-to-r from-gray-100 via-gray-300 to-gray-100 rounded-xl my-9 ml-18 mx-auto flex items-center" />  */}
 
+        {/*  <div className="w-full h-0.5 bg-linear-to-r from-gray-100 via-gray-300 to-gray-100 rounded-xl my-9 ml-18 mx-auto flex items-center" />  */}
 
         {/* Creative Services Section */}
         <div>

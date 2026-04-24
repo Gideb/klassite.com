@@ -1,4 +1,3 @@
-
 import { FaDiagramProject } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { memo } from "react";
@@ -8,7 +7,7 @@ import { FaPen } from "react-icons/fa";
 
 // Constants for easy customization
 const GRADIENTS = {
-  background: "from-purple-900 via-purple-800 to-fuchsia-900",
+  background: "from-fuchsia-900 via-fuchsia-700 to-fuchsia-900",
   button: "from-purple-600 to-fuchsia-600",
   orbs: {
     left: "bg-purple-500",
@@ -97,20 +96,8 @@ const CTASection = ({
           <motion.p
             variants={fadeInUpVariants}
             className="
-              text-white/90 
-              mb-3
-              sm:mb-5 
-              md:mb-4 
-              text-base 
-              sm:text-lg 
-              md:text-xl 
-              lg:text-xl
-              max-w-2xl 
-              mx-auto
-              px-4
-              sm:px-6
-              leading-relaxed
-            "
+              text-white/90 mb-3 sm:mb-5 md:mb-4 text-base sm:text-lg md:text-xl lg:text-xl
+              max-w-2xl mx-auto px-4 sm:px-6 leading-relaxed "
           >
             {subtitle}
           </motion.p>
@@ -136,12 +123,7 @@ const CTASection = ({
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   className="inline-flex"
                 >
-                  
-
-                  <FaPen
-                    className="text-base "
-                    aria-hidden="true"
-                  />
+                  <FaPen className="text-base " aria-hidden="true" />
                 </motion.span>
               </Link>
             </motion.div>
@@ -160,7 +142,7 @@ const CTASection = ({
                   rounded-xl font-semibold text-sm  sm:text-base md:text-lg transition-all 
                   duration-300 group cursor-pointer focus:outline-none focus:ring
                   focus:ring-white focus:ring-offset focus:ring-offset-purple-900
-                  hover:bg-white/10 w-full  sm:w-auto "
+                  hover:bg-white/10 w-full sm:w-auto"
                 aria-label={button2Text}
               >
                 <span className="whitespace-nowrap">{button2Text}</span>

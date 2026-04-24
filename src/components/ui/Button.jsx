@@ -20,8 +20,6 @@ const Button = ({link, icon:Icon, text}) => {
 export default Button;
  */
 
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -31,9 +29,11 @@ const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
 
   const styles = {
     primary:
-      "bg-purple-600 text-white hover:bg-purple-700 shadow-md hover:shadow-lg",
+      "bg-white text-purple-700 border border-gray-100 shadow-md hover:shadow-lg",
     secondary:
-      "bg-white text-amber-600 border border-gray-200 hover:bg-gray-50 shadow-sm hover:shadow-md",
+      "bg-white text-amber-600 border border-gray-100 shadow-md hover:shadow-lg",
+    tetiary:
+      "bg-white text-fuchsia-600 border border-gray-100 shadow-md hover:shadow-lg",
   };
 
   return (
