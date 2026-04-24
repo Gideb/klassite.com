@@ -30,6 +30,7 @@ import DiffPageColors from "../../components/ui/DiffPageColors";
 import Headings from "../../components/ui/Headings";
 import Subheading from "../../components/ui/Subheading";
 import ExpertiseCta from "../../components/ui/ExpertiseCta";
+import Card from "../../components/ui/Card";
 
 const WebDevelopment = () => {
   const services = [
@@ -201,7 +202,7 @@ const WebDevelopment = () => {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-emerald-500/30 mb-6">
+            <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-emerald-500/30 my-6">
               <Sparkles className="w-4 h-4 text-emerald-400" />
               <span className="text-sm font-medium text-emerald-300">
                 Klass Koncepts • Enterprise Web Solutions
@@ -260,7 +261,7 @@ const WebDevelopment = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl p-8 shadow-xl">
+              <div className="bg-linear-to-br from-emerald-100 to-teal-100 rounded-2xl p-8 shadow-xl">
                 <div className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-2">
@@ -324,12 +325,12 @@ const WebDevelopment = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+             /*  <div
                 key={index}
                 className="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100"
               >
                 <div className="w-14 h-14 rounded-xl bg-emerald-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-7 h-7 text-emerald-600" />
+                  <service.icon className="w-7 h-7 text-emerald-600 transition duration-400  group-hover:rotate-6 hover:scale-105" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-3">
                   {service.title}
@@ -337,7 +338,9 @@ const WebDevelopment = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </div> */
+              <Card key={index} title={service.title} Icon={service.icon} description={service.description} color="emerald"  />
+              
             ))}
           </div>
         </div>
@@ -542,7 +545,7 @@ const WebDevelopment = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-white mb-2">150+</div>
+              <div className="text-4xl font-bold text-white mb-2">120+</div>
               <div className="text-emerald-300">Projects Delivered</div>
             </div>
             <div>
@@ -575,7 +578,7 @@ const WebDevelopment = () => {
         path="portfolio"
       />
 
-     {/*  <div className="py-20 bg-white">
+      {/*  <div className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-3xl p-12 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

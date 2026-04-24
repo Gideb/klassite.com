@@ -189,7 +189,7 @@ const UIUXDesign = () => {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-indigo-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-indigo-500/30 mb-6">
+            <div className="inline-flex items-center gap-2 bg-indigo-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-indigo-500/30 my-6">
               <Sparkles className="w-4 h-4 text-indigo-400" />
               <span className="text-sm font-medium text-indigo-300">
                 Klass Koncepts • UI/UX Strategy
