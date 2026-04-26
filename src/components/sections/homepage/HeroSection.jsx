@@ -9,6 +9,7 @@ import { useInView } from "react-intersection-observer";
 import BlobBackground from "../../ui/BlobBackground";
 import Subheading from "../../ui/Subheading";
 import Headings from "../../ui/Headings";
+import Button from "../../ui/Button";
 
 // Services array
 const SERVICES = ["Web Development", "Branding", "Media", "Security Solutions"];
@@ -57,7 +58,7 @@ const HeroSection = () => {
           <div className="flex flex-col space-y-6 lg:space-y-8 order-2 lg:order-1">
             <h1 className="font-black text-3xl sm:text-5xl lg:text-6xl xl:text-7xl leading-none text-gray-900">
               We Build{" "}
-              <span className="bg-clip-text text-transparent bg-amber-600">
+              <span className="bg-clip-text text-transparent bg-purple-600">
                 {" "}
                 High Performance
               </span>{" "}
@@ -74,7 +75,7 @@ const HeroSection = () => {
             <ServiceTags />
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-1">
-              <Link
+              {/*  <Link
                 to="/contact"
                 className="w-full sm:w-auto grouptext-md shadow-md hover:shadow-lg px-8 py-3.5 rounded-xl font-medium text-md transform transition-all duration-300 hover:scale-105 focus:outline-none ring ring-purple-600 hover:text-purple-700 focus:ring-purple-300 focus:ring-offset flex items-center justify-center gap-2"
               >
@@ -84,11 +85,17 @@ const HeroSection = () => {
                   className="text-sm group-hover:translate-x-1 transition-transform"
                   aria-hidden="true"
                 />
-              </Link>
+              </Link> */}
+              <Button
+                link="/contact"
+                text=" Book a Strategic Call"
+                icon={SlCalender}
+                variant="primary"
+              />
 
               <a
                 href="/services"
-                className="w-full sm:w-auto group text-white bg-purple-600 px-9 py-4 rounded-xl font-medium border-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto group text-white bg-purple-600 px-8 py-3 rounded-xl font-medium border-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
                 onClick={(e) => {
                   e.preventDefault();
                   document
@@ -98,7 +105,7 @@ const HeroSection = () => {
               >
                 <FaPlay className="text-xs" aria-hidden="true" />
                 <span> Start a Project</span>
-                <GoRocket aria-hidden="true" />
+               {/*  <GoRocket aria-hidden="true" /> */}
               </a>
             </div>
 
@@ -131,7 +138,7 @@ const HeroSection = () => {
                 {[...Array(5)].map((_, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-xl bg-linear-to-br from-amber-400 to-purple-400 border-2 border-white shadow-sm"
+                    className="w-8 h-8 rounded-xl bg-linear-to-br from-purple-400 to-purple-400 border-2 border-white shadow-sm"
                   />
                 ))}
               </div>

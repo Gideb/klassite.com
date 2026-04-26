@@ -45,7 +45,7 @@ const WhyUs = () => {
         {/* Header */}
 
         <div className="max-w-3xl mb-10">
-          <Topicbg topic="Why Choose Us" />
+          <Topicbg color="purple" topic="Why Choose Us" />
           <div className="max-w-xl ">
             <Headings black="Built for performance. Designed for long-term growth." />
           </div>
@@ -67,8 +67,8 @@ const WhyUs = () => {
               >
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="w-18 h-18 rounded-xl bg-amber-100 flex items-center justify-center transition-all duration-300 group-hover:scale-105 ">
-                    <Icon className="text-4xl text-amber-600    transition-colors" />
+                  <div className="w-18 h-18 rounded-xl bg-purple-100 flex items-center justify-center transition-all duration-300 group-hover:scale-105 ">
+                    <Icon className="lg:text-3xl text-2xl text-purple-600    transition-colors" />
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ const WhyUs = () => {
         <div className="mt-20">
           <Link
             to="/about"
-            className="inline-flex items-center gap-3  bg-white  text-amber-600 shadow-md hover:shadow-lg px-7 py-3 rounded-xl font-medium transition-all duration-300 group hover:scale-105 "
+            className="inline-flex items-center gap-3  bg-white  text-purple-600 shadow-md hover:shadow-lg px-7 py-3 rounded-xl font-medium transition-all duration-300 group hover:scale-105 "
           >
             Let’s Build Together
             <FaArrowRight className="text-sm transition-transform group-hover:translate-x-1" />

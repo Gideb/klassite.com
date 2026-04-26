@@ -118,7 +118,7 @@ const FeaturedProjects = () => {
           {/* Category */}
           <div className="mb-3">
             <span
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-semibold ${isPurple ? "bg-purple-100 text-purple-700" :isBlue ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}       `}
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-semibold ${isPurple ? "bg-purple-100 text-purple-700" : isBlue ? "bg-blue-100 text-blue-700" : "bg-amber-100 text-amber-700"}       `}
             >
               {project.category}
             </span>
@@ -182,7 +182,7 @@ const FeaturedProjects = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
         {/* Header */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <Topicbg topic="Selected Work" />
+          <Topicbg color="purple" topic="Selected Work" />
 
           <Headings black="Featured Projects" />
 

@@ -48,7 +48,7 @@ const ProblemStatement = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <Topicbg topic="The Reality Check" />
+          <Topicbg color="purple" topic="The Reality Check" />
 
           <Headings black="Most Businesses Don't Have A Website Problem. They Have A Performance Problem." />
 
@@ -99,7 +99,6 @@ const ProblemStatement = () => {
           })}
         </div>
       </div>
-      
     </section>
   );
 };

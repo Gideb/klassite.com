@@ -62,7 +62,7 @@ const ContactFAQ = () => {
         <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[420px] font-black text-fuchsia-300 -rotate-60 select-none">
           ?
         </div>
-        <Topicbg topic="Faqs" />
+        <Topicbg color="purple" topic="Faqs" />
 
         <div className="relative max-w-3xl">
           <h3 className="text-3xl font-normal mb-8">

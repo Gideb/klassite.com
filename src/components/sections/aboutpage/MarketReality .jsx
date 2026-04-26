@@ -83,10 +83,8 @@ const MarketReality = () => {
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="max-w-xl mb-3">
-          <Topicbg topic="Market Reality" />
-          <Headings
-            black="The Hidden Cost of Weak Digital Infrastructure"
-          />
+          <Topicbg color="amber" topic="Market Reality" />
+          <Headings black="The Hidden Cost of Weak Digital Infrastructure" />
         </div>
         <div className="mb-8 max-w-4xl">
           <Subheading description="  In today's digital landscape, speed isn't just a feature—it's the price of entry. Yet most businesses operate on foundations that can't keep up." />

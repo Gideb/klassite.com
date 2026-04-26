@@ -225,7 +225,7 @@ const ServiceItems = () => {
       <section className="max-w-7xl mx-auto px-6 sm:px-12 py-24">
         {/* Header Section */}
         <div className="text-center mb-20">
-          <Topicbg topic="What We Do" />
+          <Topicbg color="purple" topic="What We Do" />
 
           <Headings black="Our Services" />
 

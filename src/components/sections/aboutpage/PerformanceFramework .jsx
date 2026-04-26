@@ -71,7 +71,7 @@ const PerformanceFramework = () => {
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <Topicbg topic="Systematic Approach" />
+          <Topicbg color="amber" topic="Systematic Approach" />
 
           <Headings black="Our Performance Framework" />
 
@@ -196,7 +196,7 @@ const PerformanceFramework = () => {
         <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-y-1/2 w-px h-64 bg-linear-to-b from-transparent via-purple-300 to-transparent"></div>
 
         {/* Bottom CTA or decorative element */}
-            <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -215,7 +215,7 @@ const PerformanceFramework = () => {
               to transform your digital presence
             </span>
           </div>
-        </motion.div> 
+        </motion.div>
       </div>
     </section>
   );

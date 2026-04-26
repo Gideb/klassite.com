@@ -9,6 +9,7 @@ import camera from "../../../assets/images/serviceSpecific/camera.jpg";
 import Stats from "../../Stats.jsx";
 import Topicbg from "../../ui/Topicbg.jsx";
 import Headings from "../../ui/Headings.jsx";
+import Button from "../../ui/Button.jsx";
 
 const ServicesSection = () => {
   const serviceGroups = [
@@ -77,7 +78,7 @@ const ServicesSection = () => {
       <div className="relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
         {/* Simple Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <Topicbg topic="Our Services" />
+          <Topicbg color="purple" topic="Our Services" />
           <Headings black="What We Build" />
         </div>
 
@@ -142,13 +143,19 @@ const ServicesSection = () => {
 
         {/* Simple CTA */}
         <div className="text-center mt-12 group">
-          <Link
+          <Button
+            link="/services"
+            text="Free Consultation"
+            icon={FaArrowRight}
+            variant="primary"
+          />
+          {/*   <Link
             to="/services"
             className="inline-flex items-center gap-2 bg-white text-amber-600 shadow-md hover:shadow-lg px-7 py-4 rounded-xl font-semibold  hover:scale-105 transition-all duration-300"
           >
             <span>Free Consultation</span>
             <FaArrowRight className="text-sm group-hover:translate-x-1 duration-200 " />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

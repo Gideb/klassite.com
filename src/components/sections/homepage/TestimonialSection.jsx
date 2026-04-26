@@ -120,7 +120,7 @@ const TestimonialSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
 
-        <Topicbg topic="Testimonials" />
+        <Topicbg color="purple" topic="Testimonials" />
         <Headings black="What Clients Say" />
 
         <Subheading

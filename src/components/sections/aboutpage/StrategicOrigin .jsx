@@ -50,11 +50,11 @@ const StrategicOrigin = () => {
           >
             {/* Section Header */}
             <div className="mb-8">
-              <Topicbg topic="Strategic Origin" />
+              <Topicbg color="amber" topic="Strategic Origin" />
 
               <Headings black=" Closing the Performance Gap" />
 
-              <div className="h-px w-32 bg-purple-800 mt-5"></div>
+              <div className="h-px w-32 bg-amber-800 mt-5"></div>
             </div>
 
             {/* Story paragraphs */}
@@ -62,7 +62,7 @@ const StrategicOrigin = () => {
               {storyParagraphs.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-gray-700 leading-relaxed border-l-2 border-purple-200 pl-4 hover:border-purple-400 transition-colors duration-300"
+                  className="text-gray-700 leading-relaxed border-l-2 border-amber-200 pl-4 hover:border-amber-400 transition-colors duration-300"
                 >
                   {paragraph}
                 </p>
@@ -80,10 +80,10 @@ const StrategicOrigin = () => {
             className="space-y-8 lg:mt-30"
           >
             {/* Mission Card */}
-            <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 hover:border-purple-200">
+            <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 hover:border-amber-200">
               <div className="flex items-start gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-purple-100 to-fuchsia-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <FaBullseye className="text-xl text-purple-600" />
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-amber-100 to-fuchsia-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <FaBullseye className="text-xl text-amber-600" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -102,7 +102,7 @@ const StrategicOrigin = () => {
             {/* Vision Card */}
             <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 hover:border-fuchsia-200">
               <div className="flex items-start gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-fuchsia-100 to-purple-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-fuchsia-100 to-amber-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <FaEye className="text-xl text-fuchsia-600" />
                 </div>
                 <div>
@@ -118,7 +118,6 @@ const StrategicOrigin = () => {
                 </div>
               </div>
             </div>
-
           </motion.div>
         </div>
       </div>

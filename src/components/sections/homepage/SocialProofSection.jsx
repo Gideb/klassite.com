@@ -165,7 +165,7 @@ const SocialProofSection = () => {
         className="absolute lg:left-1/2 lg:top-10 md:top-10 top-6 left-5"
       >
         <div className="lg:ml-9 sm:text-left ">
-          <Topicbg topic="Trusted Partners" />
+          <Topicbg color="purple" topic="Trusted Partners" />
         </div>
       </motion.div>
 

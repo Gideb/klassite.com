@@ -40,7 +40,7 @@ const SelectedWork = () => {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* header */}
         <div className="text-left mb-14">
-          <Topicbg topic="Selected Work" />
+          <Topicbg color="purple" topic="Selected Work" />
           <Headings black="Our Work" />
           <Subheading description="A glimpse into some of the solutions we've built for our clients" />
         </div>

@@ -34,11 +34,11 @@ const LeadershipGrid = () => {
       <div className="max-w-7xl mx-auto px-6 py-24">
         {/* Header */}
         <div className="mb-16">
-          <Topicbg topic="Leadership" />
+          <Topicbg color="amber" topic="Leadership" />
 
           <Headings black=" Performance Driven" />
 
-          <div className="h-px w-32 bg-purple-800 mt-3"></div>
+          <div className="h-px w-32 bg-amber-800 mt-3"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 ">
@@ -50,7 +50,7 @@ const LeadershipGrid = () => {
                   alt={leader.name}
                   className="w-full h-100 object-cover rounded-2xl shadow-lg transition-all duration-500 overflow-hidden group-hover:scale-105"
                 />
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-purple-800/10 group-hover:ring-purple-800/30  transition-colors"></div>
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-amber-800/10 group-hover:ring-amber-800/30  transition-colors"></div>
               </div>
 
               {/* Content */}
@@ -59,7 +59,7 @@ const LeadershipGrid = () => {
                   <h3 className="text-2xl font-light text-gray-900 mb-1">
                     {leader.name}
                   </h3>
-                  <p className="text-purple-800 font-medium text-sm tracking-wide">
+                  <p className="text-amber-800 font-medium text-sm tracking-wide">
                     {leader.title}
                   </p>
                 </div>

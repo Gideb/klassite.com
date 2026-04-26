@@ -91,7 +91,7 @@ const Differentiators = () => {
     <section className="relative w-full py-16 sm:py-18 bg-gray-50 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-100 rounded-xl mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-amber-100 rounded-xl mix-blend-multiply filter blur-3xl opacity-30"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-100 rounded-xl mix-blend-multiply filter blur-3xl opacity-30"></div>
       </div>
 
@@ -104,7 +104,7 @@ const Differentiators = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <Topicbg topic="Why Choose Us" />
+          <Topicbg color="amber" topic="Why Choose Us" />
           <Headings black="Why Growth-Focused Brands Choose Us" />
           <Subheading
             description=" We don't just build websites—we build competitive advantages that
