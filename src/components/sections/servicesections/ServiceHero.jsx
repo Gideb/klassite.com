@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../ui/Button";
-import Subheading from "../../ui/Subheading";
+import Subheading from "../../props/Subheading";
 
 const ServiceHero = () => {
   return (
-    <section className="bg-fuchsia-800 border-b border-gray-100">
+    <section className="bg-linear-to-r from-fuchsia-800 via-fuchsia-700 to-fuchsia-800 border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Headline */}
         <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-100 leading-tight tracking-tight">

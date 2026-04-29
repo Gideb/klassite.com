@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import Team from "../assets/images/header/teamWorking.jpg";
+import Team from "../../assets/images/header/teamWorking.jpg";
 
 
 const OtherHeroSection = ({

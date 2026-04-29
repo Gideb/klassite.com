@@ -6,9 +6,9 @@ import portrait3 from "../../../assets/images/portrait/portrait-3.jpg";
 import portrait4 from "../../../assets/images/portrait/portrait-4.jpg";
 import portrait5 from "../../../assets/images/portrait/portrait-5.jpg";
 import portrait6 from "../../../assets/images/portrait/portrait-6.jpg";
-import Topicbg from "../../ui/Topicbg";
-import Headings from "../../ui/Headings";
-import Subheading from "../../ui/Subheading";
+import Topicbg from "../../props/Topicbg";
+import Headings from "../../props/Headings";
+import Subheading from "../../props/Subheading";
 
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

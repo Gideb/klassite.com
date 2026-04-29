@@ -16,12 +16,11 @@ import {
 import { FaDiagramProject } from "react-icons/fa6";
 
 import { Link } from "react-router-dom";
-import Headings from "../../components/ui/Headings";
-import Subheading from "../../components/ui/Subheading";
-/* import team from "../../assets/images/serviceSpecific/brand.jpg"; */
-import DiffPageColors from "../../components/ui/DiffPageColors";
+import Headings from "../../components/props/Headings";
+import Subheading from "../../components/props/Subheading";
+import DiffPageColors from "../../components/props/DiffPageColors";
 
-const Branding = () => {
+const BrandExperience = () => {
   const services = [
     {
       icon: Compass,
@@ -116,7 +115,7 @@ const Branding = () => {
             <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-amber-500/30 my-6">
               <Sparkles className="w-4 h-4 text-amber-400" />
               <span className="text-sm font-medium text-amber-300">
-                Klass Koncepts • Premium Branding
+                Klass Koncepts • Premium BrandExperience
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mt-10 mb-6">
@@ -170,7 +169,7 @@ const Branding = () => {
           </div>
         </a>
       </div>
-      {/* What is Branding Section */}
+      {/* What is BrandExperience Section */}
       <section id="brandtypes">
         {" "}
         <div className="py-20 bg-gray-50">
@@ -180,7 +179,7 @@ const Branding = () => {
                 <DiffPageColors color="amber" topic="Our Philosophy" />
                 <Headings black=" Beyond Aesthetics — Brand Alchemy" />
                 <Subheading
-                  description=" Branding is the art of shaping perception. At Klass Koncepts,
+                  description=" BrandExperience is the art of shaping perception. At Klass Koncepts,
                   we blend strategic thinking with creative excellence to build
                   identities that don't just look good—they perform. From
                   startups to established enterprises, we create cohesive brand
@@ -253,12 +252,12 @@ const Branding = () => {
         </div>
       </section>
 
-      {/* Branding Services */}
+      {/* BrandExperience Services */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <DiffPageColors color="amber" topic="Comprehensive Solutions" />{" "}
-            <Headings black="Our Branding Services" />
+            <Headings black="Our BrandExperience Services" />
             <Subheading
               description="End-to-end branding solutions tailored to your unique vision and
               market position."
@@ -376,4 +375,4 @@ const Branding = () => {
   );
 };
 
-export default Branding;
+export default BrandExperience;

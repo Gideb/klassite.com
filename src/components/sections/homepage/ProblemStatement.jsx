@@ -7,9 +7,9 @@ import {
 } from "react-icons/fa";
 
 import { memo } from "react";
-import Topicbg from "../../ui/Topicbg";
-import Headings from "../../ui/Headings";
-import Subheading from "../../ui/Subheading";
+import Topicbg from "../../props/Topicbg";
+import Headings from "../../props/Headings";
+import Subheading from "../../props/Subheading";
 import Button from "../../ui/Button";
 
 const ProblemStatement = () => {

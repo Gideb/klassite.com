@@ -8,8 +8,8 @@ import {
   FaPaperPlane,
   FaChevronDown,
 } from "react-icons/fa";
-import Headings from "../../ui/Headings";
-import Subheading from "../../ui/Subheading";
+import Headings from "../../props/Headings";
+import Subheading from "../../props/Subheading";
 
 const ContactSection = () => {
   const [isOpen, setIsOpen] = useState(false);

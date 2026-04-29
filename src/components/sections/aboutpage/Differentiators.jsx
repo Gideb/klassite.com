@@ -9,10 +9,10 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Topicbg from "../../ui/Topicbg";
-import Subheading from "../../ui/Subheading";
-import Headings from "../../ui/Headings";
-import Stats from "../../Stats";
+import Topicbg from "../../props/Topicbg";
+import Subheading from "../../props/Subheading";
+import Headings from "../../props/Headings";
+import Stats from "../../props/Stats";
 
 const Differentiators = () => {
   const differentiators = [

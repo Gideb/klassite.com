@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaArrowRight, FaCaretDown, FaUserAlt } from "react-icons/fa";
-import Topicbg from "../../ui/Topicbg";
+import Topicbg from "../../props/Topicbg";
 import { Link } from "react-router-dom";
 
 const ContactFAQ = () => {

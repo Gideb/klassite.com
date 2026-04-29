@@ -4,11 +4,15 @@ import { FaPen, FaServicestack } from "react-icons/fa";
 import { HiOutlineUser } from "react-icons/hi";
 import { IoHomeOutline } from "react-icons/io5";
 import { PiNewspaperThin } from "react-icons/pi";
+import { FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openSubDropdown, setOpenSubDropdown] = useState(null);
+  const [openMobileSub, setOpenMobileSub] = useState(null);
 
   useEffect(() => {
     const changeHeaderBg = () => {
@@ -27,7 +31,49 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/", icon: IoHomeOutline },
     { name: "About", path: "/about", icon: HiOutlineUser },
-    { name: "Services", path: "/services", icon: FaServicestack },
+    {
+      name: "Services",
+      path: "/services",
+      icon: FaServicestack,
+      dropdown: [
+        {
+          name: "Digital Solutions",
+          path: "/services/digital-solutions",
+          dropdown: [
+            {
+              name: "Mobile Apps",
+              path: "/services/mobile-apps",
+            },
+            {
+              name: "Web Development",
+              path: "/services/web-development",
+            },
+            {
+              name: "UIUX Design",
+              path: "/services/ui-ux",
+            },
+          ],
+        },
+        {
+          name: "Creative Services",
+          path: "/services/creative-services",
+          dropdown: [
+            {
+              name: "Brand Experience",
+              path: "/services/brand-experience",
+            },
+            {
+              name: "Content Creation",
+              path: "/services/content-creation",
+            },
+            {
+              name: "Graphics Design",
+              path: "/services/graphic-design",
+            },
+          ],
+        },
+      ],
+    },
     { name: "Blog", path: "/blog", icon: PiNewspaperThin },
   ];
 
@@ -47,14 +93,68 @@ const Navbar = () => {
           {/* Desktop Links */}
           <div className="space-x-8 hidden md:flex">
             {navLinks.map((link) => (
-              <Link
+              <div
                 key={link.name}
-                to={link.path}
-                className="relative font-medium text-black/90 hover:text-purple-700
-        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-purple-500 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative py-2"
+                onMouseEnter={() => setOpenDropdown(link.name)}
+                onMouseLeave={() => setOpenDropdown(null)}
               >
-                {link.name}
-              </Link>
+                <Link
+                  to={link.path}
+                  className="flex items-center gap-1 font-medium text-black/90 hover:text-purple-700"
+                >
+                  {link.name}
+
+                  {link.dropdown && (
+                    <FaChevronDown
+                      className={`duration-300 text-xs opacity-70 group-hover:opacity-100 transition ${
+                        openDropdown === link.name ? "rotate-180" : "rotate-0"
+                      }`}
+                    />
+                  )}
+                </Link>
+
+                {/* Dropdown */}
+                {link.dropdown && openDropdown === link.name && (
+                  <div className="absolute top-full left-0 w-56 bg-white shadow-lg rounded-lg py-2">
+                    {link.dropdown.map((item) => (
+                      <div
+                        key={item.name}
+                        className="relative group"
+                        onMouseEnter={() => setOpenSubDropdown(item.name)}
+                        onMouseLeave={() => setOpenSubDropdown(null)}
+                      >
+                        <Link
+                          to={item.path}
+                          className="flex justify-between items-center px-4 py-2 text-sm hover:bg-purple-100"
+                        >
+                          {item.name}
+
+                          {item.dropdown && (
+                            <FaChevronDown className="transition-all duration-300 text-xs rotate-90 group-hover:-rotate-90 text-gray-600 " />
+                          )}
+                        </Link>
+
+                        {/* SECOND LEVEL DROPDOWN */}
+                        {item.dropdown && openSubDropdown === item.name && (
+                          <div className="absolute top-0 left-full w-56 bg-white shadow-lg rounded-lg py-2">
+                            <div className="w-2 absolute -left-2 top-0 bottom-0"></div>
+                            {item.dropdown.map((sub) => (
+                              <Link
+                                key={sub.name}
+                                to={sub.path}
+                                className="block px-4 py-2 text-sm hover:bg-purple-100"
+                              >
+                                {sub.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
@@ -104,17 +204,88 @@ const Navbar = () => {
           {/* Links */}
           <div className="mt-10 flex flex-col gap-6 text-lg">
             {navLinks.map((link, index) => (
-              <Link
-                key={index}
-                to={link.path}
-                onClick={() => setMenuOpen(false)}
-                className="font-normal text-base text-gray-700 hover:text-fuchsia-600 transition"
-              >
-                <div className="flex gap-3 hover:translate-x-1.5 transition-all duration-300">
-                  <link.icon className="text-xl " />
-                  {link.name}
+              <div key={index}>
+                <div
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === link.name ? null : link.name,
+                    )
+                  }
+                  className="flex items-center justify-between cursor-pointer"
+                >
+                  <div className="flex gap-3">
+                    <link.icon className="text-xl" />
+                    {link.name}
+                  </div>
+
+                  {link.dropdown && (
+                    <FaChevronDown
+                      className={`text-xs transition-transform duration-300 ${
+                        openDropdown === link.name ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
                 </div>
-              </Link>
+
+                {/* Dropdown */}
+                {link.dropdown && openDropdown === link.name && (
+                  <div className="ml-6 mt-2 flex flex-col gap-2">
+                    {link.dropdown.map((item) => (
+                      <div key={item.name}>
+                        {/* If item has children → toggle */}
+                        {item.dropdown ? (
+                          <>
+                            <div
+                              onClick={() =>
+                                setOpenMobileSub(
+                                  openMobileSub === item.name
+                                    ? null
+                                    : item.name,
+                                )
+                              }
+                              className="flex justify-between items-center cursor-pointer text-sm text-gray-700"
+                            >
+                              {item.name}
+                              <FaChevronDown
+                                className={`text-xs transition-transform ${
+                                  openMobileSub === item.name
+                                    ? "rotate-180"
+                                    : ""
+                                }`}
+                              />
+                            </div>
+
+                            {/* SECOND LEVEL */}
+                            {openMobileSub === item.name && (
+                              <div className="ml-4 mt-2 flex flex-col gap-2">
+                                {item.dropdown.map((sub) => (
+                                  <Link
+                                    key={sub.name}
+                                    to={sub.path}
+                                    onClick={() => setMenuOpen(false)}
+                                    className="text-sm text-gray-600"
+                                  >
+                                    {sub.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          /* Normal link (no children) */
+                          <Link
+                            to={item.path}
+                            onClick={() => setMenuOpen(false)}
+                            className="text-sm text-gray-600"
+                          >
+                            {item.name}
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 

@@ -19,12 +19,12 @@ import {
 } from "lucide-react";
 import { FaMapPin, FaPalette, FaFigma } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import DiffPageColors from "../../components/ui/DiffPageColors";
-import Headings from "../../components/ui/Headings";
-import Subheading from "../../components/ui/Subheading";
-import ExpertiseCta from "../../components/ui/ExpertiseCta";
+import DiffPageColors from "../../components/props/DiffPageColors";
+import Headings from "../../components/props/Headings";
+import Subheading from "../../components/props/Subheading";
+import ExpertiseCta from "../../components/props/ExpertiseCta";
 
-const UIUXDesign = () => {
+const UIUX = () => {
   const services = [
     {
       icon: Search,
@@ -541,4 +541,4 @@ const UIUXDesign = () => {
   );
 };
 
-export default UIUXDesign;
+export default UIUX;

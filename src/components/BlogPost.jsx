@@ -15,14 +15,14 @@ import {
 } from "react-icons/fa";
 
 // Blog Images (replace with your actual imports)
-import blog1 from "../../assets/images/blog/klass.jpeg";
-import blog2 from "../../assets/images/blog/klass.jpeg";
-import blog3 from "../../assets/images/blog/klass.jpeg";
-import blog4 from "../../assets/images/blog/klass.jpeg";
-import blog5 from "../../assets/images/blog/klass.jpeg";
-import blog6 from "../../assets/images/blog/klass.jpeg";
-import author1 from "../../assets/images/blog/klass.jpeg";
-import author2 from "../../assets/images/blog/klass.jpeg";
+import blog1 from "../assets/images/blog/klass.jpeg";
+import blog2 from "../assets/images/blog/klass.jpeg";
+import blog3 from "../assets/images/blog/klass.jpeg";
+import blog4 from "../assets/images/blog/klass.jpeg";
+import blog5 from "../assets/images/blog/klass.jpeg";
+import blog6 from "../assets/images/blog/klass.jpeg";
+import author1 from "../assets/images/blog/klass.jpeg";
+import author2 from "../assets/images/blog/klass.jpeg";
 
 // Animation variants
 const fadeInUp = {
@@ -210,7 +210,7 @@ const BlogPost = () => {
   return (
     <>
       {/* Main Blog Content */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 mt-20">
         <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content - Blog Posts */}

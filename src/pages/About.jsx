@@ -1,5 +1,5 @@
-import OtherHeroSection from "../components/OtherHeroSection";
-import CTASection from "../components/CTASection";
+import OtherHeroSection from "../components/props/OtherHeroSection";
+import CTASection from "../components/props/CTASection";
 import MarketReality from "../components/sections/aboutpage/MarketReality ";
 import StrategicOrigin from "../components/sections/aboutpage/StrategicOrigin ";
 import PerformanceFramework from "../components/sections/aboutpage/PerformanceFramework ";

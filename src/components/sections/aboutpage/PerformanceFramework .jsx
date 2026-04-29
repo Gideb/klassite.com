@@ -2,9 +2,9 @@ import { memo, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { HiOutlineCheckCircle } from "react-icons/hi";
-import Topicbg from "../../ui/Topicbg";
-import Subheading from "../../ui/Subheading";
-import Headings from "../../ui/Headings";
+import Topicbg from "../../props/Topicbg";
+import Subheading from "../../props/Subheading";
+import Headings from "../../props/Headings";
 
 const PerformanceFramework = () => {
   const sectionRef = useRef(null);

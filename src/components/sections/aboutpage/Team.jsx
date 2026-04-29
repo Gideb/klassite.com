@@ -1,8 +1,8 @@
-import Topicbg from "../../ui/Topicbg";
+import Topicbg from "../../props/Topicbg";
 import profile1 from "../../../assets/images/portrait/portrait-1.jpg";
 import profile2 from "../../../assets/images/portrait/portrait-5.jpg";
 import profile3 from "../../../assets/images/portrait/portrait-3.jpg";
-import Headings from "../../ui/Headings";
+import Headings from "../../props/Headings";
 
 const LeadershipGrid = () => {
   const leadershipTeam = [
@@ -59,7 +59,7 @@ const LeadershipGrid = () => {
                   <h3 className="text-2xl font-light text-gray-900 mb-1">
                     {leader.name}
                   </h3>
-                  <p className="text-amber-800 font-medium text-sm tracking-wide">
+                  <p className="text-amber-600 font-medium text-sm tracking-wide">
                     {leader.title}
                   </p>
                 </div>

@@ -7,13 +7,12 @@ import CountUp from "react-countup";
 import { memo } from "react";
 import { useInView } from "react-intersection-observer";
 import BlobBackground from "../../ui/BlobBackground";
-import Subheading from "../../ui/Subheading";
-import Headings from "../../ui/Headings";
+import Subheading from "../../props/Subheading";
+import Headings from "../../props/Headings";
 import Button from "../../ui/Button";
 
 // Services array
 const SERVICES = ["Web Development", "Branding", "Media", "Security Solutions"];
-
 
 // Stats array
 const STATS = [
@@ -21,7 +20,6 @@ const STATS = [
   { end: 120, suffix: "+", label: "Projects Delivered", duration: 6 },
   { end: 97, suffix: "%", label: "Client Satisfaction", duration: 5 },
 ];
-
 
 const ServiceTags = memo(() => (
   <div className="flex flex-wrap gap-3" aria-label="Our services">
@@ -92,6 +90,8 @@ const HeroSection = () => {
                 icon={SlCalender}
                 variant="primary"
               />
+              
+             
 
               <a
                 href="/services"
@@ -105,7 +105,7 @@ const HeroSection = () => {
               >
                 <FaPlay className="text-xs" aria-hidden="true" />
                 <span> Start a Project</span>
-               {/*  <GoRocket aria-hidden="true" /> */}
+            
               </a>
             </div>
 

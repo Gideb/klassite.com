@@ -2,9 +2,9 @@ import { memo } from "react";
 import { FiTrendingDown, FiClock, FiWifi, FiUsers } from "react-icons/fi";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import Topicbg from "../../ui/Topicbg";
-import Headings from "../../ui/Headings";
-import Subheading from "../../ui/Subheading";
+import Topicbg from "../../props/Topicbg";
+import Headings from "../../props/Headings";
+import Subheading from "../../props/Subheading";
 
 const MarketReality = () => {
   const { ref: statsRef, inView: statsInView } = useInView({
@@ -120,7 +120,7 @@ const MarketReality = () => {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xs transition-shadow shadow-red-300 "
+                className="bg-white p-6 rounded-xl shadow-xs border border-gray-100 hover:shadow-md transition-shadow shadow-red-300 "
               >
                 <div className={`text-2xl font-semibold ${stat.color} mb-1 `}>
                   {stat.prefix}

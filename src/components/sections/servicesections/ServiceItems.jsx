@@ -11,9 +11,9 @@ import {
   HiOutlinePaintBrush,
 } from "react-icons/hi2";
 
-import Topicbg from "../../ui/Topicbg";
-import Headings from "../../ui/Headings";
-import Subheading from "../../ui/Subheading";
+import Topicbg from "../../props/Topicbg";
+import Headings from "../../props/Headings";
+import Subheading from "../../props/Subheading";
 
 import { Link } from "react-router-dom";
 
@@ -26,28 +26,28 @@ const ServiceItems = () => {
       bgGradient: "from-purple-50 to-white",
       intro:
         "We build digital experiences that are fast, modern, and built to convert.",
+      lead: "/services/digital-solutions",
       items: [
         {
           icon: LuCodeXml,
           title: "Enterprise Web Solutions",
           desc: "Custom, responsive websites designed to elevate your brand and drive results.",
           color: "purple",
-          lead: "/services/webdev",
-        },
-
-        {
-          icon: FaLayerGroup,
-          title: "UI/UX Strategy",
-          desc: "Clean, user-focused interfaces that enhance user experience and engagement.",
-          color: "purple",
-          lead: "/services/uxdesign",
+          lead: "/services/web-development",
         },
         {
           icon: HiOutlineRocketLaunch,
           title: "Mobile Applications",
           desc: "Scalable and functional applications tailored to your business needs.",
           color: "purple",
-          lead: "/services/mobileapp",
+          lead: "/services/mobile-apps",
+        },
+        {
+          icon: FaLayerGroup,
+          title: "UI/UX Strategy",
+          desc: "Clean, user-focused interfaces that enhance user experience and engagement.",
+          color: "purple",
+          lead: "/services/ui-ux",
         },
       ],
     },
@@ -58,27 +58,28 @@ const ServiceItems = () => {
       bgGradient: "from-amber-50 to-white",
       intro:
         "We bring your brand to life through creative visuals and storytelling.",
+      lead: "/services/creative-services",
       items: [
-        {
-          icon: LuPenTool,
-          title: "Graphic Design",
-          desc: "Modern, eye-catching designs for digital and print.",
-          color: "amber",
-          lead: "/services/graphicdesign",
-        },
         {
           icon: HiOutlinePaintBrush,
           title: "Brand Experience",
           desc: "Build a strong identity that connects with your audience.",
           color: "amber",
-          lead: "/services/branding",
+          lead: "/services/brand-experience",
         },
         {
           icon: HiOutlineVideoCamera,
           title: "Content Creation",
           desc: "Engaging visuals and media that tell your story effectively.",
           color: "amber",
-          lead: "/services/contentcreation",
+          lead: "/services/content-creation",
+        },
+        {
+          icon: LuPenTool,
+          title: "Graphic Design",
+          desc: "Modern, eye-catching designs for digital and print.",
+          color: "amber",
+          lead: "/services/graphic-design",
         },
       ],
     },

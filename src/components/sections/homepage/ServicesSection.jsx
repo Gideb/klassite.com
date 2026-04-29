@@ -6,53 +6,48 @@ import digitalMark from "../../../assets/images/serviceSpecific/digi-mark.jpg";
 import branding from "../../../assets/images/serviceSpecific/branding.jpg";
 import enterprise from "../../../assets/images/serviceSpecific/enterprise.jpg";
 import camera from "../../../assets/images/serviceSpecific/camera.jpg";
-import Stats from "../../Stats.jsx";
-import Topicbg from "../../ui/Topicbg.jsx";
-import Headings from "../../ui/Headings.jsx";
+import Stats from "../../props/Stats.jsx";
+import Topicbg from "../../props/Topicbg.jsx";
+import Headings from "../../props/Headings.jsx";
 import Button from "../../ui/Button.jsx";
 
 const ServicesSection = () => {
   const serviceGroups = [
     {
       id: 1,
-      title: "Enterprise Mobile & Web Application Development ",
+      title: "Enterprise Web Solutions",
       image: enterprise,
-      description:
-        "Creating secure, efficient mobile apps that streamline workflows and deliver smooth user experiences.",
-      services: [
-        "Website Development",
-        "Mobile App Development",
-        "Web Application Development",
-      ],
+      description: "Custom, responsive websites designed to elevate your brand",
+      services: ["Website Development", "Web Application Development"],
       gradient: "from-purple-600 to-fuchsia-600",
       to: "/services/web-development",
     },
     {
       id: 2,
-      title: "Digital Experience Strategy & Optimization",
+      title: "Strategic UI/UX Design",
       image: digitalMark,
       description:
-        "Turns business needs into wireframes, prototypes, and design systems for consistent, scalable, user-friendly digital experiences.",
-      services: ["Web Design", "UI/UX Strategy", "SEO Optimization"],
+        "Clean, user-focused interfaces that enhance user experience and engagement",
+      services: ["Web Design", "UI/UX Strategy"],
       gradient: "from-blue-600 to-cyan-500",
-      to: "/services/ux-design",
+      to: "/services/ui-ux",
     },
     {
       id: 3,
-      title: "Strategic Brand Experience Design ",
+      title: "Brand Experience Design ",
       image: branding,
       description:
-        "Modern, cohesive visual identities encompassing logos, custom illustrations, UI elements, and interactive assets that ensure consistency across all digital touchpoints.",
-      services: ["Graphic Design", "Brand Experience"],
+        "We provide your brand with a strong identity that connects you with your audience.",
+      services: ["Photography", "Branding", "Printing"],
       gradient: "from-green-600 to-emerald-500",
-      to: "/services/branding",
+      to: "/services/brand-experience",
     },
     {
       id: 4,
-      title: "Interactive Design & Content Management",
+      title: "Content Management",
       image: camera,
       description:
-        "Strategic development and management of content tailored for digital platforms, ensuring consistent and engaging user experiences.",
+        "Engaging visuals and media that tell your story effectively.",
       services: [
         "Photography",
         "Videography",
@@ -60,7 +55,7 @@ const ServicesSection = () => {
         "Content Creation",
       ],
       gradient: "from-orange-600 to-red-500",
-      to: "/services/contentcreation",
+      to: "/services/content-creation",
     },
   ];
 
@@ -145,7 +140,7 @@ const ServicesSection = () => {
         <div className="text-center mt-12 group">
           <Button
             link="/services"
-            text="Free Consultation"
+            text="More Services"
             icon={FaArrowRight}
             variant="primary"
           />

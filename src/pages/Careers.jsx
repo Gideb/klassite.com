@@ -1,6 +1,6 @@
 import React from "react";
 
-import OtherHeroSection from "../components/OtherHeroSection";
+import OtherHeroSection from "../components/props/OtherHeroSection";
 import CareerSection from "../components/CareerSection";
 
 const Careers = () => {

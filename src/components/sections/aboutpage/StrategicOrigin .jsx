@@ -2,8 +2,8 @@ import { memo, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from "framer-motion";
 import { FaBullseye, FaEye } from "react-icons/fa";
-import Topicbg from "../../ui/Topicbg";
-import Headings from "../../ui/Headings";
+import Topicbg from "../../props/Topicbg";
+import Headings from "../../props/Headings";
 
 const StrategicOrigin = () => {
   const ref = useRef(null);
@@ -82,7 +82,7 @@ const StrategicOrigin = () => {
             {/* Mission Card */}
             <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 hover:border-amber-200">
               <div className="flex items-start gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-amber-100 to-fuchsia-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-amber-100 to-orange-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <FaBullseye className="text-xl text-amber-600" />
                 </div>
                 <div>
@@ -102,8 +102,8 @@ const StrategicOrigin = () => {
             {/* Vision Card */}
             <div className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 hover:border-fuchsia-200">
               <div className="flex items-start gap-4">
-                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-fuchsia-100 to-amber-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <FaEye className="text-xl text-fuchsia-600" />
+                <div className="shrink-0 w-12 h-12 rounded-xl bg-linear-to-br from-orange-100 to-amber-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <FaEye className="text-xl text-orange-600" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">

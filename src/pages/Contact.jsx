@@ -1,17 +1,13 @@
-
-import OtherHeroSection from "../components/OtherHeroSection.jsx";
+import OtherHeroSection from "../components/props/OtherHeroSection.jsx";
 import ContactFAQ from "../components/sections/contactpage/ContactFAQ.jsx";
 import ContactSection from "../components/sections/contactpage/ContactSection.jsx";
-
 
 const Contact = () => {
   return (
     <div>
       <OtherHeroSection pageName="Contact" />
-      <ContactSection /> 
+      <ContactSection />
       <ContactFAQ />
-    
-  
     </div>
   );
 };

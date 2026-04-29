@@ -4,7 +4,7 @@ import { WiTime4 } from "react-icons/wi";
 import { PiUsersThreeLight } from "react-icons/pi";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import team from "../assets/images/header/teamWorking.jpg";
+import team from "../../assets/images/header/teamWorking.jpg"
 
 const Stats = () => {
   const stats = [

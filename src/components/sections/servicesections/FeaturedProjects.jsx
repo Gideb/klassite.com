@@ -6,9 +6,9 @@ import { LuCodeXml } from "react-icons/lu";
 import project1 from "../../../assets/images/project/project-1.jpg";
 import project2 from "../../../assets/images/project/project-2.jpg";
 import project3 from "../../../assets/images/project/project-3.png";
-import Topicbg from "../../ui/Topicbg";
-import Headings from "../../ui/Headings";
-import Subheading from "../../ui/Subheading";
+import Topicbg from "../../props/Topicbg";
+import Headings from "../../props/Headings";
+import Subheading from "../../props/Subheading";
 import Button from "../../ui/Button";
 
 const FeaturedProjects = () => {

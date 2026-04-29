@@ -5,10 +5,9 @@ import ServicesSection from "../components/sections/homepage/ServicesSection.jsx
 import WhyUs from "../components/sections/homepage/WhyUs.jsx";
 import ProblemStatement from "../components/sections/homepage/ProblemStatement.jsx";
 
-import CTASection from "../components/CTASection.jsx";
+import CTASection from "../components/props/CTASection.jsx";
 
 import FeaturedProjects from "../components/sections/servicesections/FeaturedProjects.jsx";
-
 
 const Home = () => {
   return (

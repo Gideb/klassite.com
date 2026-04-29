@@ -10,9 +10,9 @@ import logo3 from "../../../assets/images/brandLogo/logo3.png";
 import logo4 from "../../../assets/images/brandLogo/logo4.png";
 import logo5 from "../../../assets/images/brandLogo/logo5.png";
 import logo6 from "../../../assets/images/brandLogo/logo6.png";
-import Topicbg from "../../ui/Topicbg";
-import Subheading from "../../ui/Subheading";
-import Headings from "../../ui/Headings";
+import Topicbg from "../../props/Topicbg";
+import Subheading from "../../props/Subheading";
+import Headings from "../../props/Headings";
 import { FaWandMagic, FaWandMagicSparkles } from "react-icons/fa6";
 
 // Animation variants

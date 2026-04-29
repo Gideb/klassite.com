@@ -23,9 +23,11 @@ import {
   FaCrown,
   FaArrowUp,
   FaArrowDown,
+  FaPhone,
 } from "react-icons/fa";
 import { BsChatQuote } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { FaDiagramProject } from "react-icons/fa6";
 
 // Background Decorations Component
 const BackgroundDecorations = () => {
@@ -542,8 +544,6 @@ const KlassKonceptFAQ = () => {
 
           {/* Search Bar */}
           <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-
-          
         </div>
       </section>
 
@@ -617,7 +617,7 @@ const KlassKonceptFAQ = () => {
             viewport={{ once: true }}
             className="relative mt-32"
           >
-            <div  />
+            <div />
             <div className="relative bg-gray-200 backdrop-blur-xl rounded-2xl p-10 text-center">
               <motion.div
                 animate={{ rotate: [0, 10, -10, 0] }}
@@ -645,7 +645,7 @@ const KlassKonceptFAQ = () => {
                   >
                     <span className="flex items-center gap-2">
                       Check Out Our Works
-                      <FaArrowUp className="group-hover:translate-x-1 transition-transform text-xs" />
+                      <FaDiagramProject className="group-hover:translate-x-1 transition-transform text-xs" />
                     </span>
                   </motion.button>
                 </Link>
@@ -658,14 +658,14 @@ const KlassKonceptFAQ = () => {
                   >
                     <span className="flex items-center gap-2">
                       Schedule a consultation
-                      <FaArrowDown className="group-hover:translate-x-1 transition-transform text-xs" />
+                      <FaPhone className="group-hover:translate-x-1 transition-transform text-xs" />
                     </span>
                   </motion.button>
                 </Link>
               </div>
 
               {/* Quick contact options */}
-              <div className="flex items-center justify-center gap-3 mt-3 text-sm text-gray-600">
+              <div className="flex lg:flex-row flex-col items-center justify-center gap-3 mt-3 text-sm text-gray-600">
                 <span className="bg-white shadow-md p-2 rounded-2xl">
                   ✨ hello@klasskoncept.com
                 </span>

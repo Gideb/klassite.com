@@ -1,7 +1,7 @@
 import React from "react";
 
-import OtherHeroSection from "../components/OtherHeroSection";
-import KlassKonceptFAQ from "../components/sections/KlassKonceptFAQ";
+import OtherHeroSection from "../components/props/OtherHeroSection";
+import KlassKonceptFAQ from "../components/KlassKonceptFAQ";
 
 const FAQs = () => {
   return (

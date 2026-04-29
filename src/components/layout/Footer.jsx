@@ -22,19 +22,19 @@ const Footer = () => {
     { name: "Home", path: "home" },
     { name: "About", path: "about" },
     { name: "Services", path: "services" },
-    { name: "Work", path: "portfolio" },
-    { name: "Support", path: "faqs" },
-    { name: "Careers", path: "careers" },
     { name: "Contact", path: "contact" },
+    { name: "Careers", path: "careers" },
+    { name: "Support", path: "faqs" },
+    { name: "Work", path: "https://myportfolio.com" },
   ];
 
   const individualpages = [
-    { service: " Enterprise Web Solutions", path: "webdev" },
-    { service: " Mobile Applications", path: "mobileapp" },
-    { service: " Content Creation", path: "contentcreation" },
-    { service: " Brand Experience", path: "branding" },
-    { service: " UI/UX Strategy", path: "uxdesign" },
-    { service: " Graphic Design", path: "graphicdesign" },
+    { service: " Enterprise Web Solutions", path: "web-development" },
+    { service: " Mobile Applications", path: "mobile-apps" },
+    { service: " Content Creation", path: "content-creation" },
+    { service: " Brand Experience", path: "brand-experience" },
+    { service: " UI/UX Strategy", path: "ui-ux" },
+    { service: " Graphic Design", path: "graphic-design" },
   ];
 
   const socialLinks = [

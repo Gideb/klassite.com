@@ -7,9 +7,9 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { memo } from "react";
-import Topicbg from "../../ui/Topicbg";
-import Subheading from "../../ui/Subheading";
-import Headings from "../../ui/Headings";
+import Topicbg from "../../props/Topicbg";
+import Subheading from "../../props/Subheading";
+import Headings from "../../props/Headings";
 
 const WhyUs = () => {
   const differentiators = [

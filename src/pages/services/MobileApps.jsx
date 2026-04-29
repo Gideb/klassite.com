@@ -26,10 +26,10 @@ import {
 import { FaGithub } from "react-icons/fa";
 import { GiShoppingCart } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import DiffPageColors from "../../components/ui/DiffPageColors";
-import Headings from "../../components/ui/Headings";
-import Subheading from "../../components/ui/Subheading";
-import ExpertiseCta from "../../components/ui/ExpertiseCta";
+import DiffPageColors from "../../components/props/DiffPageColors";
+import Headings from "../../components/props/Headings";
+import Subheading from "../../components/props/Subheading";
+import ExpertiseCta from "../../components/props/ExpertiseCta";
 
 const MobileApps = () => {
   const services = [

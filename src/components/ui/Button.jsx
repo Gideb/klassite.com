@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
 
 const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
   const base =
-    "inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300";
+    "inline-flex items-center gap-2 justify-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300";
 
   const styles = {
     primary:
