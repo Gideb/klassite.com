@@ -19,7 +19,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
 
   const navLinks = [
-    { name: "Home", path: "home" },
+    { name: "Home", path: "/" },
     { name: "About", path: "about" },
     { name: "Services", path: "services" },
     { name: "Contact", path: "contact" },
@@ -94,7 +94,7 @@ const Footer = () => {
           {/* Brand Column - Large */}
           <div className="lg:col-span-4 space-y-6">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold bg-linear-to-r from-purple-400 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold text-purple-300">
                 Klass Koncepts
               </h2>
               <p className="text-gray-200 leading-relaxed text-sm max-w-md">
@@ -145,7 +145,7 @@ const Footer = () => {
               {navLinks.map((item) => (
                 <li key={item.name}>
                   <Link
-                    to={item.path === "home" ? "/" : `/${item.path}`}
+                    to={item.path}
                     className="text-gray-300 hover:text-purple-400 transition-colors text-sm group flex items-center gap-2"
                   >
                     <span className="w-0 group-hover:w-2 h-px bg-purple-500 transition-all duration-300" />

@@ -238,13 +238,26 @@ const ServiceItems = () => {
         {/* Digital Solutions Section */}
         <div className="mb-24 ">
           <div className="mb-10 ">
-            <div className="flex items-center gap-3 mb-1 ">
-              <div className="w-15 h-15 bg-linear-to-br from-purple-100 to-purple-50 rounded-xl flex items-center justify-center ">
-                <LuLaptopMinimalCheck className="text-purple-600 text-3xl" />
+            <div className="flex items-center justify-between mb-1">
+              <div className="flex items-center gap-3">
+                <div className="w-15 h-15 bg-linear-to-br from-purple-100 to-purple-50 rounded-xl flex items-center justify-center">
+                  <LuLaptopMinimalCheck className="text-purple-600 text-3xl" />
+                </div>
+
+                <Link to={services.digital.lead}>
+                  <h3 className="text-2xl font-semibold text-gray-800 hover:text-purple-600 transition">
+                    {services.digital.title}
+                  </h3>
+                </Link>
               </div>
-              <h3 className="text-2xl font-semibold text-gray-800">
-                {services.digital.title}
-              </h3>
+
+              <Link
+                to={services.digital.lead}
+                className="text-sm font-medium text-purple-600 flex items-center gap-1 hover:gap-2 transition-all"
+              >
+                View all
+                <FaArrowRight className="text-xs" />
+              </Link>
             </div>
             <p className="text-gray-600 text-md max-w-2xl ml-18">
               {services.digital.intro}
@@ -264,13 +277,26 @@ const ServiceItems = () => {
         {/* Creative Services Section */}
         <div>
           <div className="mb-10">
-            <div className="flex items-center gap-3 mb-1">
-              <div className="w-15 h-15 bg-linear-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center">
-                <LuPalette className="text-amber-600 text-3xl" />
+            <div className="flex items-center justify-between mb-1">
+              <div className="flex items-center gap-3">
+                <div className="w-15 h-15 bg-linear-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center">
+                  <LuPalette className="text-amber-600 text-3xl" />
+                </div>
+
+                <Link to={services.creative.lead}>
+                  <h3 className="text-2xl font-semibold text-gray-800 hover:text-amber-600 transition">
+                    {services.creative.title}
+                  </h3>
+                </Link>
               </div>
-              <h3 className="text-2xl font-semibold text-gray-800">
-                {services.creative.title}
-              </h3>
+
+              <Link
+                to={services.creative.lead}
+                className="text-sm font-medium text-amber-600 flex items-center gap-1 hover:gap-2 transition-all"
+              >
+                View all
+                <FaArrowRight className="text-xs" />
+              </Link>
             </div>
             <p className="text-gray-600 text-md max-w-2xl ml-18">
               {services.creative.intro}
