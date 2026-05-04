@@ -25,6 +25,12 @@ import Headings from "../../components/props/Headings";
 import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 
+
+import contentbg from "../../assets/images/ipages/servicepage/contentcreation.jpg";
+
+
+
+
 const ContentCreation = () => {
   const services = [
     {
@@ -165,8 +171,19 @@ const ContentCreation = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/40 z-10" />
+      <div
+        className="relative bg-linear-to-br from-gray-900 via-blue-900 to-gray-900 text-white overflow-hidden"
+        style={{
+          backgroundImage: `url(${contentbg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
+        <div className="absolute inset-0 grid grid-cols-3 z-10">
+          <div className=" bg-black/50 " />
+          <div className=" bg-white/10 backdrop-blur-xs" />
+          <div className=" bg-black/50 " />
+        </div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-blue-500 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 -left-32 w-96 h-96 bg-cyan-600 rounded-full blur-[120px]" />

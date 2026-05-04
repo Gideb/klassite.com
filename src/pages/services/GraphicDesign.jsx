@@ -22,6 +22,8 @@ import Headings from "../../components/props/Headings";
 import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 
+import graphicbg from "../../assets/images/ipages/servicepage/graphicdesign.jpg";
+
 const GraphicDesign = () => {
   const services = [
     {
@@ -145,7 +147,14 @@ const GraphicDesign = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-linear-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+      <div
+        className="relative bg-linear-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden"
+        style={{
+          backgroundImage: `url(${graphicbg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 grid grid-cols-3 z-10">
           <div className=" bg-black/70 " />
           <div className=" bg-black/40 backdrop-blur-xs" />

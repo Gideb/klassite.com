@@ -21,21 +21,17 @@ const AlternatingServiceSection = ({
   imageClassName = "",
   contentClassName = "",
 }) => {
-  // Extract first word from title for CTA
-  const getFirstWord = (text) => {
-    return text.split(" ")[0];
-  };
-
   const colorStyles = {
     amber: {
       bg: "bg-amber-100",
       text: "text-amber-700",
+      hover: "text-amber-500",
     },
     purple: {
       bg: "bg-purple-100",
       text: "text-purple-700",
+      hover: "text-purple-500",
     },
- 
   };
 
   const selectedColor = colorStyles[color] || colorStyles.amber;
@@ -85,9 +81,9 @@ const AlternatingServiceSection = ({
 
         <Link
           to={link}
-          className={`inline-flex items-center gap-2 ${selectedColor.text} font-medium hover:gap-3 transition-all group`}
+          className={`inline-flex items-center gap-2 ${selectedColor.text} font-medium hover:${selectedColor.hover} hover:gap-3 transition-all group`}
         >
-          {ctaText} {getFirstWord(title)}
+          {ctaText}
           <FaArrowRight className="text-sm group-hover:translate-x-1 transition" />
         </Link>
       </div>

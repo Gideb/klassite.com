@@ -31,6 +31,10 @@ import Headings from "../../components/props/Headings";
 import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 
+import mobilebg from "../../assets/images/ipages/servicepage/mobileapp.jpg"
+
+
+
 const MobileApps = () => {
   const services = [
     {
@@ -168,27 +172,19 @@ const MobileApps = () => {
     },
   ];
 
-  // Helper icon
-  /*   const ShoppingCart = () => (
-    <svg
-      className="w-6 h-6"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 6M17 13l1.5 6M9 21h6M12 18v3"
-      />
-    </svg>
-  ); */
+ 
 
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-linear-to-br from-gray-900 via-rose-900 to-gray-900 text-white overflow-hidden">
+      <div
+        className="relative bg-linear-to-br from-gray-900 via-rose-900 to-gray-900 text-white overflow-hidden"
+        style={{
+          backgroundImage: `url(${mobilebg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-black/40 z-10" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-rose-500 rounded-full blur-[120px]" />

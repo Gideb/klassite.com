@@ -32,6 +32,10 @@ import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 import Card from "../../components/ui/Card";
 
+import webbg from "../../assets/images/ipages/servicepage/web-dev.jpg";
+
+
+
 const WebDevelopment = () => {
   const services = [
     {
@@ -189,11 +193,15 @@ const WebDevelopment = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-linear-to-br from-gray-900 via-emerald-900 to-gray-900 text-white overflow-hidden">
+      <div className="relative bg-linear-to-br from-gray-900 via-emerald-900 to-gray-900 text-white overflow-hidden"   style={{
+                backgroundImage: `url(${webbg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}>
         <div className="absolute inset-0 grid grid-cols-3 z-10">
-          <div className=" bg-black/70 " />
-          <div className=" bg-black/30 backdrop-blur-xs" />
-          <div className=" bg-black/70 " />
+          <div className=" bg-black/30 " />
+          <div className=" bg-white/20 backdrop-blur-xs" />
+          <div className=" bg-black/30 " />
         </div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-emerald-500 rounded-full blur-[120px]" />

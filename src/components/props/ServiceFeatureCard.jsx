@@ -23,7 +23,7 @@ const ServiceFeatureCard = ({
 
   return (
     <div
-      className={`flex gap-3 p-4 rounded-xl bg-gray-50/50 hover:bg-gray-50 transition-colors ${className}`}
+      className={`flex gap-3 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors ${className}`}
     >
       <div
         className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${selectedColor.bg} ${selectedColor.text}`}

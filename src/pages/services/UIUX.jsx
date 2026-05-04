@@ -24,6 +24,8 @@ import Headings from "../../components/props/Headings";
 import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 
+import uxdesignbg from "../../assets/images/ipages/servicepage/uxdesign.jpg";
+
 const UIUX = () => {
   const services = [
     {
@@ -137,50 +139,22 @@ const UIUX = () => {
     "Data-driven design decisions",
   ];
 
-  // Helper for MapPin (not imported)
-  /*  const MapPin = () => (
-    <svg
-      className="w-6 h-6"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-      />
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-      />
-    </svg>
-  );
-
-  const Palette = () => (
-    <svg
-      className="w-6 h-6"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-      />
-    </svg>
-  );
- */
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-linear-to-br from-gray-900 via-indigo-900 to-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/40 z-10" />
+      <div
+        className="relative bg-linear-to-br from-gray-900 via-indigo-900 to-gray-900 text-white overflow-hidden"
+        style={{
+          backgroundImage: `url(${uxdesignbg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 grid grid-cols-3 z-10">
+          <div className=" bg-black/30 " />
+          <div className=" bg-white/20 backdrop-blur-xs" />
+          <div className=" bg-black/30 " />
+        </div>
 
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-indigo-500 rounded-full blur-[120px]" />

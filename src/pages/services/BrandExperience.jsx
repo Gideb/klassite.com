@@ -20,6 +20,8 @@ import Headings from "../../components/props/Headings";
 import Subheading from "../../components/props/Subheading";
 import DiffPageColors from "../../components/props/DiffPageColors";
 
+import brandbg from "../../assets/images/ipages/servicepage/brandexperience.jpg";
+
 const BrandExperience = () => {
   const services = [
     {
@@ -101,9 +103,13 @@ const BrandExperience = () => {
       {/* Hero Section */}
       <div
         className="relative bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden "
-        /* style={{ backgroundImage: `url(${team})`, backgroundSize: "cover" }} */
+        style={{ backgroundImage: `url(${brandbg})`, backgroundSize: "cover" }}
       >
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 grid grid-cols-3 z-10">
+          <div className=" bg-black/50 " />
+          <div className=" bg-white/5 backdrop-blur-xs" />
+          <div className=" bg-black/50 " />
+        </div>
 
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-amber-500 rounded-full blur-[120px]" />
