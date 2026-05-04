@@ -170,54 +170,7 @@ const ServiceItems = () => {
         />
       </div>
 
-      /*  <div
-        className={`group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-lg ${style.glow} transition-all duration-500 ease-out hover:-translate-y-2 hover:scale-[1.02]
-          border border-gray-100 ${style.borderGlow} cursor-pointer overflow-hidden`}
-      >
-       
-        <div
-          className={`absolute inset-0 bg-linear-to-br ${isPurple ? "from-purple-50/50" : "from-amber-50/50"} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}
-        />
-
-     
-        <div
-          className={`relative w-16 h-16 ${style.iconBg} rounded-xl 
-            flex items-center justify-center mb-6 
-            group-hover:scale-110 group-hover:rotate-3 
-            transition-all duration-500 ease-out
-            shadow-sm group-hover:shadow-md`}
-        >
-          <Icon
-            className={`text-2xl ${style.iconColor} transition-transform duration-300`}
-            aria-hidden="true"
-          />
-        </div>
-
-      
-        <h3 className="relative text-xl font-medium text-gray-800 mb-3 group-hover:text-gray-900 transition-colors">
-          {title}
-        </h3>
-
-  
-        <p className="relative text-gray-600 text-sm leading-relaxed mb-5">
-          {desc}
-        </p>
-
-
-        <Link to={lead}>
-          <div
-            className={`relative inline-flex items-center gap-2 ${style.linkColor} ${style.linkHover} font-medium text-sm transition-all duration-300 cursor-pointer group-hover:gap-3 group-hover:translate-x-1`}
-          >
-            <span>Learn More</span>
-            <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
-          </div>
-        </Link>
-
-      
-        <div
-          className={`absolute bottom-0 right-0 w-20 h-20 bg-linear-to-tl ${isPurple ? "from-purple-500/8" : "from-amber-500/8"} to-transparent rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-        />
-      </div> */
+   
     );
   };
 

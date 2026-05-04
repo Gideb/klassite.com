@@ -20,7 +20,7 @@ const Home = () => {
       <SocialProofSection />
       <WhyUs />
       <TestimonialSection />
-      <CTASection />
+      <CTASection  />
     </>
   );
 };

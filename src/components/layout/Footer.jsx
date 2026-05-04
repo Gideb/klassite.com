@@ -20,11 +20,11 @@ const Footer = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About", path: "about" },
-    { name: "Services", path: "services" },
-    { name: "Contact", path: "contact" },
-    { name: "Careers", path: "careers" },
-    { name: "Support", path: "faqs" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+    { name: "Careers", path: "/careers" },
+    { name: "Support", path: "/faqs" },
     { name: "Work", path: "https://myportfolio.com" },
   ];
 
@@ -84,8 +84,8 @@ const Footer = () => {
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-600/10 rounded-xl blur-3xl animate-pulse" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-600/10 rounded-xl blur-3xl animate-pulse delay-1000" />
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-600/5 rounded-xl blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-600/5 rounded-xl blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
@@ -127,9 +127,9 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className={`group relative p-3 bg-white/15 rounded-xl ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-500/20`}
+                    className={`group relative p-3 bg-white/5 hover:bg-white/10 rounded-xl ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-purple-500/20`}
                   >
-                    <Icon className="w-4 h-4 transition-colors group-hover:text-white" />
+                    <Icon className="w-4 h-4 transition-colors text-gray-300 group-hover:text-white" />
                   </a>
                 );
               })}
@@ -219,8 +219,8 @@ const Footer = () => {
 
         {/* Newsletter Section - Premium */}
         <div className="mt-20 mb-12">
-          <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-purple-600/20 via-fuchsia-600/20 to-purple-600/20 border border-purple-500/20 p-8 md:p-10">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cdefs%3E%3Cpattern id=%22grid%22 width=%2260%22 height=%2260%22 patternUnits=%22userSpaceOnUse%22%3E%3Cpath d=%22M 60 0 L 0 0 0 60%22 fill=%22none%22 stroke=%22rgba(139, 92, 246, 0.05)%22 stroke-width=%221%22/%3E%3C/pattern%3E%3C/defs%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22url(%23grid)%22/%3E%3C/svg%3E')] opacity-20" />
+          <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-purple-600/10 via-fuchsia-600/20 to-purple-600/10 border border-purple-500/10 p-8 md:p-10">
+            
 
             <div className="relative flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="text-center md:text-left">

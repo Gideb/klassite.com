@@ -25,11 +25,13 @@ import { Link } from "react-router-dom";
 
 const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
   const base =
-    "md:inline-flex flex items-center gap-2 justify-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300";
+    "md:inline-flex flex items-center gap-2 justify-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-1";
 
   const styles = {
     primary:
       "bg-white text-purple-700 border border-gray-100 shadow-md hover:shadow-lg",
+    transparent:
+      "border border-white text-white shadow-md hover:shadow-lg",
     secondary:
       "bg-white text-amber-600 border border-gray-100 shadow-md hover:shadow-lg",
     tetiary:
@@ -41,7 +43,7 @@ const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
       <span>{text}</span>
 
       {Icon && (
-        <Icon className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+        <Icon className="text-sm transition-transform duration-300 group-hover:translate-x-1 " />
       )}
     </Link>
   );
