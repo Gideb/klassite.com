@@ -32,8 +32,10 @@ const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
       "border border-blue-500 text-blue-700 hover:text-blue-800 shadow-md hover:shadow-lg",
     blue: "bg-blue-600 hover:bg-blue-600 text-white shadow-md hover:shadow-lg",
 
+
     transparent:
-      "border border-white text-white hover:text-white/50 shadow-md hover:shadow-lg",
+      "border border-white text-white hover:text-white/80 shadow-md hover:shadow-lg",
+
 
     purple:
       "bg-purple-700 hover:bg-purple-600 text-white shadow-md hover:shadow-lg",
@@ -42,12 +44,32 @@ const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
     transparentpurple:
       "border border-purple-600 text-purple-600 hover:text-purple-700 shadow-md hover:shadow-lg",
 
+
     secondary:
       "bg-white text-amber-600 border border-gray-100 shadow-md hover:shadow-lg",
     amber:
       "bg-amber-500 hover:bg-amber-600 text-black shadow-md hover:shadow-lg",
     transparentamber:
       "border border-amber-400 text-amber-400 hover:text-amber-600 shadow-md hover:shadow-lg",
+
+
+    rose:
+      "bg-rose-500 hover:bg-rose-600 text-white shadow-md hover:shadow-lg",
+    transparentrose:
+      "border border-rose-600 text-rose-600 hover:text-rose-700 shadow-md hover:shadow-lg",
+
+
+    emerald:
+      "bg-emerald-500 hover:bg-emerald-600 text-white shadow-md hover:shadow-lg",
+    transparentemerald:
+      "border border-emerald-600 text-emerald-600 hover:text-emerald-700 shadow-md hover:shadow-lg",
+
+
+    indigo:
+      "bg-indigo-500 hover:bg-indigo-600 text-white shadow-md hover:shadow-lg",
+    transparentindigo:
+      "border border-indigo-600 text-indigo-100 hover:text-indigo-400 shadow-md hover:shadow-lg",
+
 
     tetiary:
       "bg-white text-fuchsia-600 border border-gray-100 shadow-md hover:shadow-lg",

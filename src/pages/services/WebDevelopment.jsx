@@ -33,8 +33,8 @@ import ExpertiseCta from "../../components/props/ExpertiseCta";
 import Card from "../../components/ui/Card";
 
 import webbg from "../../assets/images/ipages/servicepage/web-dev.jpg";
-
-
+import Button from "../../components/ui/Button";
+import { FaDiagramProject, FaPenToSquare } from "react-icons/fa6";
 
 const WebDevelopment = () => {
   const services = [
@@ -202,9 +202,9 @@ const WebDevelopment = () => {
         }}
       >
         <div className="absolute inset-0 grid grid-cols-3 z-10">
-          <div className=" bg-black/30 " />
-          <div className=" bg-white/20 backdrop-blur-xs" />
-          <div className=" bg-black/30 " />
+          <div className=" bg-black/80 " />
+          <div className=" bg-white/30 backdrop-blur-xs" />
+          <div className=" bg-black/50 " />
         </div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -right-32 w-96 h-96 bg-emerald-500 rounded-full blur-[120px]" />
@@ -225,23 +225,26 @@ const WebDevelopment = () => {
               </span>{" "}
               Web Applications That Scale
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              From custom websites to complex enterprise platforms, we build
+            <Subheading
+              isLight
+              description="From custom websites to complex enterprise platforms, we build
               robust, secure, and high-performance web solutions that drive
-              digital transformation.
-            </p>
+              digital transformation."
+            />
             <div className="flex flex-wrap gap-4">
-              <Link to="/services">
-                <button className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-                  Start Your Project <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-
-              <Link to="/portfolio">
-                <button className="border border-white/30 hover:bg-white/10 text-white font-medium px-8 py-3 rounded-full transition-all">
-                  View Our Work
-                </button>
-              </Link>
+              <Button
+                link="/contact"
+                text="Begin Your Project"
+                icon={FaPenToSquare}
+                variant="emerald"
+              />
+              <Button
+                link="https://portfolio"
+                text="View Our Work"
+                icon={FaDiagramProject}
+                variant="transparent"
+              />
+            
             </div>
           </div>
         </div>

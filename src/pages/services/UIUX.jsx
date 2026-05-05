@@ -17,7 +17,13 @@ import {
   Activity,
   Layers,
 } from "lucide-react";
-import { FaMapPin, FaPalette, FaFigma } from "react-icons/fa6";
+import {
+  FaMapPin,
+  FaPalette,
+  FaFigma,
+  FaPenToSquare,
+  FaDiagramProject,
+} from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import DiffPageColors from "../../components/props/DiffPageColors";
 import Headings from "../../components/props/Headings";
@@ -25,6 +31,7 @@ import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 
 import uxdesignbg from "../../assets/images/ipages/servicepage/uxdesign.jpg";
+import Button from "../../components/ui/Button";
 
 const UIUX = () => {
   const services = [
@@ -151,9 +158,9 @@ const UIUX = () => {
         }}
       >
         <div className="absolute inset-0 grid grid-cols-3 z-10">
-          <div className=" bg-black/30 " />
+          <div className=" bg-black/80 " />
           <div className=" bg-white/20 backdrop-blur-xs" />
-          <div className=" bg-black/30 " />
+          <div className=" bg-black/70 " />
         </div>
 
         <div className="absolute inset-0 opacity-20">
@@ -175,22 +182,26 @@ const UIUX = () => {
                 Users Love
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Great products aren't just built—they're designed. We combine user
+            <Subheading
+              isLight
+              description="   Great products aren't just built—they're designed. We combine user
               research, strategic thinking, and beautiful UI to create digital
-              experiences that delight, engage, and convert.
-            </p>
+              experiences that delight, engage, and convert."
+            />
+
             <div className="flex flex-wrap gap-4">
-              <Link to="/services">
-                <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-                  Start Your UX Journey <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <Link to="/casestudies">
-                <button className="border border-white/30 hover:bg-white/10 text-white font-medium px-8 py-3 rounded-full transition-all">
-                  View Case Studies
-                </button>
-              </Link>
+              <Button
+                link="/contact"
+                text="Begin Your UX Journey"
+                icon={FaPenToSquare}
+                variant="indigo"
+              />
+              <Button
+                link="https://portfolio"
+                text="View Case Studies"
+                icon={FaDiagramProject}
+                variant="transparent"
+              />
             </div>
           </div>
         </div>
@@ -488,24 +499,29 @@ const UIUX = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Create Amazing Experiences?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's collaborate on a UX strategy that transforms your digital
-            product into something users can't live without.
-          </p>
+          <Subheading
+            description=" Let's collaborate on a UX strategy that transforms your digital
+            product into something users can't live without."
+            isLight
+          />
 
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact">
-              <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg text-lg">
-                Book a UX Audit
-              </button>
-            </Link>
-
-            <Link to="/portfolio">
-              <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-500/10 font-medium px-8 py-4 rounded-full transition-all text-lg">
-                View Portfolio
-              </button>
-            </Link>
+            <Button
+              link="/contact"
+              text=" Book a UX Audit "
+              icon={FaPenToSquare}
+              variant="indigo"
+            />
+            <Button
+              link="https://portfolio"
+              text="View Portfolio"
+              icon={FaDiagramProject}
+              variant="transparentindigo"
+            />
           </div>
+          
+
+       
           <p className="text-gray-400 text-sm mt-8">
             Klass Koncepts — Designing Digital Excellence
           </p>

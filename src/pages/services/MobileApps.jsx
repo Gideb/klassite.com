@@ -23,7 +23,7 @@ import {
   Wifi,
   Database,
 } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { FaArrowRight, FaGithub, FaPenSquare } from "react-icons/fa";
 import { GiShoppingCart } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import DiffPageColors from "../../components/props/DiffPageColors";
@@ -31,9 +31,9 @@ import Headings from "../../components/props/Headings";
 import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 
-import mobilebg from "../../assets/images/ipages/servicepage/mobileapp.jpg"
-
-
+import mobilebg from "../../assets/images/ipages/servicepage/mobileapp.jpg";
+import { FaDiagramProject, FaPenToSquare } from "react-icons/fa6";
+import Button from "../../components/ui/Button";
 
 const MobileApps = () => {
   const services = [
@@ -172,8 +172,6 @@ const MobileApps = () => {
     },
   ];
 
- 
-
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
@@ -206,23 +204,26 @@ const MobileApps = () => {
               </span>{" "}
               That Users Love
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Reach your customers wherever they are. We build high-performance
+            <Subheading
+              isLight
+              description="Reach your customers wherever they are. We build high-performance
               iOS and Android apps that deliver exceptional user experiences and
-              drive business growth.
-            </p>
+              drive business growth."
+            />
+
             <div className="flex flex-wrap gap-4">
-              <Link to="/services">
-                <button className="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-                  Start Your App <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <Link to="/portfolio">
-                {" "}
-                <button className="border border-white/30 hover:bg-white/10 text-white font-medium px-8 py-3 rounded-full transition-all">
-                  View App Portfolio
-                </button>
-              </Link>
+              <Button
+                link="/contact"
+                text="Start Your App"
+                icon={FaPenToSquare}
+                variant="rose"
+              />
+              <Button
+                link="https://portfolio"
+                text="View App Portfolio"
+                icon={FaDiagramProject}
+                variant="transparent"
+              />
             </div>
           </div>
         </div>

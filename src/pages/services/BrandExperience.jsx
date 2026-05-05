@@ -372,7 +372,7 @@ const BrandExperience = () => {
               link="https://portfolio"
               text="View Case Studies"
               icon={FaDiagramProject}
-              variant="transparentAmber"
+              variant="transparentamber"
             />
           </div>
           <p className="text-gray-400 text-sm mt-8">

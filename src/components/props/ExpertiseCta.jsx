@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../ui/Button";
 import { FaArrowRight } from "react-icons/fa";
-import { FaDiagramProject } from "react-icons/fa6";
+import { FaDiagramProject, FaPenToSquare } from "react-icons/fa6";
 
 const ExpertiseCta = ({ color, header, paragragh, buttonText1, buttonText2, disclaimer, path }) => {
   return (
@@ -22,7 +22,7 @@ const ExpertiseCta = ({ color, header, paragragh, buttonText1, buttonText2, disc
               <Button
                 link="/contact"
                 text={buttonText1}
-                icon={FaArrowRight}
+                icon={FaPenToSquare}
                 variant={color}
               />
               <Button
