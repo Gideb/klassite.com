@@ -23,6 +23,9 @@ import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 
 import graphicbg from "../../assets/images/ipages/servicepage/graphicdesign.jpg";
+import Button from "../../components/ui/Button";
+import { FaArrowRight } from "react-icons/fa";
+import { FaPenToSquare } from "react-icons/fa6";
 
 const GraphicDesign = () => {
   const services = [
@@ -181,22 +184,26 @@ const GraphicDesign = () => {
               </span>{" "}
               That Captivates
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your ideas into stunning visuals that communicate,
+            <Subheading
+              isLight
+              description="Transform your ideas into stunning visuals that communicate,
               persuade, and inspire. From print to digital, we create design
-              solutions that elevate your brand.
-            </p>
+              solutions that elevate your brand."
+            />
+
             <div className="flex flex-wrap gap-4">
-              <Link to="/services">
-                <button className="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-                  Start Your Project <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <Link to="/portfolio">
-                <button className="border border-white/30 hover:bg-white/10 text-white font-medium px-8 py-3 rounded-full transition-all">
-                  View Portfolio
-                </button>
-              </Link>
+              <Button
+                link="/contact"
+                text="Begin Your Project"
+                icon={FaPenToSquare}
+                variant="purple"
+              />
+              <Button
+                link="/contact"
+                text="View Portfolio"
+                icon={FaArrowRight}
+                variant="transparent"
+              />
             </div>
           </div>
         </div>
@@ -465,36 +472,11 @@ const GraphicDesign = () => {
         color="purple"
         header="Ready to Bring Your Ideas to Life?"
         paragragh=" Let's collaborate on something amazing. Whether you need a single design or a complete visual system, we're here to help."
-        btn1=" Get a Free Consultation"
-        btn2=" View Pricing"
-        tiny="Klass Koncepts — Visual Excellence, Delivered "
+        buttonText1=" Get a Free Consultation"
+        buttonText2=" View Pricing"
+        disclaimer="Klass Koncepts — Visual Excellence, Delivered "
         path="pricing"
       />
-
-      {/* <div className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="bg-linear-to-r from-purple-50 to-pink-50 rounded-3xl p-12 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Bring Your Ideas to Life?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Let's collaborate on something amazing. Whether you need a single
-              design or a complete visual system, we're here to help.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg text-lg">
-                Get a Free Consultation
-              </button>
-              <button className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-medium px-8 py-4 rounded-full transition-all text-lg">
-                View Pricing
-              </button>
-            </div>
-            <p className="text-gray-500 text-sm mt-8">
-              Klass Koncepts — Visual Excellence, Delivered
-            </p>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

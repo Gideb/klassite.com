@@ -193,11 +193,14 @@ const WebDevelopment = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-linear-to-br from-gray-900 via-emerald-900 to-gray-900 text-white overflow-hidden"   style={{
-                backgroundImage: `url(${webbg})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}>
+      <div
+        className="relative bg-linear-to-br from-gray-900 via-emerald-900 to-gray-900 text-white overflow-hidden"
+        style={{
+          backgroundImage: `url(${webbg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 grid grid-cols-3 z-10">
           <div className=" bg-black/30 " />
           <div className=" bg-white/20 backdrop-blur-xs" />
@@ -585,9 +588,9 @@ const WebDevelopment = () => {
         paragragh="Let's discuss your project requirements. Whether you need a simple
               website or a complex enterprise platform, we have the expertise to
               bring your vision to life."
-        btn1="Schedule a Free Consultation"
-        btn2=" View Technical Capabilities"
-        tiny="Klass Koncepts — Engineering Digital Excellence"
+        buttonText1="Schedule a Free Consultation"
+        buttonText2=" View Technical Capabilities"
+        disclaimer="Klass Koncepts — Engineering Digital Excellence"
         path="portfolio"
       />
 

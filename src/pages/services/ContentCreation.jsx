@@ -25,11 +25,11 @@ import Headings from "../../components/props/Headings";
 import Subheading from "../../components/props/Subheading";
 import ExpertiseCta from "../../components/props/ExpertiseCta";
 
+import Button from "../../components/ui/Button";
 
 import contentbg from "../../assets/images/ipages/servicepage/contentcreation.jpg";
-
-
-
+import { FaDiagramProject } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 
 const ContentCreation = () => {
   const services = [
@@ -176,9 +176,9 @@ const ContentCreation = () => {
         style={{
           backgroundImage: `url(${contentbg})`,
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
         }}
-      > 
+      >
         <div className="absolute inset-0 grid grid-cols-3 z-10">
           <div className=" bg-black/50 " />
           <div className=" bg-white/10 backdrop-blur-xs" />
@@ -203,23 +203,26 @@ const ContentCreation = () => {
                 Connects & Converts
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Stop struggling with content creation. We produce engaging,
+            <Subheading
+              isLight
+              description="Stop struggling with content creation. We produce engaging,
               high-quality content that builds your brand, grows your audience,
-              and drives measurable results.
-            </p>
+              and drives measurable results."
+            />
+
             <div className="flex flex-wrap gap-4">
-              <Link to="/services">
-                {" "}
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-                  Start Creating <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-              <Link to="/portfolio">
-                <button className="border border-white/30 hover:bg-white/10 text-white font-medium px-8 py-3 rounded-full transition-all">
-                  View Content Portfolio
-                </button>
-              </Link>
+              <Button
+                link="/contact"
+                text="Start Creating"
+                icon={FaArrowRight}
+                variant="blue"
+              />
+              <Button
+                link="https://portfolio"
+                text="View Content Portfolio"
+                icon={FaDiagramProject}
+                variant="transparent"
+              />
             </div>
           </div>
         </div>
@@ -573,37 +576,11 @@ const ContentCreation = () => {
         paragragh="Stop struggling with content creation. Let our team of expert
               creators handle everything while you focus on growing your
               business."
-        btn1="Get a Free Content Audit"
-        btn2=" View Content Samples"
-        tiny="Klass Koncepts — Content That Works as Hard as You Do"
+        buttonText1="Get a Free Content Audit"
+        buttonText2=" View Content Samples"
+        disclaimer="Klass Koncepts — Content That Works as Hard as You Do"
         path="portfolio"
       />
-
-      {/*  <div className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="bg-linear-to-r from-blue-50 to-cyan-50 rounded-3xl p-12 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Scale Your Content?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Stop struggling with content creation. Let our team of expert
-              creators handle everything while you focus on growing your
-              business.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg text-lg">
-                Get a Free Content Audit
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium px-8 py-4 rounded-full transition-all text-lg">
-                View Content Samples
-              </button>
-            </div>
-            <p className="text-gray-500 text-sm mt-8">
-              Klass Koncepts — Content That Works as Hard as You Do
-            </p>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

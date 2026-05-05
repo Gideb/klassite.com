@@ -515,9 +515,9 @@ const MobileApps = () => {
         header="Ready to Launch Your Mobile App?"
         paragragh="Let's turn your app idea into a reality. From concept to App
               Store, we'll guide you every step of the way."
-        btn1="Get a Free App Quote"
-        btn2=" View App Portfolio"
-        tiny="Klass Koncepts — Mobile Innovation Delivered"
+        buttonText1="Get a Free App Quote"
+        buttonText2=" View App Portfolio"
+        disclaimer="Klass Koncepts — Mobile Innovation Delivered"
         path="portfolio"
       />
 
