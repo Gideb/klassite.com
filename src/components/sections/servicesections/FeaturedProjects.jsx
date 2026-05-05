@@ -206,7 +206,7 @@ const FeaturedProjects = () => {
             variant="tetiary"
           />
           <p className="text-gray-500 text-sm mt-4">
-            Explore 50+ more projects across different industries
+            Explore 100+ more projects across different industries
           </p>
         </div>
       </div>

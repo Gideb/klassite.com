@@ -440,7 +440,7 @@ const GraphicDesign = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-4xl font-bold text-white mb-2">120+</div>
               <div className="text-purple-300">Projects Completed</div>
             </div>
             <div>
@@ -452,7 +452,7 @@ const GraphicDesign = () => {
               <div className="text-purple-300">Average Response Time</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-white mb-2">50+</div>
+              <div className="text-4xl font-bold text-white mb-2">60+</div>
               <div className="text-purple-300">Happy Clients</div>
             </div>
           </div>

@@ -80,7 +80,7 @@ const CTASection = ({
             className="w-full sm:w-auto"
           >
             <Button
-              link="https://portfolio"
+              link="/contact"
               text={buttonText}
               icon={FaPenToSquare}
               variant="primary"

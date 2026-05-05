@@ -26,7 +26,7 @@ const Stats = () => {
     },
     {
       icon: LiaAwardSolid,
-      value: 7,
+      value: 10,
       suffix: "+",
       label: "Years",
       color: "from-amber-600 to-amber-600",

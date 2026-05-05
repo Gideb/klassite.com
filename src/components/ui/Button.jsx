@@ -28,10 +28,10 @@ const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
     "md:inline-flex flex items-center gap-2 justify-center gap-2 px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:-translate-y-1";
 
   const styles = {
+    transparent: "border border-white text-white shadow-md hover:shadow-lg",
+    purple: "bg-purple-700 text-white border shadow-md hover:shadow-lg",
     primary:
       "bg-white text-purple-700 border border-gray-100 shadow-md hover:shadow-lg",
-    transparent:
-      "border border-white text-white shadow-md hover:shadow-lg",
     secondary:
       "bg-white text-amber-600 border border-gray-100 shadow-md hover:shadow-lg",
     tetiary:

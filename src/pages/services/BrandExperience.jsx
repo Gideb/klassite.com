@@ -343,7 +343,7 @@ const BrandExperience = () => {
               <div className="inline-flex p-4 bg-amber-50 rounded-full mb-6">
                 <TrendingUp className="w-8 h-8 text-amber-600" />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">3.2x</div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">6.2x</div>
               <div className="text-gray-600">Average brand value increase</div>
             </div>
           </div>

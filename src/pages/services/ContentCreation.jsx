@@ -153,9 +153,9 @@ const ContentCreation = () => {
   ];
 
   const stats = [
-    { value: "3x", label: "Average Engagement Increase", icon: TrendingUp },
-    { value: "500+", label: "Content Pieces Created", icon: FileText },
-    { value: "45%", label: "Time Saved for Clients", icon: Clock },
+    { value: "10x", label: "Average Engagement Increase", icon: TrendingUp },
+    { value: "120+", label: "Content Pieces Created", icon: FileText },
+    { value: "75%", label: "Time Saved for Clients", icon: Clock },
     { value: "100%", label: "Original Content", icon: Sparkles },
   ];
 

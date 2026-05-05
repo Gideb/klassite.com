@@ -205,7 +205,7 @@ const SocialProofSection = () => {
                 </span>
 
                 <div>
-                  <p className="text-purple-900 font-bold text-md">7+ Years</p>
+                  <p className="text-purple-900 font-bold text-md">10+ Years</p>
                   <p className="text-gray-600 text-xs">Of Excellence</p>
                 </div>
               </div>

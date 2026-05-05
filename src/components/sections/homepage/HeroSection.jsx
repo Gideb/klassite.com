@@ -10,13 +10,24 @@ import BlobBackground from "../../ui/BlobBackground";
 import Subheading from "../../props/Subheading";
 import Headings from "../../props/Headings";
 import Button from "../../ui/Button";
+import logo1 from "../../../assets/images/brandLogo/logo1.png"
+import logo2 from "../../../assets/images/brandLogo/logo2.png"
+import logo3 from "../../../assets/images/brandLogo/logo3.png"
+import logo4 from "../../../assets/images/brandLogo/logo4.png"
+import logo5 from "../../../assets/images/brandLogo/logo5.png"
 
 // Services array
-const SERVICES = ["Web Development", "Mobile Development", "Branding", "Media", ""];
+const SERVICES = [
+  "Web Development",
+  "Mobile Development",
+  "Design",
+  "Branding",
+  "Media",
+];
 
 // Stats array
 const STATS = [
-  { end: 7, suffix: "+", label: "Years Experience", duration: 5 },
+  { end: 10, suffix: "+", label: "Years Experience", duration: 5 },
   { end: 120, suffix: "+", label: "Projects Delivered", duration: 6 },
   { end: 97, suffix: "%", label: "Client Satisfaction", duration: 5 },
 ];
@@ -72,41 +83,19 @@ const HeroSection = () => {
 
             <ServiceTags />
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-1">
-              {/*  <Link
-                to="/contact"
-                className="w-full sm:w-auto grouptext-md shadow-md hover:shadow-lg px-8 py-3.5 rounded-xl font-medium text-md transform transition-all duration-300 hover:scale-105 focus:outline-none ring ring-purple-600 hover:text-purple-700 focus:ring-purple-300 focus:ring-offset flex items-center justify-center gap-2"
-              >
-                <SlCalender />
-                <span> Book a Strategic Call </span>
-                <FaArrowRight
-                  className="text-sm group-hover:translate-x-1 transition-transform"
-                  aria-hidden="true"
-                />
-              </Link> */}
+            <div className="flex flex-col md:flex-row items-center gap-4 pt-1">
               <Button
                 link="/contact"
                 text=" Book a Strategic Call"
                 icon={SlCalender}
                 variant="primary"
               />
-              
-             
-
-              <a
-                href="/services"
-                className="w-full sm:w-auto group text-white bg-purple-600 px-8 py-3 rounded-xl font-medium border-2 hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .querySelector("#services")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <FaPlay className="text-xs" aria-hidden="true" />
-                <span> Start a Project</span>
-            
-              </a>
+              <Button
+                link="/services"
+                text="Start a Project"
+                icon={FaPlay}
+                variant="purple"
+              />
             </div>
 
             <div
@@ -134,16 +123,24 @@ const HeroSection = () => {
 
             {/* Trust Badge */}
             <div className="flex items-center gap-4 text-sm text-gray-600">
-              <div className="flex -space-x-2" aria-hidden="true">
-                {[...Array(5)].map((_, i) => (
+              <div className="flex -space-x-3 items-center" aria-hidden="true">
+                {[logo3, logo2, logo5, logo1, logo4].map((logo, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-xl bg-linear-to-br from-purple-400 to-purple-400 border-2 border-white shadow-sm"
-                  />
+                    className="w-8 h-8 rounded-xl bg-linear-to-br from-purple-400 to-purple-400 border-2 border-white shadow-sm hover:scale-105 transition-transform duration-300"
+                  >
+                    <img
+                      src={logo}
+                      className="w-full h-full object-contain  opacity-70"
+                    />
+                  </div>
                 ))}
               </div>
               <span className="font-medium">
-                Trusted by 60+ businesses worldwide
+                <span className="font-semibold text-gray-800">
+                  60+ businesses
+                </span>{" "}
+                trust us worldwide
               </span>
             </div>
           </div>
