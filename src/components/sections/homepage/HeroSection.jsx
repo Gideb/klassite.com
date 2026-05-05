@@ -12,7 +12,7 @@ import Headings from "../../props/Headings";
 import Button from "../../ui/Button";
 
 // Services array
-const SERVICES = ["Web Development", "Branding", "Media", "Security Solutions"];
+const SERVICES = ["Web Development", "Mobile Development", "Branding", "Media", ""];
 
 // Stats array
 const STATS = [
@@ -26,7 +26,7 @@ const ServiceTags = memo(() => (
     {SERVICES.map((service) => (
       <span
         key={service}
-        className="px-4 py-2 hover:bg-gray-100 hover:text-gray-700 rounded-xl text-sm font-medium bg-purple-100 text-purple-600 transition-colors duration-300 cursor-default"
+        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-xl text-sm font-medium hover:bg-purple-100 hover:text-purple-600 transition-colors duration-300 cursor-default"
       >
         {service}
       </span>

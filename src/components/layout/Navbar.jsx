@@ -205,25 +205,34 @@ const Navbar = () => {
           <div className="mt-10 flex flex-col gap-6 text-lg">
             {navLinks.map((link, index) => (
               <div key={index}>
-                <div
-                  onClick={() =>
-                    setOpenDropdown(
-                      openDropdown === link.name ? null : link.name,
-                    )
-                  }
-                  className="flex items-center justify-between cursor-pointer"
-                >
-                  <div className="flex gap-3">
+                <div className="flex items-center justify-between">
+                  {/* LEFT SIDE → NAVIGATION */}
+                  <Link
+                    to={link.path}
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center gap-3"
+                  >
                     <link.icon className="text-xl" />
                     {link.name}
-                  </div>
+                  </Link>
 
+                  {/* RIGHT SIDE → DROPDOWN TOGGLE */}
                   {link.dropdown && (
-                    <FaChevronDown
-                      className={`text-xs transition-transform duration-300 ${
-                        openDropdown === link.name ? "rotate-180" : ""
-                      }`}
-                    />
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation(); // prevent triggering parent
+                        setOpenDropdown(
+                          openDropdown === link.name ? null : link.name,
+                        );
+                      }}
+                      className="p-2"
+                    >
+                      <FaChevronDown
+                        className={`text-xs transition-transform duration-300 ${
+                          openDropdown === link.name ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
                   )}
                 </div>
 
@@ -235,24 +244,33 @@ const Navbar = () => {
                         {/* If item has children → toggle */}
                         {item.dropdown ? (
                           <>
-                            <div
-                              onClick={() =>
-                                setOpenMobileSub(
-                                  openMobileSub === item.name
-                                    ? null
-                                    : item.name,
-                                )
-                              }
-                              className="flex justify-between items-center cursor-pointer text-sm text-gray-700"
-                            >
-                              {item.name}
-                              <FaChevronDown
-                                className={`text-xs transition-transform ${
-                                  openMobileSub === item.name
-                                    ? "rotate-180"
-                                    : ""
-                                }`}
-                              />
+                            <div className="flex justify-between items-center">
+                              <Link
+                                to={item.path}
+                                onClick={() => setMenuOpen(false)}
+                                className="text-sm text-gray-700"
+                              >
+                                {item.name}
+                              </Link>
+
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setOpenMobileSub(
+                                    openMobileSub === item.name
+                                      ? null
+                                      : item.name,
+                                  );
+                                }}
+                              >
+                                <FaChevronDown
+                                  className={`text-xs transition-transform ${
+                                    openMobileSub === item.name
+                                      ? "rotate-180"
+                                      : ""
+                                  }`}
+                                />
+                              </button>
                             </div>
 
                             {/* SECOND LEVEL */}

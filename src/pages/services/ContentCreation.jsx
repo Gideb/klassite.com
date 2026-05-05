@@ -178,7 +178,7 @@ const ContentCreation = () => {
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
-      >
+      > 
         <div className="absolute inset-0 grid grid-cols-3 z-10">
           <div className=" bg-black/50 " />
           <div className=" bg-white/10 backdrop-blur-xs" />

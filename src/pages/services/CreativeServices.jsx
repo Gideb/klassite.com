@@ -39,8 +39,8 @@ const StatCard = ({ value, label, icon: Icon }) => (
         <Icon className="text-xl" />
       </div>
     </div>
-    <div className="text-2xl font-bold text-gray-100 mb-1">{value}</div>
-    <div className="text-sm text-gray-300">{label}</div>
+    <div className="text-2xl font-bold text-gray-900 mb-1">{value}</div>
+    <div className="text-sm text-gray-500">{label}</div>
   </div>
 );
 
@@ -74,7 +74,7 @@ const CreativeServices = ({ color = "amber" }) => {
           style={{ backgroundImage: `url(${bgimg})`, backgroundSize: "cover" }}
         />
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 py-20">
           <div className="text-center max-w-3xl mx-auto ">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight pt-10">
               Creative{" "}
@@ -84,13 +84,14 @@ const CreativeServices = ({ color = "amber" }) => {
                 Services
               </span>
             </h1>
-            <Subheading
-              isLight
-              description="We design and build scalable digital products — from
+            <div className="py-5">
+              <Subheading
+                isLight
+                description="We design and build scalable digital products — from
               high-performing websites to complex web applications that drive
               real business growth."
-            />
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto"></p>
+              />
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 link="/contact"
@@ -106,19 +107,19 @@ const CreativeServices = ({ color = "amber" }) => {
               />
             </div>
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-16 pt-8 border-t border-gray-200/50">
-            <StatCard
-              value="50+"
-              label="Projects Delivered"
-              icon={FaCheckCircle}
-            />
-            <StatCard value="24/7" label="Support" icon={LuClock} />
-            <StatCard value="100%" label="Client Satisfaction" icon={FaUsers} />
-            <StatCard value="2x" label="Faster Delivery" icon={LuZap} />
-          </div>
         </div>
       </section>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-16 py-8 ">
+        <StatCard
+          value="120+"
+          label="Projects Delivered"
+          icon={FaCheckCircle}
+        />
+        <StatCard value="24/7" label="Support" icon={LuClock} />
+        <StatCard value="97%" label="Client Satisfaction" icon={FaUsers} />
+        <StatCard value="2x" label="Faster Delivery" icon={LuZap} />
+      </div>
 
       {/* Alternating Sub-Services Sections */}
       <section className="py-24 bg-white">
