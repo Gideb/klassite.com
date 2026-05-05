@@ -6,7 +6,7 @@ import Subheading from "../../props/Subheading";
 
 const ServiceHero = () => {
   return (
-    <section className="bg-linear-to-r from-fuchsia-800 via-fuchsia-700 to-fuchsia-800 border-b border-gray-100">
+    <section className="bg-gray-800 border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Headline */}
         <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-100 leading-tight tracking-tight">
@@ -40,7 +40,7 @@ const ServiceHero = () => {
           ].map((item, i) => (
             <div
               key={i}
-              className="group p-5 rounded-xl border border-gray-200 hover:border-purple-200 hover:shadow-sm  shadow-white transition-all duration-300"
+              className="group p-5 rounded-xl border border-gray-200 hover:border-purple-200 hover:shadow-sm  shadow-white transition-all duration-300 bg-gray-50/10"
             >
               <h3 className="font-semibold text-gray-100 group-hover:text-gray-300 transition-colors">
                 {item.title}
@@ -57,7 +57,7 @@ const ServiceHero = () => {
             link="/contact"
             text="Start Your Project"
             icon={FaArrowRight}
-            variant="tetiary"
+            variant="transparent"
           />
         </div>
       </div>

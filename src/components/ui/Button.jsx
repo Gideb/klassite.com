@@ -29,13 +29,19 @@ const Button = ({ link, icon: Icon, text, variant = "primary" }) => {
 
   const styles = {
     transparent: "border border-white text-white shadow-md hover:shadow-lg",
-    purple: "bg-purple-700 text-white border shadow-md hover:shadow-lg",
+    transparentAmber: "border border-amber-400 text-amber-400 shadow-md hover:shadow-lg",
+    purple:
+      "bg-purple-700 hover:bg-purple-600 text-white shadow-md hover:shadow-lg",
     primary:
       "bg-white text-purple-700 border border-gray-100 shadow-md hover:shadow-lg",
     secondary:
       "bg-white text-amber-600 border border-gray-100 shadow-md hover:shadow-lg",
+    amber:
+      "bg-amber-500 hover:bg-amber-600 text-black shadow-md hover:shadow-lg",
     tetiary:
       "bg-white text-fuchsia-600 border border-gray-100 shadow-md hover:shadow-lg",
+    fuchsia:
+      "bg-fuchsia-500 hover:bg-fuchsia-600 text-black shadow-md hover:shadow-lg",
   };
 
   return (

@@ -13,14 +13,17 @@ import {
   Users,
   TrendingUp,
 } from "lucide-react";
-import { FaDiagramProject } from "react-icons/fa6";
+import { FaDiagramProject, FaPenToSquare } from "react-icons/fa6";
 
 import { Link } from "react-router-dom";
 import Headings from "../../components/props/Headings";
 import Subheading from "../../components/props/Subheading";
 import DiffPageColors from "../../components/props/DiffPageColors";
+import CTASection from "../../components/props/CTASection";
 
 import brandbg from "../../assets/images/ipages/servicepage/brandexperience.jpg";
+import Button from "../../components/ui/Button";
+import { FaArrowRight } from "react-icons/fa";
 
 const BrandExperience = () => {
   const services = [
@@ -131,29 +134,26 @@ const BrandExperience = () => {
               </span>{" "}
               Brand Identity
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Your brand is more than a logo—it's the soul of your business. We
+            <Subheading
+              isLight
+              description="Your brand is more than a logo—it's the soul of your business. We
               craft distinctive, memorable identities that resonate with your
-              audience and stand the test of time.
-            </p>
+              audience and stand the test of time."
+            />
+
             <div className="flex flex-wrap gap-4">
-              <Link to="/contact">
-                {" "}
-                <button className="bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-                  Start Your Brand Journey
-                  <span>
-                    <ArrowRight className="w-5 h-5" />
-                  </span>
-                </button>
-              </Link>
-              <Link to="/portfolio">
-                <button className="border border-white/30 hover:bg-white/10 text-white font-medium px-8 py-3 rounded-full transition-all flex items-center gap-2">
-                  View Portfolio
-                  <span>
-                    <FaDiagramProject className="w-5 h-5" />
-                  </span>
-                </button>
-              </Link>
+              <Button
+                link="/contact"
+                text="Begin Your Brand Journey"
+                icon={FaArrowRight}
+                variant="amber"
+              />
+              <Button
+                link="https://portfolio"
+                text="View Portfolio"
+                icon={FaDiagramProject}
+                variant="transparent"
+              />
             </div>
           </div>
         </div>
@@ -349,28 +349,31 @@ const BrandExperience = () => {
           </div>
         </div>
       </div>
-      {/* CTA Section */}
+
       <div className="py-20 bg-linear-to-r from-gray-900 to-gray-800">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Build an Iconic Brand?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's create something extraordinary together. Book a discovery call
-            and let's bring your brand vision to life.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact">
-              <button className="bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold px-8 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg text-lg">
-                Start Your Project
-              </button>
-            </Link>
+          <Subheading
+            description=" Let's create something extraordinary together. Book a discovery call
+            and let's bring your brand vision to life."
+            isLight
+          />
 
-            <Link to="/portfolio">
-              <button className="border border-amber-500 text-amber-400 hover:bg-amber-500/10 font-medium px-8 py-4 rounded-full transition-all text-lg">
-                View Case Studies
-              </button>
-            </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button
+              link="/contact"
+              text="Begin Your Project "
+              icon={FaPenToSquare}
+              variant="amber"
+            />
+            <Button
+              link="https://portfolio"
+              text="View Case Studies"
+              icon={FaDiagramProject}
+              variant="transparentAmber"
+            />
           </div>
           <p className="text-gray-400 text-sm mt-8">
             Klass Koncepts — Where Strategy Meets Artistry

@@ -169,8 +169,6 @@ const ServiceItems = () => {
           }`}
         />
       </div>
-
-   
     );
   };
 
@@ -190,8 +188,9 @@ const ServiceItems = () => {
 
         {/* Digital Solutions Section */}
         <div className="mb-24 ">
-          <div className="mb-10 ">
-            <div className="flex items-center justify-between mb-1">
+          <div className="mb-10">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-2">
+              {/* LEFT: Icon + Title */}
               <div className="flex items-center gap-3">
                 <div className="w-15 h-15 bg-linear-to-br from-purple-100 to-purple-50 rounded-xl flex items-center justify-center">
                   <LuLaptopMinimalCheck className="text-purple-600 text-3xl" />
@@ -204,18 +203,19 @@ const ServiceItems = () => {
                 </Link>
               </div>
 
+              {/* RIGHT: View All */}
               <Link
                 to={services.digital.lead}
-                className="text-sm font-medium text-purple-600 flex items-center gap-1 hover:gap-2 transition-all"
+                className="text-sm font-medium text-purple-600 flex items-center gap-1 hover:gap-2 transition-all self-start md:self-auto ml-18 md:ml-0"
               >
                 View all
                 <FaArrowRight className="text-xs" />
               </Link>
             </div>
+
             <p className="text-gray-600 text-md max-w-2xl ml-18">
               {services.digital.intro}
             </p>
-            {/* <div className="w-1/4 h-0.5 bg-linear-to-r from-purple-500 to-purple-100 rounded-xl mt-3 ml-18" /> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -225,15 +225,14 @@ const ServiceItems = () => {
           </div>
         </div>
 
-        {/*  <div className="w-full h-0.5 bg-linear-to-r from-gray-100 via-gray-300 to-gray-100 rounded-xl my-9 ml-18 mx-auto flex items-center" />  */}
-
-        {/* Creative Services Section */}
-        <div>
+        {/* creative Solutions Section */}
+        <div className="mb-24 ">
           <div className="mb-10">
-            <div className="flex items-center justify-between mb-1">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-2">
+              {/* LEFT: Icon + Title */}
               <div className="flex items-center gap-3">
                 <div className="w-15 h-15 bg-linear-to-br from-amber-100 to-amber-50 rounded-xl flex items-center justify-center">
-                  <LuPalette className="text-amber-600 text-3xl" />
+                  <LuLaptopMinimalCheck className="text-amber-600 text-3xl" />
                 </div>
 
                 <Link to={services.creative.lead}>
@@ -243,18 +242,19 @@ const ServiceItems = () => {
                 </Link>
               </div>
 
+              {/* RIGHT: View All */}
               <Link
                 to={services.creative.lead}
-                className="text-sm font-medium text-amber-600 flex items-center gap-1 hover:gap-2 transition-all"
+                className="text-sm font-medium text-amber-600 flex items-center gap-1 hover:gap-2 transition-all self-start md:self-auto ml-18 md:ml-0"
               >
                 View all
                 <FaArrowRight className="text-xs" />
               </Link>
             </div>
+
             <p className="text-gray-600 text-md max-w-2xl ml-18">
               {services.creative.intro}
             </p>
-            {/* <div className="w-1/4 h-0.5 bg-linear-to-r from-amber-500 to-amber-100 rounded-xl mt-3 ml-18" /> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -263,6 +263,7 @@ const ServiceItems = () => {
             ))}
           </div>
         </div>
+
         <div className="mt-20"></div>
       </section>
     </div>

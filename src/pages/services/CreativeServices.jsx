@@ -44,6 +44,7 @@ const StatCard = ({ value, label, icon: Icon }) => (
   </div>
 );
 
+
 const CreativeServices = ({ color = "amber" }) => {
   const colorStyles = {
     amber: {

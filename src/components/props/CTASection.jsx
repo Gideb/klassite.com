@@ -36,6 +36,7 @@ const CTASection = ({
   buttonText = "Get Free Consultation",
   button2Text = "View Our Portfolio",
   disclaimer = "Schedule A Call • Just A Healthy Discourse",
+  className = ""
  
 }) => {
   return (
@@ -51,10 +52,11 @@ const CTASection = ({
           transition: { staggerChildren: 0.2, delayChildren: 0.1 },
         },
       }}
-      className="scroll-mt-16 relative py-24 overflow-hidden"
+      className={`scroll-mt-16 relative py-24 overflow-hidden ${className} `}
+      
     >
-      <div className="absolute inset-0 bg-linear-to-r from-purple-900 to-indigo-900" />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10" />
+      <div className={`absolute inset-0 bg-linear-to-r from-purple-900 to-indigo-900 `} />
+      <div className={`absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10 `} />
 
       <div className="relative max-w-4xl mx-auto text-center px-6">
         <motion.h2
