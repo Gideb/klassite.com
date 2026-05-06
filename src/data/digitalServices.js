@@ -2,9 +2,9 @@ import { FaCheckCircle, FaUsers, FaStar, FaLayerGroup } from "react-icons/fa";
 import { LuZap, LuSmartphone, LuClock, LuShield } from "react-icons/lu";
 import { HiOutlineRocketLaunch } from "react-icons/hi2";
 
-import webDevImg from "../../../../assets/images/ipages/servicepage/web-dev.jpg";
-import mobileAppImg from "../../../../assets/images/ipages/servicepage/mobileapp.jpg";
-import uiuxImg from "../../../../assets/images/ipages/servicepage/uxdesign.jpg";
+import webDevImg from "../assets/images/ipages/servicepage/web-dev.jpg";
+import mobileAppImg from "../assets/images/ipages/servicepage/mobileapp.jpg";
+import uiuxImg from "../assets/images/ipages/servicepage/uxdesign.jpg";
 
 export const digitalServices = [
   {

@@ -21,13 +21,13 @@ import {
 import { HiOutlineRocketLaunch } from "react-icons/hi2";
 import { TbBrandReact, TbBrandTailwind, TbBrandNodejs } from "react-icons/tb";
 
-import Stats from "../../components/props/Stats";
+
 import Button from "../../components/ui/Button";
 import Subheading from "../../components/props/Subheading";
 import Headings from "../../components/props/Headings";
 
 import AlternatingServiceSection from "../../components/props/AlternatingServiceSection";
-import { digitalServices } from "../../components/sections/servicesections/subservices/digitalServices";
+import { digitalServices } from "../../data/digitalServices";
 
 import bgimg from "../../assets/images/ipages/homepage/trust.jpg";
 import MemoizedCTASection from "../../components/props/CTASection";

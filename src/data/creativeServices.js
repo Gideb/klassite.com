@@ -31,9 +31,9 @@ import {
 } from "react-icons/tb";
 
 // Import your images (replace with actual paths)
-import brandExperienceImg from "../../../../assets/images/ipages/servicepage/brandexperience.jpg";
-import contentCreationImg from "../../../../assets/images/ipages/servicepage/contentcreation.jpg";
-import graphicDesignImg from "../../../../assets/images/ipages/servicepage/graphicdesign.jpg";
+import brandExperienceImg from "../assets/images/ipages/servicepage/brandexperience.jpg";
+import contentCreationImg from "../assets/images/ipages/servicepage/contentcreation.jpg";
+import graphicDesignImg from "../assets/images/ipages/servicepage/graphicdesign.jpg";
 
 export const creativeServices = [
   {

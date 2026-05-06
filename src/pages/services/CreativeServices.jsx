@@ -1,33 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
 import {
-  FaGlobe,
-  FaLayerGroup,
-  FaArrowRight,
+ 
   FaCheckCircle,
   FaUsers,
-  FaStar,
+  
   FaExternalLinkAlt,
   FaServicestack,
-  FaDatabase,
+ 
 } from "react-icons/fa";
 import {
-  LuCodeXml,
-  LuSmartphone,
+ 
   LuZap,
   LuClock,
-  LuShield,
+  
 } from "react-icons/lu";
-import { HiOutlineRocketLaunch } from "react-icons/hi2";
+
 import { TbBrandReact, TbBrandTailwind, TbBrandNodejs } from "react-icons/tb";
 
-import Stats from "../../components/props/Stats";
 import Button from "../../components/ui/Button";
 import Subheading from "../../components/props/Subheading";
 import Headings from "../../components/props/Headings";
 
 import AlternatingServiceSection from "../../components/props/AlternatingServiceSection";
-import { creativeServices } from "../../components/sections/servicesections/subservices/creativeServices";
+import { creativeServices } from "../../data/creativeServices";
 
 import bgimg from "../../assets/images/ipages/homepage/trust.jpg";
 import MemoizedCTASection from "../../components/props/CTASection";
