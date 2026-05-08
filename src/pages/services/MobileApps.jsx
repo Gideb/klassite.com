@@ -34,6 +34,7 @@ import ExpertiseCta from "../../components/props/ExpertiseCta";
 import mobilebg from "../../assets/images/ipages/servicepage/mobileapp.jpg";
 import { FaDiagramProject, FaPenToSquare } from "react-icons/fa6";
 import Button from "../../components/ui/Button";
+import Card from "../../components/ui/Card";
 
 const MobileApps = () => {
   const services = [
@@ -306,7 +307,15 @@ const MobileApps = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Card
+                key={index}
+                title={service.title}
+                icon={service.icon}
+                description={service.description}
+                color="rose"
+                platform={service.platform}
+              />
+              /*  <div
                 key={index}
                 className="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100"
               >
@@ -324,7 +333,7 @@ const MobileApps = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </div> */
             ))}
           </div>
         </div>

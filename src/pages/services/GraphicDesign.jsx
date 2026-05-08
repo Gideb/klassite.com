@@ -26,6 +26,7 @@ import graphicbg from "../../assets/images/ipages/servicepage/graphicdesign.jpg"
 import Button from "../../components/ui/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { FaPenToSquare } from "react-icons/fa6";
+import Card from "../../components/ui/Card";
 
 const GraphicDesign = () => {
   const services = [
@@ -297,7 +298,14 @@ const GraphicDesign = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Card
+                key={index}
+                title={service.title}
+                icon={service.icon}
+                description={service.description}
+                color="purple"
+              />
+              /* <div
                 key={index}
                 className="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100"
               >
@@ -310,7 +318,7 @@ const GraphicDesign = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </div> */
             ))}
           </div>
         </div>

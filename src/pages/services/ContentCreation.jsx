@@ -30,6 +30,7 @@ import Button from "../../components/ui/Button";
 import contentbg from "../../assets/images/ipages/servicepage/contentcreation.jpg";
 import { FaDiagramProject } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import Card from "../../components/ui/Card";
 
 const ContentCreation = () => {
   const services = [
@@ -336,20 +337,14 @@ const ContentCreation = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              
+             <Card
                 key={index}
-                className="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100"
-              >
-                <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-7 h-7 text-blue-600" />
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+                title={service.title}
+                icon={service.icon}
+                description={service.description}
+                color="blue"
+              />
             ))}
           </div>
         </div>
