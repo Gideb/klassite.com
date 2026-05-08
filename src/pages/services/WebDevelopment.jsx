@@ -356,7 +356,7 @@ const WebDevelopment = () => {
               <Card
                 key={index}
                 title={service.title}
-                Icon={service.icon}
+                icon={service.icon}
                 description={service.description}
                 color="emerald"
               />
