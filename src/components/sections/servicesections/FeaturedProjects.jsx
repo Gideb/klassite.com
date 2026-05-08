@@ -50,7 +50,7 @@ const FeaturedProjects = () => {
       serviceMatch: "Web Applications",
       icon: HiOutlineRocketLaunch,
       image: project3,
-      tags: ["JavaScript", "PHP", "MySQL"],
+      tags: ["JavaScript", "PHP", "MySQL", "PHP", "MySQL"],
       results: "85% faster skill progression",
       caseStudy: "https://my_portfolio.com/works/utsportal",
     },
