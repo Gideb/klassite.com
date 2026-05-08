@@ -75,8 +75,7 @@ const HeroSection = () => {
             </h1>
 
             <div className="text-base sm:text-lg text-gray-600 max-w-2xl -mt-2">
-              <Subheading
-                description="Klass Koncepts partners with ambitious brands to architect and
+              <Subheading description="Klass Koncepts partners with ambitious brands to architect and
               scale performance-driven digital platforms."
               />
             </div>
