@@ -239,12 +239,11 @@ const WebDevelopment = () => {
                 variant="emerald"
               />
               <Button
-                link="https://portfolio"
+                link="https://gidebdev.vercel.app/"
                 text="View Our Work"
                 icon={FaDiagramProject}
                 variant="transparent"
               />
-            
             </div>
           </div>
         </div>
@@ -594,7 +593,7 @@ const WebDevelopment = () => {
         buttonText1="Schedule a Free Consultation"
         buttonText2=" View Technical Capabilities"
         disclaimer="Klass Koncepts — Engineering Digital Excellence"
-        path="portfolio"
+        path="https://gidebdev.vercel.app/"
       />
 
       {/*  <div className="py-20 bg-white">

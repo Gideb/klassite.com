@@ -219,7 +219,7 @@ const ContentCreation = () => {
                 variant="blue"
               />
               <Button
-                link="https://portfolio"
+                link="https://gidebdev.vercel.app/"
                 text="View Content Portfolio"
                 icon={FaDiagramProject}
                 variant="transparent"
@@ -337,8 +337,7 @@ const ContentCreation = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              
-             <Card
+              <Card
                 key={index}
                 title={service.title}
                 icon={service.icon}
@@ -574,7 +573,7 @@ const ContentCreation = () => {
         buttonText1="Get a Free Content Audit"
         buttonText2=" View Content Samples"
         disclaimer="Klass Koncepts — Content That Works as Hard as You Do"
-        path="portfolio"
+        path="https://gidebdev.vercel.app/"
       />
     </div>
   );

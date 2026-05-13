@@ -26,7 +26,7 @@ const FeaturedProjects = () => {
       image: project1,
       tags: ["React", "Tailwind", "Node.js"],
       results: "+450% inquiries",
-      caseStudy: "https://my_portfolio.com/works/codeuni",
+      caseStudy: "https://gidebdev.vercel.app/projects",
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const FeaturedProjects = () => {
       image: project2,
       tags: ["Brand Identity", "Packaging", "Visual Strategy"],
       results: "40% brand recognition increase",
-      caseStudy: "https://my_portfolio.com/works/brand",
+      caseStudy: "https://gidebdev.vercel.app/projects",
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ const FeaturedProjects = () => {
       image: project3,
       tags: ["JavaScript", "PHP", "MySQL", "PHP", "MySQL"],
       results: "85% faster skill progression",
-      caseStudy: "https://my_portfolio.com/works/utsportal",
+      caseStudy: "https://gidebdev.vercel.app/projects",
     },
   ];
 

@@ -13,7 +13,7 @@ const projects = [
       "Modern Programming University Website featuring offered programmes at all levels.",
     stack: ["React", "Tailwind", "Node.js"],
     image: projectImg,
-    caseStudy: "https://my_portfolio.com/works/codeuni",
+    caseStudy: "https://gidebdev.vercel.app//codeuni",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const projects = [
       "Responsive and structural modern learning portal system designed to teach most computing courses from amateur to mastery.",
     stack: ["JavaScript", "PHP", "MySQL"],
     image: projectImg,
-    caseStudy: "https://my_portfolio.com/works/utsportal",
+    caseStudy: "https://gidebdev.vercel.app//utsportal",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projects = [
     description: "React movie website Incorporated with Restful APIs.",
     stack: ["React", "RestAPI"],
     image: projectImg,
-    caseStudy: "https://my_portfolio.com/works/moviesite",
+    caseStudy: "https://gidebdev.vercel.app//moviesite",
   },
 ];
 
@@ -107,7 +107,7 @@ const SelectedWork = () => {
         {/* view more */}
         <div className="lg:text-right mt-20 transition duration-300 ease-in-out hover:-translate-y-1 text-center ">
           <a
-            href="https://my-portfolio.com"
+            href="https://my-https://gidebdev.vercel.app/.com"
             target="_blank"
             rel="noopener noreferral"
             className="text-fuchsia-600 font-semibold shadow-md py-4 px-6 rounded-xl hover:shadow-lg"

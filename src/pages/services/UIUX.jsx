@@ -32,7 +32,7 @@ import ExpertiseCta from "../../components/props/ExpertiseCta";
 
 import uxdesignbg from "../../assets/images/ipages/servicepage/uxdesign.jpg";
 import Button from "../../components/ui/Button";
-import Card from "../../components/ui/Card"
+import Card from "../../components/ui/Card";
 
 const UIUX = () => {
   const services = [
@@ -198,7 +198,7 @@ const UIUX = () => {
                 variant="indigo"
               />
               <Button
-                link="https://portfolio"
+                link="https://gidebdev.vercel.app/"
                 text="View Case Studies"
                 icon={FaDiagramProject}
                 variant="transparent"
@@ -521,7 +521,7 @@ const UIUX = () => {
               variant="indigo"
             />
             <Button
-              link="https://portfolio"
+              link="https://gidebdev.vercel.app/"
               text="View Portfolio"
               icon={FaDiagramProject}
               variant="transparentindigo"

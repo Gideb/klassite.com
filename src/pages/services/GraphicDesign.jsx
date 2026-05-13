@@ -200,7 +200,7 @@ const GraphicDesign = () => {
                 variant="purple"
               />
               <Button
-                link="/contact"
+                link="https://gidebdev.vercel.app/"
                 text="View Portfolio"
                 icon={FaArrowRight}
                 variant="transparent"

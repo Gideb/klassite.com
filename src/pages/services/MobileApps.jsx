@@ -207,9 +207,7 @@ const MobileApps = () => {
             </h1>
             <Subheading
               isLight
-              description="Reach your customers wherever they are. We build high-performance
-              iOS and Android apps that deliver exceptional user experiences and
-              drive business growth."
+              description="Reach your customers wherever they are. We build high-performance iOS and Android apps that deliver exceptional user experiences and drive business growth."
             />
 
             <div className="flex flex-wrap gap-4">
@@ -220,7 +218,7 @@ const MobileApps = () => {
                 variant="rose"
               />
               <Button
-                link="https://portfolio"
+                link="https://gidebdev.vercel.app/"
                 text="View App Portfolio"
                 icon={FaDiagramProject}
                 variant="transparent"
@@ -239,9 +237,7 @@ const MobileApps = () => {
               <Headings black="  Native & Cross-Platform Excellence" />
               <Subheading
                 description=" Whether you need a native iOS app, Android app, or a
-                cross-platform solution, we have the expertise to deliver. We
-                build apps that are fast, reliable, and beautiful—providing
-                seamless experiences across all devices."
+                cross-platform solution, we have the expertise to deliver. We build apps that are fast, reliable, and beautiful—providing seamless experiences across all devices."
               />
               <div className="space-y-4">
                 {[
@@ -528,7 +524,7 @@ const MobileApps = () => {
         buttonText1="Get a Free App Quote"
         buttonText2=" View App Portfolio"
         disclaimer="Klass Koncepts — Mobile Innovation Delivered"
-        path="portfolio"
+        path="https://gidebdev.vercel.app/"
       />
 
       {/*  <div className="py-20 bg-white">

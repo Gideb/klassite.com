@@ -25,7 +25,7 @@ const Footer = () => {
     { name: "Contact", path: "/contact" },
     { name: "Careers", path: "/careers" },
     { name: "Support", path: "/faqs" },
-    { name: "Work", path: "https://gideb.dev.vercel.com" },
+    { name: "Work", path: "https://gidebdev.vercel.app/" },
   ];
 
   const individualpages = [

@@ -96,7 +96,7 @@ const CTASection = ({
             className="w-full sm:w-auto"
           >
             <Button
-              link="https://portfolio"
+              link="https://gidebdev.vercel.app/"
               text={button2Text}
               icon={FaDiagramProject}
               variant="transparent"

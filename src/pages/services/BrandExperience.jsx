@@ -150,7 +150,7 @@ const BrandExperience = () => {
                 variant="amber"
               />
               <Button
-                link="https://portfolio"
+                link="https://gidebdev.vercel.app/"
                 text="View Portfolio"
                 icon={FaDiagramProject}
                 variant="transparent"
@@ -377,7 +377,7 @@ const BrandExperience = () => {
               variant="amber"
             />
             <Button
-              link="https://portfolio"
+              link="https://gidebdev.vercel.app/"
               text="View Case Studies"
               icon={FaDiagramProject}
               variant="transparentamber"
