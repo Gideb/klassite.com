@@ -6,6 +6,7 @@ import { LuCodeXml } from "react-icons/lu";
 import project1 from "../../../assets/images/project/project-1.jpg";
 import project2 from "../../../assets/images/project/project-2.jpg";
 import project3 from "../../../assets/images/project/project-3.png";
+import project4 from "../../../assets/images/project/project-4.jpg";
 import Topicbg from "../../props/Topicbg";
 import Headings from "../../props/Headings";
 import Subheading from "../../props/Subheading";
@@ -59,10 +60,10 @@ const FeaturedProjects = () => {
       name: "E-Commerce Product Page",
       description:
         "A fully responsive product page with image gallery, variant selection, cart management, and local storage persistence.",
-      category: "Web Development",
-      serviceMatch: "Web Development",
+      category: "Mobile App Development",
+      serviceMatch: "Mobile App Development",
       icon: HiOutlineRocketLaunch,
-      image: project3,
+      image: project4,
       tags: ["JavaScript", "React", "Context API", "Next.js", "Framer Motion"],
       results: "35% faster click through",
       caseStudy: "https://gidebdev.vercel.app/",
@@ -72,7 +73,7 @@ const FeaturedProjects = () => {
   const getCategoryColor = (serviceMatch) => {
     const colors = {
       "Website Development": "purple",
-      "Web Applications": "blue",
+      "Web Applications": "amber",
       Branding: "amber",
     };
     return colors[serviceMatch] || "purple";
@@ -213,7 +214,7 @@ const FeaturedProjects = () => {
 
         <div className="text-center">
           <Button
-            link="/contact"
+            link="https://gidebdev.vercel.app/"
             text="View Full Portfolio"
             icon={FaExternalLinkAlt}
             variant="tetiary"
