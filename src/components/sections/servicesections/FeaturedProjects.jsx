@@ -26,7 +26,7 @@ const FeaturedProjects = () => {
       image: project1,
       tags: ["React", "Tailwind", "Node.js"],
       results: "+450% inquiries",
-      caseStudy: "https://gidebdev.vercel.app/projects",
+      caseStudy: "https://gidebdev.vercel.app/projects/codeuni-website",
     },
     {
       id: 2,
@@ -39,20 +39,20 @@ const FeaturedProjects = () => {
       image: project2,
       tags: ["Brand Identity", "Packaging", "Visual Strategy"],
       results: "40% brand recognition increase",
-      caseStudy: "https://gidebdev.vercel.app/projects",
+      caseStudy: "https://gidebdev.vercel.app/projects/luxe-beauty-brand",
     },
     {
       id: 3,
-      name: "DevPath – Computing Programs for Every Stage",
+      name: "Tutor Portal – Computing Programs for Every Stage",
       description:
-        "A Structured Learning Portal — Teaching Computing from Amateur to Mastery.",
+        "A centralized web Portal — Teaching Computing from Amateur to Mastery.",
       category: "Web Application",
       serviceMatch: "Web Applications",
       icon: HiOutlineRocketLaunch,
       image: project3,
       tags: ["JavaScript", "PHP", "MySQL", "PHP", "MySQL"],
       results: "85% faster skill progression",
-      caseStudy: "https://gidebdev.vercel.app/projects",
+      caseStudy: "https://gidebdev.vercel.app/projects/tutor-portal",
     },
   ];
 

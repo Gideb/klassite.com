@@ -64,8 +64,8 @@ const HeroSection = () => {
       {/* Main Content Container */}
       <div className=" z-10 mt-10  px-4 sm:px-4 lg:px-7 max-w-7xl mx-auto min-h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-10 items-center w-full py-12 lg:py-0">
-          <div className="flex flex-col space-y-6 lg:space-y-8 order-2 lg:order-1">
-            <h1 className="font-black text-3xl sm:text-5xl lg:text-6xl xl:text-7xl leading-none text-gray-900">
+          <div className="flex flex-col space-y-6 lg:space-y-8 order-1">
+            <h1 className="font-black text-5xl lg:text-6xl xl:text-7xl leading-none text-gray-900">
               We Build{" "}
               <span className="bg-clip-text text-transparent bg-purple-600">
                 {" "}
@@ -82,7 +82,7 @@ const HeroSection = () => {
 
             <ServiceTags />
 
-            <div className="flex flex-col md:flex-row items-center gap-4 pt-1">
+            <div className="flex flex-col md:flex-row gap-4">
               <Button
                 link="/contact"
                 text=" Book a Strategic Call"
@@ -145,7 +145,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Hero Image */}
-          <div className="w-full flex justify-center lg:justify-end order-1 lg:order-2">
+          <div className="w-full flex justify-center lg:justify-end order-2">
             <div className="relative group">
               {/* Decorative Elements */}
               <div className="absolute -inset-4 bg-linear-to-r from-purple-600 to-fuchsia-600 rounded-2xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
@@ -153,7 +153,7 @@ const HeroSection = () => {
               <img
                 src={hero}
                 alt="team members in a discussion"
-                className="relative w-full max-w-md lg:max-w-lg rounded-xl shadow-xl will-change-transform group-hover:scale-105 transition-transform duration-500"
+                className="relative w-full max-w-md md:max-w-3xl lg:max-w-lg rounded-xl shadow-xl will-change-transform group-hover:scale-105 transition-transform duration-500"
                 loading="eager"
               />
 
