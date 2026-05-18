@@ -26,7 +26,7 @@ const FeaturedProjects = () => {
       image: project1,
       tags: ["React", "Tailwind", "Node.js"],
       results: "+450% inquiries",
-      caseStudy: "https://gidebdev.vercel.app/projects/codeuni-website",
+      caseStudy: "https://gidebdev.vercel.app/",
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const FeaturedProjects = () => {
       image: project2,
       tags: ["Brand Identity", "Packaging", "Visual Strategy"],
       results: "40% brand recognition increase",
-      caseStudy: "https://gidebdev.vercel.app/projects/luxe-beauty-brand",
+      caseStudy: "https://gidebdev.vercel.app/projects/",
     },
     {
       id: 3,
@@ -50,9 +50,22 @@ const FeaturedProjects = () => {
       serviceMatch: "Web Applications",
       icon: HiOutlineRocketLaunch,
       image: project3,
-      tags: ["JavaScript", "PHP", "MySQL", "PHP", "MySQL"],
+      tags: ["JavaScript", "PHP", "MySQL", "MySQL"],
       results: "85% faster skill progression",
-      caseStudy: "https://gidebdev.vercel.app/projects/tutor-portal",
+      caseStudy: "https://gidebdev.vercel.app/",
+    },
+    {
+      id: 3,
+      name: "E-Commerce Product Page",
+      description:
+        "A fully responsive product page with image gallery, variant selection, cart management, and local storage persistence.",
+      category: "Web Development",
+      serviceMatch: "Web Development",
+      icon: HiOutlineRocketLaunch,
+      image: project3,
+      tags: ["JavaScript", "React", "Context API", "Next.js", "Framer Motion"],
+      results: "35% faster click through",
+      caseStudy: "https://gidebdev.vercel.app/",
     },
   ];
 
@@ -192,7 +205,7 @@ const FeaturedProjects = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
