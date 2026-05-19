@@ -153,7 +153,7 @@ const HeroSection = () => {
               <img
                 src={hero}
                 alt="team members in a discussion"
-                className="relative w-full max-w-md md:max-w-3xl lg:max-w-lg rounded-xl shadow-xl will-change-transform group-hover:scale-105 transition-transform duration-500"
+                className="relative w-full max-w-md md:max-w-3xl lg:max-w-xl rounded-xl shadow-xl will-change-transform group-hover:scale-105 transition-transform duration-500"
                 loading="eager"
               />
 

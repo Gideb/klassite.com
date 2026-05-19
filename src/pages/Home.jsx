@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <>
       <HeroSection />
+
       <ProblemStatement />
 
       <ServicesSection />
@@ -20,7 +21,7 @@ const Home = () => {
       <SocialProofSection />
       <WhyUs />
       <TestimonialSection />
-      <CTASection  />
+      <CTASection />
     </>
   );
 };

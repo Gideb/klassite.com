@@ -53,7 +53,7 @@ const BlogPost = () => {
 
   // Blog Categories
   const categories = [
-    { id: "all", name: "All Posts", count: 24 },
+    { id: "all", name: "All Posts", count: 6 },
     { id: "web-design", name: "Web Design", count: 8 },
     { id: "development", name: "Development", count: 7 },
     { id: "branding", name: "Branding", count: 5 },

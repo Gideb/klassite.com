@@ -174,12 +174,12 @@ const ScrollToTopButton = () => {
         >
           {/* Circular progress indicator */}
           <div style={styles.progressRingContainer}>
-            <svg width="60" height="60" viewBox="0 0 100 100">
+            <svg width="40" height="40" viewBox="0 0 100 100">
               {/* Background circle */}
               <circle
                 cx="50"
                 cy="50"
-                r="42"
+                r="32"
                 fill="none"
                 stroke="rgba(255,255,255,0.2)"
                 strokeWidth="4"
@@ -190,7 +190,7 @@ const ScrollToTopButton = () => {
               <motion.circle
                 cx="50"
                 cy="50"
-                r="42"
+                r="32"
                 fill="none"
                 stroke="#fff"
                 strokeWidth="4"
@@ -208,7 +208,7 @@ const ScrollToTopButton = () => {
           </div>
           {/* Arrow icon */}
           <div style={styles.iconContainer}>
-            <FaArrowUp size={20} />
+            <FaArrowUp size={10} />
           </div>
         </motion.button>
       )}
@@ -244,7 +244,7 @@ const ScrollProgressSection = ({ children, index }) => {
   return (
     <div ref={sectionRef} style={styles.section}>
       <div style={styles.sectionProgress}>
-        <svg width="80" height="80" viewBox="0 0 100 100">
+        <svg width="60" height="60" viewBox="0 0 100 100">
           <circle
             cx="50"
             cy="50"
@@ -285,12 +285,12 @@ const styles = {
     padding: 0,
     borderRadius: "50%",
     border: "none",
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg, #667dda 0%, #a63ba2 100%)",
     boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
     zIndex: 50,
     cursor: "pointer",
-    width: "60px",
-    height: "60px",
+    width: "42px",
+    height: "42px",
     position: "relative",
     display: "flex",
     alignItems: "center",
@@ -317,8 +317,8 @@ const styles = {
   progressContainer: {
     position: "sticky",
     top: "20px",
-    width: "80px",
-    height: "80px",
+    width: "70px",
+    height: "70px",
     margin: "0 auto",
     padding: 0,
     display: "flex",
@@ -354,30 +354,7 @@ const styles = {
   },
 };
 
-// Example usage in an App component
-const App = () => {
-  return (
-    <div>
-      {/* Optional: Sticky global progress indicator at the top */}
-      <div style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 1000 }}>
-        <LoadingProgressIndicator />
-      </div>
-      
-      {/* Your main content */}
-      {[...Array(8)].map((_, i) => (
-        <ScrollProgressSection key={i} index={i}>
-          <div>
-            <h3>Section {i + 1}</h3>
-            <p>Scroll to see progress</p>
-          </div>
-        </ScrollProgressSection>
-      ))}
-      
-      {/* The scroll to top button with loading illusion */}
-      <ScrollToTopButton />
-    </div>
-  );
-};
+
 
 export default ScrollToTopButton;
 export { LoadingProgressIndicator, ScrollProgressSection };
