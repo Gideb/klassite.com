@@ -46,7 +46,6 @@ const staggerContainer = {
 };
 
 const BlogPost = () => {
-  const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
@@ -180,10 +179,8 @@ const BlogPost = () => {
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory =
       selectedCategory === "all" || post.category === selectedCategory;
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
+
+    return matchesCategory;
   });
 
   // Pagination
@@ -216,87 +213,85 @@ const BlogPost = () => {
             {/* Main Content - Blog Posts */}
             <div className="lg:col-span-2">
               {/* Featured Posts Carousel */}
-              {featuredPosts.length > 0 &&
-                searchTerm === "" &&
-                selectedCategory === "all" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-12"
-                  >
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                      Featured Articles
-                    </h2>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      {featuredPosts.slice(0, 2).map((post) => (
-                        <motion.article
-                          key={post.id}
-                          whileHover={{ y: -10 }}
-                          className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
-                        >
-                          <Link to={`/blog/${post.id}`} className="block">
-                            <div className="relative h-48 overflow-hidden">
-                              <img
-                                src={post.image}
-                                alt={post.title}
-                                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                              />
-                              <div className="absolute top-4 left-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-3 py-1 rounded-xl text-sm">
-                                Featured
-                              </div>
+              {featuredPosts.length > 0 && selectedCategory === "all" && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mb-12"
+                >
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    Featured Articles
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {featuredPosts.slice(0, 2).map((post) => (
+                      <motion.article
+                        key={post.id}
+                        whileHover={{ y: -10 }}
+                        className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+                      >
+                        <Link to={`/blog/${post.id}`} className="block">
+                          <div className="relative h-48 overflow-hidden">
+                            <img
+                              src={post.image}
+                              alt={post.title}
+                              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                            />
+                            <div className="absolute top-4 left-4 bg-linear-to-r from-purple-600 to-fuchsia-600 text-white px-3 py-1 rounded-xl text-sm">
+                              Featured
+                            </div>
+                          </div>
+
+                          <div className="p-6">
+                            <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                              <span className="flex items-center gap-1">
+                                <FaCalendarAlt className="text-fuchsia-600" />
+                                {new Date(post.date).toLocaleDateString(
+                                  "en-US",
+                                  {
+                                    month: "short",
+                                    day: "numeric",
+                                    year: "numeric",
+                                  },
+                                )}
+                              </span>
+                              <span className="flex items-center gap-1">
+                                <FaClock className="text-fuchsia-600" />
+                                {post.readTime}
+                              </span>
                             </div>
 
-                            <div className="p-6">
-                              <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                                <span className="flex items-center gap-1">
-                                  <FaCalendarAlt className="text-fuchsia-600" />
-                                  {new Date(post.date).toLocaleDateString(
-                                    "en-US",
-                                    {
-                                      month: "short",
-                                      day: "numeric",
-                                      year: "numeric",
-                                    },
-                                  )}
-                                </span>
-                                <span className="flex items-center gap-1">
-                                  <FaClock className="text-fuchsia-600" />
-                                  {post.readTime}
-                                </span>
-                              </div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-fuchsia-600 transition">
+                              {post.title}
+                            </h3>
 
-                              <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-fuchsia-600 transition">
-                                {post.title}
-                              </h3>
+                            <p className="text-gray-600 mb-4 line-clamp-2">
+                              {post.excerpt}
+                            </p>
 
-                              <p className="text-gray-600 mb-4 line-clamp-2">
-                                {post.excerpt}
-                              </p>
-
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                  <img
-                                    src={post.author.avatar}
-                                    alt={post.author.name}
-                                    className="w-8 h-8 rounded-xl object-cover"
-                                  />
-                                  <span className="text-sm text-gray-700">
-                                    {post.author.name}
-                                  </span>
-                                </div>
-                                <span className="text-fuchsia-600 font-semibold flex items-center gap-1 group">
-                                  Read More
-                                  <FaArrowRight className="text-xs group-hover:translate-x-1 transition" />
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-2">
+                                <img
+                                  src={post.author.avatar}
+                                  alt={post.author.name}
+                                  className="w-8 h-8 rounded-xl object-cover"
+                                />
+                                <span className="text-sm text-gray-700">
+                                  {post.author.name}
                                 </span>
                               </div>
+                              <span className="text-fuchsia-600 font-semibold flex items-center gap-1 group">
+                                Read More
+                                <FaArrowRight className="text-xs group-hover:translate-x-1 transition" />
+                              </span>
                             </div>
-                          </Link>
-                        </motion.article>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
+                          </div>
+                        </Link>
+                      </motion.article>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
 
               {/* Blog Posts Grid */}
               <motion.div
@@ -405,7 +400,7 @@ const BlogPost = () => {
                         onClick={() => setSelectedCategory(category.id)}
                         className={`w-full flex items-center justify-between p-2 rounded-lg transition ${
                           selectedCategory === category.id
-                            ? "bg-gradient-to-r from-purple-50 to-fuchsia-50 text-fuchsia-600"
+                            ? "bg-linear-to-r from-purple-50 to-fuchsia-50 text-fuchsia-600"
                             : "hover:bg-gray-50"
                         }`}
                       >
@@ -446,7 +441,7 @@ const BlogPost = () => {
                       to={`/blog/${post.id}`}
                       className="flex gap-3 group"
                     >
-                      <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                      <div className="w-16 h-16 rounded-lg overflow-hidden shrink-0">
                         <img
                           src={post.image}
                           alt={post.title}
@@ -485,7 +480,7 @@ const BlogPost = () => {
                   {popularTags.map((tag, index) => (
                     <button
                       key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-xl text-sm hover:bg-gradient-to-r hover:from-purple-600 hover:to-fuchsia-600 hover:text-white transition-all"
+                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-xl text-sm hover:bg-linear-to-r hover:from-purple-600 hover:to-fuchsia-600 hover:text-white transition-all"
                     >
                       #{tag}
                     </button>
@@ -499,7 +494,7 @@ const BlogPost = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="bg-gradient-to-br from-purple-900 to-fuchsia-900 rounded-2xl p-6 shadow-md text-white"
+                className="bg-linear-to-br from-purple-900 to-fuchsia-900 rounded-2xl p-6 shadow-md text-white"
               >
                 <h3 className="text-xl font-bold mb-2">Newsletter</h3>
                 <p className="text-sm text-gray-300 mb-4">
